@@ -1,12 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;0,600;1,400&display=swap');
-/* font-family: "Kanit", sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
 /* font-family: 'Comfortaa', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
 /* font-family: 'Signika Negative', sans-serif; */
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Unicase:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -22,8 +20,9 @@ html {
 
 .app {
   --primaryColor: #eee;
-  --secondaryColor: rgb(218, 160, 120);
+  --secondaryColor2: rgb(185, 130, 93);
   --secondaryColor: rgb(133, 88, 55);
+  --bookBtnColor: rgb(95, 72, 56);
   background: #eee;
   color: var(--primaryColor);
   width: 100vw;

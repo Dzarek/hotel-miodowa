@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import {
   IoIosArrowDropleftCircle,
@@ -10,19 +12,14 @@ import {
 import { MdOutlineStar } from "react-icons/md";
 
 import headerImg1 from "../images/headerImages/TWIM PREMIUM 005.jpg";
-// import headerImg2 from "../images/headerImages/TWIN 02.jpg";
-// import headerImg3 from "../images/headerImages/STUDIO 001.jpg";
-// import headerImg4 from "../images/headerImages/DELUXE 004.jpg";
-// import headerImg5 from "../images/headerImages/DELUXE 001.jpg";
-// import headerImg6 from "../images/headerImages/STUDIO 006.jpg";
-// import headerImg7 from "../images/headerImages/SUPERIOR 001.jpg";
-// import headerImg8 from "../images/headerImages/SUPERIOR 03.jpg";
 import headerImg9 from "../images/headerImages/SUPERIOR 004.jpg";
-// import headerImg10 from "../images/headerImages/DeLuxe 2.JPG";
-import headerImg11 from "../images/headerImages/Deluxe 8.jpg";
 import headerImg12 from "../images/headerImages/Superior 11.jpg";
 
 const Header = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
+
   return (
     <Wrapper>
       <div className="headerContainer">
@@ -41,10 +38,14 @@ const Header = () => {
         >
           <img src={headerImg1} alt="" />
           <img src={headerImg9} alt="" />
-          {/* <img src={headerImg11} alt="" /> */}
           <img src={headerImg12} alt="" />
         </Carousel>
-        <div className="headerTitle">
+        <div
+          data-aos="zoom-in-down"
+          data-aos-delay="600"
+          data-aos-duration="2000"
+          className="headerTitle"
+        >
           <h3>witaj w</h3>
           <h1>Hotel Miodowa</h1>
           <div className="stars">
@@ -103,23 +104,24 @@ const Wrapper = styled.div`
   }
   .headerTitle {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 0%);
+    top: 60%;
+    left: 10%;
+    margin: 0 auto;
+    /* transform: translate(-50%, 0%); */
     height: 35%;
-    width: 70%;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: left;
+    align-items: flex-start;
     text-transform: uppercase;
-    font-size: 2rem;
-    font-family: "Cormorant Unicase", serif;
+    font-size: 1.8rem;
+    font-family: "Merriweather", serif;
     letter-spacing: 2px;
     color: #eee;
     font-weight: 700;
     h1 {
-      margin: 5vh 0 10vh;
+      margin: 3vh 0 5vh;
       font-weight: 700;
     }
   }
@@ -132,7 +134,7 @@ const Wrapper = styled.div`
       font-size: 4rem;
       opacity: 0;
       animation: showStars 2s infinite alternate;
-      color: var(--secondaryColor);
+      color: var(--secondaryColor2);
       @keyframes showStars {
         40% {
           opacity: 1;
