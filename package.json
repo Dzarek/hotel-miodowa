@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@brainhubeu/react-carousel": "^1.19.26",
     "@testing-library/jest-dom": "^5.16.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -16,6 +17,7 @@
     "react-scroll": "^1.8.4",
     "simple-react-lightbox": "^3.6.9-0",
     "styled-components": "^5.3.3",
+    "react-router-scroll-to-top": "^1.1.2",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
