@@ -3,10 +3,11 @@ import styled from "styled-components";
 import { Link } from "react-scroll";
 import { animateScroll as scroll } from "react-scroll";
 
+import BookingRoom from "./BookingRoom";
+
 import { IoLanguageSharp } from "react-icons/io5";
 import { FaConciergeBell } from "react-icons/fa";
 import { TiArrowSortedDown } from "react-icons/ti";
-
 import logoMiodowa from "../images/logo-Miodowa.png";
 
 const Navbar = () => {
@@ -30,15 +31,18 @@ const Navbar = () => {
         >
           <img className="logo" src={logoMiodowa} alt="logo" />
         </div>
+        {/* {!showBooking && ( */}
         <button
           onClick={() => {
             setShowBooking(true);
           }}
           className="bookBtn"
+          style={!showBooking ? { opacity: 1 } : { opacity: 0 }}
         >
-          <FaConciergeBell />
+          <FaConciergeBell className="bell" />
           <h3>Rezerwacja</h3>{" "}
         </button>
+        {/* // )} */}
         <div className="navbar-links">
           <Link
             to="/"
@@ -109,17 +113,7 @@ const Navbar = () => {
           </h5>
         </div>
       </div>
-
-      <div className={showBooking ? "bookRoom showBookRoom" : "bookRoom"}>
-        <h3>Rezerwacja</h3>
-        <button
-          onClick={() => {
-            setShowBooking(false);
-          }}
-        >
-          zamknij
-        </button>
-      </div>
+      <BookingRoom showBooking={showBooking} setShowBooking={setShowBooking} />
     </Wrapper>
   );
 };
@@ -198,6 +192,7 @@ const Wrapper = styled.div`
     padding: 10px 10px;
     width: 12vw;
     background: var(--bookBtnColor);
+    /* background: var(--secondaryColor2); */
     color: white;
     border: none;
     border-radius: 5px;
@@ -209,23 +204,15 @@ const Wrapper = styled.div`
     :hover {
       background: #ddd;
       color: var(--bookBtnColor);
+      .bell {
+        animation: bellRing 1s infinite alternate;
+        @keyframes bellRing {
+          100% {
+            transform: scale(1.4);
+          }
+        }
+      }
     }
-  }
-  .bookRoom {
-    width: 30vw;
-    height: 50vh;
-    background: rgba(0, 0, 0, 0.8);
-    border-radius: 5px 0 0 5px;
-    color: #111;
-    transition: 0.4s;
-    transform: translateX(100%);
-    position: fixed;
-    top: 25%;
-    right: 0;
-  }
-  .showBookRoom {
-    transform: translateX(0%);
-    transition: 0.4s;
   }
 `;
 

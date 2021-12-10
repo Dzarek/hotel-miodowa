@@ -86,7 +86,7 @@ const Wrapper = styled.div`
       position: absolute;
       font-size: 2rem;
       cursor: pointer;
-      z-index: 10;
+      z-index: 10000;
       color: var(--primaryColor);
       transition: 0.3s;
       :hover {
@@ -109,7 +109,7 @@ const Wrapper = styled.div`
     margin: 0 auto;
     /* transform: translate(-50%, 0%); */
     height: 35%;
-    width: 100%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -120,6 +120,7 @@ const Wrapper = styled.div`
     letter-spacing: 2px;
     color: #eee;
     font-weight: 700;
+    /* user-select: none; */
     h1 {
       margin: 3vh 0 5vh;
       font-weight: 700;
