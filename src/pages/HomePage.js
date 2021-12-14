@@ -32,6 +32,7 @@ const HomePage = () => {
           <img src={kuchnia} alt="" />
         </div>
       </div>
+      <div className="mainSection serviceShort"></div>
     </Wrapper>
   );
 };
