@@ -23,8 +23,48 @@ html {
   --secondaryColor2: rgb(185, 130, 93);
   --secondaryColor: rgb(133, 88, 55);
   --bookBtnColor: rgb(95, 72, 56);
-  background: #eee;
+  --appBgColor: rgb(10, 10, 10);
+  background-color: var(--appBgColor);
   color: var(--primaryColor);
   width: 100vw;
-  min-height: 200vh;
+  /* min-height: 200vh; */
+  /* padding-bottom: 10vh; */
+
+}
+
+.headerBGOneImage {
+  background: url("./images/headerImages/Superior\ 11.jpg");
+  /* background: red; */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  top: 0;
+  left: 0;
+  filter: brightness(0.5);
+  object-fit: cover;
+  animation: zoom 20s ease infinite;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2) translateX(-5%);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.mainSection {
+  position: relative;
+  height: 100vh;
+  width: 80vw;
+  max-width: 1360px;
+  margin: 10vh auto;
 }
