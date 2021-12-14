@@ -24,6 +24,12 @@ html {
   --secondaryColor: rgb(133, 88, 55);
   --bookBtnColor: rgb(95, 72, 56);
   --appBgColor: rgb(10, 10, 10);
+  --buttonFont: "Signika Negative", sans-serif;
+  --textFont: "Comfortaa", sans-serif;
+  --titleFont: "Merriweather", sans-serif;
+
+
+
   background-color: var(--appBgColor);
   color: var(--primaryColor);
   width: 100vw;
@@ -66,5 +72,13 @@ html {
   height: 100vh;
   width: 80vw;
   max-width: 1360px;
-  margin: 10vh auto;
+  margin: 10vh auto 0;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: "Merriweather", sans-serif;
+  text-align: center;
+  color: var(--secondaryColor2);
 }
