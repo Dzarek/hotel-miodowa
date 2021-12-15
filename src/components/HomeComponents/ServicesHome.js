@@ -109,9 +109,12 @@ const Wrapper = styled.div`
     /* justify-content: space-between; */
     width: 90vw;
     align-items: center;
+    background: rgb(15, 15, 15);
+    /* box-shadow: 0 0 10px 0px white; */
+    /* margin: 5vh 0; */
     .titleContainer {
-      margin-bottom: 10vh;
-      /* margin-top: -5vh; */
+      margin-bottom: 5vh;
+      margin-top: 5vh;
     }
     .services {
       display: flex;

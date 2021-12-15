@@ -24,6 +24,7 @@ html {
   --secondaryColor: rgb(133, 88, 55);
   --bookBtnColor: rgb(95, 72, 56);
   --favoriteRoomColor: rgb(44, 26, 18);
+  --footerBgColor: rgb(20, 20, 20);
   --appBgColor: rgb(10, 10, 10);
   /* --appBgColor: rgb(12, 12, 12); */
   --buttonFont: "Signika Negative", sans-serif;
@@ -98,4 +99,12 @@ html {
   width: 150px;
   height: 2px;
   background: var(--primaryColor);
+}
+
+.footer {
+  background: url("./images/homeImages/footerBg.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center 85%;
+  filter: sepia(1) brightness(0.1);
 }

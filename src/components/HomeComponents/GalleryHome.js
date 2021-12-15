@@ -118,6 +118,8 @@ const Wrapper = styled.div`
     img {
       width: 90%;
       height: 50vh;
+      border: 3px solid var(--secondaryColor);
+      border-radius: 5px;
     }
   }
   .picturesFlex {
@@ -151,7 +153,7 @@ const Wrapper = styled.div`
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
-    font-weight: 400;
+    font-weight: 600;
     font-family: "Signika Negative", sans-serif;
     transition: 0.5s;
     :hover {
