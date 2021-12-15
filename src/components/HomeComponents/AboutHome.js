@@ -3,10 +3,10 @@ import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
-import lazienka from "../../images/homeAbout/DELUXE 011.jpg";
-import salon from "../../images/homeAbout/SUPERIOR 06.jpg";
-import kuchnia from "../../images/homeAbout/SUPERIOR 010.jpg";
-import lozko from "../../images/homeAbout/SUPERIOR 015.jpg";
+import lazienka from "../../images/homeImages/DELUXE 011.jpg";
+import salon from "../../images/homeImages/SUPERIOR 06.jpg";
+import kuchnia from "../../images/homeImages/SUPERIOR 010.jpg";
+import lozko from "../../images/homeImages/SUPERIOR 015.jpg";
 
 const AboutHome = () => {
   useEffect(() => {

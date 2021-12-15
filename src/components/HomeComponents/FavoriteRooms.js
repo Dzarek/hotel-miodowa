@@ -13,10 +13,10 @@ import { RiRuler2Line } from "react-icons/ri";
 import { MdSingleBed, MdKitchen } from "react-icons/md";
 import { FaCouch, FaBath } from "react-icons/fa";
 
-import room1 from "../../images/headerImages/Deluxe 8.jpg";
-import room2 from "../../images/headerImages/STUDIO 002.jpg";
-import room3 from "../../images/headerImages/Superior 11.jpg";
-import room4 from "../../images/headerImages/TWIM PREMIUM 005.jpg";
+import room1 from "../../images/homeImages/Deluxe 8.jpg";
+import room2 from "../../images/homeImages/STUDIO 002.jpg";
+import room3 from "../../images/homeImages/Superior 11.jpg";
+import room4 from "../../images/homeImages/TWIM PREMIUM 005.jpg";
 
 const FavoriteRooms = () => {
   return (
@@ -200,7 +200,7 @@ const Wrapper = styled.div`
       .oneFavoriteRoom {
         width: 80%;
         height: 50vh;
-        border: 2px solid #ddd;
+        border: 1px solid #ddd;
         border-radius: 5px;
         position: relative;
         overflow: hidden;

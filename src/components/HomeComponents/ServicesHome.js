@@ -13,14 +13,14 @@ import {
   FaWifi,
 } from "react-icons/fa";
 
-import restauracjaImg from "../../images/homeServices/RESTAURACJA 004.jpg";
-import budynekImg from "../../images/homeServices/Budynek.jpg";
-import recepcjaImg from "../../images/homeServices/RECEPCJA 005.jpg";
-import transferImg from "../../images/homeServices/airportTransfer.jpg";
-import wifiImg from "../../images/homeServices/wifi.jpg";
-import wycieczkiImg from "../../images/homeServices/wycieczki.jpg";
-import parkingImg from "../../images/homeServices/parking.jpg";
-import serviceImg from "../../images/homeServices/serwis.jpg";
+import restauracjaImg from "../../images/homeImages/RESTAURACJA 004.jpg";
+import budynekImg from "../../images/homeImages/Budynek.jpg";
+import recepcjaImg from "../../images/homeImages/RECEPCJA 005.jpg";
+import transferImg from "../../images/homeImages/airportTransfer.jpg";
+import wifiImg from "../../images/homeImages/wifi.jpg";
+import wycieczkiImg from "../../images/homeImages/wycieczki.jpg";
+import parkingImg from "../../images/homeImages/parking.jpg";
+import serviceImg from "../../images/homeImages/serwis.jpg";
 
 const ServicesHome = () => {
   useEffect(() => {
