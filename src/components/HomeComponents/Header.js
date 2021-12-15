@@ -23,7 +23,7 @@ const Header = () => {
   return (
     <Wrapper>
       <div className="headerContainer">
-        {/* <Carousel
+        <Carousel
           className="headerImages"
           infinite
           autoPlay={7000}
@@ -39,8 +39,8 @@ const Header = () => {
           <img src={headerImg1} alt="" />
           <img src={headerImg9} alt="" />
           <img src={headerImg12} alt="" />
-        </Carousel> */}
-        <div className="headerBGOneImage"></div>
+        </Carousel>
+        {/* <div className="headerBGOneImage"></div> */}
         <div
           data-aos="zoom-in-down"
           data-aos-delay="600"

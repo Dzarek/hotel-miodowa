@@ -1,19 +1,39 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
-import { GiMeal } from "react-icons/gi";
-import { FaMapMarkerAlt, FaConciergeBell } from "react-icons/fa";
+import { GiMeal, GiVacuumCleaner } from "react-icons/gi";
+import { IoFootsteps } from "react-icons/io5";
+import {
+  FaMapMarkerAlt,
+  FaConciergeBell,
+  FaShuttleVan,
+  FaParking,
+  FaWifi,
+} from "react-icons/fa";
 
 import restauracjaImg from "../../images/homeServices/RESTAURACJA 004.jpg";
 import budynekImg from "../../images/homeServices/Budynek.jpg";
 import recepcjaImg from "../../images/homeServices/RECEPCJA 005.jpg";
+import transferImg from "../../images/homeServices/airportTransfer.jpg";
+import wifiImg from "../../images/homeServices/wifi.jpg";
+import wycieczkiImg from "../../images/homeServices/wycieczki.jpg";
+import parkingImg from "../../images/homeServices/parking.jpg";
+import serviceImg from "../../images/homeServices/serwis.jpg";
 
 const ServicesHome = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <Wrapper>
       <div className="mainSection servicesHome">
-        <h2 className="title">Nasza Oferta</h2>
-        <div className="services">
+        <div className="titleContainer">
+          <h2 className="title">Nasza Oferta</h2>
+          <span className="titleBorder"></span>
+        </div>
+        <div data-aos="zoom-in" className="services">
           <span className="oneService">
             <GiMeal className="icon" />
             <h4>Śniadania</h4>
@@ -38,39 +58,43 @@ const ServicesHome = () => {
             <img src={recepcjaImg} alt="" />
           </span>
           <span className="oneService">
-            <GiMeal className="icon" />
+            <FaShuttleVan className="icon" />
             <h4>Transfery Lotniskowe</h4>
             <p>
-              Śniadania dla każdego gościa serwowane w godzinach 7:30-10:00.
+              Transport z Portu Lotniczego Kraków-Balice wprost do naszego
+              obiektu.
             </p>
+            <img src={transferImg} alt="" />
           </span>
           <span className="oneService">
-            <GiMeal className="icon" />
+            <IoFootsteps className="icon" />
             <h4>Wycieczki</h4>
             <p>
-              Śniadania dla każdego gościa serwowane w godzinach 7:30-10:00.
+              Organizujemy wycieczki do takich miejsc jak Auschwitz Birkenau,
+              Kopalnia Soli w Wieliczce czy Zakopane.
             </p>
+            <img src={wycieczkiImg} alt="" />
           </span>
           <span className="oneService">
-            <GiMeal className="icon" />
+            <FaParking className="icon" />
             <h4>Parking</h4>
             <p>
-              Śniadania dla każdego gościa serwowane w godzinach 7:30-10:00.
+              Hotel posiada kilka miejsc parkingowych dla osób podróżujących
+              samochodem.
             </p>
+            <img src={parkingImg} alt="" />
           </span>
           <span className="oneService">
-            <GiMeal className="icon" />
+            <FaWifi className="icon" />
             <h4>Wi-Fi</h4>
-            <p>
-              Śniadania dla każdego gościa serwowane w godzinach 7:30-10:00.
-            </p>
+            <p>Do dyspozycji gości sieć Wi-Fi w całym budynku hotelu.</p>
+            <img src={wifiImg} alt="" />
           </span>
           <span className="oneService">
-            <GiMeal className="icon" />
+            <GiVacuumCleaner className="icon" />
             <h4>Serwis</h4>
-            <p>
-              Śniadania dla każdego gościa serwowane w godzinach 7:30-10:00.
-            </p>
+            <p>Obsługa hotelu zapewnia codzienny serwis pokoi.</p>
+            <img src={serviceImg} alt="" />
           </span>
         </div>
       </div>
@@ -85,7 +109,7 @@ const Wrapper = styled.div`
     /* justify-content: space-between; */
     width: 90vw;
     align-items: center;
-    .title {
+    .titleContainer {
       margin-bottom: 10vh;
       /* margin-top: -5vh; */
     }

@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 import lazienka from "../../images/homeAbout/DELUXE 011.jpg";
 import salon from "../../images/homeAbout/SUPERIOR 06.jpg";
@@ -7,6 +9,9 @@ import kuchnia from "../../images/homeAbout/SUPERIOR 010.jpg";
 import lozko from "../../images/homeAbout/SUPERIOR 015.jpg";
 
 const AboutHome = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <Wrapper>
       <div className="mainSection aboutShort">
@@ -23,7 +28,7 @@ const AboutHome = () => {
           <a href="#">Czytaj więcej</a>
         </div>
 
-        <div className="aboutShortImages">
+        <div data-aos="zoom-out" className="aboutShortImages">
           <img src={lozko} alt="" />
           <img src={lazienka} alt="" />
           <img src={salon} alt="" />
@@ -55,7 +60,7 @@ const Wrapper = styled.div`
       p {
         font-family: "Comfortaa", sans-serif;
         font-size: 1.1rem;
-        margin: 5vh auto;
+        margin: 10vh auto 5vh;
         text-align: center;
         line-height: 1.7;
       }

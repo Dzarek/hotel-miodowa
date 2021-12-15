@@ -139,6 +139,8 @@ const Wrapper = styled.div`
     align-items: center;
     z-index: 9999;
     background: rgba(0, 0, 0, 0.85);
+    /* background: var(--navbarBgColor); */
+    border-bottom: 2px solid var(--bookBtnColor);
     /* background: #111; */
     .logo-container {
       height: 22vh;

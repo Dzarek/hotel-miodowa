@@ -145,7 +145,7 @@ const Wrapper = styled.div`
   .bookRoom {
     width: 28vw;
     height: 60vh;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.9);
     border-radius: 5px 0 0 5px;
     color: #111;
     transition: 0.4s;
