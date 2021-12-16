@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { ImCross } from "react-icons/im";
 
@@ -11,10 +11,10 @@ const containerStyles = {
 const today = new Date();
 let tomorrow = new Date();
 tomorrow.setDate(today.getDate() + 1);
-let minDate2 = tomorrow.toISOString().slice(0, 10);
-let minDate = new Date().toISOString().slice(0, 10);
-let maxDate = minDate.slice(0, 4) * 1 + 1;
-maxDate = maxDate + "-12-31";
+// let minDate2 = tomorrow.toISOString().slice(0, 10);
+// let minDate = new Date().toISOString().slice(0, 10);
+// let maxDate = minDate.slice(0, 4) * 1 + 1;
+// maxDate = maxDate + "-12-31";
 // console.log(minDate);
 // let datesNow =
 //   today.getDate() +
