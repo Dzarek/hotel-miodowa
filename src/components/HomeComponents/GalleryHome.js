@@ -87,7 +87,7 @@ const GalleryHome = () => {
             })}
           </div>
         </div>
-        <a href="#">Zobacz całą galerie</a>
+        <a href="https://jarek-portfolio.netlify.app/">Zobacz całą galerie</a>
       </div>
     </Wrapper>
   );

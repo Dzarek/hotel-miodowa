@@ -25,7 +25,7 @@ const AboutHome = () => {
             łazienka sprawią, że będziecie mogli poczuć się tutaj jak we własnym
             domu.
           </p>
-          <a href="#">Czytaj więcej</a>
+          <a href="https://jarek-portfolio.netlify.app/">Czytaj więcej</a>
         </div>
 
         <div data-aos="zoom-out" className="aboutShortImages">
