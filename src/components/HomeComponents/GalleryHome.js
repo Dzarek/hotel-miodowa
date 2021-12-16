@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { SRLWrapper } from "simple-react-lightbox";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
@@ -43,6 +45,9 @@ const pictures = [
 ];
 
 const GalleryHome = () => {
+  useEffect(() => {
+    Aos.init({ duration: 1000 });
+  }, []);
   return (
     <Wrapper>
       <div className="mainSection GalleryHome">
@@ -72,7 +77,11 @@ const GalleryHome = () => {
               })}
             </Carousel>
           </SRLWrapper>
-          <div className="picturesFlex">
+          <div
+            data-aos="zoom-out"
+            data-aos-duration="1500"
+            className="picturesFlex"
+          >
             {pictures.map((item, index) => {
               return <img key={index} src={item} alt="" />;
             })}
@@ -96,7 +105,7 @@ const Wrapper = styled.div`
     /* position: relative; */
 
     .titleContainer {
-      margin-bottom: 15vh;
+      /* margin-bottom: 15vh; */
       z-index: 1;
     }
   }
@@ -123,16 +132,16 @@ const Wrapper = styled.div`
     }
   }
   .picturesFlex {
-    position: absolute;
+    /* position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); */
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    opacity: 0.2;
+    filter: opacity(0.3);
     img {
       width: 13vw;
       height: 10vw;
@@ -141,7 +150,7 @@ const Wrapper = styled.div`
     }
   }
   a {
-    margin-top: 15vh;
+    /* margin-top: -10vh; */
     z-index: 1;
     padding: 10px;
     background: transparent;

@@ -59,7 +59,7 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
     checkInDate.setDate(dates[0].getDate() + 0);
     checkInDate = checkInDate.toISOString().slice(0, 10);
     // checkInDate = dates[0].toISOString().slice(0, 10);
-    console.log(checkInDate);
+    // console.log(checkInDate);
     checkOutDate = dates[1].toISOString().slice(0, 10);
   }
   // console.log(checkInDate, checkOutDate);

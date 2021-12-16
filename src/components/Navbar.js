@@ -5,6 +5,7 @@ import { animateScroll as scroll } from "react-scroll";
 
 import BookingRoom from "./BookingRoom";
 
+import { BsFillArrowUpSquareFill } from "react-icons/bs";
 import { IoLanguageSharp } from "react-icons/io5";
 import { FaConciergeBell } from "react-icons/fa";
 import { TiArrowSortedDown } from "react-icons/ti";
@@ -19,7 +20,8 @@ const Navbar = () => {
       setOffset(window.pageYOffset);
     };
   }, []);
-
+  // console.log(window.document.body.offsetHeight - window.innerHeight);
+  const pageHeight = window.document.body.offsetHeight - window.innerHeight;
   return (
     <Wrapper>
       <div className={offset === 0 ? "navbar" : "navbar navbarBg"}>
@@ -27,7 +29,11 @@ const Navbar = () => {
           onClick={() => {
             scroll.scrollToTop();
           }}
-          className="logo-container"
+          className={
+            offset !== pageHeight
+              ? "logo-container"
+              : "logo-container displayNONE"
+          }
         >
           <img className="logo" src={logoMiodowa} alt="logo" />
         </div>
@@ -114,6 +120,14 @@ const Navbar = () => {
         </div>
       </div>
       <BookingRoom showBooking={showBooking} setShowBooking={setShowBooking} />
+      <button
+        className={offset > 200 ? "upBtn" : "upBtn upBtnNone"}
+        onClick={() => {
+          scroll.scrollToTop();
+        }}
+      >
+        <BsFillArrowUpSquareFill />
+      </button>
     </Wrapper>
   );
 };
@@ -151,10 +165,13 @@ const Wrapper = styled.div`
       align-items: center;
       border-radius: 0 0 5px 5px;
       cursor: pointer;
-
+      transition: 0.5s;
       .logo {
         width: 130px;
       }
+    }
+    .displayNONE {
+      transform: translateY(-100%);
     }
     .navbar-links {
       display: flex;
@@ -215,6 +232,23 @@ const Wrapper = styled.div`
         }
       }
     }
+  }
+  .upBtn {
+    position: fixed;
+    bottom: 7vh;
+    right: 3vw;
+    font-size: 2rem;
+    background: transparent;
+    border: none;
+    color: var(--primaryColor);
+    transition: 0.5s;
+    cursor: pointer;
+    :hover {
+      color: var(--secondaryColor2);
+    }
+  }
+  .upBtnNone {
+    opacity: 0;
   }
 `;
 

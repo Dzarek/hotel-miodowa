@@ -102,9 +102,20 @@ html {
 }
 
 .footer {
+  position: relative;
+}
+
+.footerBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
   background: url("./images/homeImages/footerBg.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center 85%;
   filter: sepia(1) brightness(0.1);
+  /* filter: grayscale(1) brightness(.5); */
+  z-index: 0;
 }
