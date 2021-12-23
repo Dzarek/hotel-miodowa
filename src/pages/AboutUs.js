@@ -2,9 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
-import hotelImg from "../images/homeImages/hotelImgAbout.jpg";
-import krakowImg from "../images/homeImages/krakow.jpg";
-
 const AboutUs = () => {
   return (
     <Wrapper className="main-page">
