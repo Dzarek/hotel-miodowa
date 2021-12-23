@@ -43,7 +43,7 @@ const Header = () => {
         {/* <div className="headerBGOneImage"></div> */}
         <div
           data-aos="zoom-in-down"
-          data-aos-delay="600"
+          // data-aos-delay="600"
           data-aos-duration="2000"
           className="headerTitle"
         >

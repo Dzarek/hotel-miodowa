@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link } from "react-scroll";
+// import { Link } from "react-scroll";
+import { NavLink } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 
 import BookingRoom from "./BookingRoom";
@@ -71,78 +72,36 @@ const Navbar = () => {
         </button>
         {/* // )} */}
         <div className="navbar-links">
-          <Link
-            to="/"
-            smooth={true}
-            duration={1000}
-            activeClass="active"
-            spy={true}
-            offset={-100}
-          >
+          <NavLink to="/" activeClassName="active">
             <p>strona główna</p>
-          </Link>
-          <Link
-            to="gallery"
-            smooth={true}
-            duration={1000}
-            activeClass="active"
-            spy={true}
-            offset={-100}
-          >
+          </NavLink>
+          <NavLink to="pokoje" activeClassName="active">
             <p onMouseOver={displaySubmenu} className="link-btn">
               pokoje
             </p>
             <TiArrowSortedDown />
-          </Link>
-          <Link
-            to="gallery"
-            smooth={true}
-            duration={1000}
-            activeClass="active"
-            spy={true}
-            offset={-100}
-          >
+          </NavLink>
+          <NavLink to="oNas" activeClassName="active">
             <p onMouseOver={displaySubmenu} className="link-btn">
               o nas
             </p>
             <TiArrowSortedDown />
-          </Link>
-          <Link
-            to="gallery"
-            smooth={true}
-            duration={1000}
-            activeClass="active"
-            spy={true}
-            offset={-100}
-          >
+          </NavLink>
+          <NavLink to="/galeria" activeClassName="active">
             galeria
-          </Link>
-          <Link
-            to="gallery"
-            smooth={true}
-            duration={1000}
-            activeClass="active"
-            spy={true}
-            offset={-100}
-          >
+          </NavLink>
+          <NavLink to="uslugi" activeClassName="active">
             <p onMouseOver={displaySubmenu} className="link-btn">
               usługi
             </p>
             <TiArrowSortedDown />
-          </Link>
-          <Link
-            to="gallery"
-            smooth={true}
-            duration={1000}
-            activeClass="active"
-            spy={true}
-            offset={-100}
-          >
+          </NavLink>
+          <NavLink to="kontakt" activeClassName="active">
             <p onMouseOver={displaySubmenu} className="link-btn">
               kontakt
             </p>
             <TiArrowSortedDown />
-          </Link>
+          </NavLink>
           <h5 className="iconLanguage">
             <IoLanguageSharp />
           </h5>
@@ -210,6 +169,8 @@ const Wrapper = styled.div`
       height: 100%;
       h5,
       a {
+        color: var(--primaryColor);
+        text-decoration: none;
         height: 100%;
         font-weight: 600;
         font-size: 1.1rem;

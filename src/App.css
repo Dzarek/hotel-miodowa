@@ -73,10 +73,19 @@ html {
 
 .mainSection {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   width: 80vw;
   max-width: 1360px;
   margin: 5vh auto 0;
+}
+
+.main-page {
+  position: relative;
+  min-height: 100vh;
+  width: 90vw;
+  max-width: 1360px;
+  padding-top: 13vh;
+  margin: 0 auto;
 }
 
 .title {
