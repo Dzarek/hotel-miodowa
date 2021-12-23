@@ -4,11 +4,14 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import SimpleReactLightbox from "simple-react-lightbox";
+import { AppProvider } from "./context";
 
 ReactDOM.render(
   <React.StrictMode>
     <SimpleReactLightbox>
-      <App />
+      <AppProvider>
+        <App />
+      </AppProvider>
     </SimpleReactLightbox>
   </React.StrictMode>,
   document.getElementById("root")

@@ -11,7 +11,22 @@ import { FaConciergeBell } from "react-icons/fa";
 import { TiArrowSortedDown } from "react-icons/ti";
 import logoMiodowa from "../images/logo-Miodowa.png";
 
+import { useGlobalContext } from "../context";
+
 const Navbar = () => {
+  const { openSubmenu, closeSubmenu } = useGlobalContext();
+  const displaySubmenu = (e) => {
+    const page = e.target.textContent;
+    const tempBtn = e.target.getBoundingClientRect();
+    const center = (tempBtn.left + tempBtn.right) / 2;
+    const bottom = tempBtn.bottom;
+    openSubmenu(page, { center, bottom });
+  };
+  const handleSubmenu = (e) => {
+    if (!e.target.classList.contains("link-btn")) {
+      closeSubmenu();
+    }
+  };
   const [offset, setOffset] = useState(0);
   const [showBooking, setShowBooking] = useState(false);
 
@@ -20,11 +35,17 @@ const Navbar = () => {
       setOffset(window.pageYOffset);
     };
   }, []);
-  // console.log(window.document.body.offsetHeight - window.innerHeight);
+  useEffect(() => {
+    closeSubmenu();
+    // eslint-disable-next-line
+  }, [offset]);
   const pageHeight = window.document.body.offsetHeight - window.innerHeight;
   return (
     <Wrapper>
-      <div className={offset === 0 ? "navbar" : "navbar navbarBg"}>
+      <div
+        className={offset === 0 ? "navbar" : "navbar navbarBg"}
+        onMouseOver={handleSubmenu}
+      >
         <div
           onClick={() => {
             scroll.scrollToTop();
@@ -58,7 +79,7 @@ const Navbar = () => {
             spy={true}
             offset={-100}
           >
-            Strona Główna
+            <p>strona główna</p>
           </Link>
           <Link
             to="gallery"
@@ -68,7 +89,9 @@ const Navbar = () => {
             spy={true}
             offset={-100}
           >
-            Pokoje
+            <p onMouseOver={displaySubmenu} className="link-btn">
+              pokoje
+            </p>
             <TiArrowSortedDown />
           </Link>
           <Link
@@ -79,7 +102,9 @@ const Navbar = () => {
             spy={true}
             offset={-100}
           >
-            O nas
+            <p onMouseOver={displaySubmenu} className="link-btn">
+              o nas
+            </p>
             <TiArrowSortedDown />
           </Link>
           <Link
@@ -90,7 +115,7 @@ const Navbar = () => {
             spy={true}
             offset={-100}
           >
-            Galeria
+            galeria
           </Link>
           <Link
             to="gallery"
@@ -100,7 +125,9 @@ const Navbar = () => {
             spy={true}
             offset={-100}
           >
-            Usługi
+            <p onMouseOver={displaySubmenu} className="link-btn">
+              usługi
+            </p>
             <TiArrowSortedDown />
           </Link>
           <Link
@@ -111,7 +138,9 @@ const Navbar = () => {
             spy={true}
             offset={-100}
           >
-            Kontakt
+            <p onMouseOver={displaySubmenu} className="link-btn">
+              kontakt
+            </p>
             <TiArrowSortedDown />
           </Link>
           <h5 className="iconLanguage">
@@ -139,6 +168,7 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 9999;
+
   .navbar {
     margin: 0 auto;
     position: fixed;
@@ -177,17 +207,28 @@ const Wrapper = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      height: 100%;
       h5,
       a {
+        height: 100%;
         font-weight: 600;
         font-size: 1.1rem;
         font-family: "Signika Negative", sans-serif;
-        margin: 0 1.2vw;
+        /* margin: 0 1.2vw; */
+        padding: 0 1.2vw;
         text-transform: uppercase;
         transition: 0.4s;
         cursor: pointer;
         display: flex;
         align-items: center;
+        justify-content: center;
+        p {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 3px;
+        }
         &.active {
           color: var(--secondaryColor);
         }

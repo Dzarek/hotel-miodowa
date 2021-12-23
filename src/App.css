@@ -119,3 +119,66 @@ html {
   /* filter: grayscale(1) brightness(.5); */
   z-index: 0;
 }
+
+
+.submenu {
+  background: rgba(0, 0, 0, 0.85);
+  border: var(--bookBtnColor) 2px solid;
+  border-top: none;
+  border-radius: 0 0 10px 10px;
+  position: fixed;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  padding: 1rem 2rem;
+  transition: 0.5s;
+  display: none;
+}
+
+.submenu::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.submenu.show {
+  display: block;
+  z-index: 999999;
+}
+
+.submenu-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+
+}
+
+
+.submenu-center a {
+  color: var(--primaryColor);
+  text-decoration: none;
+  font-family: var(--buttonFont);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 2vh 0;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.submenu-center a:hover {
+  color: var(--bookBtnColor);
+}
+
+.submenu-center svg {
+  color: var(--bookBtnColor);
+  margin-right: 10px;
+  font-size: 1rem;
+}
