@@ -7,7 +7,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import GalleryPage from "./pages/GalleryPage";
 import AboutUs from "./pages/AboutUs";
-
+import AboutCracow from "./pages/AboutCracow";
 import Submenu from "./Submenu";
 
 function App() {
@@ -21,6 +21,7 @@ function App() {
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/galeria" element={<GalleryPage />}></Route>
           <Route path="/oNas" element={<AboutUs />}></Route>
+          <Route path="/oNas/oKrakowie" element={<AboutCracow />}></Route>
         </Routes>
         <Footer />
       </Router>

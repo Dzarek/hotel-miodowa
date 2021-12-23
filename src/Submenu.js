@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { useGlobalContext } from "./context";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 const Submenu = () => {
   const {
@@ -26,10 +27,10 @@ const Submenu = () => {
           {links.map((link, index) => {
             const { url, icon, label } = link;
             return (
-              <a key={index} href={url}>
+              <NavLink key={index} to={url}>
                 {icon}
                 {label}
-              </a>
+              </NavLink>
             );
           })}
         </div>
