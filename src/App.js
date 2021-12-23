@@ -6,6 +6,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import GalleryPage from "./pages/GalleryPage";
+import AboutUs from "./pages/AboutUs";
 
 import Submenu from "./Submenu";
 
@@ -19,6 +20,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/galeria" element={<GalleryPage />}></Route>
+          <Route path="/oNas" element={<AboutUs />}></Route>
         </Routes>
         <Footer />
       </Router>

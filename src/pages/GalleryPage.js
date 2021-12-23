@@ -31,7 +31,7 @@ const GalleryPage = () => {
     setActiveBtn(category);
   };
   return (
-    <Wrapper id="gallery" className="main-page">
+    <Wrapper className="main-page">
       <div className="title">
         <h1>Galeria</h1>
       </div>

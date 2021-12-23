@@ -191,7 +191,7 @@ const Wrapper = styled.div`
           margin-right: 3px;
         }
         &.active {
-          color: var(--secondaryColor);
+          color: var(--secondaryColor2);
         }
         :hover {
           color: var(--secondaryColor);

@@ -183,11 +183,21 @@ html {
 }
 
 .submenu-center a:hover {
-  color: var(--bookBtnColor);
+  color: var(--secondaryColor2);
 }
 
 .submenu-center svg {
   color: var(--bookBtnColor);
   margin-right: 10px;
   font-size: 1rem;
+}
+
+.hotelAbout {
+  background-image: url(./images/homeImages/hotelImgAbout.jpg);
+  background-size: cover;
+}
+
+.cracowAbout {
+  background-image: url(./images/homeImages/krakow.jpg);
+  background-size: cover;
 }
