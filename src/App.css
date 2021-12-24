@@ -219,12 +219,6 @@ html {
   /* filter: brightness(0.7) */
 }
 
-/* .hotelInNumbers {
-  background-image: url(./images/recepcja&bar/BAR\ 002.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-} */
 
 .backgroundDark {
   height: 100%;
@@ -240,4 +234,11 @@ html {
   background-position: center;
   background-attachment: fixed;
   filter: saturate(0) brightness(0.6);
+}
+
+.airportTransferHeader {
+  background-image: url(./images/inne/airportTransfer.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
