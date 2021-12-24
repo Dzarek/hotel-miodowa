@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { NavLink } from "react-router-dom";
 
 import lazienka from "../../images/homeImages/DELUXE 011.jpg";
 import salon from "../../images/homeImages/SUPERIOR 06.jpg";
@@ -25,7 +26,7 @@ const AboutHome = () => {
             łazienka sprawią, że będziecie mogli poczuć się tutaj jak we własnym
             domu.
           </p>
-          <a href="https://jarek-portfolio.netlify.app/">Czytaj więcej</a>
+          <NavLink to="/oNas/oHotelu">Czytaj więcej</NavLink>
         </div>
 
         <div data-aos="zoom-out" className="aboutShortImages">

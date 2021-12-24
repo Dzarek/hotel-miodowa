@@ -211,3 +211,33 @@ html {
   background-position: center 20%;
   filter: brightness(0.7)
 }
+
+.hotelAboutHeader {
+  background-image: url(./images/homeImages/hotelImgAbout.jpg);
+  background-size: cover;
+  background-position: center;
+  /* filter: brightness(0.7) */
+}
+
+/* .hotelInNumbers {
+  background-image: url(./images/recepcja&bar/BAR\ 002.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+} */
+
+.backgroundDark {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.backgroundhotelInNumbers {
+  height: 100%;
+  width: 100%;
+  background-image: url(./images/recepcja&bar/BAR\ 002.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: saturate(0) brightness(0.6);
+}

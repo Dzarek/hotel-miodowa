@@ -64,7 +64,7 @@ const Wrapper = styled.div`
     }
     a {
       position: relative;
-      filter: brightness(0.3) blur(1px);
+      filter: brightness(0.5) blur(1px);
       transition: 0.5s;
       cursor: pointer;
       display: flex;

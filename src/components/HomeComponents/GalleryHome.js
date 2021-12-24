@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -87,7 +88,7 @@ const GalleryHome = () => {
             })}
           </div>
         </div>
-        <a href="https://jarek-portfolio.netlify.app/">Zobacz całą galerie</a>
+        <NavLink to="/galeria">Zobacz całą galerie</NavLink>
       </div>
     </Wrapper>
   );

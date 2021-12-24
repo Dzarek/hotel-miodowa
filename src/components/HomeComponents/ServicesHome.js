@@ -135,7 +135,7 @@ const Wrapper = styled.div`
         border: 1px solid #888;
         border-radius: 5px;
         margin: 15px;
-        cursor: pointer;
+        /* cursor: pointer; */
         position: relative;
         overflow: hidden;
         transition: 0.5s;

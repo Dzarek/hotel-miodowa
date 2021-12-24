@@ -93,7 +93,7 @@ export const sublinks = [
   {
     pageOne: "o nas",
     links: [
-      { label: "hotel", icon: <FaLongArrowAltRight />, url: "/oNas/oKrakowie" },
+      { label: "hotel", icon: <FaLongArrowAltRight />, url: "/oNas/oHotelu" },
       {
         label: "kraków",
         icon: <FaLongArrowAltRight />,
