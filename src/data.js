@@ -105,9 +105,9 @@ export const sublinks = [
     pageOne: "usługi",
     links: [
       {
-        label: "transport lotniskowy",
+        label: "transfery i wycieczki",
         icon: <FaLongArrowAltRight />,
-        url: "/products",
+        url: "/uslugi/transportLotniskowy",
       },
       { label: "restauracja", icon: <FaLongArrowAltRight />, url: "/products" },
       { label: "parking", icon: <FaLongArrowAltRight />, url: "/products" },

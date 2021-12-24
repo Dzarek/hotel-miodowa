@@ -51,7 +51,8 @@ const Footer = () => {
                 <FaLongArrowAltRight className="iconReact" /> Restauracja
               </p>
               <p>
-                <FaLongArrowAltRight className="iconReact" /> Transport
+                <FaLongArrowAltRight className="iconReact" /> Transfery i
+                Wycieczki
               </p>
             </section>
             <section>

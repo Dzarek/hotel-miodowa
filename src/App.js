@@ -10,6 +10,7 @@ import GalleryPage from "./pages/GalleryPage";
 import AboutUs from "./pages/AboutUs";
 import AboutCracow from "./pages/AboutCracow";
 import AboutHotel from "./pages/AboutHotel";
+import AirportTransfer from "./pages/AirportTransfer";
 
 function App() {
   return (
@@ -24,6 +25,10 @@ function App() {
           <Route path="/oNas" element={<AboutUs />}></Route>
           <Route path="/oNas/oKrakowie" element={<AboutCracow />}></Route>
           <Route path="/oNas/oHotelu" element={<AboutHotel />}></Route>
+          <Route
+            path="/uslugi/transportLotniskowy"
+            element={<AirportTransfer />}
+          ></Route>
         </Routes>
         <Footer />
       </Router>
