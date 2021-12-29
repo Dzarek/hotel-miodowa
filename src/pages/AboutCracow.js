@@ -78,7 +78,7 @@ const Wrapper = styled.div`
   margin: 0 auto;
   .cracowHeader {
     position: relative;
-    height: 35vh;
+    height: 50vh;
     width: 100%;
     border-bottom: 2px solid var(--secondaryColor);
     .title {
@@ -98,7 +98,7 @@ const Wrapper = styled.div`
     width: 80%;
     align-items: center;
     justify-content: center;
-    margin: 10vh auto;
+    margin: 5vh auto;
     section {
       display: flex;
       align-items: center;

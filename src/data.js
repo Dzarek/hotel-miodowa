@@ -107,9 +107,13 @@ export const sublinks = [
       {
         label: "transfery i wycieczki",
         icon: <FaLongArrowAltRight />,
-        url: "/uslugi/transportLotniskowy",
+        url: "/uslugi/transport&wycieczki",
       },
-      { label: "restauracja", icon: <FaLongArrowAltRight />, url: "/products" },
+      {
+        label: "restauracja",
+        icon: <FaLongArrowAltRight />,
+        url: "/uslugi/restauracja",
+      },
       { label: "parking", icon: <FaLongArrowAltRight />, url: "/products" },
     ],
   },
