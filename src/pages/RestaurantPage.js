@@ -1,8 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import { useEffect } from "react";
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { SRLWrapper } from "simple-react-lightbox";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
@@ -20,9 +17,6 @@ let restaurantImages = gallery.filter(
 );
 restaurantImages = restaurantImages[0].img;
 const RestaurantPage = () => {
-  useEffect(() => {
-    Aos.init({ duration: 1000 });
-  }, []);
   return (
     <Wrapper>
       <div className="restaurantHeader">

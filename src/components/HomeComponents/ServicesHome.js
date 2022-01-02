@@ -80,7 +80,7 @@ const ServicesHome = () => {
             <h4>Parking</h4>
             <p>
               Hotel posiada kilka miejsc parkingowych dla osób podróżujących
-              samochodem.
+              samochodem. Wymagana rezerwacja.
             </p>
             <img src={parkingImg} alt="" />
           </span>

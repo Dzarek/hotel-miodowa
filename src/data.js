@@ -114,7 +114,11 @@ export const sublinks = [
         icon: <FaLongArrowAltRight />,
         url: "/uslugi/restauracja",
       },
-      { label: "parking", icon: <FaLongArrowAltRight />, url: "/products" },
+      {
+        label: "parking",
+        icon: <FaLongArrowAltRight />,
+        url: "/uslugi/parking",
+      },
     ],
   },
   {

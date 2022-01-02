@@ -243,6 +243,13 @@ html {
   background-attachment: fixed;
 }
 
+.parkingHeader {
+  background-image: url(./images/inne/parking2.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
 /* .restaurantHeader {
   background-image: url(./images/restauracja/RESTAURACJA\ 015.jpg);
   background-size: cover;

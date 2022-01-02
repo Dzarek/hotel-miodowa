@@ -7,11 +7,14 @@ import Submenu from "./Submenu";
 import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import GalleryPage from "./pages/GalleryPage";
+
 import AboutUs from "./pages/AboutUs";
 import AboutCracow from "./pages/AboutCracow";
 import AboutHotel from "./pages/AboutHotel";
+
 import AirportTransfer from "./pages/AirportTransfer";
 import RestaurantPage from "./pages/RestaurantPage";
+import ParkingPage from "./pages/ParkingPage";
 
 function App() {
   return (
@@ -34,6 +37,7 @@ function App() {
             path="/uslugi/restauracja"
             element={<RestaurantPage />}
           ></Route>
+          <Route path="/uslugi/parking" element={<ParkingPage />}></Route>
         </Routes>
         <Footer />
       </Router>
