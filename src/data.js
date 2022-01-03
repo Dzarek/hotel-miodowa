@@ -130,11 +130,15 @@ export const sublinks = [
         url: "/kontakt/formularzKontaktowy",
       },
       { label: "faq", icon: <FaLongArrowAltRight />, url: "/kontakt/faq" },
-      { label: "rodo", icon: <FaLongArrowAltRight />, url: "/kontakt/rodo" },
       {
         label: "regulamin",
         icon: <FaLongArrowAltRight />,
         url: "/kontakt/regulamin",
+      },
+      {
+        label: "rodo i cookies",
+        icon: <FaLongArrowAltRight />,
+        url: "/kontakt/rodo&cookies",
       },
     ],
   },

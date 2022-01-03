@@ -19,6 +19,7 @@ import ParkingPage from "./pages/ParkingPage";
 
 import ContactPage from "./pages/ContactPage";
 import FaqPage from "./pages/FaqPage";
+import RodoPage from "./pages/RodoPage";
 
 function App() {
   return (
@@ -48,6 +49,7 @@ function App() {
             element={<ContactPage />}
           ></Route>
           <Route path="/kontakt/faq" element={<FaqPage />}></Route>
+          <Route path="/kontakt/rodo&cookies" element={<RodoPage />}></Route>
         </Routes>
         <Footer />
       </Router>

@@ -15,16 +15,28 @@ const ContactPage = () => {
   return (
     <Wrapper>
       <div className="title">
-        <FaPhoneAlt />
-        <MdMail />
+        <h1>
+          <FaPhoneAlt />
+        </h1>
+        <h2>
+          {" "}
+          <MdMail />
+        </h2>
 
-        <FaMapMarkerAlt />
+        <h3>
+          <FaMapMarkerAlt />
+        </h3>
 
         <h2 data-aos="fade-up">Kontakt</h2>
-        <FaMapMarkerAlt />
-
-        <MdMail />
-        <FaPhoneAlt />
+        <h3>
+          <FaMapMarkerAlt />
+        </h3>
+        <h2>
+          <MdMail />
+        </h2>
+        <h1>
+          <FaPhoneAlt />
+        </h1>
       </div>
       <div className="contactContent">
         <section className="form">
