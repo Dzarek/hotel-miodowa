@@ -17,6 +17,8 @@ import AirportTransfer from "./pages/AirportTransfer";
 import RestaurantPage from "./pages/RestaurantPage";
 import ParkingPage from "./pages/ParkingPage";
 
+import ContactPage from "./pages/ContactPage";
+
 function App() {
   return (
     <div className="app">
@@ -40,6 +42,10 @@ function App() {
             element={<RestaurantPage />}
           ></Route>
           <Route path="/uslugi/parking" element={<ParkingPage />}></Route>
+          <Route
+            path="/kontakt/formularzKontaktowy"
+            element={<ContactPage />}
+          ></Route>
         </Routes>
         <Footer />
       </Router>

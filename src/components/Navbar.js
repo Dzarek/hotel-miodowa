@@ -96,7 +96,7 @@ const Navbar = () => {
             </p>
             <TiArrowSortedDown />
           </NavLink>
-          <NavLink to="/kontakt" activeClassName="active">
+          <NavLink to="/kontakt/formularzKontaktowy" activeClassName="active">
             <p onMouseOver={displaySubmenu} className="link-btn">
               kontakt
             </p>

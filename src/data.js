@@ -127,11 +127,15 @@ export const sublinks = [
       {
         label: "kontakt",
         icon: <FaLongArrowAltRight />,
-        url: "/products",
+        url: "/kontakt/formularzKontaktowy",
       },
-      { label: "faq", icon: <FaLongArrowAltRight />, url: "/products" },
-      { label: "rodo", icon: <FaLongArrowAltRight />, url: "/products" },
-      { label: "regulamin", icon: <FaLongArrowAltRight />, url: "/products" },
+      { label: "faq", icon: <FaLongArrowAltRight />, url: "/kontakt/faq" },
+      { label: "rodo", icon: <FaLongArrowAltRight />, url: "/kontakt/rodo" },
+      {
+        label: "regulamin",
+        icon: <FaLongArrowAltRight />,
+        url: "/kontakt/regulamin",
+      },
     ],
   },
 ];
