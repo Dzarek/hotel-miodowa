@@ -75,13 +75,13 @@ const Navbar = () => {
           <NavLink to="/" activeClassName="active">
             <p>strona główna</p>
           </NavLink>
-          <NavLink to="pokoje" activeClassName="active">
+          <NavLink to="/pokoje" activeClassName="active">
             <p onMouseOver={displaySubmenu} className="link-btn">
               pokoje
             </p>
             <TiArrowSortedDown />
           </NavLink>
-          <NavLink to="oNas" activeClassName="active">
+          <NavLink to="/oNas" activeClassName="active">
             <p onMouseOver={displaySubmenu} className="link-btn">
               o nas
             </p>
@@ -90,13 +90,13 @@ const Navbar = () => {
           <NavLink to="/galeria" activeClassName="active">
             galeria
           </NavLink>
-          <NavLink to="uslugi" activeClassName="active">
+          <NavLink to="/uslugi" activeClassName="active">
             <p onMouseOver={displaySubmenu} className="link-btn">
               usługi
             </p>
             <TiArrowSortedDown />
           </NavLink>
-          <NavLink to="kontakt" activeClassName="active">
+          <NavLink to="/kontakt" activeClassName="active">
             <p onMouseOver={displaySubmenu} className="link-btn">
               kontakt
             </p>
