@@ -18,6 +18,7 @@ import RestaurantPage from "./pages/RestaurantPage";
 import ParkingPage from "./pages/ParkingPage";
 
 import ContactPage from "./pages/ContactPage";
+import FaqPage from "./pages/FaqPage";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
             path="/kontakt/formularzKontaktowy"
             element={<ContactPage />}
           ></Route>
+          <Route path="/kontakt/faq" element={<FaqPage />}></Route>
         </Routes>
         <Footer />
       </Router>

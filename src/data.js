@@ -190,3 +190,48 @@ export const gallery = [
     category: "recepcja i bar",
   },
 ];
+
+export const questionsData = [
+  {
+    id: 1,
+    title:
+      "Czym różnią się od siebie poszczególne typy apartamentów – Standard, Superior, Deluxe?",
+    info: "Wszystkie oferowane przez nas apartamenty urządzone są w bardzo wysokim standardzie. Typ SUPERIOR wyróżnia się większym metrażem niż apartamenty STANDARD, największą powierzchnię mają z kolei apartamenty DELUXE. Różnicę stanowi także widok z okna.",
+  },
+  {
+    id: 2,
+    title: "Podane ceny są cenami za apartament czy za osobę?",
+    info: "Wszystkie podawane na stronie ceny są cenami na apartament. Ceny apartamentów jednego typu mogą być zróżnicowane ze względu na ilość osób, jaką maksymalnie są w stanie pomieścić..",
+  },
+  {
+    id: 3,
+    title: "Co znajduje się na wyposażeniu pokojów?",
+    info: "W każdym apartamencie znajdują się: wygodne łóżka, szafa na ubrania, rozkładana sofa,telewizor LED, stolik kawowy, biurko, stół i krzesła, w pełni wyposażony aneks kuchenny (płyta indukcyjna, okap, lodówka, zlew, czajnik, naczynia i sztućce),dostęp do prywatnej łazienki z toaletą, umywalką, wanną lub prysznicem, lustrem i suszarką do włosów.",
+  },
+  {
+    id: 4,
+    title:
+      "Z jakich udogodnień można skorzystać na terenie Aparthotelu Miodowa?",
+    info: "Poza kompleksowo wyposażonymi apartamentami naszym Gościom oferujemy także możliwość skorzystania z: darmowego śniadania w formie bufetu, parkingu, codziennego sprzątania, żelazka do prasowania, przechowali bagażu, usług całodobowej recepcji, transferu lotniskowego i innych usług transportowych.",
+  },
+  {
+    id: 5,
+    title: "Czy istnieje możliwość skorzystania z parkingu?",
+    info: "Tak, za dodatkową opłatą oferujemy parking strzeżony znajdujący się obok obiektu.",
+  },
+  {
+    id: 6,
+    title: "O której godzinie rozpoczyna się, a o której kończy doba hotelowa?",
+    info: "Doba hotelowa rozpoczyna się o godzinie 14:00, a kończy się o godzinie 12:00 dnia następnego.",
+  },
+  {
+    id: 7,
+    title: "Jakie są konsekwencje anulowania rezerwacji?",
+    info: "Wszystko zależy od rodzaju pokoju. Zachęcamy, aby każdorazowo zapoznawać się z warunkami rezerwacji przed jej dokonaniem.",
+  },
+  {
+    id: 8,
+    title: "Czy w Aparthotelu Miodowa akceptowana jest płatność kartą?",
+    info: "Tak – akceptujemy zarówno transakcje gotówkowe, jak i płatność kartą kredytową, Na terenie naszego obiektu możliwa jest obsługa kart Visa i MasterCard.",
+  },
+];
