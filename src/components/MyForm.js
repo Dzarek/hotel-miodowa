@@ -63,7 +63,7 @@ class MyForm extends Component {
                 odpowiedzi na mojego e-maila.
                 <NavLink
                   onClick={() => this.setState({ cookieVisible: true })}
-                  to="cookie"
+                  to="/kontakt/rodo&cookies"
                   smooth={true}
                   duration={1000}
                   className="cookieLink"
