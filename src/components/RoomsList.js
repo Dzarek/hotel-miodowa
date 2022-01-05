@@ -5,7 +5,7 @@ import styled from "styled-components";
 const RoomsListPL = ({ rooms }) => {
   if (rooms.length === 0) {
     return (
-      <Wrapper2 className="empty-search">
+      <Wrapper2>
         <h3>niestety, nie udało się znaleźć pokoju</h3>
       </Wrapper2>
     );
@@ -36,6 +36,15 @@ const Wrapper = styled.div`
     flex-wrap: wrap;
   }
 `;
-const Wrapper2 = styled.div``;
+const Wrapper2 = styled.div`
+  width: 60vw;
+  margin: 20vh auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: var(--buttonFont);
+  font-size: 1.5rem;
+`;
 
 export default RoomsListPL;

@@ -125,7 +125,7 @@ const RoomsFilter = ({ rooms }) => {
             checked={breakfast}
             className="breakfastCheckbox"
             //   onChange={handleChange}
-            // disabled
+            disabled
           />
         </div>
         {/* end extras */}

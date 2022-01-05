@@ -11,7 +11,7 @@ class RoomProvider extends Component {
     sortedRooms: [],
     featuredRooms: [],
     loading: true,
-    type: "all",
+    type: "wszystkie",
     capacity: 1,
     price: 0,
     minPrice: 0,
@@ -171,7 +171,7 @@ class RoomProvider extends Component {
     tempRooms = tempRooms.filter((room) => room.price <= price);
 
     //filter by size
-    tempRooms = tempRooms.filter((room) => room.size <= size);
+    tempRooms = tempRooms.filter((room) => room.size >= size);
 
     //filter by breakfast and pets
     // if (breakfast) {
