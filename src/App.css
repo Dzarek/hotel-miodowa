@@ -223,7 +223,7 @@ html {
 .backgroundDark {
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .backgroundhotelInNumbers {
@@ -233,7 +233,7 @@ html {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  filter: saturate(0) brightness(0.6);
+  filter: saturate(0) brightness(0.8);
 }
 
 .airportTransferHeader {
@@ -266,13 +266,22 @@ html {
   filter: saturate(0);
 }
 
+.AllRoomsHeader2 {
+  background: url('./images/deluxe/DELUXE.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 30%;
+  animation: zoom 15s ease infinite;
+}
+
+
 @keyframes zoom {
   0% {
     transform: scale(1);
   }
 
   50% {
-    transform: scale(1.2) translateX(-5%);
+    transform: scale(1.1) translateX(-5%);
   }
 
   100% {

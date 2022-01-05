@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import ServicesHome from "../components/HomeComponents/ServicesHome";
+import BuildingImg from "../images/homeImages/Budynek.jpg";
 
 const AboutHotel = () => {
   useEffect(() => {
@@ -13,8 +14,8 @@ const AboutHotel = () => {
       <div className="hotelAboutHeader">
         <div className="backgroundDark"></div>
         <div className="title">
-          <h2>Hotel Miodowa</h2>
-          <h4>luksusowe apartamenty w centrum miasta</h4>
+          <h2 data-aos="zoom-in">Hotel Miodowa</h2>
+          <h4 data-aos="zoom-in">luksusowe apartamenty w centrum miasta</h4>
         </div>
       </div>
       <div className="description">
@@ -27,15 +28,18 @@ const AboutHotel = () => {
           estetycznie przestrzeń. Intuicyjny system rezerwacji pozwala na
           sprawny wynajem apartamentu w jednym z trzech oferowanych standardów.
         </p>
-        <p>
-          Atutem naszego obiektu – obok ekskluzywnych wnętrz – jest położenie.
-          Lokalizacja na krakowskim Kazimierzu to prestiżowe miejsce o
-          historycznym wydźwięku. Dawna dzielnica żydowska ma wiele znamion
-          przeszłości, a jej dzieje stanowią doskonałe tło dla bogatej oferty
-          kulinarnej oraz licznych atrakcji kulturalnych. Ogromne znaczenie ma
-          bliskość Starego Miasta. Nieśpieszny spacer zabytkowymi uliczkami
-          pozwala odkryć uroki historycznego centrum miasta.
-        </p>
+        <section>
+          <p>
+            Atutem naszego obiektu – obok ekskluzywnych wnętrz – jest położenie.
+            Lokalizacja na krakowskim Kazimierzu to prestiżowe miejsce o
+            historycznym wydźwięku. Dawna dzielnica żydowska ma wiele znamion
+            przeszłości, a jej dzieje stanowią doskonałe tło dla bogatej oferty
+            kulinarnej oraz licznych atrakcji kulturalnych. Ogromne znaczenie ma
+            bliskość Starego Miasta. Nieśpieszny spacer zabytkowymi uliczkami
+            pozwala odkryć uroki historycznego centrum miasta.
+          </p>
+          <img data-aos="fade-left" src={BuildingImg} alt="budynek" />
+        </section>
         <p>
           Dogodne położenie, luksusowe apartamenty, atrakcyjne ceny – Hotel
           Miodowa w Krakowie oferuje swoim Gościom idealne warunki na czas
@@ -103,18 +107,33 @@ const Wrapper = styled.div`
       font-size: 2.5rem;
       align-self: flex-start;
       font-family: var(--titleFont);
+      color: var(--secondaryColor2);
     }
     p {
       font-family: var(--textFont);
       color: var(--primaryColor);
       font-size: 1.1rem;
-      margin-top: 5vh;
+      margin-top: 8vh;
       line-height: 1.3;
+    }
+    section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      p {
+        width: 40%;
+      }
+      img {
+        width: 35%;
+        border-radius: 5px;
+        margin-right: 15%;
+        margin-top: 8vh;
+      }
     }
   }
   .hotelInNumbers {
     width: 100vw;
-    height: 60vh;
+    height: 70vh;
     position: relative;
     margin: 20vh auto 25vh;
 
@@ -128,12 +147,12 @@ const Wrapper = styled.div`
       transform: translate(-50%, -50%);
       z-index: 2;
       span {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        /* background: white;
-        color: var(--secondaryColor2); */
-        background: var(--bookBtnColor);
+        width: 150px;
+        height: 150px;
+        border-radius: 30%;
+        /* background: #eee;
+        color: var(--secondaryColor); */
+        background: var(--secondaryColor);
         color: white;
         display: flex;
         flex-direction: column;

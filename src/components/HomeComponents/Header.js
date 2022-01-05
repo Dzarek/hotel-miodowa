@@ -26,7 +26,7 @@ const Header = () => {
         <Carousel
           className="headerImages"
           infinite
-          autoPlay={7000}
+          autoPlay={5000}
           animationSpeed={1000}
           slidesPerPage={1}
           addArrowClickHandler

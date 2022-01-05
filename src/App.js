@@ -22,6 +22,9 @@ import FaqPage from "./pages/FaqPage";
 import RegulationsPage from "./pages/RegulationsPage";
 import RodoPage from "./pages/RodoPage";
 
+import SingleRoomPage from "./pages/SingleRoomPage";
+import AllRoomsPage from "./pages/AllRoomsPage";
+
 function App() {
   return (
     <div className="app">
@@ -31,6 +34,8 @@ function App() {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
+          <Route path="/pokoje" element={<AllRoomsPage />}></Route>
+          <Route path="/pokoje/singleRoom" element={<SingleRoomPage />}></Route>
           <Route path="/galeria" element={<GalleryPage />}></Route>
           <Route path="/oNas" element={<AboutUs />}></Route>
           <Route path="/oNas/oKrakowie" element={<AboutCracow />}></Route>

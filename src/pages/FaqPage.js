@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import {
@@ -29,13 +30,14 @@ const FaqPage = () => {
         <h2>?</h2>
         <h1>?</h1>
       </div>
+      <h2 className="faqSubTitle">Najczęściej zadawane pytania</h2>
       <div className="questions">
         <Accordion allowZeroExpanded={true}>
           {questionsData.map((question) => {
             const { title, info, id } = question;
             return (
               <AccordionItem key={id}>
-                <div className="singleQuestion">
+                <div data-aos="fade-down" className="singleQuestion">
                   <header>
                     <h3>
                       <BsFillQuestionOctagonFill className="icon" /> {title}
@@ -56,8 +58,15 @@ const FaqPage = () => {
             );
           })}
         </Accordion>
-        <div className="receptionPicture">
-          <div className="receptionImg"></div>
+        <div className="receptionFaq">
+          <p>
+            Nie znalazleś odpowiedzi na swoje pytania? <br /> Śmiało zapytaj nas
+            poprzez formularz kontaktowy!
+          </p>
+          <div className="receptionPicture">
+            <div className="receptionImg"></div>
+            <NavLink to="/kontakt/formularzKontaktowy">Zapytaj nas!</NavLink>
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -84,6 +93,15 @@ const Wrapper = styled.div`
       letter-spacing: 10px;
       text-align: center;
     }
+  }
+  .faqSubTitle {
+    margin: 10vh auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--titleFont);
+    color: var(--secondaryColor2);
+    font-size: 2rem;
   }
   .accordion__panel {
     animation: fadein 0.5s ease-in;
@@ -127,7 +145,7 @@ const Wrapper = styled.div`
     font-size: 1rem;
     width: 80vw;
     max-width: 1360px;
-    margin: 15vh auto;
+    margin: 30vh auto 15vh;
     position: relative;
     @media (orientation: portrait) and (max-width: 800px) {
       width: 95vw;
@@ -135,11 +153,46 @@ const Wrapper = styled.div`
       margin-top: 10vh;
     }
   }
+  .receptionFaq {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30vw;
+
+    p {
+      font-family: var(--textFont);
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.4;
+    }
+  }
   .receptionPicture {
+    margin-top: 5vh;
     width: 30vw;
     height: 25vw;
     overflow: hidden;
     border-radius: 5px;
+    position: relative;
+    a {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 1;
+      background: var(--bookBtnColor);
+      padding: 15px 25px;
+      color: var(--primaryColor);
+      font-size: 1.1rem;
+      font-family: var(--buttonFont);
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: 0.3s;
+      :hover {
+        letter-spacing: 3px;
+      }
+    }
   }
   .receptionImg {
     width: 100%;
@@ -148,7 +201,7 @@ const Wrapper = styled.div`
   .singleQuestion {
     margin: 2vh auto;
     padding: 10px 20px;
-    width: 40vw;
+    width: 35vw;
     background: rgba(0, 0, 0, 0.9);
     color: white;
     border-radius: 5px;
