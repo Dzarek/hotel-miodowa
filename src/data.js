@@ -239,3 +239,376 @@ export const questionsData = [
     info: "Tak – akceptujemy zarówno transakcje gotówkowe, jak i płatność kartą kredytową, Na terenie naszego obiektu możliwa jest obsługa kart Visa i MasterCard.",
   },
 ];
+
+export const items = [
+  {
+    sys: {
+      id: "1",
+    },
+    fields: {
+      name: "pokój 2-osobowy TWIN",
+      slug: "twin",
+      type: "twin",
+      price: 250,
+      size: 16,
+      capacity: 2,
+      featured: false,
+      breakfast: true,
+      description:
+        "Pokój dwuosobowy TWIN Posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+      extras: [
+        "Ręczniki kąpielowe",
+        "Szampony i mydełka",
+        "Kawa i Herbata",
+        "Lodówka i Czajnik",
+        "Telewizor",
+        "Serwis na życzenie",
+        "Śniadanie",
+        "Internet",
+        "Wygodne łóżka",
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: twin1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin5,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "2",
+    },
+    fields: {
+      name: "pokój 2-osobowy DOUBLE",
+      slug: "double",
+      type: "double",
+      price: 350,
+      size: 20,
+      capacity: 3,
+      featured: false,
+      breakfast: true,
+      description:
+        "Pokój dwuosobowy Double Posiada wygodne łóżko dwuosobowe, telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty, luksusową łazienkę z prysznicem,wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+      extras: [
+        "Ręczniki kąpielowe",
+        "Serwis na życzenie",
+        "Śniadanie",
+        "Internet",
+        "Wygodne łóżka",
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: dbl1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: dbl2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: dbl3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: dbl4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: dbl5,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "3",
+    },
+    fields: {
+      name: "pokój 2-osobowy TWIN",
+      slug: "twin",
+      type: "twin",
+      price: 250,
+      size: 16,
+      capacity: 2,
+      featured: false,
+      breakfast: true,
+      description:
+        "Pokój dwuosobowy TWIN Posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+      extras: [
+        "Ręczniki kąpielowe",
+        "Serwis na życzenie",
+        "Śniadanie",
+        "Internet",
+        "Wygodne łóżka",
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: twin1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin5,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "4",
+    },
+    fields: {
+      name: "pokój 2-osobowy TWIN",
+      slug: "twin",
+      type: "twin",
+      price: 250,
+      size: 16,
+      capacity: 2,
+      featured: false,
+      breakfast: true,
+      description:
+        "Pokój dwuosobowy TWIN Posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+      extras: [
+        "Ręczniki kąpielowe",
+        "Serwis na życzenie",
+        "Śniadanie",
+        "Internet",
+        "Wygodne łóżka",
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: twin1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin5,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "5",
+    },
+    fields: {
+      name: "pokój 2-osobowy TWIN",
+      slug: "twin",
+      type: "twin",
+      price: 250,
+      size: 16,
+      capacity: 2,
+      featured: false,
+      breakfast: true,
+      description:
+        "Pokój dwuosobowy TWIN Posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+      extras: [
+        "Ręczniki kąpielowe",
+        "Serwis na życzenie",
+        "Śniadanie",
+        "Internet",
+        "Wygodne łóżka",
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: twin1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin5,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "6",
+    },
+    fields: {
+      name: "pokój 2-osobowy TWIN",
+      slug: "twin",
+      type: "twin",
+      price: 250,
+      size: 16,
+      capacity: 2,
+      featured: false,
+      breakfast: true,
+      description:
+        "Pokój dwuosobowy TWIN Posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+      extras: [
+        "Ręczniki kąpielowe",
+        "Serwis na życzenie",
+        "Śniadanie",
+        "Internet",
+        "Wygodne łóżka",
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: twin1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin5,
+            },
+          },
+        },
+      ],
+    },
+  },
+];

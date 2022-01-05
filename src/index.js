@@ -5,12 +5,15 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import SimpleReactLightbox from "simple-react-lightbox";
 import { AppProvider } from "./context";
+import { RoomProvider } from "./roomContext";
 
 ReactDOM.render(
   <React.StrictMode>
     <SimpleReactLightbox>
       <AppProvider>
-        <App />
+        <RoomProvider>
+          <App />
+        </RoomProvider>
       </AppProvider>
     </SimpleReactLightbox>
   </React.StrictMode>,
