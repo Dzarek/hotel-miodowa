@@ -150,7 +150,7 @@ class RoomProvider extends Component {
     );
   };
   filterRooms = () => {
-    let { rooms, type, capacity, price, size, breakfast } = this.state;
+    let { rooms, type, capacity, price, size } = this.state;
 
     // all the rooms
     let tempRooms = [...rooms];
@@ -159,7 +159,7 @@ class RoomProvider extends Component {
     price = parseInt(price);
 
     //filter by type
-    if (type !== "all") {
+    if (type !== "wszystkie") {
       tempRooms = tempRooms.filter((room) => room.type === type);
     }
 
@@ -174,9 +174,9 @@ class RoomProvider extends Component {
     tempRooms = tempRooms.filter((room) => room.size <= size);
 
     //filter by breakfast and pets
-    if (breakfast) {
-      tempRooms = tempRooms.filter((room) => room.breakfast);
-    }
+    // if (breakfast) {
+    //   tempRooms = tempRooms.filter((room) => room.breakfast);
+    // }
 
     //change state
     this.setState({

@@ -248,14 +248,18 @@ export const items = [
     fields: {
       name: "pokój 2-osobowy TWIN",
       slug: "twin",
-      type: "twin",
-      price: 250,
+      type: "pokój",
+      price: 220,
       size: 16,
       capacity: 2,
       featured: false,
       breakfast: true,
+      bathroom: "prysznic",
+      kitchen: "lodówka, czajnik",
+      beds: "2x 90cm",
+      sofa: false,
       description:
-        "Pokój dwuosobowy TWIN Posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+        "Pokój dwuosobowy TWIN posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
       extras: [
         "Ręczniki kąpielowe",
         "Szampony i mydełka",
@@ -313,14 +317,18 @@ export const items = [
     fields: {
       name: "pokój 2-osobowy DOUBLE",
       slug: "double",
-      type: "double",
-      price: 350,
-      size: 20,
-      capacity: 3,
+      type: "pokój",
+      price: 220,
+      size: 16,
+      capacity: 2,
       featured: false,
       breakfast: true,
+      bathroom: "prysznic",
+      kitchen: "lodówka, czajnik",
+      beds: "1x 160cm",
+      sofa: false,
       description:
-        "Pokój dwuosobowy Double Posiada wygodne łóżko dwuosobowe, telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty, luksusową łazienkę z prysznicem,wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+        "Pokój dwuosobowy Double posiada wygodne łóżko dwuosobowe, telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty, luksusową łazienkę z prysznicem,wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
       extras: [
         "Ręczniki kąpielowe",
         "Serwis na życzenie",
@@ -372,56 +380,61 @@ export const items = [
       id: "3",
     },
     fields: {
-      name: "pokój 2-osobowy TWIN",
-      slug: "twin",
-      type: "twin",
-      price: 250,
-      size: 16,
-      capacity: 2,
+      name: "pokój 2-osobowy PREMIUM",
+      slug: "premium",
+      type: "pokój",
+      price: 260,
+      size: 22,
+      capacity: 4,
       featured: false,
       breakfast: true,
+      bathroom: "prysznic",
+      kitchen: "lodówka, czajnik",
+      beds: "2x 90cm",
+      sofa: true,
       description:
-        "Pokój dwuosobowy TWIN Posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+        "Pokój dwuosobowy PREMIUM posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), rozkładaną sofę, telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
       extras: [
         "Ręczniki kąpielowe",
         "Serwis na życzenie",
         "Śniadanie",
         "Internet",
         "Wygodne łóżka",
+        "Rozkładana sofa",
       ],
       images: [
         {
           fields: {
             file: {
-              url: twin1,
+              url: premium2,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin2,
+              url: premium1,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin3,
+              url: premium3,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin4,
+              url: premium4,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin5,
+              url: premium5,
             },
           },
         },
@@ -433,56 +446,62 @@ export const items = [
       id: "4",
     },
     fields: {
-      name: "pokój 2-osobowy TWIN",
-      slug: "twin",
-      type: "twin",
-      price: 250,
-      size: 16,
-      capacity: 2,
+      name: "apartament SUPERIOR",
+      slug: "superior",
+      type: "apartament",
+      price: 300,
+      size: 38,
+      capacity: 4,
       featured: false,
       breakfast: true,
+      bathroom: "prysznic",
+      kitchen: "kuchnia",
+      beds: "2x 90cm",
+      sofa: true,
       description:
-        "Pokój dwuosobowy TWIN Posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+        "Nasze apartamenty SUPERIOR to gwarancja doskonałego wypoczynku, do którego przyczynia się zarówno wykorzystanie funkcjonalnych i komfortowych w użytkowaniu udogodnień, jak również postawienie na klasyczną, elegancką aranżację.W skład tego rodzaju obiektu mieszkalnego, nadającego się dla nawet 4 osób, wchodzi część sypialniano-wypoczynkowa z dużym, wygodnym łóżkiem, rozkładaną sofą, biurkiem, a także telewizorem LED. Całość stanowi bardzo harmonijną przestrzeń, która jest w stanie zaspokoić wiele potrzeb przebywających w niej osób. Z kolei aneks kuchenny z jadalnią, na który składają się płyta indukcyjna, okap, lodówka, zlew, czajnik, naczynia i sztućce oraz stół i krzesła, umożliwiają zasiadanie do wspólnych posiłków. Osobnym pomieszczeniem jest utrzymana w bardzo luksusowym stylu łazienka z prysznicem, w której wszyscy nasi Gości znajdą suszarkę, a także zestaw kosmetyków i zachwycające czystą bielą i świeżym zapachem ręczniki.",
       extras: [
         "Ręczniki kąpielowe",
         "Serwis na życzenie",
         "Śniadanie",
         "Internet",
         "Wygodne łóżka",
+        "Rozkładana sofa",
+        "Aneks kuchenny",
       ],
       images: [
         {
           fields: {
             file: {
-              url: twin1,
+              url: superior1,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin2,
+              url: superior2,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin3,
+              url: superior3,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin4,
+              url: superior4,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin5,
+              url: superior5,
             },
           },
         },
@@ -494,56 +513,62 @@ export const items = [
       id: "5",
     },
     fields: {
-      name: "pokój 2-osobowy TWIN",
-      slug: "twin",
-      type: "twin",
-      price: 250,
-      size: 16,
-      capacity: 2,
+      name: "apartament STUDIO",
+      slug: "studio",
+      type: "apartament",
+      price: 320,
+      size: 32,
+      capacity: 4,
       featured: false,
       breakfast: true,
+      bathroom: "prysznic",
+      kitchen: "kuchnia",
+      beds: "2x 90cm",
+      sofa: true,
       description:
-        "Pokój dwuosobowy TWIN Posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+        "Apartament Typu STUDIO posiada sypialnię z bardzo wygodnym łóżkiem, rozkładaną sofę, telewizor led, w pełni wyposażony aneks kuchenny z jadalnią ( płyta indukcyjna, okap, lodówka, zlew, czajnik, naczynia i sztućce) , oraz luksusową łazienkę z prysznicem, wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
       extras: [
         "Ręczniki kąpielowe",
         "Serwis na życzenie",
         "Śniadanie",
         "Internet",
         "Wygodne łóżka",
+        "Rozkładana sofa",
+        "Aneks kuchenny",
       ],
       images: [
         {
           fields: {
             file: {
-              url: twin1,
+              url: studio1,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin2,
+              url: studio2,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin3,
+              url: studio3,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin4,
+              url: studio4,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin5,
+              url: studio5,
             },
           },
         },
@@ -555,56 +580,62 @@ export const items = [
       id: "6",
     },
     fields: {
-      name: "pokój 2-osobowy TWIN",
-      slug: "twin",
-      type: "twin",
-      price: 250,
-      size: 16,
-      capacity: 2,
+      name: "apartament DELUXE",
+      slug: "deluxe",
+      type: "apartament",
+      price: 350,
+      size: 40,
+      capacity: 4,
       featured: false,
       breakfast: true,
+      bathroom: "wanna",
+      kitchen: "kuchnia",
+      beds: "2x 90cm",
+      sofa: true,
       description:
-        "Pokój dwuosobowy TWIN Posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+        "Apartament DELUXE może pomieścić do 4 osób. Składa się z dużego pomieszczenia, łączącego w sobie cechy sypialni, salonu oraz kuchni, mającego bezpośredni dostęp do prywatnej łazienki (z wanną i prysznicem). Wygodne łóżko jest doskonałą opcją dla każdego, kto szuka chwili błogiego odprężenia, z kolei rozkładana sofa oraz telewizor LED tworzą wyjątkową przestrzeń wypoczynkową. Starannie wyposażony aneks kuchenny, w skład którego wchodzą płyta indukcyjna, okap, lodówka, zlew, czajnik oraz naczynia i sztućce, to idealny sposób na przygotowanie smacznych posiłków, które można spożyć wspólnie w części jadalnianej. Dbając o komfort Gości zatroszczyliśmy się także o detale. Właśnie dlatego w apartamencie DELUXE dostępne są zawsze świeże, śnieżnobiałe komplety ręczników, zestawy kosmetyków, a nawet suszarka do włosów.",
       extras: [
         "Ręczniki kąpielowe",
         "Serwis na życzenie",
         "Śniadanie",
         "Internet",
         "Wygodne łóżka",
+        "Rozkładana sofa",
+        "Aneks kuchenny",
       ],
       images: [
         {
           fields: {
             file: {
-              url: twin1,
+              url: deluxe1,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin2,
+              url: deluxe2,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin3,
+              url: deluxe3,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin4,
+              url: deluxe4,
             },
           },
         },
         {
           fields: {
             file: {
-              url: twin5,
+              url: deluxe5,
             },
           },
         },

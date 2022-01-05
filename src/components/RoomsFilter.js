@@ -35,6 +35,8 @@ const RoomsFilter = ({ rooms }) => {
     );
   });
   let people = getUnique(rooms, "capacity");
+  people = [1, people[0], 3, people[1]];
+
   people = people.map((item, index) => {
     return (
       <option key={index} value={item}>
@@ -48,7 +50,7 @@ const RoomsFilter = ({ rooms }) => {
       <form className="filter-form">
         {/* select type */}
         <div className="form-group">
-          <label htmlFor="type">typ pokoju:</label>
+          <label htmlFor="type">typ pomieszczenia:</label>
           <select
             name="type"
             id="type"

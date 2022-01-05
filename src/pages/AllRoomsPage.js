@@ -5,11 +5,11 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import RoomsFilter from "../components/RoomsFilter";
-// import RoomsList from "./RoomsListPL";
+import RoomsList from "../components/RoomsList";
 import { withRoomConsumer } from "../roomContext";
 
 const AllRoomsPage = ({ context }) => {
-  const { rooms } = context;
+  const { sortedRooms, rooms } = context;
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
@@ -65,7 +65,7 @@ const AllRoomsPage = ({ context }) => {
       </div>
       <div className="filterAndList">
         <RoomsFilter className="filter" rooms={rooms} />
-        <div className="list"></div>
+        <RoomsList className="list" rooms={sortedRooms} />
       </div>
     </Wrapper>
   );
@@ -135,7 +135,7 @@ const Wrapper = styled.div`
     margin: 15vh auto;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
   }
 `;
-// export default AllRoomsPage;
 export default withRoomConsumer(AllRoomsPage);
