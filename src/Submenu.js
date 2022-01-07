@@ -16,7 +16,6 @@ const Submenu = () => {
     submenu.style.left = `${center}px`;
     submenu.style.top = `${bottom}px`;
   }, [pageOne, location, links]);
-  console.log(pageOne);
   return (
     <Wrapper
       className={`${isSubmenuOpen ? "submenu show" : "submenu"}`}

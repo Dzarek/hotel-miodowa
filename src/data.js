@@ -61,32 +61,32 @@ export const sublinks = [
       {
         label: "pokój 2-osobowy TWIN",
         icon: <FaLongArrowAltRight />,
-        url: "/products",
+        url: "/pokoje/twin",
       },
       {
         label: "pokój 2-osobowy DOUBLE",
         icon: <FaLongArrowAltRight />,
-        url: "/products",
+        url: "/pokoje/double",
       },
       {
         label: "pokój 2-osobowy PREMIUM",
         icon: <FaLongArrowAltRight />,
-        url: "/products",
+        url: "/pokoje/premium",
       },
       {
         label: "apartament SUPERIOR",
         icon: <FaLongArrowAltRight />,
-        url: "/products",
+        url: "/pokoje/superior",
       },
       {
         label: "apartament STUDIO",
         icon: <FaLongArrowAltRight />,
-        url: "/products",
+        url: "/pokoje/studio",
       },
       {
         label: "apartament DELUXE",
         icon: <FaLongArrowAltRight />,
-        url: "/products",
+        url: "/pokoje/deluxe",
       },
     ],
   },
@@ -247,7 +247,7 @@ export const items = [
     },
     fields: {
       name: "pokój 2-osobowy TWIN",
-      slug: "twin",
+      slug: "/pokoje/twin",
       type: "pokój",
       price: 220,
       size: 16,
@@ -258,8 +258,9 @@ export const items = [
       kitchen: "lodówka, czajnik",
       beds: "2x 90cm",
       sofa: false,
-      description:
+      description: [
         "Pokój dwuosobowy TWIN posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+      ],
       extras: [
         "Ręczniki kąpielowe",
         "Szampony i mydełka",
@@ -316,7 +317,7 @@ export const items = [
     },
     fields: {
       name: "pokój 2-osobowy DOUBLE",
-      slug: "double",
+      slug: "/pokoje/double",
       type: "pokój",
       price: 220,
       size: 16,
@@ -327,8 +328,9 @@ export const items = [
       kitchen: "lodówka, czajnik",
       beds: "1x 160cm",
       sofa: false,
-      description:
+      description: [
         "Pokój dwuosobowy Double posiada wygodne łóżko dwuosobowe, telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty, luksusową łazienkę z prysznicem,wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+      ],
       extras: [
         "Ręczniki kąpielowe",
         "Serwis na życzenie",
@@ -381,7 +383,7 @@ export const items = [
     },
     fields: {
       name: "pokój 2-osobowy PREMIUM",
-      slug: "premium",
+      slug: "/pokoje/premium",
       type: "pokój",
       price: 260,
       size: 22,
@@ -392,8 +394,9 @@ export const items = [
       kitchen: "lodówka, czajnik",
       beds: "2x 90cm",
       sofa: true,
-      description:
+      description: [
         "Pokój dwuosobowy PREMIUM posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), rozkładaną sofę, telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+      ],
       extras: [
         "Ręczniki kąpielowe",
         "Serwis na życzenie",
@@ -447,7 +450,7 @@ export const items = [
     },
     fields: {
       name: "apartament SUPERIOR",
-      slug: "superior",
+      slug: "/pokoje/superior",
       type: "apartament",
       price: 300,
       size: 38,
@@ -458,8 +461,11 @@ export const items = [
       kitchen: "kuchnia",
       beds: "2x 90cm",
       sofa: true,
-      description:
-        "Nasze apartamenty SUPERIOR to gwarancja doskonałego wypoczynku, do którego przyczynia się zarówno wykorzystanie funkcjonalnych i komfortowych w użytkowaniu udogodnień, jak również postawienie na klasyczną, elegancką aranżację.W skład tego rodzaju obiektu mieszkalnego, nadającego się dla nawet 4 osób, wchodzi część sypialniano-wypoczynkowa z dużym, wygodnym łóżkiem, rozkładaną sofą, biurkiem, a także telewizorem LED. Całość stanowi bardzo harmonijną przestrzeń, która jest w stanie zaspokoić wiele potrzeb przebywających w niej osób. Z kolei aneks kuchenny z jadalnią, na który składają się płyta indukcyjna, okap, lodówka, zlew, czajnik, naczynia i sztućce oraz stół i krzesła, umożliwiają zasiadanie do wspólnych posiłków. Osobnym pomieszczeniem jest utrzymana w bardzo luksusowym stylu łazienka z prysznicem, w której wszyscy nasi Gości znajdą suszarkę, a także zestaw kosmetyków i zachwycające czystą bielą i świeżym zapachem ręczniki.",
+      description: [
+        "Nasze apartamenty SUPERIOR to gwarancja doskonałego wypoczynku, do którego przyczynia się zarówno wykorzystanie funkcjonalnych i komfortowych w użytkowaniu udogodnień, jak również postawienie na klasyczną, elegancką aranżację.",
+        "W skład tego rodzaju obiektu mieszkalnego, nadającego się dla nawet 4 osób, wchodzi część sypialniano-wypoczynkowa z dużym, wygodnym łóżkiem, rozkładaną sofą, biurkiem, a także telewizorem LED. Całość stanowi bardzo harmonijną przestrzeń, która jest w stanie zaspokoić wiele potrzeb przebywających w niej osób. Z kolei aneks kuchenny z jadalnią, na który składają się płyta indukcyjna, okap, lodówka, zlew, czajnik, naczynia i sztućce oraz stół i krzesła, umożliwiają zasiadanie do wspólnych posiłków.",
+        "Osobnym pomieszczeniem jest utrzymana w bardzo luksusowym stylu łazienka z prysznicem, w której wszyscy nasi Gości znajdą suszarkę, a także zestaw kosmetyków i zachwycające czystą bielą i świeżym zapachem ręczniki.",
+      ],
       extras: [
         "Ręczniki kąpielowe",
         "Serwis na życzenie",
@@ -514,7 +520,7 @@ export const items = [
     },
     fields: {
       name: "apartament STUDIO",
-      slug: "studio",
+      slug: "/pokoje/studio",
       type: "apartament",
       price: 320,
       size: 32,
@@ -525,8 +531,9 @@ export const items = [
       kitchen: "kuchnia",
       beds: "2x 90cm",
       sofa: true,
-      description:
+      description: [
         "Apartament Typu STUDIO posiada sypialnię z bardzo wygodnym łóżkiem, rozkładaną sofę, telewizor led, w pełni wyposażony aneks kuchenny z jadalnią ( płyta indukcyjna, okap, lodówka, zlew, czajnik, naczynia i sztućce) , oraz luksusową łazienkę z prysznicem, wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
+      ],
       extras: [
         "Ręczniki kąpielowe",
         "Serwis na życzenie",
@@ -581,7 +588,7 @@ export const items = [
     },
     fields: {
       name: "apartament DELUXE",
-      slug: "deluxe",
+      slug: "/pokoje/deluxe",
       type: "apartament",
       price: 350,
       size: 40,
@@ -592,8 +599,11 @@ export const items = [
       kitchen: "kuchnia",
       beds: "2x 90cm",
       sofa: true,
-      description:
-        "Apartament DELUXE może pomieścić do 4 osób. Składa się z dużego pomieszczenia, łączącego w sobie cechy sypialni, salonu oraz kuchni, mającego bezpośredni dostęp do prywatnej łazienki (z wanną i prysznicem). Wygodne łóżko jest doskonałą opcją dla każdego, kto szuka chwili błogiego odprężenia, z kolei rozkładana sofa oraz telewizor LED tworzą wyjątkową przestrzeń wypoczynkową. Starannie wyposażony aneks kuchenny, w skład którego wchodzą płyta indukcyjna, okap, lodówka, zlew, czajnik oraz naczynia i sztućce, to idealny sposób na przygotowanie smacznych posiłków, które można spożyć wspólnie w części jadalnianej. Dbając o komfort Gości zatroszczyliśmy się także o detale. Właśnie dlatego w apartamencie DELUXE dostępne są zawsze świeże, śnieżnobiałe komplety ręczników, zestawy kosmetyków, a nawet suszarka do włosów.",
+      description: [
+        "Apartament DELUXE może pomieścić do 4 osób. Składa się z dużego pomieszczenia, łączącego w sobie cechy sypialni, salonu oraz kuchni, mającego bezpośredni dostęp do prywatnej łazienki (z wanną i prysznicem).",
+        "Wygodne łóżko jest doskonałą opcją dla każdego, kto szuka chwili błogiego odprężenia, z kolei rozkładana sofa oraz telewizor LED tworzą wyjątkową przestrzeń wypoczynkową. Starannie wyposażony aneks kuchenny, w skład którego wchodzą płyta indukcyjna, okap, lodówka, zlew, czajnik oraz naczynia i sztućce, to idealny sposób na przygotowanie smacznych posiłków, które można spożyć wspólnie w części jadalnianej.",
+        "Dbając o komfort Gości zatroszczyliśmy się także o detale. Właśnie dlatego w apartamencie DELUXE dostępne są zawsze świeże, śnieżnobiałe komplety ręczników, zestawy kosmetyków, a nawet suszarka do włosów.",
+      ],
       extras: [
         "Ręczniki kąpielowe",
         "Serwis na życzenie",

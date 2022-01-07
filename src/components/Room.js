@@ -31,7 +31,7 @@ const Room = ({ room }) => {
         <p>/noc</p>
       </div>
       <h4>{name}</h4>
-      <Link to={`/pokoje/${slug}`} className="iconContainer">
+      <Link to={`${slug}`} className="iconContainer">
         <GiExitDoor className="icon" />
       </Link>
       <section>
@@ -71,7 +71,7 @@ const Room = ({ room }) => {
 };
 
 const Wrapper = styled.div`
-  width: 25vw;
+  width: 23vw;
   height: 55vh;
   border: 1px solid #ddd;
   border-radius: 5px;

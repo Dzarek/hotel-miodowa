@@ -35,7 +35,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/pokoje" element={<AllRoomsPage />}></Route>
-          <Route path="/pokoje/singleRoom" element={<SingleRoomPage />}></Route>
+          <Route path="/pokoje/:slug" element={<SingleRoomPage />}></Route>
           <Route path="/galeria" element={<GalleryPage />}></Route>
           <Route path="/oNas" element={<AboutUs />}></Route>
           <Route path="/oNas/oKrakowie" element={<AboutCracow />}></Route>
