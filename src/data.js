@@ -1,4 +1,18 @@
 import { FaLongArrowAltRight } from "react-icons/fa";
+import { MdSingleBed, MdOutlineLightbulb, MdMonitor } from "react-icons/md";
+import {
+  FaCouch,
+  FaWifi,
+  FaPumpSoap,
+  FaSnowflake,
+  FaToilet,
+  FaShower,
+  FaBath,
+} from "react-icons/fa";
+import { BiFridge, BiCloset } from "react-icons/bi";
+import { GiTeapot, GiTowel, GiTable, GiCookingPot } from "react-icons/gi";
+import { BsFillTelephoneFill } from "react-icons/bs";
+
 import React from "react";
 
 import dbl1 from "./images/dbl/DBL 001.jpg";
@@ -262,15 +276,74 @@ export const items = [
         "Pokój dwuosobowy TWIN posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
       ],
       extras: [
-        "Ręczniki kąpielowe",
-        "Szampony i mydełka",
-        "Kawa i Herbata",
-        "Lodówka i Czajnik",
-        "Telewizor",
-        "Serwis na życzenie",
-        "Śniadanie",
-        "Internet",
-        "Wygodne łóżka",
+        {
+          label: "łóżka",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "lampka nocna",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Szafa",
+          icon: <BiCloset />,
+        },
+        // {
+        //   label: "Stół",
+        //   icon: <GiTable />,
+        // },
+        // {
+        //   label: "Sofa",
+        //   icon: <FaCouch />,
+        // },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 32"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Telefon",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Klimatyzacja",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Lodówka",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Czajnik",
+          icon: <GiTeapot />,
+        },
+        // {
+        //   label: "kuchnia",
+        //   icon: <GiCookingPot />,
+        // },
+        {
+          label: "Ręczniki",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Szamponiki",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Prysznic",
+          icon: <FaShower />,
+        },
+        // {
+        //   label: "Wanna",
+        //   icon: <FaBath />,
+        // },
       ],
       images: [
         {
@@ -332,11 +405,74 @@ export const items = [
         "Pokój dwuosobowy Double posiada wygodne łóżko dwuosobowe, telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty, luksusową łazienkę z prysznicem,wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
       ],
       extras: [
-        "Ręczniki kąpielowe",
-        "Serwis na życzenie",
-        "Śniadanie",
-        "Internet",
-        "Wygodne łóżka",
+        {
+          label: "łóżko",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "lampka nocna",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Szafa",
+          icon: <BiCloset />,
+        },
+        // {
+        //   label: "Stół",
+        //   icon: <GiTable />,
+        // },
+        // {
+        //   label: "Sofa",
+        //   icon: <FaCouch />,
+        // },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 32"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Telefon",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Klimatyzacja",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Lodówka",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Czajnik",
+          icon: <GiTeapot />,
+        },
+        // {
+        //   label: "kuchnia",
+        //   icon: <GiCookingPot />,
+        // },
+        {
+          label: "Ręczniki",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Szamponiki",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Prysznic",
+          icon: <FaShower />,
+        },
+        // {
+        //   label: "Wanna",
+        //   icon: <FaBath />,
+        // },
       ],
       images: [
         {
@@ -398,12 +534,74 @@ export const items = [
         "Pokój dwuosobowy PREMIUM posiada dwa łóżka pojedyncze (na życzenie gości istnieje możliwość przygotowania łoża małżeńskiego), rozkładaną sofę, telewizor led, mini lodówkę, zestaw do parzenia kawy i herbaty oraz luksusową łazienkę z kabiną prysznicową wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
       ],
       extras: [
-        "Ręczniki kąpielowe",
-        "Serwis na życzenie",
-        "Śniadanie",
-        "Internet",
-        "Wygodne łóżka",
-        "Rozkładana sofa",
+        {
+          label: "łóżka",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "lampka nocna",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Szafa",
+          icon: <BiCloset />,
+        },
+        {
+          label: "Stół",
+          icon: <GiTable />,
+        },
+        {
+          label: "Sofa",
+          icon: <FaCouch />,
+        },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 32"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Telefon",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Klimatyzacja",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Lodówka",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Czajnik",
+          icon: <GiTeapot />,
+        },
+        // {
+        //   label: "kuchnia",
+        //   icon: <GiCookingPot />,
+        // },
+        {
+          label: "Ręczniki",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Szamponiki",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Prysznic",
+          icon: <FaShower />,
+        },
+        // {
+        //   label: "Wanna",
+        //   icon: <FaBath />,
+        // },
       ],
       images: [
         {
@@ -467,13 +665,74 @@ export const items = [
         "Osobnym pomieszczeniem jest utrzymana w bardzo luksusowym stylu łazienka z prysznicem, w której wszyscy nasi Gości znajdą suszarkę, a także zestaw kosmetyków i zachwycające czystą bielą i świeżym zapachem ręczniki.",
       ],
       extras: [
-        "Ręczniki kąpielowe",
-        "Serwis na życzenie",
-        "Śniadanie",
-        "Internet",
-        "Wygodne łóżka",
-        "Rozkładana sofa",
-        "Aneks kuchenny",
+        {
+          label: "łóżka",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "lampka nocna",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Szafa",
+          icon: <BiCloset />,
+        },
+        {
+          label: "Stół",
+          icon: <GiTable />,
+        },
+        {
+          label: "Sofa",
+          icon: <FaCouch />,
+        },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 40"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Telefon",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Klimatyzacja",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Lodówka",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Czajnik",
+          icon: <GiTeapot />,
+        },
+        {
+          label: "kuchnia",
+          icon: <GiCookingPot />,
+        },
+        {
+          label: "Ręczniki",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Szamponiki",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Prysznic",
+          icon: <FaShower />,
+        },
+        // {
+        //   label: "Wanna",
+        //   icon: <FaBath />,
+        // },
       ],
       images: [
         {
@@ -535,13 +794,74 @@ export const items = [
         "Apartament Typu STUDIO posiada sypialnię z bardzo wygodnym łóżkiem, rozkładaną sofę, telewizor led, w pełni wyposażony aneks kuchenny z jadalnią ( płyta indukcyjna, okap, lodówka, zlew, czajnik, naczynia i sztućce) , oraz luksusową łazienkę z prysznicem, wyposażoną w suszarkę, komplet ręczników i zestaw kosmetyków.",
       ],
       extras: [
-        "Ręczniki kąpielowe",
-        "Serwis na życzenie",
-        "Śniadanie",
-        "Internet",
-        "Wygodne łóżka",
-        "Rozkładana sofa",
-        "Aneks kuchenny",
+        {
+          label: "łóżka",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "lampka nocna",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Szafa",
+          icon: <BiCloset />,
+        },
+        {
+          label: "Stół",
+          icon: <GiTable />,
+        },
+        {
+          label: "Sofa",
+          icon: <FaCouch />,
+        },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 40"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Telefon",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Klimatyzacja",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Lodówka",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Czajnik",
+          icon: <GiTeapot />,
+        },
+        {
+          label: "kuchnia",
+          icon: <GiCookingPot />,
+        },
+        {
+          label: "Ręczniki",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Szamponiki",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Prysznic",
+          icon: <FaShower />,
+        },
+        // {
+        //   label: "Wanna",
+        //   icon: <FaBath />,
+        // },
       ],
       images: [
         {
@@ -605,13 +925,74 @@ export const items = [
         "Dbając o komfort Gości zatroszczyliśmy się także o detale. Właśnie dlatego w apartamencie DELUXE dostępne są zawsze świeże, śnieżnobiałe komplety ręczników, zestawy kosmetyków, a nawet suszarka do włosów.",
       ],
       extras: [
-        "Ręczniki kąpielowe",
-        "Serwis na życzenie",
-        "Śniadanie",
-        "Internet",
-        "Wygodne łóżka",
-        "Rozkładana sofa",
-        "Aneks kuchenny",
+        {
+          label: "łóżka",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "lampka nocna",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Szafa",
+          icon: <BiCloset />,
+        },
+        {
+          label: "Stół",
+          icon: <GiTable />,
+        },
+        {
+          label: "Sofa",
+          icon: <FaCouch />,
+        },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 40"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Telefon",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Klimatyzacja",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Lodówka",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Czajnik",
+          icon: <GiTeapot />,
+        },
+        {
+          label: "kuchnia",
+          icon: <GiCookingPot />,
+        },
+        {
+          label: "Ręczniki",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Szamponiki",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Prysznic",
+          icon: <FaShower />,
+        },
+        {
+          label: "Wanna",
+          icon: <FaBath />,
+        },
       ],
       images: [
         {

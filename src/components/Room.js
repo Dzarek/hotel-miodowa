@@ -71,7 +71,7 @@ const Room = ({ room }) => {
 };
 
 const Wrapper = styled.div`
-  width: 23vw;
+  width: 22vw;
   height: 55vh;
   border: 1px solid #ddd;
   border-radius: 5px;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
 import { useLocation } from "react-router-dom";
@@ -8,12 +8,21 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { SRLWrapper } from "simple-react-lightbox";
+import Carousel from "@brainhubeu/react-carousel";
+import "@brainhubeu/react-carousel/lib/style.css";
+import {
+  IoIosArrowDropleftCircle,
+  IoIosArrowDroprightCircle,
+} from "react-icons/io";
 
-import { GiTwoCoins, GiMeal } from "react-icons/gi";
+import { GiTwoCoins, GiMeal, GiVacuumCleaner } from "react-icons/gi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { RiRuler2Line } from "react-icons/ri";
 import { MdSingleBed } from "react-icons/md";
 import { FaCouch } from "react-icons/fa";
+
+import Room from "../components/Room";
+import { withRoomConsumer } from "../roomContext";
 
 const SingleRoomPage = () => {
   useEffect(() => {
@@ -24,32 +33,35 @@ const SingleRoomPage = () => {
   const context = useContext(RoomContext);
   const slug = location.pathname;
   const { getRoom } = context;
+  const { rooms } = context;
   const room = getRoom(slug);
 
-  if (!room) {
-    return (
-      <div className="errorPageStyle">
-        <div className="error">
-          <h3>nie można odnaleźć pokoju...</h3>
-          <Link to="/pokoje/" className="btn-primary">
-            wróć do listy pokoi
-          </Link>
-        </div>
-      </div>
-    );
-  }
+  // if (!room) {
+  //   return (
+  //     <div className="errorPageStyle">
+  //       <div className="error">
+  //         <h3>nie można odnaleźć pokoju...</h3>
+  //         <Link to="/pokoje/" className="btn-primary">
+  //           wróć do listy pokoi
+  //         </Link>
+  //       </div>
+  //     </div>
+  //   );
+  // }
   const {
     name,
     description,
     capacity,
     size,
     price,
-    // extras,
+    extras,
     // breakfast,
     beds,
     sofa,
     images,
   } = room;
+
+  const otherRooms = rooms.filter((item) => item.name !== room.name);
 
   return (
     <Wrapper>
@@ -77,7 +89,38 @@ const SingleRoomPage = () => {
           </div>
           <div className="roomEquipments">
             <h2>Wyposażenie</h2>
-            <div className="equipments"></div>
+            <div className="equipments">
+              {extras.map((item, index) => {
+                const { label, icon } = item;
+                return (
+                  <p key={index}>
+                    {icon} <span>{label}</span>
+                  </p>
+                );
+              })}
+            </div>
+          </div>
+          <div className="otherRooms">
+            <h2>Inne pokoje</h2>
+            <Carousel
+              className="favoriteRoomsCarousel"
+              infinite
+              autoPlay={3000}
+              animationSpeed={1000}
+              slidesPerPage={3}
+              addArrowClickHandler
+              stopAutoPlayOnHover
+              arrowLeft={
+                <IoIosArrowDropleftCircle className="arrow arrowLeft" />
+              }
+              arrowRight={
+                <IoIosArrowDroprightCircle className="arrow arrowRight" />
+              }
+            >
+              {otherRooms.map((item) => {
+                return <Room key={item.id} room={item} />;
+              })}
+            </Carousel>
           </div>
         </div>
         <div className="roomDetails">
@@ -92,7 +135,10 @@ const SingleRoomPage = () => {
             <RiRuler2Line className="icon" /> {size} m <sup>2</sup>
           </p>
           <p>
-            <GiMeal className="icon" /> śniadanie
+            <GiMeal className="icon" /> śniadanie w cenie
+          </p>
+          <p>
+            <GiVacuumCleaner className="icon" /> serwis na życzenie
           </p>
           <p>
             <MdSingleBed className="icon" /> {beds}
@@ -162,7 +208,7 @@ const Wrapper = styled.div`
     max-width: 1360px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     margin: 10vh auto 15vh;
     h2 {
       font-family: var(--buttonFont);
@@ -180,7 +226,7 @@ const Wrapper = styled.div`
     background: #111;
     justify-content: flex-start;
     align-items: center;
-    /* margin-top: 30vh; */
+    margin-top: 20vh;
     border-radius: 3px;
     h2 {
       align-self: center;
@@ -191,17 +237,39 @@ const Wrapper = styled.div`
       /* margin-left: 20%; */
       margin-top: 1vh;
       margin-bottom: 1vh;
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       display: flex;
       align-items: center;
       font-family: var(--buttonFont);
       border-bottom: 1px solid var(--secondaryColor2);
-      width: 80%;
+      width: 90%;
       padding: 5px;
     }
     .icon {
       margin-right: 10%;
       color: var(--secondaryColor);
+    }
+  }
+  .otherRooms {
+    width: 80vw;
+    max-width: 1360px;
+    margin-top: 10vh;
+    h2 {
+      align-self: center;
+      text-align: center;
+    }
+    .favoriteRoomsCarousel {
+      width: 100%;
+    }
+    .arrow {
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 10000;
+      color: var(--primaryColor);
+      transition: 0.3s;
+      :hover {
+        color: var(--secondaryColor);
+      }
     }
   }
   .roomEquipments {
@@ -212,7 +280,29 @@ const Wrapper = styled.div`
       background: #ddd;
       width: 100%;
       padding: 20px;
-      border-radius: 5px;
+      border-radius: 3px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        font-size: 3.5rem;
+        font-family: var(--buttonFont);
+        background: var(--appBgColor);
+        padding: 20px 5px;
+        border-radius: 10px;
+        width: 150px;
+        height: 150px;
+        margin: 1.5vh;
+        span {
+          font-size: 1.3rem;
+          color: var(--secondaryColor2);
+        }
+      }
     }
   }
   .descriptionAndPictures {
@@ -256,4 +346,5 @@ const Wrapper = styled.div`
   }
 `;
 
-export default SingleRoomPage;
+// export default SingleRoomPage;
+export default withRoomConsumer(SingleRoomPage);
