@@ -46,7 +46,7 @@ const ParkingPage = () => {
             className="oneParkingMap"
             allowfullscreen=""
             loading="lazy"
-            data-aos="flip-right"
+            data-aos="fade-left"
             title="Miodowa 55A"
           ></iframe>
         </section>
@@ -56,7 +56,7 @@ const ParkingPage = () => {
             className="oneParkingMap"
             allowfullscreen=""
             loading="lazy"
-            data-aos="flip-right"
+            data-aos="fade-right"
             title="Starowiślna 79a"
           ></iframe>
           <div className="oneParkingInfo">
@@ -82,7 +82,7 @@ const ParkingPage = () => {
             className="oneParkingMap"
             allowfullscreen=""
             loading="lazy"
-            data-aos="flip-right"
+            data-aos="fade-left"
             title="Dajwór 12"
           ></iframe>
         </section>

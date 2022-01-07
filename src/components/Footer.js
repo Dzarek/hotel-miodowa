@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
 
 import { MdOutlineStar, MdMail } from "react-icons/md";
 import {
@@ -38,37 +39,37 @@ const Footer = () => {
           <h3>Przydatne Linki</h3>
           <div className="links">
             <section>
-              <p>
+              <NavLink to="/pokoje">
                 <FaLongArrowAltRight className="iconReact" /> Pokoje
-              </p>
-              <p>
+              </NavLink>
+              <NavLink to="/oNas/oHotelu">
                 <FaLongArrowAltRight className="iconReact" /> Hotel
-              </p>
-              <p>
+              </NavLink>
+              <NavLink to="/oNas/oKrakowie">
                 <FaLongArrowAltRight className="iconReact" /> Kraków
-              </p>
-              <p>
+              </NavLink>
+              <NavLink to="/uslugi/restauracja">
                 <FaLongArrowAltRight className="iconReact" /> Restauracja
-              </p>
-              <p>
+              </NavLink>
+              <NavLink to="/uslugi/transport&wycieczki">
                 <FaLongArrowAltRight className="iconReact" /> Transfery i
                 Wycieczki
-              </p>
+              </NavLink>
             </section>
             <section>
-              <p>
+              <NavLink to="/kontakt/faq">
                 <FaLongArrowAltRight className="iconReact" /> FAQ
-              </p>
-              <p>
+              </NavLink>
+              <NavLink to="/kontakt/regulamin">
                 <FaLongArrowAltRight className="iconReact" /> Regulamin
-              </p>
-              <p>
+              </NavLink>
+              <NavLink to="/kontakt/rodo&cookies">
                 <FaLongArrowAltRight className="iconReact" /> RODO
-              </p>
-              <p>
+              </NavLink>
+              {/* <NavLink>
                 <FaLongArrowAltRight className="iconReact" /> Polityka
                 Prywatności
-              </p>
+              </NavLink> */}
             </section>
           </div>
         </div>
@@ -92,7 +93,7 @@ const Footer = () => {
         </div>
       </div>
       <h5 className="copyrights">
-        &copy; {new Date().getFullYear()} Hotel Miodowa, Wszelkie Prawa
+        &copy; 2014 - {new Date().getFullYear()} Hotel Miodowa, Wszelkie Prawa
         Zastrzeżone
       </h5>
     </Wrapper>
@@ -181,6 +182,7 @@ const Wrapper = styled.div`
           justify-content: flex-start;
           align-items: flex-start;
           width: 50%;
+          a,
           p {
             margin: 1vh 0;
             display: flex;
@@ -188,8 +190,9 @@ const Wrapper = styled.div`
             align-items: center;
             font-family: var(--buttonFont);
             font-size: 1.1rem;
+            color: white;
+            text-decoration: none;
             transition: 0.3s;
-            cursor: pointer;
             .iconReact {
               color: var(--secondaryColor2);
               margin-right: 10px;
@@ -197,6 +200,9 @@ const Wrapper = styled.div`
             :hover {
               color: var(--secondaryColor2);
             }
+          }
+          a {
+            cursor: pointer;
           }
         }
       }
@@ -222,7 +228,7 @@ const Wrapper = styled.div`
           font-family: var(--buttonFont);
           font-size: 1.1rem;
           transition: 0.3s;
-          cursor: pointer;
+          /* cursor: pointer; */
           .iconReact {
             color: var(--secondaryColor2);
             margin-right: 10px;

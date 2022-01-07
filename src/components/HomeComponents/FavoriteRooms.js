@@ -2,23 +2,21 @@ import React from "react";
 import styled from "styled-components";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
-
 import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
-import { GiExitDoor } from "react-icons/gi";
-import { BsFillPersonFill } from "react-icons/bs";
-import { RiRuler2Line } from "react-icons/ri";
-import { MdSingleBed, MdKitchen } from "react-icons/md";
-import { FaCouch, FaBath } from "react-icons/fa";
-
-import room1 from "../../images/homeImages/Deluxe 8.jpg";
-import room2 from "../../images/homeImages/STUDIO 002.jpg";
-import room3 from "../../images/homeImages/Superior 11.jpg";
-import room4 from "../../images/homeImages/TWIM PREMIUM 005.jpg";
+import { useContext } from "react";
+import { RoomContext } from "../../roomContext";
+import Room from "../Room";
+import { withRoomConsumer } from "../../roomContext";
 
 const FavoriteRooms = () => {
+  const context = useContext(RoomContext);
+  const { rooms } = context;
+
+  const favoriteRooms = rooms.filter((item) => item.featured === true);
+
   return (
     <Wrapper>
       <div className="mainSection favoriteRooms">
@@ -39,146 +37,9 @@ const FavoriteRooms = () => {
             <IoIosArrowDroprightCircle className="arrow arrowRight" />
           }
         >
-          <div className="oneFavoriteRoom">
-            <img src={room1} alt="" />
-            <h4>Apartament Deluxe</h4>
-            <div className="iconContainer">
-              <GiExitDoor className="icon" />
-            </div>
-            <section>
-              <span>
-                <BsFillPersonFill />
-                <h5>2 - 4</h5>
-              </span>
-              <span>
-                <RiRuler2Line />
-                <h5>
-                  40 m <sup>2</sup>{" "}
-                </h5>
-              </span>
-              <span>
-                <FaBath />
-                <h5>łazienka</h5>
-              </span>
-              <span>
-                <MdKitchen />
-                <h5>kuchnia</h5>
-              </span>
-              <span>
-                <MdSingleBed />
-                <h5>2x 90 cm</h5>
-              </span>
-              <span>
-                <FaCouch />
-                <h5>1x 160 cm</h5>
-              </span>
-            </section>
-          </div>
-          <div className="oneFavoriteRoom">
-            <img src={room4} alt="" />
-            <h4>Apartament Twin Premium</h4>
-            <div className="iconContainer">
-              <GiExitDoor className="icon" />
-            </div>
-            <section>
-              <span>
-                <BsFillPersonFill />
-                <h5>2 - 4</h5>
-              </span>
-              <span>
-                <RiRuler2Line />
-                <h5>
-                  22 m <sup>2</sup>{" "}
-                </h5>
-              </span>
-              <span>
-                <FaBath />
-                <h5>łazienka</h5>
-              </span>
-              <span>
-                <MdKitchen />
-                <h5>kuchnia</h5>
-              </span>
-              <span>
-                <MdSingleBed />
-                <h5>2x 90 cm</h5>
-              </span>
-              <span>
-                <FaCouch />
-                <h5>1x 160 cm</h5>
-              </span>
-            </section>
-          </div>
-          <div className="oneFavoriteRoom">
-            <img src={room2} alt="" />
-            <h4>Apartament Studio</h4>
-            <div className="iconContainer">
-              <GiExitDoor className="icon" />
-            </div>
-            <section>
-              <span>
-                <BsFillPersonFill />
-                <h5>2 - 4</h5>
-              </span>
-              <span>
-                <RiRuler2Line />
-                <h5>
-                  32 m <sup>2</sup>{" "}
-                </h5>
-              </span>
-              <span>
-                <FaBath />
-                <h5>łazienka</h5>
-              </span>
-              <span>
-                <MdKitchen />
-                <h5>kuchnia</h5>
-              </span>
-              <span>
-                <MdSingleBed />
-                <h5>2x 90 cm</h5>
-              </span>
-              <span>
-                <FaCouch />
-                <h5>1x 180 cm</h5>
-              </span>
-            </section>
-          </div>
-          <div className="oneFavoriteRoom">
-            <img src={room3} alt="" />
-            <h4>Apartament Superior</h4>
-            <div className="iconContainer">
-              <GiExitDoor className="icon" />
-            </div>
-            <section>
-              <span>
-                <BsFillPersonFill />
-                <h5>2 - 4</h5>
-              </span>
-              <span>
-                <RiRuler2Line />
-                <h5>
-                  38 m <sup>2</sup>{" "}
-                </h5>
-              </span>
-              <span>
-                <FaBath />
-                <h5>łazienka</h5>
-              </span>
-              <span>
-                <MdKitchen />
-                <h5>kuchnia</h5>
-              </span>
-              <span>
-                <MdSingleBed />
-                <h5>2x 90 cm</h5>
-              </span>
-              <span>
-                <FaCouch />
-                <h5>1x 160 cm</h5>
-              </span>
-            </section>
-          </div>
+          {favoriteRooms.map((item) => {
+            return <Room key={item.id} room={item} />;
+          })}
         </Carousel>
       </div>
     </Wrapper>
@@ -192,8 +53,6 @@ const Wrapper = styled.div`
     width: 80vw;
     margin-top: 20vh;
 
-    /* justify-content: space-around;
-    align-items: center; */
     .favoriteRoomsCarousel {
       margin-top: 10vh;
       width: 100%;
@@ -296,4 +155,5 @@ const Wrapper = styled.div`
   }
 `;
 
-export default FavoriteRooms;
+// export default FavoriteRooms;
+export default withRoomConsumer(FavoriteRooms);

@@ -70,7 +70,7 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
   // }, []);
 
   const url = `https://www.booking.com/hotel/pl/aparthotel-miodowa-krakow.pl.html?aid=304142;label=gen173nr-1DCAsotgFCGWFwYXJ0aG90ZWwtbWlvZG93YS1rcmFrb3dIHlgEaLYBiAEBmAEeuAEXyAEP2AED6AEB-AECiAIBqAIDuALtqLSNBsACAdICJDFhYjY2NDM4LTI1NzItNDhlYS1hMWY4LTU1NDE5YjYwNzI3ZtgCBOACAQ;sid=8eca526340932527514ab17dccd65fef;checkin=${checkInDate};checkout=${checkOutDate}; group_adults=${adult};group_children=${children};no_rooms=1;req_adults=${adult};${numberOfChildren}req_children=${children};`;
-  // console.log(date);
+
   return (
     <Wrapper>
       <div className={showBooking ? "bookRoom showBookRoom" : "bookRoom"}>

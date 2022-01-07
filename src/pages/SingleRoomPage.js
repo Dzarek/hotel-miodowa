@@ -93,14 +93,14 @@ const SingleRoomPage = () => {
               {extras.map((item, index) => {
                 const { label, icon } = item;
                 return (
-                  <p key={index}>
+                  <p data-aos="zoom-left" key={index}>
                     {icon} <span>{label}</span>
                   </p>
                 );
               })}
             </div>
           </div>
-          <div className="otherRooms">
+          <div data-aos="fade-up" data-aos-offset="200" className="otherRooms">
             <h2>Inne pokoje</h2>
             <Carousel
               className="favoriteRoomsCarousel"
@@ -123,7 +123,11 @@ const SingleRoomPage = () => {
             </Carousel>
           </div>
         </div>
-        <div className="roomDetails">
+        <div
+          data-aos="fade-right"
+          data-aos-offset="300"
+          className="roomDetails"
+        >
           <h2>Szczegóły</h2>
           <p>
             <GiTwoCoins className="icon" /> {price} zł
