@@ -820,13 +820,13 @@ const Wrapper2 = styled.div`
   .upBtn {
     position: fixed;
     bottom: 7vh;
-    right: 15vw;
+    right: 10vw;
     font-size: 2rem;
     background: transparent;
     border: none;
     color: var(--primaryColor);
     transition: 0.5s;
-    z-index: 9999;
+    z-index: 999999999;
     cursor: pointer;
     :hover {
       color: var(--secondaryColor2);

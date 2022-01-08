@@ -13,12 +13,11 @@ import { MdOutlineStar } from "react-icons/md";
 
 import desktopImg1 from "../../images/headerImages/TWIM PREMIUM 005.jpg";
 import desktopImg3 from "../../images/headerImages/Superior 11.jpg";
-// import desktopImg2 from "../../images/headerImages/DELUXE 002.jpg";
 import desktopImg4 from "../../images/headerImages/STUDIO 004.jpg";
 
 import mobileImg1 from "../../images/headerImages/TWIM PREMIUMMobile.jpg";
 import mobileImg2 from "../../images/headerImages/DELUXE Mobile.jpg";
-import mobileImg4 from "../../images/headerImages/STUDIO 004Mobile.jpg";
+import mobileImg4 from "../../images/headerImages/STUDIO 005Mobile.jpg";
 
 import { useContext } from "react";
 import { RoomContext } from "../../roomContext";

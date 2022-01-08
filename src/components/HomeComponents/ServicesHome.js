@@ -208,6 +208,7 @@ const Wrapper = styled.div`
         position: relative;
         overflow: hidden;
         transition: 0.5s;
+        user-select: none;
 
         img {
           position: absolute;

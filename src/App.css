@@ -19,8 +19,14 @@ html {
   overflow-x: hidden;
 }
 
+body {
+  overflow-x: hidden;
+
+}
 
 .app {
+  overflow-x: hidden;
+
   --primaryColor: #eee;
   --secondaryColor2: rgb(185, 130, 93);
   --secondaryColor: rgb(133, 88, 55);
