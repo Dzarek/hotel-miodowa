@@ -198,7 +198,7 @@ const Wrapper = styled.div`
     }
   }
   .showBookRoom {
-    transform: translateX(-10%);
+    transform: translateX(0%);
     transition: 0.4s;
   }
   .bookForm {
