@@ -22,82 +22,155 @@ import wycieczkiImg from "../../images/homeImages/wycieczki.jpg";
 import parkingImg from "../../images/homeImages/parking.jpg";
 import serviceImg from "../../images/homeImages/serwis.jpg";
 
+import { useContext } from "react";
+import { RoomContext } from "../../roomContext";
+
 const ServicesHome = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper>
-      <div className="mainSection servicesHome">
-        <div className="titleContainer">
-          <h2 className="title">Nasza Oferta</h2>
-          <span className="titleBorder"></span>
+      {polish ? (
+        <div className="mainSection servicesHome">
+          <div className="titleContainer">
+            <h2 className="title">Nasza Oferta</h2>
+            <span className="titleBorder"></span>
+          </div>
+          <div data-aos="zoom-in" className="services">
+            <span className="oneService">
+              <GiMeal className="icon" />
+              <h4>Śniadania</h4>
+              <p>
+                Śniadania dla każdego gościa serwowane w godzinach 7:30-10:00.
+              </p>
+              <img src={restauracjaImg} alt="" />
+            </span>
+            <span className="oneService">
+              <FaMapMarkerAlt className="icon" />
+              <h4>Lokalizacja</h4>
+              <p>
+                Lokalizacja w centrum Krakowa zapewnia bardzo dobrą komunikację
+                z najważniejszymi punktami miasta.
+              </p>
+              <img src={budynekImg} alt="" />
+            </span>
+            <span className="oneService">
+              <FaConciergeBell className="icon" />
+              <h4>Recepcja 24H</h4>
+              <p>Nasza recepcja czynna jest 24 godziny na dobę.</p>
+              <img src={recepcjaImg} alt="" />
+            </span>
+            <span className="oneService">
+              <FaShuttleVan className="icon" />
+              <h4>Transfery Lotniskowe</h4>
+              <p>
+                Transport z Portu Lotniczego Kraków-Balice wprost do naszego
+                obiektu.
+              </p>
+              <img src={transferImg} alt="" />
+            </span>
+            <span className="oneService">
+              <IoFootsteps className="icon" />
+              <h4>Wycieczki</h4>
+              <p>
+                Organizujemy wycieczki do takich miejsc jak Auschwitz Birkenau,
+                Kopalnia Soli w Wieliczce czy Zakopane.
+              </p>
+              <img src={wycieczkiImg} alt="" />
+            </span>
+            <span className="oneService">
+              <FaParking className="icon" />
+              <h4>Parking</h4>
+              <p>
+                Hotel posiada kilka miejsc parkingowych dla osób podróżujących
+                samochodem. Wymagana rezerwacja.
+              </p>
+              <img src={parkingImg} alt="" />
+            </span>
+            <span className="oneService">
+              <FaWifi className="icon" />
+              <h4>Wi-Fi</h4>
+              <p>Do dyspozycji gości sieć Wi-Fi w całym budynku hotelu.</p>
+              <img src={wifiImg} alt="" />
+            </span>
+            <span className="oneService">
+              <GiVacuumCleaner className="icon" />
+              <h4>Serwis</h4>
+              <p>Obsługa hotelu zapewnia codzienny serwis pokoi.</p>
+              <img src={serviceImg} alt="" />
+            </span>
+          </div>
         </div>
-        <div data-aos="zoom-in" className="services">
-          <span className="oneService">
-            <GiMeal className="icon" />
-            <h4>Śniadania</h4>
-            <p>
-              Śniadania dla każdego gościa serwowane w godzinach 7:30-10:00.
-            </p>
-            <img src={restauracjaImg} alt="" />
-          </span>
-          <span className="oneService">
-            <FaMapMarkerAlt className="icon" />
-            <h4>Lokalizacja</h4>
-            <p>
-              Lokalizacja w centrum Krakowa zapewnia bardzo dobrą komunikację z
-              najważniejszymi punktami miasta.
-            </p>
-            <img src={budynekImg} alt="" />
-          </span>
-          <span className="oneService">
-            <FaConciergeBell className="icon" />
-            <h4>Recepcja 24H</h4>
-            <p>Nasza recepcja czynna jest 24 godziny na dobę.</p>
-            <img src={recepcjaImg} alt="" />
-          </span>
-          <span className="oneService">
-            <FaShuttleVan className="icon" />
-            <h4>Transfery Lotniskowe</h4>
-            <p>
-              Transport z Portu Lotniczego Kraków-Balice wprost do naszego
-              obiektu.
-            </p>
-            <img src={transferImg} alt="" />
-          </span>
-          <span className="oneService">
-            <IoFootsteps className="icon" />
-            <h4>Wycieczki</h4>
-            <p>
-              Organizujemy wycieczki do takich miejsc jak Auschwitz Birkenau,
-              Kopalnia Soli w Wieliczce czy Zakopane.
-            </p>
-            <img src={wycieczkiImg} alt="" />
-          </span>
-          <span className="oneService">
-            <FaParking className="icon" />
-            <h4>Parking</h4>
-            <p>
-              Hotel posiada kilka miejsc parkingowych dla osób podróżujących
-              samochodem. Wymagana rezerwacja.
-            </p>
-            <img src={parkingImg} alt="" />
-          </span>
-          <span className="oneService">
-            <FaWifi className="icon" />
-            <h4>Wi-Fi</h4>
-            <p>Do dyspozycji gości sieć Wi-Fi w całym budynku hotelu.</p>
-            <img src={wifiImg} alt="" />
-          </span>
-          <span className="oneService">
-            <GiVacuumCleaner className="icon" />
-            <h4>Serwis</h4>
-            <p>Obsługa hotelu zapewnia codzienny serwis pokoi.</p>
-            <img src={serviceImg} alt="" />
-          </span>
+      ) : (
+        <div className="mainSection servicesHome">
+          <div className="titleContainer">
+            <h2 className="title">Our Offer</h2>
+            <span className="titleBorder"></span>
+          </div>
+          <div data-aos="zoom-in" className="services">
+            <span className="oneService">
+              <GiMeal className="icon" />
+              <h4>Breakfast</h4>
+              <p>Breakfasts for each guest are served from 7:30 to 10:00. </p>
+              <img src={restauracjaImg} alt="" />
+            </span>
+            <span className="oneService">
+              <FaMapMarkerAlt className="icon" />
+              <h4>Location</h4>
+              <p>
+                The location in the center of Crakow provides very good
+                communication with the most important points of the city.
+              </p>
+              <img src={budynekImg} alt="" />
+            </span>
+            <span className="oneService">
+              <FaConciergeBell className="icon" />
+              <h4>Reception 24H</h4>
+              <p>Our reception is open 24H.</p>
+              <img src={recepcjaImg} alt="" />
+            </span>
+            <span className="oneService">
+              <FaShuttleVan className="icon" />
+              <h4>Airport Transfers</h4>
+              <p>Transport from Crakow-Balice Airport to Our Hotel.</p>
+              <img src={transferImg} alt="" />
+            </span>
+            <span className="oneService">
+              <IoFootsteps className="icon" />
+              <h4>Tours</h4>
+              <p>
+                We organize trips to places such as Auschwitz Birkenau, The Salt
+                Mine in Wieliczka or Zakopane.
+              </p>
+              <img src={wycieczkiImg} alt="" />
+            </span>
+            <span className="oneService">
+              <FaParking className="icon" />
+              <h4>Parking</h4>
+              <p>
+                The hotel has several parking spaces for travelers by car.
+                Reservation required.
+              </p>
+              <img src={parkingImg} alt="" />
+            </span>
+            <span className="oneService">
+              <FaWifi className="icon" />
+              <h4>Wi-Fi</h4>
+              <p>Wi-Fi network available throughout the hotel building.</p>
+              <img src={wifiImg} alt="" />
+            </span>
+            <span className="oneService">
+              <GiVacuumCleaner className="icon" />
+              <h4>Service</h4>
+              <p>The hotel staff provides daily room service.</p>
+              <img src={serviceImg} alt="" />
+            </span>
+          </div>
         </div>
-      </div>
+      )}
     </Wrapper>
   );
 };

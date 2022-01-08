@@ -10,11 +10,11 @@ import { RoomProvider } from "./roomContext";
 ReactDOM.render(
   <React.StrictMode>
     <SimpleReactLightbox>
-      <AppProvider>
-        <RoomProvider>
+      <RoomProvider>
+        <AppProvider>
           <App />
-        </RoomProvider>
-      </AppProvider>
+        </AppProvider>
+      </RoomProvider>
     </SimpleReactLightbox>
   </React.StrictMode>,
   document.getElementById("root")

@@ -1,8 +1,11 @@
 import React, { useState, useContext } from "react";
-import { sublinks } from "./data";
+import { RoomContext } from "./roomContext";
+import { sublinks, sublinksEN } from "./data";
 const AppContext = React.createContext();
 
 const AppProvider = ({ children }) => {
+  const context = useContext(RoomContext);
+  const { polish } = context;
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSubmenuOpen, setIsSubmenuOpen] = useState(false);
   const [page, setPage] = useState({ pageOne: "", links: [] });
@@ -14,7 +17,12 @@ const AppProvider = ({ children }) => {
     setIsSidebarOpen(false);
   };
   const openSubmenu = (text, coordinates) => {
-    const page = sublinks.find((link) => link.pageOne === text);
+    let page;
+    if (polish) {
+      page = sublinks.find((link) => link.pageOne === text);
+    } else {
+      page = sublinksEN.find((link) => link.pageOne === text);
+    }
     setPage(page);
     setLocation(coordinates);
     setIsSubmenuOpen(true);

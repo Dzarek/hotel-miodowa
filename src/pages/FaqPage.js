@@ -11,13 +11,25 @@ import {
   AccordionItemHeading,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-import { questionsData } from "../data";
+import { questionsData, questionsDataEN } from "../data";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { BsFillQuestionOctagonFill } from "react-icons/bs";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 const FaqPage = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  const context = useContext(RoomContext);
+  const { polish } = context;
+
+  let questions = [];
+  if (polish) {
+    questions = questionsData;
+  } else {
+    questions = questionsDataEN;
+  }
+
   return (
     <Wrapper>
       <div className="title">
@@ -30,10 +42,12 @@ const FaqPage = () => {
         <h2>?</h2>
         <h1>?</h1>
       </div>
-      <h2 className="faqSubTitle">Najczęściej zadawane pytania</h2>
+      <h2 className="faqSubTitle">
+        {polish ? "Najczęściej zadawane pytania" : "Frequently Asked Questions"}
+      </h2>
       <div className="questions">
         <Accordion allowZeroExpanded={true}>
-          {questionsData.map((question) => {
+          {questions.map((question) => {
             const { title, info, id } = question;
             return (
               <AccordionItem key={id}>
@@ -59,13 +73,22 @@ const FaqPage = () => {
           })}
         </Accordion>
         <div className="receptionFaq">
-          <p>
-            Nie znalazleś odpowiedzi na swoje pytania? <br /> Śmiało zapytaj nas
-            poprzez formularz kontaktowy!
-          </p>
+          {polish ? (
+            <p>
+              Nie znalazleś odpowiedzi na swoje pytania? <br /> Śmiało zapytaj
+              nas poprzez formularz kontaktowy!
+            </p>
+          ) : (
+            <p>
+              Didn't find the answer to your questions? <br /> Go ahead and ask
+              us by the contact form!
+            </p>
+          )}
           <div className="receptionPicture">
             <div className="receptionImg"></div>
-            <NavLink to="/kontakt/formularzKontaktowy">Zapytaj nas!</NavLink>
+            <NavLink to="/kontakt/formularzKontaktowy">
+              {polish ? "Zapytaj nas!" : "Ask us!"}
+            </NavLink>
           </div>
         </div>
       </div>

@@ -9,6 +9,9 @@ import { RiRuler2Line } from "react-icons/ri";
 import { MdSingleBed, MdKitchen } from "react-icons/md";
 import { FaCouch, FaBath } from "react-icons/fa";
 
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
+
 const Room = ({ room }) => {
   const {
     name,
@@ -22,13 +25,14 @@ const Room = ({ room }) => {
     beds,
     sofa,
   } = room;
-
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper>
       <img src={images[0]} alt="pokój" />
       <div className="price-top">
         <h6>{price} zł</h6>
-        <p>/noc</p>
+        <p>{polish ? "/noc" : "/night"}</p>
       </div>
       <h4>{name}</h4>
       <Link to={`${slug}`} className="iconContainer">

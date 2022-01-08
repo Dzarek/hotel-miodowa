@@ -157,6 +157,95 @@ export const sublinks = [
     ],
   },
 ];
+export const sublinksEN = [
+  {
+    pageOne: "rooms",
+    links: [
+      {
+        label: "TWIN room",
+        icon: <FaLongArrowAltRight />,
+        url: "/pokoje/twin",
+      },
+      {
+        label: "DOUBLE room",
+        icon: <FaLongArrowAltRight />,
+        url: "/pokoje/double",
+      },
+      {
+        label: "PREMIUM room",
+        icon: <FaLongArrowAltRight />,
+        url: "/pokoje/premium",
+      },
+      {
+        label: "SUPERIOR room",
+        icon: <FaLongArrowAltRight />,
+        url: "/pokoje/superior",
+      },
+      {
+        label: "STUDIO room",
+        icon: <FaLongArrowAltRight />,
+        url: "/pokoje/studio",
+      },
+      {
+        label: "DELUXE room",
+        icon: <FaLongArrowAltRight />,
+        url: "/pokoje/deluxe",
+      },
+    ],
+  },
+  {
+    pageOne: "about us",
+    links: [
+      { label: "hotel", icon: <FaLongArrowAltRight />, url: "/oNas/oHotelu" },
+      {
+        label: "cracow",
+        icon: <FaLongArrowAltRight />,
+        url: "/oNas/oKrakowie",
+      },
+    ],
+  },
+  {
+    pageOne: "services",
+    links: [
+      {
+        label: "transfers and tours",
+        icon: <FaLongArrowAltRight />,
+        url: "/uslugi/transport&wycieczki",
+      },
+      {
+        label: "restaurant",
+        icon: <FaLongArrowAltRight />,
+        url: "/uslugi/restauracja",
+      },
+      {
+        label: "parking",
+        icon: <FaLongArrowAltRight />,
+        url: "/uslugi/parking",
+      },
+    ],
+  },
+  {
+    pageOne: "contact",
+    links: [
+      {
+        label: "contact",
+        icon: <FaLongArrowAltRight />,
+        url: "/kontakt/formularzKontaktowy",
+      },
+      { label: "faq", icon: <FaLongArrowAltRight />, url: "/kontakt/faq" },
+      {
+        label: "regulations",
+        icon: <FaLongArrowAltRight />,
+        url: "/kontakt/regulamin",
+      },
+      {
+        label: "rodo and cookies",
+        icon: <FaLongArrowAltRight />,
+        url: "/kontakt/rodo&cookies",
+      },
+    ],
+  },
+];
 
 export const gallery = [
   {
@@ -208,6 +297,56 @@ export const gallery = [
     category: "recepcja i bar",
   },
 ];
+export const galleryEN = [
+  {
+    id: 1,
+    img: [twin1, twin2, twin3, twin4, twin5],
+    category: "twin",
+  },
+  {
+    id: 2,
+    img: [dbl1, dbl2, dbl3, dbl4, dbl5, dbl6],
+    category: "double",
+  },
+  {
+    id: 3,
+    img: [premium1, premium2, premium3, premium4, premium5],
+    category: "premium",
+  },
+  {
+    id: 4,
+    img: [superior1, superior2, superior3, superior4, superior5, superior6],
+    category: "superior",
+  },
+  {
+    id: 5,
+    img: [studio1, studio2, studio3, studio4, studio5],
+    category: "studio",
+  },
+  {
+    id: 6,
+    img: [deluxe1, deluxe2, deluxe3, deluxe4, deluxe5, deluxe6],
+    category: "deluxe",
+  },
+  {
+    id: 7,
+    img: [
+      restauracja1,
+      restauracja2,
+      restauracja3,
+      restauracja4,
+      restauracja5,
+      restauracja6,
+      restauracja7,
+    ],
+    category: "restaurant",
+  },
+  {
+    id: 8,
+    img: [recepcjaBar1, recepcjaBar2, recepcjaBar3, recepcjaBar4, recepcjaBar5],
+    category: "reception and bar",
+  },
+];
 
 export const questionsData = [
   {
@@ -251,6 +390,49 @@ export const questionsData = [
     id: 8,
     title: "Czy w Aparthotelu Miodowa akceptowana jest płatność kartą?",
     info: "Tak – akceptujemy zarówno transakcje gotówkowe, jak i płatność kartą kredytową, Na terenie naszego obiektu możliwa jest obsługa kart Visa i MasterCard.",
+  },
+];
+export const questionsDataEN = [
+  {
+    id: 1,
+    title:
+      "What is the difference between the different types of apartments - Standard, Superior, Deluxe?",
+    info: "All our apartments are furnished to a very high standard. The SUPERIOR type is distinguished by a larger area than the STANDARD apartments, while the DELUXE apartments have the largest area. The difference is also the view from the window.",
+  },
+  {
+    id: 2,
+    title: "The given prices are prices per apartment or per person?",
+    info: "All prices quoted on the website are prices per apartment. Prices of one type of apartments may vary depending on the maximum number of people they can accommodate.",
+  },
+  {
+    id: 3,
+    title: "What's on the room equipment?",
+    info: "Each apartment has: comfortable beds, wardrobe, fold-out sofa, LED TV, coffee table, desk, table and chairs, fully equipped kitchenette (induction hob, extractor hood, fridge, sink, kettle, dishes and cutlery), access to a private bathroom with toilet, sink, bathtub or shower, mirror and hairdryer.",
+  },
+  {
+    id: 4,
+    title: "What amenities can you use at Aparthotel Miodowa?",
+    info: "In addition to fully equipped apartments, we also offer our guests the opportunity to take advantage of: free breakfast buffet, parking, daily cleaning, irons for ironing, luggage storage, 24-hour reception services, airport transfer and other transport services.",
+  },
+  {
+    id: 5,
+    title: "Is it possible to use the car park?",
+    info: "Yes, we offer a guarded car park next to the property for an additional fee.",
+  },
+  {
+    id: 6,
+    title: "What time does the hotel day begin and end?",
+    info: "The hotel day starts at 2:00 PM and ends at 12:00 the next day.",
+  },
+  {
+    id: 7,
+    title: "What are the consequences of canceling the reservation?",
+    info: "It all depends on the type of room. We encourage you to read the booking conditions before making your reservation.",
+  },
+  {
+    id: 8,
+    title: "Is card payment accepted at Aparthotel Miodowa?",
+    info: "Yes - we accept both cash transactions and credit card payments. We also accept Visa and MasterCard.",
   },
 ];
 
@@ -991,6 +1173,786 @@ export const items = [
         },
         {
           label: "Wanna",
+          icon: <FaBath />,
+        },
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: deluxe1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: deluxe2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: deluxe3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: deluxe4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: deluxe5,
+            },
+          },
+        },
+      ],
+    },
+  },
+];
+export const itemsEN = [
+  {
+    sys: {
+      id: "1",
+    },
+    fields: {
+      name: "TWIN room",
+      slug: "/pokoje/twin",
+      type: "room",
+      price: 220,
+      size: 16,
+      capacity: 2,
+      featured: false,
+      breakfast: true,
+      bathroom: "shower",
+      kitchen: "fridge, kettle",
+      beds: "2x 90cm",
+      sofa: false,
+      description: [
+        "The TWIN room has two single beds (on request, it is possible to prepare a double bed), LED TV, mini fridge, tea and coffee making facilities and a luxurious bathroom with a shower cabin equipped with a dryer, a set of towels and a set of cosmetics.",
+      ],
+      extras: [
+        {
+          label: "Beds",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "Bedside Lamp",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Wardrobe",
+          icon: <BiCloset />,
+        },
+        // {
+        //   label: "Table",
+        //   icon: <GiTable />,
+        // },
+        // {
+        //   label: "Couch",
+        //   icon: <FaCouch />,
+        // },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 32"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Phone",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Air-Conditioner",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Fridge",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Kettle",
+          icon: <GiTeapot />,
+        },
+        // {
+        //   label: "Kitchen",
+        //   icon: <GiCookingPot />,
+        // },
+        {
+          label: "Towels",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Shampoos",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Shower",
+          icon: <FaShower />,
+        },
+        // {
+        //   label: "Bath",
+        //   icon: <FaBath />,
+        // },
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: twin1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: twin5,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "2",
+    },
+    fields: {
+      name: "DOUBLE room",
+      slug: "/pokoje/double",
+      type: "room",
+      price: 220,
+      size: 16,
+      capacity: 2,
+      featured: true,
+      breakfast: true,
+      bathroom: "shower",
+      kitchen: "fridge, kettle",
+      beds: "1x 160cm",
+      sofa: false,
+      description: [
+        "Double room has a comfortable double bed, LED TV, mini fridge, tea and coffee making facilities, a luxurious bathroom with a shower, equipped with a dryer, a set of towels and a set of cosmetics.",
+      ],
+      extras: [
+        {
+          label: "Beds",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "Bedside Lamp",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Wardrobe",
+          icon: <BiCloset />,
+        },
+        // {
+        //   label: "Table",
+        //   icon: <GiTable />,
+        // },
+        // {
+        //   label: "Couch",
+        //   icon: <FaCouch />,
+        // },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 32"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Phone",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Air-Conditioner",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Fridge",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Kettle",
+          icon: <GiTeapot />,
+        },
+        // {
+        //   label: "Kitchen",
+        //   icon: <GiCookingPot />,
+        // },
+        {
+          label: "Towels",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Shampoos",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Shower",
+          icon: <FaShower />,
+        },
+        // {
+        //   label: "Bath",
+        //   icon: <FaBath />,
+        // },
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: dbl1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: dbl2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: dbl3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: dbl4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: dbl5,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "3",
+    },
+    fields: {
+      name: "PREMIUM room",
+      slug: "/pokoje/premium",
+      type: "room",
+      price: 260,
+      size: 22,
+      capacity: 4,
+      featured: false,
+      breakfast: true,
+      bathroom: "shower",
+      kitchen: "fridge, kettle",
+      beds: "2x 90cm",
+      sofa: true,
+      description: [
+        "The PREMIUM room has two single beds (on request, it is possible to prepare a double bed), a fold-out sofa, LED TV, mini fridge, tea and coffee making facilities and a luxurious bathroom with a shower cabin equipped with a dryer, a set of towels and a set of cosmetics.",
+      ],
+      extras: [
+        {
+          label: "Beds",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "Bedside Lamp",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Wardrobe",
+          icon: <BiCloset />,
+        },
+        // {
+        //   label: "Table",
+        //   icon: <GiTable />,
+        // },
+        {
+          label: "Couch",
+          icon: <FaCouch />,
+        },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 32"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Phone",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Air-Conditioner",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Fridge",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Kettle",
+          icon: <GiTeapot />,
+        },
+        // {
+        //   label: "Kitchen",
+        //   icon: <GiCookingPot />,
+        // },
+        {
+          label: "Towels",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Shampoos",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Shower",
+          icon: <FaShower />,
+        },
+        // {
+        //   label: "Bath",
+        //   icon: <FaBath />,
+        // },
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: premium2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: premium1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: premium3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: premium4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: premium5,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "4",
+    },
+    fields: {
+      name: "SUPERIOR apartment",
+      slug: "/pokoje/superior",
+      type: "apartment",
+      price: 300,
+      size: 38,
+      capacity: 4,
+      featured: true,
+      breakfast: true,
+      bathroom: "shower",
+      kitchen: "kettle",
+      beds: "2x 90cm",
+      sofa: true,
+      description: [
+        "Our SUPERIOR apartments are a guarantee of a perfect rest, thanks to both the use of functional and comfortable amenities, as well as the classic, elegant arrangement. ",
+        "This type of residential building, suitable for up to 4 people, includes a bedroom and living area with a large, comfortable bed, a fold-out sofa, a desk, and a LED TV. The whole is a very harmonious space that is able to meet many needs of the occupants. In turn, a kitchenette with a dining area, which includes an induction hob, extractor hood, fridge, sink, kettle, dishes and cutlery as well as a table and chairs, allow you to sit down to eat together. ",
+        "A separate room is a very luxurious bathroom with a shower, in which all our guests will find a dryer, a set of cosmetics and towels enchanting with pure white and fresh scent.",
+      ],
+      extras: [
+        {
+          label: "Beds",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "Bedside Lamp",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Wardrobe",
+          icon: <BiCloset />,
+        },
+        {
+          label: "Table",
+          icon: <GiTable />,
+        },
+        {
+          label: "Couch",
+          icon: <FaCouch />,
+        },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 32"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Phone",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Air-Conditioner",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Fridge",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Kettle",
+          icon: <GiTeapot />,
+        },
+        {
+          label: "Kitchen",
+          icon: <GiCookingPot />,
+        },
+        {
+          label: "Towels",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Shampoos",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Shower",
+          icon: <FaShower />,
+        },
+        // {
+        //   label: "Bath",
+        //   icon: <FaBath />,
+        // },
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: superior1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: superior2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: superior3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: superior4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: superior5,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "5",
+    },
+    fields: {
+      name: "STUDIO apartment",
+      slug: "/pokoje/studio",
+      type: "apartment",
+      price: 320,
+      size: 32,
+      capacity: 4,
+      featured: true,
+      breakfast: true,
+      bathroom: "shower",
+      kitchen: "kettle",
+      beds: "2x 90cm",
+      sofa: true,
+      description: [
+        "The STUDIO type apartment has a bedroom with a very comfortable bed, a fold-out sofa, a LED TV, a fully equipped kitchenette with a dining area (induction hob, hood, fridge, sink, kettle, dishes and cutlery), and a luxurious bathroom with a shower, equipped with a dryer, a set of towels and a set of cosmetics.",
+      ],
+      extras: [
+        {
+          label: "Beds",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "Bedside Lamp",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Wardrobe",
+          icon: <BiCloset />,
+        },
+        {
+          label: "Table",
+          icon: <GiTable />,
+        },
+        {
+          label: "Couch",
+          icon: <FaCouch />,
+        },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 32"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Phone",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Air-Conditioner",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Fridge",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Kettle",
+          icon: <GiTeapot />,
+        },
+        {
+          label: "Kitchen",
+          icon: <GiCookingPot />,
+        },
+        {
+          label: "Towels",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Shampoos",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Shower",
+          icon: <FaShower />,
+        },
+        // {
+        //   label: "Bath",
+        //   icon: <FaBath />,
+        // },
+      ],
+      images: [
+        {
+          fields: {
+            file: {
+              url: studio1,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: studio2,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: studio3,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: studio4,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: studio5,
+            },
+          },
+        },
+      ],
+    },
+  },
+  {
+    sys: {
+      id: "6",
+    },
+    fields: {
+      name: "DELUXE apartment",
+      slug: "/pokoje/deluxe",
+      type: "apartment",
+      price: 350,
+      size: 40,
+      capacity: 4,
+      featured: true,
+      breakfast: true,
+      bathroom: "bath",
+      kitchen: "kitchen",
+      beds: "2x 90cm",
+      sofa: true,
+      description: [
+        "The DELUXE apartment can accommodate up to 4 people. It consists of a large room, combining the features of a bedroom, living room and kitchen, with direct access to a private bathroom (with bath and shower). ",
+        "A comfortable bed is an excellent option for anyone looking for a moment of blissful relaxation, while the fold-out sofa and LED TV create a unique seating space. A carefully equipped kitchenette, which includes an induction hob, extractor hood, fridge, sink, kettle, crockery and cutlery is the perfect way to prepare tasty meals that can be eaten together in the dining area. ",
+        "Taking care of the comfort of our guests, we also took care of the details. That is why in the DELUXE apartment there are always fresh, snow-white sets of towels, cosmetics sets, and even a hair dryer.",
+      ],
+      extras: [
+        {
+          label: "Beds",
+          icon: <MdSingleBed />,
+        },
+        {
+          label: "Bedside Lamp",
+          icon: <MdOutlineLightbulb />,
+        },
+        {
+          label: "Wardrobe",
+          icon: <BiCloset />,
+        },
+        {
+          label: "Table",
+          icon: <GiTable />,
+        },
+        {
+          label: "Couch",
+          icon: <FaCouch />,
+        },
+        {
+          label: "Wi-Fi",
+          icon: <FaWifi />,
+        },
+        {
+          label: `TV 32"`,
+          icon: <MdMonitor />,
+        },
+        {
+          label: "Phone",
+          icon: <BsFillTelephoneFill />,
+        },
+        {
+          label: "Air-Conditioner",
+          icon: <FaSnowflake />,
+        },
+        {
+          label: "Fridge",
+          icon: <BiFridge />,
+        },
+        {
+          label: "Kettle",
+          icon: <GiTeapot />,
+        },
+        {
+          label: "Kitchen",
+          icon: <GiCookingPot />,
+        },
+        {
+          label: "Towels",
+          icon: <GiTowel />,
+        },
+        {
+          label: "Shampoos",
+          icon: <FaPumpSoap />,
+        },
+        {
+          label: "WC",
+          icon: <FaToilet />,
+        },
+        {
+          label: "Shower",
+          icon: <FaShower />,
+        },
+        {
+          label: "Bath",
           icon: <FaBath />,
         },
       ],

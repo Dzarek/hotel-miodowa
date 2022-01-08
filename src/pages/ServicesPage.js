@@ -7,24 +7,34 @@ import { NavLink } from "react-router-dom";
 import transportImg from "../images/inne/airportTransfer.jpg";
 import restaurantImage from "../images/restauracja/RESTAURACJA 001.jpg";
 import parkingImage from "../images/inne/parking2.jpg";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 
 const ServicesPage = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper>
-      <h1 className="title">Usługi</h1>
+      <h1 className="title">{polish ? "Usługi" : "Services"}</h1>
       <div data-aos="fade-up" className="main-page">
         <NavLink to="/uslugi/transport&wycieczki" className="oneService">
           <img src={transportImg} alt="transport" />
-          <h2>
-            Transport <br /> i <br /> Wycieczki
-          </h2>
+          {polish ? (
+            <h2>
+              Transport <br /> i <br /> Wycieczki
+            </h2>
+          ) : (
+            <h2>
+              Transfers <br /> and <br /> Tours
+            </h2>
+          )}
         </NavLink>
         <NavLink to="/uslugi/restauracja" className="oneService">
           <img src={restaurantImage} alt="restauracja" />
-          <h2>Restauracja</h2>
+          <h2>{polish ? "Restauracja" : "Restaurant"}</h2>
         </NavLink>
         <NavLink to="/uslugi/parking" className="oneService">
           <img src={parkingImage} alt="parking" />

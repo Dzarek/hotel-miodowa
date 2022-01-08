@@ -21,11 +21,17 @@ const RoomsFilter = ({ rooms }) => {
     minSize,
     maxSize,
     breakfast,
+    polish,
   } = context;
   //get unique types
   let types = getUnique(rooms, "type");
   // add all
-  types = ["wszystkie", ...types];
+  if (polish) {
+    types = ["wszystkie", ...types];
+  } else {
+    types = ["all", ...types];
+  }
+
   // map to jsx
   types = types.map((item, index) => {
     return (
@@ -46,11 +52,13 @@ const RoomsFilter = ({ rooms }) => {
   });
   return (
     <Wrapper className="filter-container">
-      <h2 className="title">Filtruj Pokoje</h2>
+      <h2 className="title">{polish ? "Filtruj Pokoje" : "Search Rooms"}</h2>
       <form className="filter-form">
         {/* select type */}
         <div className="form-group">
-          <label htmlFor="type">typ pomieszczenia:</label>
+          <label htmlFor="type">
+            {polish ? "typ pomieszczenia:" : "type of room"}
+          </label>
           <select
             name="type"
             id="type"
@@ -64,7 +72,9 @@ const RoomsFilter = ({ rooms }) => {
         {/* end select type */}
         {/* guests type */}
         <div className="form-group">
-          <label htmlFor="capacity">ilość osób:</label>
+          <label htmlFor="capacity">
+            {polish ? "ilość osób:" : "number of guest"}
+          </label>
           <select
             name="capacity"
             id="capacity"
@@ -79,7 +89,7 @@ const RoomsFilter = ({ rooms }) => {
         {/* room price */}
         <div className="form-group">
           <label htmlFor="price">
-            Cena pokoju do: <span>{price} zł</span>
+            {polish ? "Cena pokoju do:" : "Price to:"} <span>{price} zł</span>
           </label>
           <input
             type="range"
@@ -96,7 +106,7 @@ const RoomsFilter = ({ rooms }) => {
         {/* size */}
         <div className="form-group">
           <label htmlFor="size">
-            Rozmiar pokoju od:{" "}
+            {polish ? "Rozmiar pokoju od:" : "Size from:"}{" "}
             <span>
               {size} m<sup>2</sup>
             </span>
@@ -115,9 +125,15 @@ const RoomsFilter = ({ rooms }) => {
         {/* end size */}
         {/* extras */}
         <div className="form-group">
-          <label htmlFor="breakfast">
-            śniadanie: <span>wliczone w cenę</span>
-          </label>
+          {polish ? (
+            <label htmlFor="breakfast">
+              śniadanie: <span>wliczone w cenę</span>
+            </label>
+          ) : (
+            <label htmlFor="breakfast">
+              breakfast: <span>included</span>
+            </label>
+          )}
           <input
             type="checkbox"
             name="breakfast"

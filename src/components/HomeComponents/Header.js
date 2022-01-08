@@ -15,11 +15,15 @@ import headerImg1 from "../../images/headerImages/TWIM PREMIUM 005.jpg";
 import headerImg9 from "../../images/headerImages/SUPERIOR 004.jpg";
 import headerImg12 from "../../images/headerImages/Superior 11.jpg";
 
+import { useContext } from "react";
+import { RoomContext } from "../../roomContext";
+
 const Header = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
-
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper>
       <div className="headerContainer">
@@ -47,7 +51,7 @@ const Header = () => {
           data-aos-duration="2000"
           className="headerTitle"
         >
-          <h3>witaj w</h3>
+          <h3>{polish ? "witaj w" : "welcome in"}</h3>
           <h1>Hotel Miodowa</h1>
           <div className="stars">
             <MdOutlineStar className="iconStar" />

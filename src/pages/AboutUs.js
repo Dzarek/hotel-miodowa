@@ -1,19 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 const AboutUs = () => {
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper className="main-page">
       <div className="title">
-        <h3>Przeczytaj więcej o nas!</h3>
+        <h3>{polish ? "Przeczytaj więcej o nas!" : "Read more about us!"}</h3>
       </div>
       <div className="aboutContainer">
         <NavLink to="/oNas/oHotelu" className="hotelAbout">
-          <h2>o hotelu</h2>
+          <h2>{polish ? "o hotelu" : "about hotel"}</h2>
         </NavLink>
         <NavLink to="/oNas/oKrakowie" className="cracowAbout">
-          <h2>o krakowie</h2>
+          <h2>{polish ? "o krakowie" : "about cracow"}</h2>
         </NavLink>
       </div>
     </Wrapper>

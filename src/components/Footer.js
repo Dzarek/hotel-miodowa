@@ -11,8 +11,12 @@ import {
 } from "react-icons/fa";
 
 import logoMiodowa from "../images/icon.png";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 
 const Footer = () => {
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper className="footer">
       <div className="footerBg"></div>
@@ -30,30 +34,33 @@ const Footer = () => {
             </section>
           </div>
           <p className="info">
-            Dogodne położenie, luksusowe apartamenty, atrakcyjne ceny – Hotel
-            Miodowa w Krakowie oferuje swoim Gościom idealne warunki na czas
-            podróży służbowej, jak i na wyjazd turystyczny.
+            {polish
+              ? "Dogodne położenie, luksusowe apartamenty, atrakcyjne ceny – Hotel Miodowa w Krakowie oferuje swoim Gościom idealne warunki na czas podróży służbowej, jak i na wyjazd turystyczny."
+              : "Perfect location, luxurious apartments, attractive prices - Hotel Miodowa in Krakow offers its guests ideal conditions for a business trip as well as for a tourist trip."}
           </p>
         </div>
         <div className="secondSection">
-          <h3>Przydatne Linki</h3>
+          <h3>{polish ? "Przydatne Linki" : "Useful links"}</h3>
           <div className="links">
             <section>
               <NavLink to="/pokoje">
-                <FaLongArrowAltRight className="iconReact" /> Pokoje
+                <FaLongArrowAltRight className="iconReact" />
+                {polish ? "Pokoje" : "Rooms"}
               </NavLink>
               <NavLink to="/oNas/oHotelu">
                 <FaLongArrowAltRight className="iconReact" /> Hotel
               </NavLink>
               <NavLink to="/oNas/oKrakowie">
-                <FaLongArrowAltRight className="iconReact" /> Kraków
+                <FaLongArrowAltRight className="iconReact" />{" "}
+                {polish ? "Kraków" : "Cracow"}
               </NavLink>
               <NavLink to="/uslugi/restauracja">
-                <FaLongArrowAltRight className="iconReact" /> Restauracja
+                <FaLongArrowAltRight className="iconReact" />
+                {polish ? "Restauracja" : "Restaurant"}
               </NavLink>
               <NavLink to="/uslugi/transport&wycieczki">
-                <FaLongArrowAltRight className="iconReact" /> Transfery i
-                Wycieczki
+                <FaLongArrowAltRight className="iconReact" />{" "}
+                {polish ? "Transfery i Wycieczki" : "Transfers & Tours"}
               </NavLink>
             </section>
             <section>
@@ -61,20 +68,17 @@ const Footer = () => {
                 <FaLongArrowAltRight className="iconReact" /> FAQ
               </NavLink>
               <NavLink to="/kontakt/regulamin">
-                <FaLongArrowAltRight className="iconReact" /> Regulamin
+                <FaLongArrowAltRight className="iconReact" />{" "}
+                {polish ? "Regulamin" : "Regulations"}
               </NavLink>
               <NavLink to="/kontakt/rodo&cookies">
                 <FaLongArrowAltRight className="iconReact" /> RODO
               </NavLink>
-              {/* <NavLink>
-                <FaLongArrowAltRight className="iconReact" /> Polityka
-                Prywatności
-              </NavLink> */}
             </section>
           </div>
         </div>
         <div className="thirdSection">
-          <h3>Kontakt</h3>
+          <h3>{polish ? "Kontakt" : "Contact"}</h3>
           <div className="contactInfo">
             <p>
               <FaMapMarkerAlt className="iconReact" /> ul. Miodowa 51, 31-036
@@ -93,8 +97,8 @@ const Footer = () => {
         </div>
       </div>
       <h5 className="copyrights">
-        &copy; 2014 - {new Date().getFullYear()} Hotel Miodowa, Wszelkie Prawa
-        Zastrzeżone
+        &copy; 2014 - {new Date().getFullYear()} Hotel Miodowa,{" "}
+        {polish ? "Wszelkie Prawa Zastrzeżone" : "All Rights Reserved"}
       </h5>
     </Wrapper>
   );

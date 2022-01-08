@@ -11,6 +11,9 @@ import {
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
 
+import { useContext } from "react";
+import { RoomContext } from "../../roomContext";
+
 import img1 from "../../images/homeImages/BAR 002.jpg";
 import img2 from "../../images/homeImages/BAR 003.jpg";
 import img3 from "../../images/homeImages/DELUXE 008.jpg";
@@ -49,11 +52,13 @@ const GalleryHome = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper>
       <div className="mainSection GalleryHome">
         <div className="titleContainer">
-          <h2 className="title">Galeria</h2>
+          <h2 className="title">{polish ? "Galeria" : "Gallery"}</h2>
           <span className="titleBorder"></span>
         </div>
         <div className="picturesAll">
@@ -88,7 +93,9 @@ const GalleryHome = () => {
             })}
           </div>
         </div>
-        <NavLink to="/galeria">Zobacz całą galerie</NavLink>
+        <NavLink to="/galeria">
+          {polish ? "Zobacz całą galerie" : "See full gallery"}
+        </NavLink>
       </div>
     </Wrapper>
   );

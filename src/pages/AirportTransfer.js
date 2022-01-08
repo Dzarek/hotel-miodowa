@@ -3,6 +3,8 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 
 import { FaLongArrowAltRight } from "react-icons/fa";
 
@@ -15,86 +17,177 @@ const AirportTransfer = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
-    <Wrapper>
-      <div className="airportTransferHeader">
-        <div className="backgroundDark"></div>
-        <div data-aos="zoom-in-right" className="title">
-          <h2>Transfery i Wycieczki</h2>
-        </div>
-      </div>
-      <div className="shuttleContainer">
-        <div className="shuttle">
-          <h3>Transfery Lotniskowe</h3>
-          <p>
-            Oferujemy transport z Portu Lotniczego Kraków-Balice wprost do
-            naszego obiektu. Ceny zależą od ilości przewożonych osób.
-          </p>
-          <span>
-            {" "}
-            <FaLongArrowAltRight className="icon" /> 1-3 osoby: 90 zł
-          </span>
-          <span>
-            <FaLongArrowAltRight className="icon" /> 4-6 osób: 140 zł
-          </span>
-          <span>
-            <FaLongArrowAltRight className="icon" /> 7-8 osób: 160 zł
-          </span>
-          <p>Powyżej ośmiu osób koszt transferu obliczamy indywidualnie.</p>
-          <p>
-            Aby dokonać rezerwacji transportu prosimy o podanie: numeru lotu,
-            ilości osób oraz czasu przylotu.
-          </p>
-          <p>
-            W przypadku gdy podróżują z Państwem małe dzieci, należy
-            poinformować nas o konieczności przygotowania fotelika dziecięcego.
-          </p>
-        </div>
-        <img
-          data-aos="fade-right"
-          data-aos-offset="300"
-          src={shuttleGuest}
-          alt="airport"
-        />
-      </div>
-      <div className="toursContainer">
-        <div className="imgContainer">
-          <span data-aos="flip-right">
-            <img src={auschwitzImg} alt="auschwitz" />
-            <h4>Auschwitz</h4>
-          </span>
-          <span data-aos="flip-right">
-            <img src={wieliczkaImg} alt="wieliczka" />
-            <h4>Wieliczka</h4>
-          </span>
-          <span data-aos="flip-right">
-            <img src={zakopaneImg} alt="zakopane" />
-            <h4>Zakopane</h4>
-          </span>
-        </div>
-        <div className="tours">
-          <h3>Wycieczki</h3>
-          <p>Organizujemy wycieczki:</p>
-          <span>
-            <FaLongArrowAltRight className="icon" /> do Auchwitz Birkenau: koszt
-            od 180 zł za osobę,
-          </span>
-          <span>
-            <FaLongArrowAltRight className="icon" /> do Kopalni Soli w
-            Wieliczce: koszt od 180 zł za osobę,
-          </span>
-          <span>
-            <FaLongArrowAltRight className="icon" /> do Zakopanego: koszt od 350
-            zł za osobę,
-          </span>
-          <p>
-            Opłata obejmuje: transfer do celu i z powrotem do hotelu,
-            przewodnika w języku angielskim, włoskim, hiszpańskim, francuskim
-            lub niemieckim, bilet wstępu.
-          </p>
-        </div>
-      </div>
-    </Wrapper>
+    <>
+      {polish ? (
+        <Wrapper>
+          <div className="airportTransferHeader">
+            <div className="backgroundDark"></div>
+            <div data-aos="zoom-in-right" className="title">
+              <h2>Transfery i Wycieczki</h2>
+            </div>
+          </div>
+          <div className="shuttleContainer">
+            <div className="shuttle">
+              <h3>Transfery Lotniskowe</h3>
+              <p>
+                Oferujemy transport z Portu Lotniczego Kraków-Balice wprost do
+                naszego obiektu. Ceny zależą od ilości przewożonych osób.
+              </p>
+              <span>
+                {" "}
+                <FaLongArrowAltRight className="icon" /> 1-3 osoby: 90 zł
+              </span>
+              <span>
+                <FaLongArrowAltRight className="icon" /> 4-6 osób: 140 zł
+              </span>
+              <span>
+                <FaLongArrowAltRight className="icon" /> 7-8 osób: 160 zł
+              </span>
+              <p>Powyżej ośmiu osób koszt transferu obliczamy indywidualnie.</p>
+              <p>
+                Aby dokonać rezerwacji transportu prosimy o podanie: numeru
+                lotu, ilości osób oraz czasu przylotu.
+              </p>
+              <p>
+                W przypadku gdy podróżują z Państwem małe dzieci, należy
+                poinformować nas o konieczności przygotowania fotelika
+                dziecięcego.
+              </p>
+            </div>
+            <img
+              data-aos="fade-right"
+              data-aos-offset="300"
+              src={shuttleGuest}
+              alt="airport"
+            />
+          </div>
+          <div className="toursContainer">
+            <div className="imgContainer">
+              <span data-aos="flip-right">
+                <img src={auschwitzImg} alt="auschwitz" />
+                <h4>Auschwitz</h4>
+              </span>
+              <span data-aos="flip-right">
+                <img src={wieliczkaImg} alt="wieliczka" />
+                <h4>Wieliczka</h4>
+              </span>
+              <span data-aos="flip-right">
+                <img src={zakopaneImg} alt="zakopane" />
+                <h4>Zakopane</h4>
+              </span>
+            </div>
+            <div className="tours">
+              <h3>Wycieczki</h3>
+              <p>Organizujemy wycieczki:</p>
+              <span>
+                <FaLongArrowAltRight className="icon" /> do Auchwitz Birkenau:
+                koszt od 180 zł za osobę,
+              </span>
+              <span>
+                <FaLongArrowAltRight className="icon" /> do Kopalni Soli w
+                Wieliczce: koszt od 180 zł za osobę,
+              </span>
+              <span>
+                <FaLongArrowAltRight className="icon" /> do Zakopanego: koszt od
+                350 zł za osobę,
+              </span>
+              <p>
+                Opłata obejmuje: transfer do celu i z powrotem do hotelu,
+                przewodnika w języku angielskim, włoskim, hiszpańskim,
+                francuskim lub niemieckim, bilet wstępu.
+              </p>
+            </div>
+          </div>
+        </Wrapper>
+      ) : (
+        <Wrapper>
+          <div className="airportTransferHeader">
+            <div className="backgroundDark"></div>
+            <div data-aos="zoom-in-right" className="title">
+              <h2>Transfers and Tours</h2>
+            </div>
+          </div>
+          <div className="shuttleContainer">
+            <div className="shuttle">
+              <h3>Airport Shuttle</h3>
+              <p>
+                We offer transport from the Krakow-Balice Airport directly to
+                our Hotel. The prices depend on the number of people
+                transported.
+              </p>
+              <span>
+                {" "}
+                <FaLongArrowAltRight className="icon" /> 1-3 people: 90 zł
+              </span>
+              <span>
+                <FaLongArrowAltRight className="icon" /> 4-6 people: 140 zł
+              </span>
+              <span>
+                <FaLongArrowAltRight className="icon" /> 7-8 people: 160 zł
+              </span>
+              <p>
+                For more than eight people, we calculate the cost of the
+                transfer individually.
+              </p>
+              <p>
+                To book a transport, please provide: flight number, number of
+                people and time of arrival.
+              </p>
+              <p>
+                If children are traveling with you, please inform us about the
+                need to prepare a child seat.
+              </p>
+            </div>
+            <img
+              data-aos="fade-right"
+              data-aos-offset="300"
+              src={shuttleGuest}
+              alt="airport"
+            />
+          </div>
+          <div className="toursContainer">
+            <div className="imgContainer">
+              <span data-aos="flip-right">
+                <img src={auschwitzImg} alt="auschwitz" />
+                <h4>Auschwitz</h4>
+              </span>
+              <span data-aos="flip-right">
+                <img src={wieliczkaImg} alt="wieliczka" />
+                <h4>Wieliczka</h4>
+              </span>
+              <span data-aos="flip-right">
+                <img src={zakopaneImg} alt="zakopane" />
+                <h4>Zakopane</h4>
+              </span>
+            </div>
+            <div className="tours">
+              <h3>Tours</h3>
+              <p>We organize trips:</p>
+              <span>
+                <FaLongArrowAltRight className="icon" /> to Auchwitz Birkenau:
+                price 180 zł per person,
+              </span>
+              <span>
+                <FaLongArrowAltRight className="icon" /> to Salt Mine in
+                Wieliczce: price 180 zł per person,
+              </span>
+              <span>
+                <FaLongArrowAltRight className="icon" /> to Zakopane: price 350
+                zł per person,
+              </span>
+              <p>
+                The fee includes: transfer to the destination and back to the
+                hotel, guide in English, Italian, Spanish, French or German,
+                admission ticket.
+              </p>
+            </div>
+          </div>
+        </Wrapper>
+      )}
+    </>
   );
 };
 

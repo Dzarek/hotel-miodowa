@@ -11,12 +11,16 @@ import {
 import { gallery } from "../data";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import videoSpoon from "../images/restauracja/Spoon.mp4";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 
 let restaurantImages = gallery.filter(
   (item) => item.category === "restauracja"
 );
 restaurantImages = restaurantImages[0].img;
 const RestaurantPage = () => {
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper>
       <div className="restaurantHeader">
@@ -30,57 +34,109 @@ const RestaurantPage = () => {
         ></video>
         <div className="backgroundDark"></div>
         <div data-aos="zoom-in-right" className="title">
-          <h2>Restauracja</h2>
+          <h2>{polish ? "Restauracja" : "Restaurant"}</h2>
         </div>
       </div>
-      <div className="restaurantInfo">
-        <div className="meals">
-          <h3>Śniadania</h3>
-          <p>
-            {" "}
-            <FaLongArrowAltRight className="icon" />W naszym hotelu śniadania są
-            serwowane w formie bufetu. Jest ono wliczone w cenę każdej
-            rezerwacji!
-          </p>
-          <p>
-            {" "}
-            <FaLongArrowAltRight className="icon" />
-            Na stole szwedzkim znajdą Państwo polskie produkty różnego rodzaju
-            tak aby każdy gość mógł zjeść pyszny posiłek na rozpoczęcie swojego
-            dnia.
-          </p>
-          <p>
-            {" "}
-            <FaLongArrowAltRight className="icon" />
-            Godzina podawania: 7:30 - 10:00.
-          </p>
-          <span>
-            Jeśli zaistnieje taka potrzeba i gość musi opuścić hotel wcześniej
-            niż jest serwowne śniadanie, możemy przygotować breakfast/lunch boxy
-            na wynos. Wystarczy zgłosić to na recepcji dzień wcześniej.
-          </span>
+      {polish ? (
+        <div className="restaurantInfo">
+          <div className="meals">
+            <h3>Śniadania</h3>
+            <p>
+              {" "}
+              <FaLongArrowAltRight className="icon" />W naszym hotelu śniadania
+              są serwowane w formie bufetu. Jest ono wliczone w cenę każdej
+              rezerwacji!
+            </p>
+            <p>
+              {" "}
+              <FaLongArrowAltRight className="icon" />
+              Na stole szwedzkim znajdą Państwo polskie produkty różnego rodzaju
+              tak aby każdy gość mógł zjeść pyszny posiłek na rozpoczęcie
+              swojego dnia.
+            </p>
+            <p>
+              {" "}
+              <FaLongArrowAltRight className="icon" />
+              Godzina podawania: 7:30 - 10:00.
+            </p>
+            <span>
+              Jeśli zaistnieje taka potrzeba i gość musi opuścić hotel wcześniej
+              niż jest serwowne śniadanie, możemy przygotować breakfast/lunch
+              boxy na wynos. Wystarczy zgłosić to na recepcji dzień wcześniej.
+            </span>
+          </div>
+          <div className="meals">
+            <h3>Obiady i Kolacje</h3>
+            <p>
+              {" "}
+              <FaLongArrowAltRight className="icon" />
+              Obiady i kolacje są podawane jedynie dla zoorganizowanych grup.
+            </p>
+            <p>
+              {" "}
+              <FaLongArrowAltRight className="icon" />
+              Menu uzgadaniamy wcześniej z naszymi gośćmi i dopasowujemy do ich
+              preferencji.
+            </p>
+            <p>
+              {" "}
+              <FaLongArrowAltRight className="icon" />
+              Nasza gastronomia opiera się na kuchni typowo polskiej. Zależy nam
+              by zagraniczni goście poznali nasz kraj również smakując go.
+            </p>
+          </div>
         </div>
-        <div className="meals">
-          <h3>Obiady i Kolacje</h3>
-          <p>
-            {" "}
-            <FaLongArrowAltRight className="icon" />
-            Obiady i kolacje są podawane jedynie dla zoorganizowanych grup.
-          </p>
-          <p>
-            {" "}
-            <FaLongArrowAltRight className="icon" />
-            Menu uzgadaniamy wcześniej z naszymi gośćmi i dopasowujemy do ich
-            preferencji.
-          </p>
-          <p>
-            {" "}
-            <FaLongArrowAltRight className="icon" />
-            Nasza gastronomia opiera się na kuchni typowo polskiej. Zależy nam
-            by zagraniczni goście poznali nasz kraj również smakując go.
-          </p>
+      ) : (
+        <div className="restaurantInfo">
+          <div className="meals">
+            <h3>Breakfast</h3>
+            <p>
+              {" "}
+              <FaLongArrowAltRight className="icon" />
+              Breakfast is provided in our hotel served as a buffet. It is
+              included in the price of each booking!
+            </p>
+            <p>
+              {" "}
+              <FaLongArrowAltRight className="icon" />
+              On the Swedish table you will find Polish products of various
+              kinds so that each guest can enjoy a delicious meal to start their
+              own day.
+            </p>
+            <p>
+              {" "}
+              <FaLongArrowAltRight className="icon" />
+              Time of serving: 7:30 - 10:00.{" "}
+            </p>
+            <span>
+              If there is such a need and the guest has to leave the hotel
+              earlier than breakfast is served, we can prepare breakfast / lunch
+              boxes Takeaway. It is enough to report it at the reception the day
+              before.
+            </span>
+          </div>
+          <div className="meals">
+            <h3> Lunch and Dinner </h3>
+            <p>
+              {""}
+              <FaLongArrowAltRight className="icon" />
+              Lunch and dinner are served for organized groups only.
+            </p>
+            <p>
+              {""}
+              <FaLongArrowAltRight className="icon" />
+              We agree the menu in advance with our guests and adjust it to them
+              preferences.
+            </p>
+            <p>
+              {""}
+              <FaLongArrowAltRight className="icon" />
+              Our gastronomy is based on typical Polish cuisine. We care so that
+              foreign guests can also get to know our country by tasting it.
+            </p>
+          </div>
         </div>
-      </div>
+      )}
       <div className="picturesRestaurant">
         <SRLWrapper>
           <Carousel

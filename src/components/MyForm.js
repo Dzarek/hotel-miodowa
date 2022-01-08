@@ -3,12 +3,11 @@ import emailjs from "emailjs-com";
 import styled from "styled-components";
 // import Cookie from "./CookiePage";
 import { NavLink } from "react-router-dom";
-import { IoCloseCircle } from "react-icons/io5";
 
 class MyForm extends Component {
   state = {
     status: "",
-    cookieVisible: false,
+    // cookieVisible: false,
   };
 
   sendEmail = (e) => {
@@ -33,25 +32,27 @@ class MyForm extends Component {
   };
   render() {
     const { status } = this.state;
+    const { polish } = this.context;
     return (
       <>
         <Wrapper onSubmit={this.sendEmail}>
           <h1>
-            Jeśli chcesz dokonać rezerwacji lub masz jakieś pytania, śmiało
-            napisz do nas!
+            {polish
+              ? "Jeśli chcesz dokonać rezerwacji lub masz jakieś pytania, śmiało napisz do nas!"
+              : "If you want to make a reservation or have any questions, feel free to write to us!"}
           </h1>
           <div className="inputContainer">
             <input
               type="text"
               name="name"
-              placeholder="Imię i nazwisko"
+              placeholder={polish ? "Imię i nazwisko" : "Your name"}
               required
             />
             <input type="email" name="email" placeholder="E-mail" required />
           </div>
           <br />
           <textarea
-            placeholder="Twoja wiadomość..."
+            placeholder={polish ? "Twoja wiadomość..." : "Your message"}
             name="message"
             required
           ></textarea>
@@ -59,8 +60,9 @@ class MyForm extends Component {
             <label className="labelCheck" htmlFor="accept">
               <p>
                 <input type="checkbox" id="accept" name="accept" required />
-                Wyrażam zgodę na przetwarzanie danych osobowych w celu
-                odpowiedzi na mojego e-maila.
+                {polish
+                  ? "Wyrażam zgodę na przetwarzanie danych osobowych w celu odpowiedzi na mojego e-maila."
+                  : "I agree to the processing of my personal data in order to answer my e-mail."}
                 <NavLink
                   onClick={() => this.setState({ cookieVisible: true })}
                   to="/kontakt/rodo&cookies"
@@ -68,21 +70,36 @@ class MyForm extends Component {
                   duration={1000}
                   className="cookieLink"
                 >
-                  (Polityka Prywatności)
+                  {polish ? "(Polityka Prywatności)" : "(Privacy Policy)"}
                 </NavLink>
               </p>
             </label>
           </div>
-          {status === "SUCCESS" ? (
-            <p style={{ fontSize: "30px" }}>Wiadomość wysłana! </p>
+          {polish ? (
+            <>
+              {status === "SUCCESS" ? (
+                <p style={{ fontSize: "30px" }}>Wiadomość wysłana! </p>
+              ) : (
+                <button>Wyślij</button>
+              )}
+              {status === "ERROR" && (
+                <p style={{ fontSize: "30px" }}>ups... coś poszło nie tak!</p>
+              )}
+            </>
           ) : (
-            <button>Wyślij</button>
-          )}
-          {status === "ERROR" && (
-            <p style={{ fontSize: "30px" }}>ups... coś poszło nie tak!</p>
+            <>
+              {status === "SUCCESS" ? (
+                <p style={{ fontSize: "30px" }}>Message was sent! </p>
+              ) : (
+                <button>Send</button>
+              )}
+              {status === "ERROR" && (
+                <p style={{ fontSize: "30px" }}>ups... something wrong!</p>
+              )}
+            </>
           )}
         </Wrapper>
-        {this.state.cookieVisible && (
+        {/* {this.state.cookieVisible && (
           <WrapperModal id="cookie">
             <button
               className="btnCloseCookie"
@@ -90,9 +107,8 @@ class MyForm extends Component {
             >
               <IoCloseCircle />
             </button>
-            {/* <Cookie /> */}
           </WrapperModal>
-        )}
+        )} */}
       </>
     );
   }
@@ -202,40 +218,5 @@ const Wrapper = styled.form`
     }
   }
 `;
-const WrapperModal = styled.div`
-  width: 80vw;
-  position: absolute;
-  top: 120vh;
-  left: 0;
-  background: #000;
-  background: rgb(9, 8, 20);
-  background: rgb(23, 22, 36);
 
-  color: white;
-  padding: 20px;
-  @media screen and (max-width: 800px) {
-    width: 100vw;
-    top: 150vh;
-    padding-top: 10vh;
-  }
-  .btnCloseCookie {
-    position: absolute;
-    top: 5%;
-    right: 10%;
-    color: white;
-    font-size: 3rem;
-    background: transparent;
-    border: none;
-    transition: 0.4s;
-    cursor: pointer;
-    :hover {
-      transform: scale(1.2);
-    }
-    @media screen and (max-width: 800px) {
-      top: 10px;
-      right: 50%;
-      transform: translateX(50%);
-    }
-  }
-`;
 export default MyForm;

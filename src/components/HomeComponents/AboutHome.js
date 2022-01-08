@@ -9,25 +9,44 @@ import salon from "../../images/homeImages/SUPERIOR 06.jpg";
 import kuchnia from "../../images/homeImages/SUPERIOR 010.jpg";
 import lozko from "../../images/homeImages/SUPERIOR 015.jpg";
 
+import { useContext } from "react";
+import { RoomContext } from "../../roomContext";
+
 const AboutHome = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper>
       <div className="mainSection aboutShort">
-        <div className="aboutShortText">
-          <h2>Luksusowe Apartamenty w Centrum Krakowa</h2>
-          <p>
-            Hotel Miodowa to coś znacznie więcej, niż tylko wygodne pokoje. To
-            zaproszenie do luksusu, który każdy z naszych Gości ma okazję
-            doświadczyć na własnej skórze. Komfortowe łóżka, sprzyjający
-            odprężeniu salon, w pełni wyposażony aneks kuchenny oraz piękna
-            łazienka sprawią, że będziecie mogli poczuć się tutaj jak we własnym
-            domu.
-          </p>
-          <NavLink to="/oNas/oHotelu">Czytaj więcej</NavLink>
-        </div>
+        {polish ? (
+          <div className="aboutShortText">
+            <h2>Luksusowe Apartamenty w Centrum Krakowa</h2>
+            <p>
+              Hotel Miodowa to coś znacznie więcej, niż tylko wygodne pokoje. To
+              zaproszenie do luksusu, który każdy z naszych Gości ma okazję
+              doświadczyć na własnej skórze. Komfortowe łóżka, sprzyjający
+              odprężeniu salon, w pełni wyposażony aneks kuchenny oraz piękna
+              łazienka sprawią, że będziecie mogli poczuć się tutaj jak we
+              własnym domu.
+            </p>
+            <NavLink to="/oNas/oHotelu">Czytaj więcej</NavLink>
+          </div>
+        ) : (
+          <div className="aboutShortText">
+            <h2>Luxurious apartments in the center of Cracow</h2>
+            <p>
+              Hotel Miodowa is much more than just comfortable rooms. This an
+              invitation to luxury that each of our guests has the opportunity
+              to experience the hard way. Comfortable beds, supportive a
+              pampering lounge, fully equipped kitchenette, and beautiful
+              facilities the bathroom will make you feel at home here home.
+            </p>
+            <NavLink to="/oNas/oHotelu">Read More</NavLink>
+          </div>
+        )}
 
         <div data-aos="zoom-out" className="aboutShortImages">
           <img src={lozko} alt="" />

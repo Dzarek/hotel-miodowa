@@ -33,7 +33,7 @@ const SingleRoomPage = () => {
   const context = useContext(RoomContext);
   const slug = location.pathname;
   const { getRoom } = context;
-  const { rooms } = context;
+  const { rooms, polish } = context;
   const room = getRoom(slug);
 
   // if (!room) {
@@ -73,13 +73,13 @@ const SingleRoomPage = () => {
       </header>
       <div className="singleRoomContent">
         <div className="descriptionAndPictures">
-          <h2>Opis</h2>
+          <h2>{polish ? "Opis" : "Description"}</h2>
           <div className="roomDescription">
             {description.map((item, index) => {
               return <p key={index}>{item}</p>;
             })}
           </div>
-          <h2>Zdjęcia</h2>
+          <h2>{polish ? "Zdjęcia" : "Pictures"}</h2>
           <div className="roomPictures">
             <SRLWrapper>
               {images.map((item, index) => {
@@ -88,7 +88,7 @@ const SingleRoomPage = () => {
             </SRLWrapper>
           </div>
           <div className="roomEquipments">
-            <h2>Wyposażenie</h2>
+            <h2>{polish ? "Wyposażenie" : "Equipments"}</h2>
             <div className="equipments">
               {extras.map((item, index) => {
                 const { label, icon } = item;
@@ -101,7 +101,7 @@ const SingleRoomPage = () => {
             </div>
           </div>
           <div data-aos="fade-up" data-aos-offset="200" className="otherRooms">
-            <h2>Inne pokoje</h2>
+            <h2>{polish ? "Inne pokoje" : "Other rooms"}</h2>
             <Carousel
               className="favoriteRoomsCarousel"
               infinite
@@ -128,7 +128,7 @@ const SingleRoomPage = () => {
           data-aos-offset="300"
           className="roomDetails"
         >
-          <h2>Szczegóły</h2>
+          <h2>{polish ? "Szczegóły" : "Info"}</h2>
           <p>
             <GiTwoCoins className="icon" /> {price} zł
           </p>
@@ -139,10 +139,12 @@ const SingleRoomPage = () => {
             <RiRuler2Line className="icon" /> {size} m <sup>2</sup>
           </p>
           <p>
-            <GiMeal className="icon" /> śniadanie w cenie
+            <GiMeal className="icon" />{" "}
+            {polish ? "śniadanie w cenie" : "breakfast included"}
           </p>
           <p>
-            <GiVacuumCleaner className="icon" /> serwis na życzenie
+            <GiVacuumCleaner className="icon" />
+            {polish ? "serwis na życzenie" : "service on request"}
           </p>
           <p>
             <MdSingleBed className="icon" /> {beds}

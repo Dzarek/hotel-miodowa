@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { items } from "./data";
+import { items, itemsEN } from "./data";
 
 let rooms = [];
 
@@ -20,11 +20,11 @@ class RoomProvider extends Component {
     minSize: 0,
     maxSize: 0,
     breakfast: true,
-    language: "english",
+    language: "polish",
     isOpen: false,
     viewlanguage: false,
-    polish: false,
-    english: true,
+    polish: true,
+    english: false,
   };
 
   handleToggle = () => {
@@ -37,7 +37,7 @@ class RoomProvider extends Component {
       english: false,
     });
     this.handleToggle();
-    this.getDataPL();
+    this.getData();
   };
   handleToggleEnglish = () => {
     this.setState({
@@ -73,49 +73,27 @@ class RoomProvider extends Component {
       language: "polish",
     });
   };
-  //   getDataEN = () => {
-  //     rooms = this.formatData(items2);
-  //     let featuredRooms = rooms.filter((room) => room.featured === true);
-  //     let maxPrice = Math.max(...rooms.map((item) => item.price));
-  //     let maxSize = Math.max(...rooms.map((item) => item.size));
-  //     this.setState({
-  //       rooms,
-  //       featuredRooms,
-  //       sortedRooms: rooms,
-  //       loading: false,
-  //       price: maxPrice,
-  //       maxPrice,
-  //       maxSize,
-  //       language: "english",
-  //     });
-  //   };
-
-  //getData;
-  //   getData = async () => {
-  //     try {
-  //       let response = await Client.getEntries({
-  //         content_type: "jaroslawApartments",
-  //         // order: "sys.createdAt",
-  //         order: "fields.price",
-  //       });
-
-  //       let rooms = this.formatData(response.items);
-  //       let featuredRooms = rooms.filter((room) => room.featured === true);
-  //       let maxPrice = Math.max(...rooms.map((item) => item.price));
-  //       let maxSize = Math.max(...rooms.map((item) => item.size));
-  //       this.setState({
-  //         rooms,
-  //         featuredRooms,
-  //         sortedRooms: rooms,
-  //         loading: false,
-  //         price: maxPrice,
-  //         maxPrice,
-  //         maxSize,
-  //       });
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
+  getDataEN = () => {
+    rooms = this.formatData(itemsEN);
+    let featuredRooms = rooms.filter((room) => room.featured === true);
+    let maxPrice = Math.max(...rooms.map((item) => item.price));
+    let minPrice = Math.min(...rooms.map((item) => item.price));
+    let maxSize = Math.max(...rooms.map((item) => item.size));
+    let minSize = Math.min(...rooms.map((item) => item.size));
+    this.setState({
+      rooms,
+      featuredRooms,
+      sortedRooms: rooms,
+      loading: false,
+      price: maxPrice,
+      size: minSize,
+      maxPrice,
+      minPrice,
+      maxSize,
+      minSize,
+      language: "english",
+    });
+  };
 
   componentDidMount() {
     this.getData();

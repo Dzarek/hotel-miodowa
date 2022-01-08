@@ -1,12 +1,20 @@
 import React from "react";
 import Room from "./Room";
 import styled from "styled-components";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 
 const RoomsListPL = ({ rooms }) => {
+  const context = useContext(RoomContext);
+  const { polish } = context;
   if (rooms.length === 0) {
     return (
       <Wrapper2>
-        <h3>niestety, nie udało się znaleźć pokoju</h3>
+        <h3>
+          {polish
+            ? "niestety, nie udało się znaleźć pokoju"
+            : "Unfortunately No Rooms Matched Your Search Parameters"}
+        </h3>
       </Wrapper2>
     );
   }

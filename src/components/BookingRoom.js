@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { ImCross } from "react-icons/im";
 
 import { DatePicker } from "react-rainbow-components";
-
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 const containerStyles = {
   maxWidth: 400,
 };
@@ -30,6 +31,8 @@ tomorrow.setDate(today.getDate() + 1);
 //   tomorrow.getFullYear();
 
 const BookingRoom = ({ showBooking, setShowBooking }) => {
+  const context = useContext(RoomContext);
+  const { polish } = context;
   const [dates, setDates] = useState([today, tomorrow]);
   // const [date2, setDate2] = useState(minDate2);
   const [adult, setAdult] = useState(1);
@@ -74,7 +77,7 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
   return (
     <Wrapper>
       <div className={showBooking ? "bookRoom showBookRoom" : "bookRoom"}>
-        <h3>Rezerwacja</h3>
+        <h3>{polish ? "Rezerwacja" : "Reservation"}</h3>
         <button
           className="closeBookRoom"
           onClick={() => {
@@ -93,7 +96,7 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
             >
               <DatePicker
                 minDate={new Date()}
-                label="Termin pobytu:"
+                label={polish ? "Termin pobytu:" : "Dates:"}
                 // placeholder={datesNow}
                 selectionType="range"
                 variant="single"
@@ -102,10 +105,10 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
               />
             </div>
           </div>
-          <h4>Liczba Gości:</h4>
+          <h4>{polish ? "Liczba Gości:" : "Guests:"}</h4>
           <div className="bookFormGuest">
             <div className="adultGuests">
-              <label htmlFor="adults">Dorośli:</label>
+              <label htmlFor="adults">{polish ? "Dorośli:" : "Adults:"}</label>
               <input
                 type="number"
                 name="adults"
@@ -116,7 +119,9 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
               />
             </div>
             <div className="childrenGuests">
-              <label htmlFor="children">Dzieci:</label>
+              <label htmlFor="children">
+                {polish ? "Dzieci:" : "Children"}
+              </label>
               <input
                 type="number"
                 name="children"
@@ -133,7 +138,7 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
             target="_blank"
             className="reserveBtnNow"
           >
-            Sprawdź termin
+            {polish ? "Sprawdź termin" : "Book now"}
           </a>
         </form>
       </div>

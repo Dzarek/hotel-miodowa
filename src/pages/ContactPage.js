@@ -4,6 +4,8 @@ import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import MyForm from "../components/MyForm";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 
 import { MdMail } from "react-icons/md";
 import { FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
@@ -12,6 +14,8 @@ const ContactPage = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper>
       <div className="title">
@@ -27,7 +31,7 @@ const ContactPage = () => {
           <FaMapMarkerAlt />
         </h3>
 
-        <h2 data-aos="fade-up">Kontakt</h2>
+        <h2 data-aos="fade-up">{polish ? "Kontakt" : "Contact"}</h2>
         <h3>
           <FaMapMarkerAlt />
         </h3>

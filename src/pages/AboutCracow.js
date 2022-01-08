@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 
 import cracowImg1 from "../images/krakow/cracowImg1.jpg";
 import cracowImg2 from "../images/krakow/cracowImg2.jpg";
@@ -11,38 +13,40 @@ const AboutCracow = () => {
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper>
       <div className="cracowHeader">
         <div className="title">
-          <h2>Kraków - Miasto Polskich Królów</h2>
+          <h2>
+            {polish
+              ? "Kraków - Miasto Polskich Królów"
+              : "The City Of Polish Kings"}
+          </h2>
         </div>
       </div>
       <div className="cracowInfo">
         <section>
           <img data-aos="fade-right" src={cracowImg3} alt="cracowImg1" />
           <span data-aos="fade-left">
-            <h3>O mieście</h3>
+            <h3>{polish ? "O mieście" : "About city"}</h3>
             <p>
-              Jedno z najstarszych miast w kraju, siedziba i nekropolia polskich
-              władców, niezmiennie ważny przez wieki ośrodek kultura, nauka i
-              sztuka - Kraków przyciąga rzesze turystów kraju iz całego świata.
-              Odkrywa niezwykła historia niezwykłego państwa i narodu. To
-              pozwala poczuć splendor czasów królewskich. Zaskakuje nowoczesność
-              oraz bogata oferta biznesowa i turystyczna.{" "}
+              {polish
+                ? "Jedno z najstarszych miast w kraju, siedziba i nekropolia władców polskich, niezmiennie ważny od wieków ośrodek kultury, nauki i sztuki – Kraków przyciąga rzesze turystów z kraju i z całego świata. Odkrywa niezwykłe dzieje niezwykłego państwa i narodu. Pozwala poczuć świetność królewskich czasów. Zaskakuje nowoczesnością oraz bogatą ofertą biznesową i turystyczną."
+                : "One of the oldest cities in the country, the seat and necropolis of Polish rulers, invariably important for centuries center of culture, science and art - Krakow attracts crowds of tourists from the country and from around the world. He discovers the extraordinary history of an extraordinary state and nation. It allows you to feel the splendor of royal times. It surprises with modernity and a rich business and tourist offer."}
             </p>
           </span>
         </section>
         <section>
           <span data-aos="fade-right">
-            <h3>Musisz zobaczyć w Krakowie</h3>
+            <h3>
+              {polish ? "Musisz zobaczyć w Krakowie" : "Must See of Cracow"}
+            </h3>
             <p>
-              Od średniowiecza centrum życia mieszkańców Krakowa był na Wawelu.
-              To jest u podnóża wzgórza, na którym królewska zamek znajduje się
-              na tym, że rozciąga się Stare Miasto. Ten ogromny plac zadziwia
-              swoim ogromnym rozmiarem i kształtem niezmienionym od XIII
-              stulecie. Znajduje się tu również Kościół Mariacki, Sukiennice
-              zabytkowe budynki Uniwersytetu Krakowskiego.{" "}
+              {polish
+                ? "Od czasów średniowiecza centrum życia mieszkańców Krakowa toczy się przy Wawelu. To właśnie u stóp wzgórza, na którym mieści się królewski zamek, rozciąga się Stare Miasto. Ten rozległy plac zadziwia potężnymi rozmiarami oraz niezmienionym od XIII wieku kształtem. Znajduje się tu Bazylika Mariacka, Sukiennice, a także historyczne zabudowania Uniwersytetu Krakowskiego."
+                : "Since the Middle Ages, the center of life of Krakow's inhabitants has been at Wawel. It is at the foot of the hill where the royal castle is located that the Old Town stretches. This vast square amazes with its huge size and shape unchanged since the 13th century. There are St. Mary's Basilica, the Cloth Hall, as well as the historic buildings of the University of Krakow."}
             </p>
           </span>
           <img data-aos="fade-left" src={cracowImg1} alt="cracowImg2" />
@@ -50,17 +54,11 @@ const AboutCracow = () => {
         <section>
           <img data-aos="fade-right" src={cracowImg2} alt="cracowImg3" />
           <span data-aos="fade-left">
-            <h3>Dzielnica Żydowska</h3>
+            <h3>{polish ? "Dzielnica Żydowska" : "Jewish quarter"}</h3>
             <p>
-              Niedaleko Starego Miasta, w centrum Krakowa, znajduje się stara
-              dzielnica - Kazimierz, dawniej małe miasteczko. Przesiedlenie
-              ludność żydowska na tych terenach w XV wieku odrodziła miasto.
-              Rozwijając się wraz z rozwojem samego Krakowa, wkrótce stała się
-              jego dzielnicą. Dziś - spacerując po zabytkowym ulice - wciąż
-              można zobaczyć wiele zabytków, m.in. liczne synagogi, cmentarze,
-              Wielki Mikveh i drób rzeźnia. Podczas pobytu w Krakowie warto go
-              odwiedzić tej dzielnicy, a jeszcze ciekawsze znalezienie noclegu
-              tutaj.
+              {polish
+                ? " Nieopodal Starego Miasta, w centrum Krakowa, znajduje się stara dzielnica – Kazimierz, dawniej niewielka miejscowość. Przesiedlenie ludności żydowskiej na ten teren w XV wieku ożywiło miasteczko. Wzrastające wraz z rozwojem samego Krakowa stało się wkrótce jego dzielnicą. Dziś – podczas spaceru zabytkowymi uliczkami – można dojrzeć jeszcze wiele reliktów historii, w tym liczne synagogi, cmentarze, Mykwę Wielką, czy rzeźnię drobiu. Na terenie dzisiejszego Kazimierza organizowany jest także Festiwal Kultury Żydowskiej. Podczas pobytu w Krakowie warto odwiedzić tę dzielnicę, a jeszcze ciekawiej znaleźć tu nocleg."
+                : "Near the Old Town, in the center of Krakow, there is the old district - Kazimierz, formerly a small town. The resettlement of the Jewish population to this area in the 15th century revived the town. Growing along with the development of Krakow itself, it soon became its district. Today - while walking along the historic streets - you can still see many relics of history, including numerous synagogues, cemeteries, the Great Mikveh, and a poultry slaughterhouse. During your stay in Krakow, it is worth visiting this district, and even more interesting finding accommodation here."}
             </p>
           </span>
         </section>

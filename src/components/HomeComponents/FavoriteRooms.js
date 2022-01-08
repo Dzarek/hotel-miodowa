@@ -13,7 +13,7 @@ import { withRoomConsumer } from "../../roomContext";
 
 const FavoriteRooms = () => {
   const context = useContext(RoomContext);
-  const { rooms } = context;
+  const { rooms, polish } = context;
 
   const favoriteRooms = rooms.filter((item) => item.featured === true);
 
@@ -21,7 +21,11 @@ const FavoriteRooms = () => {
     <Wrapper>
       <div className="mainSection favoriteRooms">
         <div className="titleContainer">
-          <h2 className="title">Ulubione Pokoje Naszych Gości</h2>
+          <h2 className="title">
+            {polish
+              ? "Ulubione Pokoje Naszych Gości"
+              : "Our guests' favorite rooms"}
+          </h2>
           <span className="titleBorder"></span>
         </div>
         <Carousel
