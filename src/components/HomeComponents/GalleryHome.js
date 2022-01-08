@@ -132,11 +132,17 @@ const Wrapper = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95%;
+    }
     img {
       width: 90%;
       height: 50vh;
       border: 3px solid var(--secondaryColor);
       border-radius: 5px;
+      @media (orientation: portrait) and (max-width: 800px) {
+        height: 40vh;
+      }
     }
   }
   .picturesFlex {
@@ -155,6 +161,11 @@ const Wrapper = styled.div`
       height: 10vw;
       margin: 2vw;
       filter: saturate(0);
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 25vw;
+        height: 20vw;
+        margin: 3vw;
+      }
     }
   }
   a {

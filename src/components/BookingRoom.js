@@ -156,10 +156,20 @@ const Wrapper = styled.div`
     transition: 0.4s;
     transform: translateX(100%);
     position: fixed;
+    z-index: 991;
     top: 25%;
     right: 0;
     font-family: "Signika Negative", sans-serif;
-
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 1);
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+      border-radius: 5px;
+      border: 2px solid var(--secondaryColor2);
+    }
     .closeBookRoom {
       position: absolute;
       top: 5%;
@@ -188,7 +198,7 @@ const Wrapper = styled.div`
     }
   }
   .showBookRoom {
-    transform: translateX(0%);
+    transform: translateX(-10%);
     transition: 0.4s;
   }
   .bookForm {
@@ -203,6 +213,9 @@ const Wrapper = styled.div`
     justify-content: space-around;
     align-items: center;
     color: white;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 90vw;
+    }
   }
   h4 {
     font-size: 1.2rem;
@@ -231,6 +244,14 @@ const Wrapper = styled.div`
         color: #444;
         font-weight: 600;
         cursor: pointer;
+        @media (orientation: portrait) and (max-width: 800px) {
+          width: 15vw;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px;
+          font-size: 1.4rem;
+        }
       }
       label {
         font-size: 1.2rem;
@@ -241,7 +262,6 @@ const Wrapper = styled.div`
   .bookFormDates {
     width: 100%;
     display: flex;
-    /* flex-direction: row; */
     justify-content: center;
     align-items: center;
     div {
@@ -251,12 +271,17 @@ const Wrapper = styled.div`
       /* flex-direction: row; */
       justify-content: center;
       align-items: center;
-
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 98%;
+      }
       input {
         width: 100%;
         font-size: 1.2rem;
         border-radius: 5px;
         border: solid 3px var(--bookBtnColor);
+        @media (orientation: portrait) and (max-width: 800px) {
+          font-size: 1.4rem;
+        }
       }
     }
     label {
@@ -268,6 +293,9 @@ const Wrapper = styled.div`
       justify-content: center;
       align-items: center;
       width: 50%;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 95%;
+      }
     }
   }
   .reserveBtnNow {

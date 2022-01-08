@@ -84,6 +84,9 @@ const Wrapper = styled.div`
   background: #111;
   transition: 0.5s;
   margin: 2vw 1vw;
+  @media (orientation: portrait) and (max-width: 800px) {
+    width: 90vw;
+  }
   img {
     position: absolute;
     height: 35vh;

@@ -64,6 +64,9 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media (orientation: portrait) and (max-width: 800px) {
+      flex-direction: column;
+    }
     .aboutShortText {
       width: 40%;
       height: 70vh;
@@ -102,11 +105,24 @@ const Wrapper = styled.div`
           letter-spacing: 2px;
         }
       }
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+        h2 {
+          font-size: 1.5rem;
+        }
+      }
     }
     .aboutShortImages {
       width: 45%;
       height: 70vh;
       position: relative;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 90vw;
+        /* height: auto; */
+        margin: 0 auto;
+      }
       img {
         position: absolute;
         width: 200px;

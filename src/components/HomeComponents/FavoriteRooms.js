@@ -34,6 +34,11 @@ const FavoriteRooms = () => {
           autoPlay={3000}
           animationSpeed={1000}
           slidesPerPage={3}
+          breakpoints={{
+            900: {
+              slidesPerPage: 1,
+            },
+          }}
           addArrowClickHandler
           stopAutoPlayOnHover
           arrowLeft={<IoIosArrowDropleftCircle className="arrow arrowLeft" />}
@@ -56,11 +61,13 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 80vw;
     margin-top: 20vh;
-
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 95vw;
+    }
     .favoriteRoomsCarousel {
       margin-top: 10vh;
       width: 100%;
-      .oneFavoriteRoom {
+      /* .oneFavoriteRoom {
         width: 80%;
         height: 50vh;
         border: 1px solid #ddd;
@@ -144,7 +151,7 @@ const Wrapper = styled.div`
             }
           }
         }
-      }
+      } */
     }
   }
   .arrow {

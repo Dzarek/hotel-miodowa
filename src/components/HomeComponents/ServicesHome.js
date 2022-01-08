@@ -179,12 +179,12 @@ const Wrapper = styled.div`
   .servicesHome {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     width: 90vw;
     align-items: center;
     background: rgb(15, 15, 15);
-    /* box-shadow: 0 0 10px 0px white; */
-    /* margin: 5vh 0; */
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100vw;
+    }
     .titleContainer {
       margin-bottom: 5vh;
       margin-top: 5vh;
@@ -194,13 +194,10 @@ const Wrapper = styled.div`
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      /* width: 90%;
-      height: 100%; */
+      @media (orientation: portrait) and (max-width: 800px) {
+        padding-bottom: 10vh;
+      }
       .oneService {
-        /* display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center; */
         text-align: center;
         height: 35vh;
         width: 16vw;
@@ -208,7 +205,6 @@ const Wrapper = styled.div`
         border: 1px solid #888;
         border-radius: 5px;
         margin: 15px;
-        /* cursor: pointer; */
         position: relative;
         overflow: hidden;
         transition: 0.5s;
@@ -220,10 +216,8 @@ const Wrapper = styled.div`
           transform: translate(-50%, -50%);
           object-fit: cover;
           height: 100%;
-          /* width: 100%; */
           filter: brightness(0.3);
           z-index: 0;
-          /* display: none; */
           opacity: 0;
         }
         :hover {
@@ -234,7 +228,6 @@ const Wrapper = styled.div`
         }
         @keyframes imgShow {
           100% {
-            /* display: block; */
             opacity: 1;
           }
         }
@@ -249,8 +242,6 @@ const Wrapper = styled.div`
           width: 90%;
         }
         h4 {
-          /* margin: 15px auto; */
-          /* text-transform: capitalize; */
           font-size: 1.3rem;
           font-family: var(--buttonFont);
           font-weight: 400;
@@ -260,6 +251,11 @@ const Wrapper = styled.div`
           left: 50%;
           transform: translate(-50%, -50%);
           width: 90%;
+          @media (orientation: portrait) and (max-width: 800px) {
+            top: 75%;
+            left: 50%;
+            font-size: 1.1rem;
+          }
         }
         p {
           font-family: var(--buttonFont);
@@ -271,6 +267,28 @@ const Wrapper = styled.div`
           left: 50%;
           transform: translateX(-50%);
           width: 90%;
+          @media (orientation: portrait) and (max-width: 800px) {
+            display: none;
+          }
+        }
+        @media (orientation: portrait) and (max-width: 800px) {
+          width: 40vw;
+          height: 20vh;
+          margin: 5px;
+          padding: 10px 5px;
+          :hover {
+            width: 80vw;
+            height: 40vh;
+            margin: 5px;
+            padding: 10px 5px;
+          }
+          :hover p {
+            display: block;
+          }
+          :hover h4 {
+            top: 45%;
+            left: 50%;
+          }
         }
       }
     }

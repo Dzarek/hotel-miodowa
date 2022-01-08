@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
@@ -11,19 +11,40 @@ import {
 } from "react-icons/io";
 import { MdOutlineStar } from "react-icons/md";
 
-import headerImg1 from "../../images/headerImages/TWIM PREMIUM 005.jpg";
-import headerImg9 from "../../images/headerImages/SUPERIOR 004.jpg";
-import headerImg12 from "../../images/headerImages/Superior 11.jpg";
+import desktopImg1 from "../../images/headerImages/TWIM PREMIUM 005.jpg";
+import desktopImg3 from "../../images/headerImages/Superior 11.jpg";
+// import desktopImg2 from "../../images/headerImages/DELUXE 002.jpg";
+import desktopImg4 from "../../images/headerImages/STUDIO 004.jpg";
+
+import mobileImg1 from "../../images/headerImages/TWIM PREMIUMMobile.jpg";
+import mobileImg2 from "../../images/headerImages/DELUXE Mobile.jpg";
+import mobileImg4 from "../../images/headerImages/STUDIO 004Mobile.jpg";
 
 import { useContext } from "react";
 import { RoomContext } from "../../roomContext";
 
 const Header = () => {
+  const desktopImgs = [desktopImg1, desktopImg3, desktopImg4];
+  const mobileImgs = [mobileImg1, mobileImg2, mobileImg4];
+
   useEffect(() => {
     Aos.init({ duration: 1000 });
   }, []);
   const context = useContext(RoomContext);
   const { polish } = context;
+
+  const [width, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 800;
   return (
     <Wrapper>
       <div className="headerContainer">
@@ -40,9 +61,13 @@ const Header = () => {
             <IoIosArrowDroprightCircle className="arrow arrowRight" />
           }
         >
-          <img src={headerImg1} alt="" />
-          <img src={headerImg9} alt="" />
-          <img src={headerImg12} alt="" />
+          {!isMobile
+            ? desktopImgs.map((item, index) => {
+                return <img key={index} src={item} alt="" />;
+              })
+            : mobileImgs.map((item, index) => {
+                return <img key={index} src={item} alt="" />;
+              })}
         </Carousel>
         {/* <div className="headerBGOneImage"></div> */}
         <div
@@ -82,9 +107,10 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
     img {
-      height: 100%;
-      width: 100%;
+      height: 100vh;
+      width: 100vw;
       object-fit: cover;
       filter: brightness(0.5);
     }
@@ -106,6 +132,12 @@ const Wrapper = styled.div`
     .arrowRight {
       bottom: 5%;
       right: 5%;
+    }
+    @media (orientation: portrait) and (max-width: 800px) {
+      .arrowLeft {
+        bottom: 5%;
+        right: 15%;
+      }
     }
   }
   .headerTitle {
@@ -131,11 +163,27 @@ const Wrapper = styled.div`
       margin: 3vh 0 5vh;
       font-weight: 700;
     }
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 1.5rem;
+      width: 90%;
+      top: 53%;
+      left: 0%;
+      h1 {
+        margin: 2vh 7vw 2vh;
+      }
+      h3 {
+        margin-left: 7vw;
+      }
+    }
   }
   .stars {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100vw;
+      margin: 0 auto;
+    }
     .iconStar {
       margin: 0 20px;
       font-size: 4rem;
@@ -149,6 +197,10 @@ const Wrapper = styled.div`
         100% {
           opacity: 1;
         }
+      }
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 3rem;
+        margin: 0 auto;
       }
     }
   }
