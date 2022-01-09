@@ -86,6 +86,7 @@ const Wrapper = styled.div`
   margin: 2vw 1vw;
   @media (orientation: portrait) and (max-width: 800px) {
     width: 90vw;
+    margin: 5vw 1vw;
   }
   img {
     position: absolute;

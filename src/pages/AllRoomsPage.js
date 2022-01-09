@@ -117,6 +117,9 @@ const Wrapper = styled.div`
   width: 100vw;
   padding-top: 13vh;
   margin: 0 auto;
+  @media (orientation: portrait) and (max-width: 800px) {
+    padding-top: 12vh;
+  }
   .AllRoomsHeader {
     position: relative;
     height: 60vh;
@@ -140,6 +143,10 @@ const Wrapper = styled.div`
       text-shadow: 0 2px 2px black;
       color: white;
       z-index: 1;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1.4rem;
+        right: 0%;
+      }
     }
   }
   .allRoomsInfo {
@@ -152,6 +159,10 @@ const Wrapper = styled.div`
     font-family: var(--textFont);
     font-size: 1.2rem;
     line-height: 1.5;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 85vw;
+      font-size: 1.1rem;
+    }
     p {
       margin: 5vh auto;
     }
@@ -176,6 +187,9 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    @media (orientation: portrait) and (max-width: 800px) {
+      flex-direction: column;
+    }
   }
 `;
 export default withRoomConsumer(AllRoomsPage);

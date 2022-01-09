@@ -83,7 +83,14 @@ const SingleRoomPage = () => {
           <div className="roomPictures">
             <SRLWrapper>
               {images.map((item, index) => {
-                return <img key={index} src={item} alt={index + 1} />;
+                return (
+                  <img
+                    className="roomPictureImg"
+                    key={index}
+                    src={item}
+                    alt={index + 1}
+                  />
+                );
               })}
             </SRLWrapper>
           </div>
@@ -108,6 +115,11 @@ const SingleRoomPage = () => {
               autoPlay={3000}
               animationSpeed={1000}
               slidesPerPage={3}
+              breakpoints={{
+                900: {
+                  slidesPerPage: 1,
+                },
+              }}
               addArrowClickHandler
               stopAutoPlayOnHover
               arrowLeft={
@@ -169,6 +181,9 @@ const Wrapper = styled.div`
   width: 100vw;
   padding-top: 13vh;
   margin: 0 auto;
+  @media (orientation: portrait) and (max-width: 800px) {
+    padding-top: 12vh;
+  }
   header {
     position: relative;
     height: 40vh;
@@ -202,6 +217,11 @@ const Wrapper = styled.div`
       text-shadow: 0 2px 2px black;
       color: white;
       z-index: 1;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1.2rem;
+        right: 0%;
+        top: 60%;
+      }
       h4 {
         text-transform: lowerCase;
         margin-top: 2vh;
@@ -222,6 +242,15 @@ const Wrapper = styled.div`
       color: var(--secondaryColor2);
       margin-bottom: 3vh;
       margin-top: 8vh;
+    }
+    @media (orientation: portrait) and (max-width: 800px) {
+      flex-direction: column-reverse;
+      width: 100vw;
+      h2 {
+        margin: 0 auto;
+        margin-bottom: 3vh;
+        margin-top: 8vh;
+      }
     }
   }
   .roomDetails {
@@ -255,6 +284,13 @@ const Wrapper = styled.div`
       margin-right: 10%;
       color: var(--secondaryColor);
     }
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100%;
+      margin-top: 0vh;
+      p {
+        font-size: 1.1rem;
+      }
+    }
   }
   .otherRooms {
     width: 80vw;
@@ -275,6 +311,12 @@ const Wrapper = styled.div`
       transition: 0.3s;
       :hover {
         color: var(--secondaryColor);
+      }
+    }
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 90vw;
+      .arrow {
+        font-size: 1.5rem;
       }
     }
   }
@@ -310,6 +352,26 @@ const Wrapper = styled.div`
         }
       }
     }
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100vw;
+      padding: 0;
+      margin: 0;
+      .equipments {
+        padding: 10px;
+        width: 100vw;
+        p {
+          font-size: 2.3rem;
+          padding: 5px;
+          width: 100px;
+          height: 100px;
+          margin: 1vh;
+          span {
+            font-size: 1rem;
+            color: var(--secondaryColor2);
+          }
+        }
+      }
+    }
   }
   .descriptionAndPictures {
     width: 65%;
@@ -317,7 +379,12 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100%;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+    }
     .roomDescription {
       width: 100%;
       display: flex;
@@ -331,6 +398,16 @@ const Wrapper = styled.div`
         margin-bottom: 3vh;
         /* text-align: justify; */
       }
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 85%;
+        margin: 0 auto;
+        p {
+          font-size: 1.1rem;
+          line-height: 1.3;
+          margin-bottom: 3vh;
+          text-align: center;
+        }
+      }
     }
     .roomPictures {
       width: 100%;
@@ -338,7 +415,18 @@ const Wrapper = styled.div`
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: center;
-      img {
+      @media (orientation: portrait) and (max-width: 800px) {
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        > * {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .roomPictureImg {
         width: 220px;
         margin: 1vh 2vh 1vh 0;
         border-radius: 3px;
@@ -346,6 +434,12 @@ const Wrapper = styled.div`
         cursor: pointer;
         :hover {
           box-shadow: 0 0 2px 2px white;
+        }
+        @media (orientation: portrait) and (max-width: 800px) {
+          justify-content: center;
+          align-self: center;
+          margin: 1vh auto 1vh auto;
+          width: 80vw;
         }
       }
     }
