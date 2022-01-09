@@ -65,6 +65,11 @@ const Wrapper = styled.div`
     align-items: center;
     width: 80vw;
     padding-top: 20vh;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 90vw;
+      flex-direction: column;
+      padding-top: 35vh;
+    }
     .oneService {
       width: 20vw;
       height: 50vh;
@@ -72,7 +77,11 @@ const Wrapper = styled.div`
       border-radius: 5px;
       cursor: pointer;
       transition: 0.6s;
-
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 70vw;
+        height: 23vh;
+        margin: 2vh auto;
+      }
       img {
         width: 100%;
         height: 100%;
@@ -83,6 +92,9 @@ const Wrapper = styled.div`
         border: 2px solid var(--secondaryColor2);
         transition: 0.4s;
         filter: saturate(0);
+        @media (orientation: portrait) and (max-width: 800px) {
+          filter: saturate(0) brightness(0.3);
+        }
       }
       h2 {
         display: none;
@@ -96,6 +108,11 @@ const Wrapper = styled.div`
         font-size: 2.5rem;
         text-align: center;
         transition: 0.4s;
+        @media (orientation: portrait) and (max-width: 800px) {
+          display: block;
+          /* color: var(--secondaryColor2); */
+          font-size: 1.7rem;
+        }
       }
       :hover img {
         filter: brightness(0.3) saturate(0);

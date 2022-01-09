@@ -7,9 +7,7 @@ import { NavLink } from "react-router-dom";
 class MyForm extends Component {
   state = {
     status: "",
-    // cookieVisible: false,
   };
-
   sendEmail = (e) => {
     e.preventDefault();
 
@@ -32,7 +30,7 @@ class MyForm extends Component {
   };
   render() {
     const { status } = this.state;
-    const { polish } = this.context;
+    const { polish } = this.props;
     return (
       <>
         <Wrapper onSubmit={this.sendEmail}>
@@ -122,7 +120,8 @@ const Wrapper = styled.form`
   height: 66vh;
   width: 90%;
   margin: 0 auto;
-  @media screen and (max-width: 800px) {
+  @media (orientation: portrait) and (max-width: 800px) {
+    width: 100%;
     height: auto;
   }
   h1 {
@@ -131,8 +130,9 @@ const Wrapper = styled.form`
     margin-bottom: 5vh;
     font-family: var(--buttonFont);
     width: 80%;
-    @media screen and (max-width: 800px) {
-      font-size: 1.7rem;
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 1.5rem;
+      width: 90%;
     }
   }
   .inputContainer {
@@ -183,7 +183,7 @@ const Wrapper = styled.form`
     label {
       margin: 3vh auto 0;
       @media (orientation: portrait) and (max-width: 800px) {
-        font-size: 1rem;
+        font-size: 0.9rem;
       }
       input {
         margin-right: 10px;

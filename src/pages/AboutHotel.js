@@ -165,6 +165,14 @@ const Wrapper = styled.div`
         margin-top: 2vh;
       }
     }
+    @media (orientation: portrait) and (max-width: 800px) {
+      h2 {
+        font-size: 1.8rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+    }
   }
   .description {
     width: 70%;
@@ -198,6 +206,27 @@ const Wrapper = styled.div`
         border-radius: 5px;
         margin-right: 15%;
         margin-top: 8vh;
+      }
+    }
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 85%;
+      h3 {
+        font-size: 2rem;
+      }
+      section {
+        flex-direction: column;
+        width: 100vw;
+        p {
+          width: 85%;
+          text-align: center;
+        }
+        img {
+          width: 80%;
+          margin-right: 0;
+        }
+      }
+      p:nth-of-type(2) {
+        text-align: right;
       }
     }
   }
@@ -238,6 +267,26 @@ const Wrapper = styled.div`
         }
         p {
           font-size: 1.2rem;
+        }
+      }
+    }
+    @media (orientation: portrait) and (max-width: 800px) {
+      height: 80vh;
+      .inNumbers {
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: space-around;
+        span {
+          width: 100px;
+          height: 100px;
+          margin: 2vh auto;
+          h3 {
+            font-size: 2rem;
+            margin-bottom: 1vh;
+          }
+          p {
+            font-size: 1.1rem;
+          }
         }
       }
     }

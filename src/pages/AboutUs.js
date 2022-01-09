@@ -42,15 +42,27 @@ const Wrapper = styled.div`
         transform: scale(1);
       }
     }
+    @media (orientation: portrait) and (max-width: 800px) {
+      flex-direction: column;
+    }
     .hotelAbout {
       height: 60%;
       width: 40%;
       border-radius: 10% 0 0 10%;
       border: 2px solid var(--secondaryColor);
       border-right: none;
-
       h2 {
         transform: translateX(50vw);
+      }
+      @media (orientation: portrait) and (max-width: 800px) {
+        height: 30%;
+        width: 90%;
+        border-radius: 10%;
+        margin-bottom: 5vh;
+        h2 {
+          transform: translateX(0);
+          font-size: 2.3rem;
+        }
       }
     }
     .cracowAbout {
@@ -59,10 +71,18 @@ const Wrapper = styled.div`
       border-radius: 0% 10% 10% 0%;
       border: 2px solid var(--secondaryColor);
       border-left: none;
-
       h2 {
         transform: translateX(-50vw);
         text-align: right;
+      }
+      @media (orientation: portrait) and (max-width: 800px) {
+        height: 30%;
+        width: 90%;
+        border-radius: 10%;
+        h2 {
+          transform: translateX(0);
+          font-size: 2.3rem;
+        }
       }
     }
     a {
@@ -75,7 +95,9 @@ const Wrapper = styled.div`
       justify-content: center;
       text-decoration: none;
       overflow: hidden;
-
+      @media (orientation: portrait) and (max-width: 800px) {
+        filter: none;
+      }
       h2 {
         font-size: 3rem;
         color: white;

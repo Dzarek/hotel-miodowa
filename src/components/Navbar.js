@@ -32,6 +32,15 @@ const Navbar = () => {
     polish,
   } = context;
 
+  const togglePolishL = () => {
+    handleTogglePolish();
+    setShowMenu(false);
+  };
+  const toggleEnglishL = () => {
+    handleToggleEnglish();
+    setShowMenu(false);
+  };
+
   const displaySubmenu = (e) => {
     const page = e.target.textContent;
     const tempBtn = e.target.getBoundingClientRect();
@@ -320,14 +329,14 @@ const Navbar = () => {
                         <img
                           src={englandFlag}
                           alt="englandFlag"
-                          onClick={handleToggleEnglish}
+                          onClick={toggleEnglishL}
                         />
                       </span>
                       <span>
                         <img
                           src={polandFlag}
                           alt="polandFlag"
-                          onClick={handleTogglePolish}
+                          onClick={togglePolishL}
                         />
                       </span>
                     </div>
@@ -399,14 +408,14 @@ const Navbar = () => {
                         <img
                           src={polandFlag}
                           alt="polandFlag"
-                          onClick={handleTogglePolish}
+                          onClick={togglePolishL}
                         />
                       </span>
                       <span>
                         <img
                           src={englandFlag}
                           alt="englandFlag"
-                          onClick={handleToggleEnglish}
+                          onClick={toggleEnglishL}
                         />
                       </span>
                     </div>
@@ -717,6 +726,7 @@ const Wrapper2 = styled.div`
     transition: 0.7s;
     transform: translateY(-88vh);
     margin: 0 auto;
+    z-index: 99999;
   }
   .showMain-Nav {
     transition: 0.7s;
@@ -826,7 +836,7 @@ const Wrapper2 = styled.div`
     border: none;
     color: var(--primaryColor);
     transition: 0.5s;
-    z-index: 999999999;
+    z-index: 9999;
     cursor: pointer;
     :hover {
       color: var(--secondaryColor2);

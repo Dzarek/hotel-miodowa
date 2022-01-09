@@ -220,6 +220,12 @@ const Wrapper = styled.div`
         margin-top: 2vh;
       }
     }
+    @media (orientation: portrait) and (max-width: 800px) {
+      h2 {
+        font-size: 1.8rem;
+        transform: translateX(25%);
+      }
+    }
   }
   .shuttleContainer {
     display: flex;
@@ -263,6 +269,16 @@ const Wrapper = styled.div`
         margin-right: 10px;
       }
     }
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 90vw;
+      flex-direction: column;
+      img {
+        width: 70vw;
+      }
+      .shuttle {
+        width: 100%;
+      }
+    }
   }
   .toursContainer {
     display: flex;
@@ -270,10 +286,19 @@ const Wrapper = styled.div`
     align-items: center;
     width: 80vw;
     margin: 20vh auto 30vh;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 90vw;
+      flex-direction: column-reverse;
+      margin: 15vh auto 15vh;
+    }
     .imgContainer {
       width: 50%;
       height: 50vh;
       position: relative;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 100%;
+        height: 50vh;
+      }
       span {
         width: 300px;
         height: 180px;
@@ -287,69 +312,77 @@ const Wrapper = styled.div`
         :hover h4 {
           opacity: 1;
         }
-      }
-      span:nth-of-type(2) {
-        top: 33%;
-        left: 50%;
-      }
-      span:nth-of-type(3) {
-        top: 66%;
-        left: 0%;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        border-radius: 3px;
-        transition: 0.4s;
-        border: 1px solid var(--secondaryColor2);
-      }
-      h4 {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: white;
-        font-family: var(--buttonFont);
-        font-size: 2rem;
-        opacity: 0;
-        transition: 0.4s;
+        width: 60vw;
+        height: 20vh;
       }
     }
-    .tours {
+    span:nth-of-type(2) {
+      top: 33%;
+      left: 50%;
+      @media (orientation: portrait) and (max-width: 800px) {
+        left: 35%;
+      }
+    }
+    span:nth-of-type(3) {
+      top: 66%;
+      left: 0%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      border-radius: 3px;
+      transition: 0.4s;
+      border: 1px solid var(--secondaryColor2);
+    }
+    h4 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      font-family: var(--buttonFont);
+      font-size: 2rem;
+      opacity: 0;
+      transition: 0.4s;
+    }
+  }
+  .tours {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: flex-start;
+    justify-content: center;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100%;
+    }
+    h3 {
+      font-family: var(--buttonFont);
+      font-size: 2rem;
+      margin-bottom: 3vh;
+      color: var(--secondaryColor2);
+    }
+    p {
+      font-family: var(--textFont);
+      font-size: 1rem;
+      line-height: 1.3;
+      margin: 3vh auto 3vh 0;
+      text-align: left;
+    }
+    span {
+      font-family: var(--textFont);
+      font-size: 1rem;
+      line-height: 1.3;
+      color: var(--secondaryColor2);
+      margin: 0.5rem 0 0.5rem 2vw;
       display: flex;
-      flex-direction: column;
-      width: 40%;
-      align-items: flex-start;
-      justify-content: center;
-      h3 {
-        font-family: var(--buttonFont);
-        font-size: 2rem;
-        margin-bottom: 3vh;
-        color: var(--secondaryColor2);
-      }
-      p {
-        font-family: var(--textFont);
-        font-size: 1rem;
-        line-height: 1.3;
-        margin: 3vh auto 3vh 0;
-        text-align: left;
-      }
-      span {
-        font-family: var(--textFont);
-        font-size: 1rem;
-        line-height: 1.3;
-        color: var(--secondaryColor2);
-        margin: 0.5rem 0 0.5rem 2vw;
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        font-weight: bold;
-        .icon {
-          margin-right: 10px;
-        }
+      align-items: center;
+      justify-content: space-around;
+      font-weight: bold;
+      .icon {
+        margin-right: 10px;
       }
     }
   }

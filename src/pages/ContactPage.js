@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import MyForm from "../components/MyForm";
@@ -16,6 +16,19 @@ const ContactPage = () => {
   }, []);
   const context = useContext(RoomContext);
   const { polish } = context;
+
+  const [width, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 800;
   return (
     <Wrapper>
       <div className="title">
@@ -44,7 +57,7 @@ const ContactPage = () => {
       </div>
       <div className="contactContent">
         <section className="form">
-          <MyForm />
+          <MyForm polish={polish} />
         </section>
         <section className="social">
           <div data-aos="fade-left" className="adressPhoneEmail">
@@ -54,7 +67,13 @@ const ContactPage = () => {
             </span>
             <span>
               <FaPhoneAlt />
-              <p>+48 12 4467130, +48 508 373 246</p>
+              {!isMobile ? (
+                <p>+48 12 4467130, +48 508 373 246</p>
+              ) : (
+                <p>
+                  +48 12 4467130, <br /> +48 508 373 246
+                </p>
+              )}
             </span>
             <span>
               <MdMail />
@@ -98,21 +117,34 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /* color: var(--secondaryColor2); */
-    /* color: var(--appBgColor); */
     color: #444;
     h2 {
       color: var(--secondaryColor);
-      /* letter-spacing: 8vw; */
       letter-spacing: 10px;
       text-align: center;
-      /* animation: letterConect 1s 1s 1 forwards; */
     }
-    /* @keyframes letterConect {
-      100% {
-        letter-spacing: 10px;
+    @media (orientation: portrait) and (max-width: 800px) {
+      h1:nth-of-type(2) {
+        display: none;
       }
-    } */
+
+      h2:nth-of-type(3) {
+        display: none;
+      }
+      h3:nth-of-type(2) {
+        display: none;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+        letter-spacing: 5px;
+      }
+      h3 {
+        font-size: 1.8rem;
+      }
+    }
   }
   .Map {
     width: 100%;
@@ -140,11 +172,21 @@ const Wrapper = styled.div`
     .form {
       width: 50%;
     }
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 90vw;
+      flex-direction: column;
+      form {
+        width: 90vw;
+      }
+    }
   }
   .social {
     display: flex;
     flex-direction: column;
     width: 40%;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 100%;
+    }
     .adressPhoneEmail {
       display: flex;
       flex-direction: column;
@@ -152,6 +194,9 @@ const Wrapper = styled.div`
       align-items: center;
       justify-content: center;
       font-family: var(--buttonFont);
+      @media (orientation: portrait) and (max-width: 800px) {
+        margin-top: 10vh;
+      }
       span {
         display: flex;
         align-items: center;
@@ -175,6 +220,31 @@ const Wrapper = styled.div`
           margin-left: 15px;
           text-align: center;
         }
+        @media (orientation: portrait) and (max-width: 800px) {
+          width: 90vw;
+          padding: 5px 10px;
+
+          :nth-of-type(1) {
+            margin-left: 0vw;
+            margin: 2vh auto;
+            background: var(--bookBtnColor);
+          }
+          :nth-of-type(2) {
+            width: 60vw;
+            background: var(--bookBtnColor);
+          }
+          :nth-of-type(3) {
+            margin-right: 0vw;
+            margin: 2vh auto;
+          }
+
+          p {
+            margin-left: 0px;
+            margin: 2vh auto;
+            text-align: center;
+            font-size: 1.1rem;
+          }
+        }
       }
     }
     .bankDetails {
@@ -193,6 +263,11 @@ const Wrapper = styled.div`
       }
       p {
         margin-bottom: 1vh;
+      }
+      @media (orientation: portrait) and (max-width: 800px) {
+        margin-left: 0;
+        margin: 10vh auto 0;
+        align-items: flex-start;
       }
     }
   }

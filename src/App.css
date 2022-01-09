@@ -260,9 +260,9 @@ body {
 }
 
 .airportTransferHeader {
-  background-image: url(./images/inne/airportTransfer.jpg);
+  background-image: url(./images/inne/airportTransferMobile.jpg);
   background-size: cover;
-  background-position: center;
+  background-position: top;
   background-attachment: fixed;
 }
 
@@ -273,12 +273,7 @@ body {
   background-attachment: fixed;
 }
 
-/* .restaurantHeader {
-  background-image: url(./images/restauracja/RESTAURACJA\ 015.jpg);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-} */
+
 
 .receptionImg {
   background: url('./images/homeImages/RECEPCJA\ 005.jpg');

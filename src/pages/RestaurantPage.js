@@ -145,6 +145,11 @@ const RestaurantPage = () => {
             autoPlay={3000}
             animationSpeed={1000}
             slidesPerPage={3}
+            breakpoints={{
+              900: {
+                slidesPerPage: 1,
+              },
+            }}
             addArrowClickHandler
             stopAutoPlayOnHover
             arrowLeft={<IoIosArrowDropleftCircle className="arrow arrowLeft" />}
@@ -208,6 +213,12 @@ const Wrapper = styled.div`
         text-transform: lowerCase;
         margin-top: 2vh;
       }
+      @media (orientation: portrait) and (max-width: 800px) {
+        h2 {
+          font-size: 1.8rem;
+          transform: translateX(25%);
+        }
+      }
     }
   }
   .restaurantInfo {
@@ -218,12 +229,21 @@ const Wrapper = styled.div`
     margin: 15vh auto;
     justify-content: space-around;
     align-items: flex-start;
+    @media (orientation: portrait) and (max-width: 800px) {
+      flex-direction: column;
+      width: 90vw;
+    }
     .meals {
       width: 40%;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 10vh;
+      }
       h3 {
         font-family: var(--buttonFont);
         font-size: 2rem;
@@ -263,6 +283,12 @@ const Wrapper = styled.div`
         width: 300px;
         border-radius: 5px;
         cursor: pointer;
+      }
+      @media (orientation: portrait) and (max-width: 800px) {
+        width: 90vw;
+        img {
+          width: 90%;
+        }
       }
     }
   }

@@ -22,7 +22,7 @@ const AboutCracow = () => {
           <h2>
             {polish
               ? "Kraków - Miasto Polskich Królów"
-              : "The City Of Polish Kings"}
+              : "Cracow - The City Of Polish Kings"}
           </h2>
         </div>
       </div>
@@ -88,6 +88,9 @@ const Wrapper = styled.div`
       width: 100%;
       text-shadow: 0 2px 2px black;
       color: white;
+      @media (orientation: portrait) and (max-width: 800px) {
+        font-size: 1.2rem;
+      }
     }
   }
   .cracowInfo {
@@ -97,6 +100,9 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     margin: 5vh auto;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 90%;
+    }
     section {
       display: flex;
       align-items: center;
@@ -120,6 +126,24 @@ const Wrapper = styled.div`
           color: var(--secondaryColor2);
           margin-bottom: 3vh;
           text-transform: uppercase;
+        }
+      }
+      @media (orientation: portrait) and (max-width: 800px) {
+        flex-direction: column;
+        margin: 7vh auto;
+
+        img {
+          width: 90%;
+          margin: 0vh auto 3vh;
+        }
+        img:nth-of-type(2) {
+          margin: 5vh auto 0vh;
+        }
+        img:nth-of-type(3) {
+          margin: 0vh auto 3vh;
+        }
+        span {
+          width: 90%;
         }
       }
     }

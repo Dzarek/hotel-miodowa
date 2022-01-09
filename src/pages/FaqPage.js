@@ -125,6 +125,9 @@ const Wrapper = styled.div`
     font-family: var(--titleFont);
     color: var(--secondaryColor2);
     font-size: 2rem;
+    @media (orientation: portrait) and (max-width: 800px) {
+      font-size: 1.5rem;
+    }
   }
   .accordion__panel {
     animation: fadein 0.5s ease-in;
@@ -174,6 +177,7 @@ const Wrapper = styled.div`
       width: 95vw;
       font-size: 0.8rem;
       margin-top: 10vh;
+      flex-direction: column;
     }
   }
   .receptionFaq {
@@ -182,7 +186,10 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     width: 30vw;
-
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 90vw;
+      margin-top: 15vh;
+    }
     p {
       font-family: var(--textFont);
       text-align: center;
@@ -197,6 +204,10 @@ const Wrapper = styled.div`
     overflow: hidden;
     border-radius: 5px;
     position: relative;
+    @media (orientation: portrait) and (max-width: 800px) {
+      width: 80vw;
+      height: 40vh;
+    }
     a {
       position: absolute;
       top: 50%;
@@ -214,6 +225,9 @@ const Wrapper = styled.div`
       transition: 0.3s;
       :hover {
         letter-spacing: 3px;
+      }
+      @media (orientation: portrait) and (max-width: 800px) {
+        padding: 15px;
       }
     }
   }
