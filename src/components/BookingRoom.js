@@ -156,7 +156,7 @@ const Wrapper = styled.div`
     transition: 0.4s;
     transform: translateX(100%);
     position: fixed;
-    z-index: 991;
+    z-index: 9999999;
     top: 25%;
     right: 0;
     font-family: "Signika Negative", sans-serif;
