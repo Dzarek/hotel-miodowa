@@ -418,6 +418,28 @@ const Wrapper = styled.div`
       text-align: center;
       font-size: 2.8rem;
     }
+    @media (orientation: portrait) and (max-width: 800px) {
+      h1:nth-of-type(2) {
+        display: none;
+      }
+
+      h2:nth-of-type(3) {
+        display: none;
+      }
+      h3:nth-of-type(2) {
+        display: none;
+      }
+      h1 {
+        font-size: 1.8rem;
+      }
+      h2 {
+        font-size: 1.8rem;
+        letter-spacing: 5px;
+      }
+      h3 {
+        font-size: 1.8rem;
+      }
+    }
   }
   .content {
     width: 80vw;
