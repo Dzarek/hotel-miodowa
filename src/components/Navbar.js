@@ -726,7 +726,7 @@ const Wrapper2 = styled.div`
     transition: 0.7s;
     transform: translateY(-88vh);
     margin: 0 auto;
-    z-index: 99999;
+    z-index: 990;
   }
   .showMain-Nav {
     transition: 0.7s;
@@ -836,7 +836,7 @@ const Wrapper2 = styled.div`
     border: none;
     color: var(--primaryColor);
     transition: 0.5s;
-    z-index: 9999;
+    z-index: 989;
     cursor: pointer;
     :hover {
       color: var(--secondaryColor2);
