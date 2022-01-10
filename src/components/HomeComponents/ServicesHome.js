@@ -182,7 +182,7 @@ const Wrapper = styled.div`
     width: 90vw;
     align-items: center;
     background: rgb(15, 15, 15);
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100vw;
     }
     .titleContainer {
@@ -194,7 +194,7 @@ const Wrapper = styled.div`
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         padding-bottom: 10vh;
       }
       .oneService {
@@ -252,7 +252,7 @@ const Wrapper = styled.div`
           left: 50%;
           transform: translate(-50%, -50%);
           width: 90%;
-          @media (orientation: portrait) and (max-width: 800px) {
+          @media screen and (max-width: 800px) {
             top: 75%;
             left: 50%;
             font-size: 1.1rem;
@@ -268,11 +268,11 @@ const Wrapper = styled.div`
           left: 50%;
           transform: translateX(-50%);
           width: 90%;
-          @media (orientation: portrait) and (max-width: 800px) {
+          @media screen and (max-width: 800px) {
             display: none;
           }
         }
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           width: 40vw;
           height: 20vh;
           margin: 5px;
@@ -289,6 +289,15 @@ const Wrapper = styled.div`
           :hover h4 {
             top: 45%;
             left: 50%;
+          }
+        }
+        @media (orientation: landscape) and (max-width: 800px) {
+          height: 50vh;
+          :hover {
+            width: 80vw;
+            height: 60vh;
+            margin: 5px;
+            padding: 10px 5px;
           }
         }
       }

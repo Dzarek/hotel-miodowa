@@ -88,7 +88,7 @@ const Wrapper = styled.div`
       width: 100%;
       text-shadow: 0 2px 2px black;
       color: white;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 1.2rem;
       }
     }
@@ -100,7 +100,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     margin: 5vh auto;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 90%;
     }
     section {
@@ -128,7 +128,7 @@ const Wrapper = styled.div`
           text-transform: uppercase;
         }
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         flex-direction: column;
         margin: 7vh auto;
 
@@ -145,6 +145,9 @@ const Wrapper = styled.div`
         span {
           width: 90%;
         }
+      }
+      @media (orientation: landscape) and (max-width: 800px) {
+        width: 70%;
       }
     }
     /* section:nth-of-type(1) {

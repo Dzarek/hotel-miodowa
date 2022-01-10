@@ -409,7 +409,7 @@ const Wrapper = styled.div`
       text-align: center;
       font-size: 2.8rem;
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       h1:nth-of-type(2) {
         display: none;
       }

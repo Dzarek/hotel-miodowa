@@ -198,7 +198,7 @@ const Wrapper = styled.div`
       :hover {
         box-shadow: 0 0 2px 2px white;
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 100%;
         margin: 15px auto;
       }

@@ -116,7 +116,7 @@ const Wrapper = styled.div`
       letter-spacing: 10px;
       text-align: center;
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       h1:nth-of-type(2) {
         display: none;
       }
@@ -147,7 +147,7 @@ const Wrapper = styled.div`
     font-family: var(--titleFont);
     color: var(--secondaryColor2);
     font-size: 2rem;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 1.5rem;
     }
   }
@@ -173,7 +173,7 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     cursor: pointer;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 1.8rem;
     }
     :hover {
@@ -195,7 +195,7 @@ const Wrapper = styled.div`
     max-width: 1360px;
     margin: 30vh auto 15vh;
     position: relative;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 95vw;
       font-size: 0.8rem;
       margin-top: 10vh;
@@ -208,7 +208,7 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     width: 30vw;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 90vw;
       margin-top: 15vh;
     }
@@ -226,7 +226,7 @@ const Wrapper = styled.div`
     overflow: hidden;
     border-radius: 5px;
     position: relative;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 80vw;
       height: 40vh;
     }
@@ -248,7 +248,7 @@ const Wrapper = styled.div`
       :hover {
         letter-spacing: 3px;
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         padding: 15px;
       }
     }
@@ -266,7 +266,7 @@ const Wrapper = styled.div`
     border-radius: 5px;
     border: 1px solid var(--secondaryColor2);
     font-family: var(--buttonFont);
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100%;
     }
     p {

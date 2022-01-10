@@ -42,7 +42,7 @@ const Wrapper = styled.div`
         transform: scale(1);
       }
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       flex-direction: column;
     }
     .hotelAbout {
@@ -54,7 +54,7 @@ const Wrapper = styled.div`
       h2 {
         transform: translateX(50vw);
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         height: 30%;
         width: 90%;
         border-radius: 10%;
@@ -62,6 +62,7 @@ const Wrapper = styled.div`
         h2 {
           transform: translateX(0);
           font-size: 2.3rem;
+          text-align: center;
         }
       }
     }
@@ -75,13 +76,14 @@ const Wrapper = styled.div`
         transform: translateX(-50vw);
         text-align: right;
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         height: 30%;
         width: 90%;
         border-radius: 10%;
         h2 {
           transform: translateX(0);
           font-size: 2.3rem;
+          text-align: center;
         }
       }
     }
@@ -95,7 +97,7 @@ const Wrapper = styled.div`
       justify-content: center;
       text-decoration: none;
       overflow: hidden;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         filter: none;
       }
       h2 {

@@ -61,7 +61,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 80vw;
     margin-top: 20vh;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 95vw;
     }
     .favoriteRoomsCarousel {

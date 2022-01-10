@@ -205,7 +205,7 @@ const Wrapper = styled.div`
         text-transform: lowerCase;
         margin-top: 2vh;
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         h2 {
           font-size: 2rem;
           transform: translateX(25%);
@@ -219,7 +219,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     margin: 15vh auto;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 90vw;
     }
     p {
@@ -227,7 +227,7 @@ const Wrapper = styled.div`
       font-size: 1.2rem;
       line-height: 1.4;
       margin: 3vh auto;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 1.1rem;
       }
       span {
@@ -239,7 +239,7 @@ const Wrapper = styled.div`
     }
   }
   .oneParking:nth-of-type(2) {
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       flex-direction: column-reverse;
     }
   }
@@ -250,7 +250,7 @@ const Wrapper = styled.div`
     margin: 10vh auto;
     /* margin-left: 10vw; */
     width: 90%;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100%;
       flex-direction: column;
     }
@@ -267,7 +267,7 @@ const Wrapper = styled.div`
           color: var(--secondaryColor2);
           margin-left: 10px;
         }
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           font-size: 1.2rem;
           align-self: center;
           margin: 1vh auto 3vh;
@@ -283,9 +283,13 @@ const Wrapper = styled.div`
       height: 45vh;
       border: 2px solid var(--secondaryColor2);
       border-radius: 5px;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 100%;
         height: 35vh;
+      }
+      @media (orientation: landscape) and (max-width: 800px) {
+        width: 100%;
+        height: 75vh;
       }
     }
   }

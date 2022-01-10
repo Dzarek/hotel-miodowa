@@ -476,7 +476,7 @@ const Wrapper = styled.div`
   top: 0;
   left: 0;
   z-index: 9999;
-  @media (orientation: portrait) and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     display: none;
   }
   .navbarToggleLanguage {
@@ -654,7 +654,7 @@ const Wrapper = styled.div`
 `;
 
 const Wrapper2 = styled.div`
-  @media (min-width: 801px) {
+  @media screen and (min-width: 801px) {
     display: none;
   }
 
@@ -667,6 +667,9 @@ const Wrapper2 = styled.div`
     font-size: 50px;
     color: white;
     transition: 0.3s;
+    @media (orientation: landscape) and (max-width: 800px) {
+      margin-top: 50vh;
+    }
   }
   .language-change {
     width: 100vw;
@@ -727,6 +730,9 @@ const Wrapper2 = styled.div`
     transform: translateY(-88vh);
     margin: 0 auto;
     z-index: 990;
+    @media (orientation: landscape) and (max-width: 800px) {
+      transform: translateY(-80vh);
+    }
   }
   .showMain-Nav {
     transition: 0.7s;
@@ -739,6 +745,9 @@ const Wrapper2 = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media (orientation: landscape) and (max-width: 800px) {
+      height: 20vh;
+    }
   }
 
   .nav-toggle {
@@ -763,6 +772,9 @@ const Wrapper2 = styled.div`
     transition: 0.5s;
     .logo {
       width: 40vw;
+    }
+    @media (orientation: landscape) and (max-width: 800px) {
+      display: none;
     }
   }
 
@@ -797,6 +809,13 @@ const Wrapper2 = styled.div`
       .iconLanguage {
         font-size: 1.3rem;
       }
+      @media (orientation: landscape) and (max-width: 800px) {
+        margin: 1vh auto;
+        font-size: 1rem;
+      }
+    }
+    @media (orientation: landscape) and (max-width: 800px) {
+      margin-top: 10vh;
     }
   }
   .bookBtn {

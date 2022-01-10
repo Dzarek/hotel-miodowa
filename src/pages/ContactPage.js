@@ -123,7 +123,7 @@ const Wrapper = styled.div`
       letter-spacing: 10px;
       text-align: center;
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       h1:nth-of-type(2) {
         display: none;
       }
@@ -172,7 +172,7 @@ const Wrapper = styled.div`
     .form {
       width: 50%;
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 90vw;
       flex-direction: column;
       form {
@@ -184,7 +184,7 @@ const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
     width: 40%;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100%;
     }
     .adressPhoneEmail {
@@ -194,7 +194,7 @@ const Wrapper = styled.div`
       align-items: center;
       justify-content: center;
       font-family: var(--buttonFont);
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         margin-top: 10vh;
       }
       span {
@@ -220,7 +220,7 @@ const Wrapper = styled.div`
           margin-left: 15px;
           text-align: center;
         }
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           width: 90vw;
           padding: 5px 10px;
 
@@ -264,7 +264,7 @@ const Wrapper = styled.div`
       p {
         margin-bottom: 1vh;
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         margin-left: 0;
         margin: 10vh auto 0;
         align-items: flex-start;

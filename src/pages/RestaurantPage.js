@@ -213,7 +213,7 @@ const Wrapper = styled.div`
         text-transform: lowerCase;
         margin-top: 2vh;
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         h2 {
           font-size: 1.8rem;
           transform: translateX(25%);
@@ -229,7 +229,7 @@ const Wrapper = styled.div`
     margin: 15vh auto;
     justify-content: space-around;
     align-items: flex-start;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       flex-direction: column;
       width: 90vw;
     }
@@ -239,7 +239,7 @@ const Wrapper = styled.div`
       flex-direction: column;
       align-items: flex-start;
       justify-content: flex-start;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 90%;
         margin: 0 auto;
         margin-bottom: 10vh;
@@ -284,7 +284,7 @@ const Wrapper = styled.div`
         border-radius: 5px;
         cursor: pointer;
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 90vw;
         img {
           width: 90%;

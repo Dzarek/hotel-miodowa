@@ -111,9 +111,12 @@ const Wrapper = styled.div`
   border-top: 2px solid var(--bookBtnColor);
   position: relative;
   overflow: hidden;
-  @media (orientation: portrait) and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     height: auto;
     min-height: 160vh;
+  }
+  @media (orientation: landscape) and (max-width: 800px) {
+    min-height: 220vh;
   }
   .copyrights {
     position: absolute;
@@ -146,9 +149,12 @@ const Wrapper = styled.div`
     align-items: center;
     padding: 0 5vw;
     margin: 0 auto;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       flex-direction: column;
       height: 150vh;
+    }
+    @media (orientation: landscape) and (max-width: 800px) {
+      height: 210vh;
     }
     .firstSection {
       display: flex;
@@ -157,7 +163,7 @@ const Wrapper = styled.div`
       align-items: center;
       width: 30%;
       padding: 0 5%;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 90%;
         height: 40vh;
       }
@@ -169,7 +175,7 @@ const Wrapper = styled.div`
       letter-spacing: 1px;
       line-height: 1.5;
       text-align: center;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         margin: 3vh auto;
       }
     }
@@ -180,7 +186,7 @@ const Wrapper = styled.div`
       font-family: var(--buttonFont);
       margin-bottom: 6vh;
       /* text-align: center; */
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         margin-bottom: 3vh;
       }
     }
@@ -194,10 +200,13 @@ const Wrapper = styled.div`
       margin-top: 15vh;
       margin: 15vh 5vw 0;
       /* padding: 0 5%; */
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         height: 40vh;
         width: 90%;
         margin: 5vh auto 0;
+      }
+      @media (orientation: landscape) and (max-width: 800px) {
+        margin: 15vh auto 15vh;
       }
       .links {
         display: flex;
@@ -242,7 +251,7 @@ const Wrapper = styled.div`
       width: 40%;
       height: 80%;
       margin-top: 15vh;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         height: 40vh;
         width: 90%;
         margin-top: 5vh;
@@ -307,7 +316,7 @@ const Wrapper = styled.div`
     filter: grayscale(1);
     width: 7vw;
     margin-right: 20px;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 20vw;
     }
   }

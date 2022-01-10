@@ -132,7 +132,7 @@ const Wrapper = styled.div`
       bottom: 5%;
       right: 5%;
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       .arrowLeft {
         bottom: 5%;
         right: 15%;
@@ -162,7 +162,7 @@ const Wrapper = styled.div`
       margin: 3vh 0 5vh;
       font-weight: 700;
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 1.5rem;
       width: 90%;
       top: 53%;
@@ -179,7 +179,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100vw;
       margin: 0 auto;
     }
@@ -197,7 +197,7 @@ const Wrapper = styled.div`
           opacity: 1;
         }
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 3rem;
         margin: 0 auto;
       }

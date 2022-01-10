@@ -64,7 +64,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: space-around;
     align-items: center;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       flex-direction: column;
     }
     .aboutShortText {
@@ -105,7 +105,7 @@ const Wrapper = styled.div`
           letter-spacing: 2px;
         }
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 90%;
         height: auto;
         margin: 0 auto;
@@ -118,10 +118,13 @@ const Wrapper = styled.div`
       width: 45%;
       height: 70vh;
       position: relative;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 90vw;
         /* height: auto; */
         margin: 0 auto;
+      }
+      @media (orientation: landscape) and (max-width: 800px) {
+        display: none;
       }
       img {
         position: absolute;

@@ -84,9 +84,13 @@ const Wrapper = styled.div`
   background: #111;
   transition: 0.5s;
   margin: 2vw 1vw;
-  @media (orientation: portrait) and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     width: 90vw;
     margin: 5vw 1vw;
+  }
+  @media (orientation: landscape) and (max-width: 800px) {
+    width: 50vw;
+    height: 75vh;
   }
   img {
     position: absolute;
@@ -111,6 +115,9 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     font-family: var(--buttonFont);
+    @media (orientation: landscape) and (max-width: 800px) {
+      height: 10vh;
+    }
   }
   .iconContainer {
     position: absolute;
@@ -128,6 +135,9 @@ const Wrapper = styled.div`
     opacity: 0;
     cursor: pointer;
     color: white;
+    @media (orientation: landscape) and (max-width: 800px) {
+      height: 40vh;
+    }
   }
   :hover .iconContainer {
     display: flex;
@@ -161,6 +171,10 @@ const Wrapper = styled.div`
       h5 {
         margin-left: 10px;
       }
+    }
+    @media (orientation: landscape) and (max-width: 800px) {
+      height: 30vh;
+      top: 42vh;
     }
   }
   .price-top {

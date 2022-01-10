@@ -463,7 +463,7 @@ export const items = [
           icon: <MdSingleBed />,
         },
         {
-          label: "lampka nocna",
+          label: "lampka",
           icon: <MdOutlineLightbulb />,
         },
         {
@@ -592,7 +592,7 @@ export const items = [
           icon: <MdSingleBed />,
         },
         {
-          label: "lampka nocna",
+          label: "lampka",
           icon: <MdOutlineLightbulb />,
         },
         {
@@ -721,7 +721,7 @@ export const items = [
           icon: <MdSingleBed />,
         },
         {
-          label: "lampka nocna",
+          label: "lampka",
           icon: <MdOutlineLightbulb />,
         },
         {
@@ -852,7 +852,7 @@ export const items = [
           icon: <MdSingleBed />,
         },
         {
-          label: "lampka nocna",
+          label: "lampka",
           icon: <MdOutlineLightbulb />,
         },
         {
@@ -981,7 +981,7 @@ export const items = [
           icon: <MdSingleBed />,
         },
         {
-          label: "lampka nocna",
+          label: "lampka",
           icon: <MdOutlineLightbulb />,
         },
         {
@@ -1112,7 +1112,7 @@ export const items = [
           icon: <MdSingleBed />,
         },
         {
-          label: "lampka nocna",
+          label: "lampka",
           icon: <MdOutlineLightbulb />,
         },
         {

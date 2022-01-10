@@ -35,7 +35,7 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (orientation: portrait) and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     width: 80vw;
     margin: 10vh auto;
   }
@@ -46,7 +46,7 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       margin: 0 auto;
     }
   }
@@ -60,7 +60,7 @@ const Wrapper2 = styled.div`
   text-transform: uppercase;
   font-family: var(--buttonFont);
   font-size: 1.5rem;
-  @media (orientation: portrait) and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     width: 80vw;
     margin: 10vh auto;
   }

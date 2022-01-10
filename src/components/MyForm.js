@@ -120,7 +120,7 @@ const Wrapper = styled.form`
   height: 66vh;
   width: 90%;
   margin: 0 auto;
-  @media (orientation: portrait) and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     width: 100%;
     height: auto;
   }
@@ -130,7 +130,7 @@ const Wrapper = styled.form`
     margin-bottom: 5vh;
     font-family: var(--buttonFont);
     width: 80%;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 1.5rem;
       width: 90%;
     }

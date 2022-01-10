@@ -181,7 +181,7 @@ const Wrapper = styled.div`
   width: 100vw;
   padding-top: 13vh;
   margin: 0 auto;
-  @media (orientation: portrait) and (max-width: 800px) {
+  @media screen and (max-width: 800px) {
     padding-top: 12vh;
   }
   header {
@@ -217,7 +217,7 @@ const Wrapper = styled.div`
       text-shadow: 0 2px 2px black;
       color: white;
       z-index: 1;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         font-size: 1.2rem;
         right: 0%;
         top: 60%;
@@ -243,7 +243,7 @@ const Wrapper = styled.div`
       margin-bottom: 3vh;
       margin-top: 8vh;
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       flex-direction: column-reverse;
       width: 100vw;
       h2 {
@@ -284,7 +284,7 @@ const Wrapper = styled.div`
       margin-right: 10%;
       color: var(--secondaryColor);
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100%;
       margin-top: 0vh;
       p {
@@ -313,7 +313,7 @@ const Wrapper = styled.div`
         color: var(--secondaryColor);
       }
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 90vw;
       .arrow {
         font-size: 1.5rem;
@@ -352,7 +352,7 @@ const Wrapper = styled.div`
         }
       }
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100vw;
       padding: 0;
       margin: 0;
@@ -379,7 +379,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100%;
       margin: 0 auto;
       justify-content: center;
@@ -398,7 +398,7 @@ const Wrapper = styled.div`
         margin-bottom: 3vh;
         /* text-align: justify; */
       }
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 85%;
         margin: 0 auto;
         p {
@@ -415,7 +415,7 @@ const Wrapper = styled.div`
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: center;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         justify-content: center;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -435,7 +435,7 @@ const Wrapper = styled.div`
         :hover {
           box-shadow: 0 0 2px 2px white;
         }
-        @media (orientation: portrait) and (max-width: 800px) {
+        @media screen and (max-width: 800px) {
           justify-content: center;
           align-self: center;
           margin: 1vh auto 1vh auto;

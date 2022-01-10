@@ -220,7 +220,7 @@ const Wrapper = styled.div`
         margin-top: 2vh;
       }
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       h2 {
         font-size: 1.8rem;
         transform: translateX(25%);
@@ -269,7 +269,7 @@ const Wrapper = styled.div`
         margin-right: 10px;
       }
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 90vw;
       flex-direction: column;
       img {
@@ -279,6 +279,11 @@ const Wrapper = styled.div`
         width: 100%;
       }
     }
+    @media (orientation: landscape) and (max-width: 800px) {
+      img {
+        display: none;
+      }
+    }
   }
   .toursContainer {
     display: flex;
@@ -286,7 +291,7 @@ const Wrapper = styled.div`
     align-items: center;
     width: 80vw;
     margin: 20vh auto 30vh;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 90vw;
       flex-direction: column-reverse;
       margin: 15vh auto 15vh;
@@ -295,9 +300,12 @@ const Wrapper = styled.div`
       width: 50%;
       height: 50vh;
       position: relative;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         width: 100%;
         height: 50vh;
+      }
+      @media (orientation: landscape) and (max-width: 800px) {
+        height: 150vh;
       }
       span {
         width: 300px;
@@ -312,14 +320,20 @@ const Wrapper = styled.div`
         :hover h4 {
           opacity: 1;
         }
-        width: 60vw;
-        height: 20vh;
+        @media screen and (max-width: 800px) {
+          width: 60vw;
+          height: 20vh;
+        }
+        @media (orientation: landscape) and (max-width: 800px) {
+          width: 50vw;
+          height: 55vh;
+        }
       }
     }
     span:nth-of-type(2) {
       top: 33%;
       left: 50%;
-      @media (orientation: portrait) and (max-width: 800px) {
+      @media screen and (max-width: 800px) {
         left: 35%;
       }
     }
@@ -355,7 +369,7 @@ const Wrapper = styled.div`
     width: 40%;
     align-items: flex-start;
     justify-content: center;
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 100%;
     }
     h3 {

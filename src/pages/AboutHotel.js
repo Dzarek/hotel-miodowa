@@ -165,7 +165,7 @@ const Wrapper = styled.div`
         margin-top: 2vh;
       }
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       h2 {
         font-size: 1.8rem;
       }
@@ -208,7 +208,7 @@ const Wrapper = styled.div`
         margin-top: 8vh;
       }
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       width: 85%;
       h3 {
         font-size: 2rem;
@@ -270,7 +270,7 @@ const Wrapper = styled.div`
         }
       }
     }
-    @media (orientation: portrait) and (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       height: 80vh;
       .inNumbers {
         flex-direction: column;
@@ -289,6 +289,9 @@ const Wrapper = styled.div`
           }
         }
       }
+    }
+    @media (orientation: landscape) and (max-width: 800px) {
+      height: 100vh;
     }
   }
 `;
