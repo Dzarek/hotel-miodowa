@@ -810,8 +810,8 @@ const Wrapper2 = styled.div`
         font-size: 1.3rem;
       }
       @media (orientation: landscape) and (max-width: 800px) {
-        margin: 1vh auto;
-        font-size: 1rem;
+        margin: 1.5vh auto;
+        font-size: 1.1rem;
       }
     }
     @media (orientation: landscape) and (max-width: 800px) {
