@@ -5,6 +5,10 @@ import { ImCross } from "react-icons/im";
 import { DatePicker } from "react-rainbow-components";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
+
+import { MdMail } from "react-icons/md";
+import { FaPhoneAlt } from "react-icons/fa";
+
 const containerStyles = {
   maxWidth: 400,
 };
@@ -86,6 +90,15 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
         >
           <ImCross />
         </button>
+        <div className="bookByPhone">
+          <h4>
+            <FaPhoneAlt className="iconReact" /> +48 124467130
+          </h4>
+          <h4>
+            <MdMail className="iconReact" /> rezerwacja@hotelmiodowa.pl
+          </h4>
+          <p>lub przez booking.com</p>
+        </div>
         <form className="bookForm">
           <div className="bookFormDates">
             <div
@@ -149,7 +162,7 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
 const Wrapper = styled.div`
   .bookRoom {
     width: 28vw;
-    height: 60vh;
+    height: 75vh;
     background: rgba(0, 0, 0, 0.9);
     border-radius: 5px 0 0 5px;
     color: #111;
@@ -157,7 +170,7 @@ const Wrapper = styled.div`
     transform: translateX(100%);
     position: fixed;
     z-index: 991;
-    top: 25%;
+    top: 18%;
     right: 0;
     font-family: "Signika Negative", sans-serif;
     @media screen and (max-width: 800px) {
@@ -187,7 +200,7 @@ const Wrapper = styled.div`
     }
     h3 {
       position: absolute;
-      top: 10%;
+      top: 6%;
       left: 50%;
       transform: translateX(-50%);
       color: var(--secondaryColor2);
@@ -195,17 +208,62 @@ const Wrapper = styled.div`
       text-transform: uppercase;
       font-weight: 600;
       letter-spacing: 3px;
+      @media screen and (max-width: 800px) {
+        top: 10%;
+      }
     }
   }
   .showBookRoom {
     transform: translateX(0%);
     transition: 0.4s;
   }
+  .bookByPhone {
+    position: absolute;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+    @media screen and (max-width: 800px) {
+      top: 22%;
+    }
+    @media (orientation: landscape) and (max-width: 800px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    h4 {
+      margin: 1vh auto;
+      display: flex;
+      align-items: center;
+      .iconReact {
+        color: var(--secondaryColor2);
+        margin-right: 10px;
+        font-size: 1.5rem;
+      }
+    }
+    p {
+      margin-top: 5vh;
+      color: var(--secondaryColor2);
+      font-size: 1.1rem;
+      @media screen and (max-width: 800px) {
+        margin-top: 8vh;
+      }
+      @media (orientation: landscape) and (max-width: 800px) {
+        width: 100%;
+        text-align: center;
+        margin-top: 1vh;
+      }
+    }
+  }
   .bookForm {
     width: 28vw;
-    height: 70%;
+    height: 55%;
     position: absolute;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -40%);
     display: flex;
@@ -215,6 +273,12 @@ const Wrapper = styled.div`
     color: white;
     @media screen and (max-width: 800px) {
       width: 90vw;
+      height: 50%;
+      top: 68%;
+    }
+    @media (orientation: landscape) and (max-width: 800px) {
+      height: 60%;
+      top: 60%;
     }
   }
   h4 {
@@ -251,6 +315,11 @@ const Wrapper = styled.div`
           justify-content: center;
           padding: 5px;
           font-size: 1.4rem;
+        }
+        @media (orientation: landscape) and (max-width: 800px) {
+          width: 10vw;
+          padding: 2px;
+          font-size: 1.1rem;
         }
       }
       label {
