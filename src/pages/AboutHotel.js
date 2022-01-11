@@ -67,7 +67,7 @@ const AboutHotel = () => {
                 <h3>120</h3>
                 <p>max. osób</p>
               </span>
-              <span data-aos="zoom-in-right">
+              <span data-aos="zoom-in-right" data-aos-offset="-200">
                 <h3>11</h3>
                 <p>personelu</p>
               </span>
@@ -269,21 +269,21 @@ const Wrapper = styled.div`
       }
     }
     @media screen and (max-width: 800px) {
-      height: 80vh;
+      height: 60vh;
       .inNumbers {
         flex-direction: column;
         justify-content: space-around;
         align-items: space-around;
         span {
-          width: 100px;
-          height: 100px;
+          width: 90px;
+          height: 90px;
           margin: 2vh auto;
           h3 {
-            font-size: 2rem;
+            font-size: 1.8rem;
             margin-bottom: 1vh;
           }
           p {
-            font-size: 1.1rem;
+            font-size: 1rem;
           }
         }
       }
