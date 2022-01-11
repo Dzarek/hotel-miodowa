@@ -62,7 +62,7 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
           <h4>
             <MdMail className="iconReact" /> rezerwacja@hotelmiodowa.pl
           </h4>
-          <p>lub przez booking.com</p>
+          <p>{polish ? "lub przez booking.com" : "or by booking.com"}</p>
         </div>
         <form className="bookForm">
           <div className="bookFormDates">
