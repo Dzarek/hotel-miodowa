@@ -1,14 +1,15 @@
 import React from "react";
-import styled from "styled-components";
 import { useEffect } from "react";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
+import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { NavLink } from "react-router-dom";
-import transportImg from "../images/inne/airportTransfer.jpg";
+
+import transportImg from "../images/inne/airportTransferMobile.jpg";
 import restaurantImage from "../images/restauracja/RESTAURACJA 001.jpg";
 import parkingImage from "../images/inne/parking2.jpg";
-import { useContext } from "react";
-import { RoomContext } from "../roomContext";
 
 const ServicesPage = () => {
   useEffect(() => {
@@ -113,7 +114,6 @@ const Wrapper = styled.div`
         transition: 0.4s;
         @media screen and (max-width: 800px) {
           display: block;
-          /* color: var(--secondaryColor2); */
           font-size: 1.7rem;
         }
       }

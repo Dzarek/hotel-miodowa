@@ -211,7 +211,6 @@ const Wrapper = styled.div`
       position: absolute;
       top: 70%;
       right: 25%;
-      /* transform: translate(-50%, -50%); */
       width: 100%;
       text-shadow: 0 2px 2px black;
       color: white;

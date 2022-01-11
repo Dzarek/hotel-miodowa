@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useContext } from "react";
+import { RoomContext } from "../../roomContext";
 import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -8,9 +10,6 @@ import lazienka from "../../images/homeImages/DELUXE 011.jpg";
 import salon from "../../images/homeImages/SUPERIOR 06.jpg";
 import kuchnia from "../../images/homeImages/SUPERIOR 010.jpg";
 import lozko from "../../images/homeImages/SUPERIOR 015.jpg";
-
-import { useContext } from "react";
-import { RoomContext } from "../../roomContext";
 
 const AboutHome = () => {
   useEffect(() => {
@@ -120,7 +119,6 @@ const Wrapper = styled.div`
       position: relative;
       @media screen and (max-width: 800px) {
         width: 90vw;
-        /* height: auto; */
         margin: 0 auto;
       }
       @media (orientation: landscape) and (max-width: 800px) {

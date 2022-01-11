@@ -1,14 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap');
-/* font-family: 'Comfortaa', cursive; */
 @import url('https://fonts.googleapis.com/css2?family=Signika+Negative:wght@400;600&display=swap');
-/* font-family: 'Signika Negative', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+/* @import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600&display=swap'); */
 
 
 /* general */
-
 * {
   margin: 0;
   padding: 0;
@@ -26,7 +23,6 @@ body {
 
 .app {
   overflow-x: hidden;
-
   --primaryColor: #eee;
   --secondaryColor2: rgb(185, 130, 93);
   --secondaryColor: rgb(133, 88, 55);
@@ -34,50 +30,12 @@ body {
   --favoriteRoomColor: rgb(44, 26, 18);
   --footerBgColor: rgb(20, 20, 20);
   --appBgColor: rgb(10, 10, 10);
-  /* --appBgColor: rgb(12, 12, 12); */
   --buttonFont: "Signika Negative", sans-serif;
   --textFont: "Comfortaa", sans-serif;
   --titleFont: "Merriweather", sans-serif;
-  /* --navbarBgColor: rgb(32, 19, 9); */
-
-
-
-
   background-color: var(--appBgColor);
   color: var(--primaryColor);
   width: 100vw;
-  /* min-height: 200vh; */
-  /* padding-bottom: 10vh; */
-
-}
-
-.headerBGOneImage {
-  background: url("./images/homeImages/Superior\ 11.jpg");
-  /* background: red; */
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  top: 0;
-  left: 0;
-  filter: brightness(0.5);
-  object-fit: cover;
-  animation: zoom 20s ease infinite;
-}
-
-@keyframes zoom {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.2) translateX(-5%);
-  }
-
-  100% {
-    transform: scale(1);
-  }
 }
 
 .mainSection {
@@ -90,11 +48,7 @@ body {
 
 @media (orientation: portrait) and (max-width: 800px) {
   .mainSection {
-    position: relative;
-    min-height: 100vh;
     width: 100vw;
-    max-width: 1360px;
-    margin: 5vh auto 0;
   }
 }
 
@@ -144,17 +98,14 @@ body {
   background-size: cover;
   background-position: center 85%;
   filter: sepia(1) brightness(0.1);
-  /* filter: grayscale(1) brightness(.5); */
   z-index: 0;
 }
 
 @media (orientation: portrait) and (max-width: 800px) {
   .footerBg {
     background-attachment: fixed;
-
   }
 }
-
 
 .submenu {
   background: rgba(0, 0, 0, 0.85);
@@ -192,9 +143,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: flex-start;
-
 }
-
 
 .submenu-center a {
   color: var(--primaryColor);
@@ -239,7 +188,6 @@ body {
   background-image: url(./images/homeImages/hotelImgAbout.jpg);
   background-size: cover;
   background-position: center;
-  /* filter: brightness(0.7) */
 }
 
 
@@ -273,8 +221,6 @@ body {
   background-attachment: fixed;
 }
 
-
-
 .receptionImg {
   background: url('./images/homeImages/RECEPCJA\ 005.jpg');
   background-repeat: no-repeat;
@@ -291,7 +237,6 @@ body {
   background-position: 50% 30%;
   animation: zoom 15s ease infinite;
 }
-
 
 @keyframes zoom {
   0% {

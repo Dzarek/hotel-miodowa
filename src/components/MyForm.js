@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import emailjs from "emailjs-com";
 import styled from "styled-components";
-// import Cookie from "./CookiePage";
 import { NavLink } from "react-router-dom";
 
 class MyForm extends Component {
@@ -97,16 +96,6 @@ class MyForm extends Component {
             </>
           )}
         </Wrapper>
-        {/* {this.state.cookieVisible && (
-          <WrapperModal id="cookie">
-            <button
-              className="btnCloseCookie"
-              onClick={() => this.setState({ cookieVisible: false })}
-            >
-              <IoCloseCircle />
-            </button>
-          </WrapperModal>
-        )} */}
       </>
     );
   }

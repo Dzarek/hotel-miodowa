@@ -692,6 +692,13 @@ export const items = [
             },
           },
         },
+        {
+          fields: {
+            file: {
+              url: dbl6,
+            },
+          },
+        },
       ],
     },
   },
@@ -949,6 +956,13 @@ export const items = [
           fields: {
             file: {
               url: superior5,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: superior6,
             },
           },
         },
@@ -1472,6 +1486,13 @@ export const itemsEN = [
             },
           },
         },
+        {
+          fields: {
+            file: {
+              url: dbl6,
+            },
+          },
+        },
       ],
     },
   },
@@ -1729,6 +1750,13 @@ export const itemsEN = [
           fields: {
             file: {
               url: superior5,
+            },
+          },
+        },
+        {
+          fields: {
+            file: {
+              url: superior6,
             },
           },
         },

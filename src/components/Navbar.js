@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useGlobalContext } from "../context";
 import { useContext } from "react";
+import { useGlobalContext } from "../context";
 import { RoomContext } from "../roomContext";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
@@ -13,8 +13,8 @@ import { IoLanguageSharp } from "react-icons/io5";
 import { FaConciergeBell, FaBars, FaArrowUp } from "react-icons/fa";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { GiExitDoor } from "react-icons/gi";
-import logoMiodowa from "../images/logo-Miodowa.png";
 
+import logoMiodowa from "../images/logo-Miodowa.png";
 import polandFlag from "../images/poland-flag.png";
 import englandFlag from "../images/england-flag.png";
 

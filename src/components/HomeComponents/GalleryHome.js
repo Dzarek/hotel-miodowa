@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useContext } from "react";
+import { RoomContext } from "../../roomContext";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import Aos from "aos";
@@ -10,9 +12,6 @@ import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
-
-import { useContext } from "react";
-import { RoomContext } from "../../roomContext";
 
 import img1 from "../../images/homeImages/BAR 002.jpg";
 import img2 from "../../images/homeImages/BAR 003.jpg";
@@ -103,17 +102,12 @@ const GalleryHome = () => {
 
 const Wrapper = styled.div`
   .GalleryHome {
-    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    /* margin-top: -10vh; */
     padding-bottom: 10vh;
-    /* position: relative; */
-
     .titleContainer {
-      /* margin-bottom: 15vh; */
       z-index: 1;
     }
   }
@@ -123,7 +117,6 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     position: relative;
-    /* margin: 10vh auto; */
   }
   .pictures {
     width: 45%;
@@ -146,10 +139,6 @@ const Wrapper = styled.div`
     }
   }
   .picturesFlex {
-    /* position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); */
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -169,7 +158,6 @@ const Wrapper = styled.div`
     }
   }
   a {
-    /* margin-top: -10vh; */
     z-index: 1;
     padding: 10px;
     background: transparent;

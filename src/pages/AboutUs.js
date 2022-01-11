@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
+
 const AboutUs = () => {
   const context = useContext(RoomContext);
   const { polish } = context;

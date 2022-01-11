@@ -248,7 +248,6 @@ const Wrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     margin: 10vh auto;
-    /* margin-left: 10vw; */
     width: 90%;
     @media screen and (max-width: 800px) {
       width: 100%;

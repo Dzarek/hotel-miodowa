@@ -1,11 +1,12 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-import { gallery, galleryEN } from "../data";
 import { SRLWrapper } from "simple-react-lightbox";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
+
+import { gallery, galleryEN } from "../data";
 
 const allCategories = [
   ...new Set(gallery.map((item) => item.category)),

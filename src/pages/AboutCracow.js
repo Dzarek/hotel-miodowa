@@ -71,7 +71,6 @@ const Wrapper = styled.div`
   position: relative;
   min-height: 100vh;
   width: 100vw;
-  /* max-width: 1360px; */
   padding-top: 13vh;
   margin: 0 auto;
   .cracowHeader {
@@ -150,9 +149,6 @@ const Wrapper = styled.div`
         width: 70%;
       }
     }
-    /* section:nth-of-type(1) {
-      margin-right: 5vw;
-    } */
   }
 `;
 

@@ -1,11 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { ImCross } from "react-icons/im";
-
 import { DatePicker } from "react-rainbow-components";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
 
+import { ImCross } from "react-icons/im";
 import { MdMail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
 
@@ -16,38 +15,14 @@ const containerStyles = {
 const today = new Date();
 let tomorrow = new Date();
 tomorrow.setDate(today.getDate() + 1);
-// let minDate2 = tomorrow.toISOString().slice(0, 10);
-// let minDate = new Date().toISOString().slice(0, 10);
-// let maxDate = minDate.slice(0, 4) * 1 + 1;
-// maxDate = maxDate + "-12-31";
-// console.log(minDate);
-// let datesNow =
-//   today.getDate() +
-//   "-" +
-//   parseInt(today.getMonth() + 1) +
-//   "-" +
-//   today.getFullYear() +
-//   " - " +
-//   tomorrow.getDate() +
-//   "-" +
-//   parseInt(tomorrow.getMonth() + 1) +
-//   "-" +
-//   tomorrow.getFullYear();
 
 const BookingRoom = ({ showBooking, setShowBooking }) => {
   const context = useContext(RoomContext);
   const { polish } = context;
   const [dates, setDates] = useState([today, tomorrow]);
-  // const [date2, setDate2] = useState(minDate2);
   const [adult, setAdult] = useState(1);
   const [children, setChildren] = useState(0);
 
-  // const handleDate = (e) => {
-  //   setDate(e.target.value);
-  // };
-  // const handleDate2 = (e) => {
-  //   setDate2(e.target.value);
-  // };
   const handleAdult = (e) => {
     setAdult(e.target.value);
   };
@@ -57,24 +32,14 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
   const ageOfChildren = "req_age=12;";
   const numberOfChildren = ageOfChildren.repeat(children);
 
-  // const checkDates = () => {
   let checkInDate = today.toISOString().slice(0, 10);
   let checkOutDate = tomorrow.toISOString().slice(0, 10);
   if (dates.length > 1) {
-    // console.log(dates[0]);
     checkInDate = new Date();
     checkInDate.setDate(dates[0].getDate() + 0);
     checkInDate = checkInDate.toISOString().slice(0, 10);
-    // checkInDate = dates[0].toISOString().slice(0, 10);
-    // console.log(checkInDate);
     checkOutDate = dates[1].toISOString().slice(0, 10);
   }
-  // console.log(checkInDate, checkOutDate);
-  // };
-
-  // useEffect(() => {
-  //   checkDates();
-  // }, []);
 
   const url = `https://www.booking.com/hotel/pl/aparthotel-miodowa-krakow.pl.html?aid=304142;label=gen173nr-1DCAsotgFCGWFwYXJ0aG90ZWwtbWlvZG93YS1rcmFrb3dIHlgEaLYBiAEBmAEeuAEXyAEP2AED6AEB-AECiAIBqAIDuALtqLSNBsACAdICJDFhYjY2NDM4LTI1NzItNDhlYS1hMWY4LTU1NDE5YjYwNzI3ZtgCBOACAQ;sid=8eca526340932527514ab17dccd65fef;checkin=${checkInDate};checkout=${checkOutDate}; group_adults=${adult};group_children=${children};no_rooms=1;req_adults=${adult};${numberOfChildren}req_children=${children};`;
 
@@ -104,13 +69,10 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
             <div
               className="rainbow-align-content_center rainbow-m-vertical_large rainbow-p-horizontal_small rainbow-m_auto"
               style={containerStyles}
-              // className="rainbow-p-vertical_xx-large rainbow-align-content_center"
-              // theme={theme}
             >
               <DatePicker
                 minDate={new Date()}
                 label={polish ? "Termin pobytu:" : "Dates:"}
-                // placeholder={datesNow}
                 selectionType="range"
                 variant="single"
                 value={dates}
@@ -297,7 +259,6 @@ const Wrapper = styled.div`
       align-items: center;
       margin: 0 3%;
       input {
-        /* margin-top: 5%; */
         width: 3vw;
         padding: 5px 0 5px 5px;
         border-radius: 5px;
@@ -334,10 +295,8 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     div {
-      /* width: 100%; */
       width: 90%;
       display: flex;
-      /* flex-direction: row; */
       justify-content: center;
       align-items: center;
       @media screen and (max-width: 800px) {
@@ -356,7 +315,6 @@ const Wrapper = styled.div`
     label {
       font-size: 1.2rem;
       margin-bottom: 10px;
-      /* margin-right: 10px; */
       color: var(--primaryColor);
       display: flex;
       justify-content: center;

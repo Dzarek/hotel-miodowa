@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -8,9 +10,6 @@ import { BsFillPersonFill } from "react-icons/bs";
 import { RiRuler2Line } from "react-icons/ri";
 import { MdSingleBed, MdKitchen } from "react-icons/md";
 import { FaCouch, FaBath } from "react-icons/fa";
-
-import { useContext } from "react";
-import { RoomContext } from "../roomContext";
 
 const Room = ({ room }) => {
   const {

@@ -2,10 +2,12 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import ServicesHome from "../components/HomeComponents/ServicesHome";
-import BuildingImg from "../images/homeImages/Budynek.jpg";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
+
+import ServicesHome from "../components/HomeComponents/ServicesHome";
+
+import BuildingImg from "../images/homeImages/Budynek.jpg";
 
 const AboutHotel = () => {
   useEffect(() => {
@@ -142,7 +144,6 @@ const Wrapper = styled.div`
   position: relative;
   min-height: 100vh;
   width: 100vw;
-  /* max-width: 1360px; */
   padding-top: 13vh;
   margin: 0 auto;
   .hotelAboutHeader {
@@ -249,8 +250,6 @@ const Wrapper = styled.div`
         width: 150px;
         height: 150px;
         border-radius: 30%;
-        /* background: #eee;
-        color: var(--secondaryColor); */
         background: var(--secondaryColor);
         color: white;
         display: flex;

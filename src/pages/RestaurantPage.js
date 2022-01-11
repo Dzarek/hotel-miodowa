@@ -1,4 +1,6 @@
 import React from "react";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 import styled from "styled-components";
 import { SRLWrapper } from "simple-react-lightbox";
 import Carousel from "@brainhubeu/react-carousel";
@@ -8,11 +10,10 @@ import {
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
 
-import { gallery } from "../data";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import videoSpoon from "../images/restauracja/Spoon.mp4";
-import { useContext } from "react";
-import { RoomContext } from "../roomContext";
+
+import { gallery } from "../data";
 
 let restaurantImages = gallery.filter(
   (item) => item.category === "restauracja"
@@ -204,7 +205,6 @@ const Wrapper = styled.div`
       position: absolute;
       top: 70%;
       right: 25%;
-      /* transform: translate(-50%, -50%); */
       width: 100%;
       text-shadow: 0 2px 2px black;
       color: white;
@@ -223,7 +223,6 @@ const Wrapper = styled.div`
   }
   .restaurantInfo {
     display: flex;
-    /* flex-direction: column; */
     width: 80vw;
     max-width: 1360px;
     margin: 15vh auto;

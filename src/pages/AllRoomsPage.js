@@ -3,10 +3,10 @@ import styled from "styled-components";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+import { withRoomConsumer } from "../roomContext";
 
 import RoomsFilter from "../components/RoomsFilter";
 import RoomsList from "../components/RoomsList";
-import { withRoomConsumer } from "../roomContext";
 
 const AllRoomsPage = ({ context }) => {
   const { sortedRooms, rooms, polish } = context;

@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useContext } from "react";
+import { RoomContext } from "../../roomContext";
 import styled from "styled-components";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -21,9 +23,6 @@ import wifiImg from "../../images/homeImages/wifi.jpg";
 import wycieczkiImg from "../../images/homeImages/wycieczki.jpg";
 import parkingImg from "../../images/homeImages/parking.jpg";
 import serviceImg from "../../images/homeImages/serwis.jpg";
-
-import { useContext } from "react";
-import { RoomContext } from "../../roomContext";
 
 const ServicesHome = () => {
   useEffect(() => {

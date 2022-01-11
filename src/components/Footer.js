@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 
 import { MdOutlineStar, MdMail } from "react-icons/md";
 import {
@@ -11,8 +13,6 @@ import {
 } from "react-icons/fa";
 
 import logoMiodowa from "../images/icon.png";
-import { useContext } from "react";
-import { RoomContext } from "../roomContext";
 
 const Footer = () => {
   const context = useContext(RoomContext);
@@ -185,7 +185,6 @@ const Wrapper = styled.div`
       font-size: 1.5rem;
       font-family: var(--buttonFont);
       margin-bottom: 6vh;
-      /* text-align: center; */
       @media screen and (max-width: 800px) {
         margin-bottom: 3vh;
       }
@@ -199,7 +198,6 @@ const Wrapper = styled.div`
       margin-left: 5vw;
       margin-top: 15vh;
       margin: 15vh 5vw 0;
-      /* padding: 0 5%; */
       @media screen and (max-width: 800px) {
         height: 40vh;
         width: 90%;
@@ -271,7 +269,6 @@ const Wrapper = styled.div`
           font-family: var(--buttonFont);
           font-size: 1.1rem;
           transition: 0.3s;
-          /* cursor: pointer; */
           .iconReact {
             color: var(--secondaryColor2);
             margin-right: 10px;
@@ -308,11 +305,6 @@ const Wrapper = styled.div`
     }
   }
   .logo {
-    /* position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-80%);
-    z-index: 1; */
     filter: grayscale(1);
     width: 7vw;
     margin-right: 20px;

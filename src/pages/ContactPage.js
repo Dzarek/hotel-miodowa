@@ -148,7 +148,6 @@ const Wrapper = styled.div`
   }
   .Map {
     width: 100%;
-    /* height: 100%; */
     height: 60vh;
     position: relative;
     bottom: 0;

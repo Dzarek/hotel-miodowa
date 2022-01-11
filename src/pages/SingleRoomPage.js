@@ -1,5 +1,4 @@
 import React from "react";
-// import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
 import { useLocation } from "react-router-dom";
@@ -10,11 +9,11 @@ import "aos/dist/aos.css";
 import { SRLWrapper } from "simple-react-lightbox";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
+
 import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
-
 import { GiTwoCoins, GiMeal, GiVacuumCleaner } from "react-icons/gi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { RiRuler2Line } from "react-icons/ri";
@@ -36,18 +35,6 @@ const SingleRoomPage = () => {
   const { rooms, polish } = context;
   const room = getRoom(slug);
 
-  // if (!room) {
-  //   return (
-  //     <div className="errorPageStyle">
-  //       <div className="error">
-  //         <h3>nie można odnaleźć pokoju...</h3>
-  //         <Link to="/pokoje/" className="btn-primary">
-  //           wróć do listy pokoi
-  //         </Link>
-  //       </div>
-  //     </div>
-  //   );
-  // }
   const {
     name,
     description,
@@ -55,7 +42,6 @@ const SingleRoomPage = () => {
     size,
     price,
     extras,
-    // breakfast,
     beds,
     sofa,
     images,
@@ -269,7 +255,6 @@ const Wrapper = styled.div`
       margin-top: 0vh;
     }
     p {
-      /* margin-left: 20%; */
       margin-top: 1vh;
       margin-bottom: 1vh;
       font-size: 1.4rem;
@@ -396,7 +381,6 @@ const Wrapper = styled.div`
         line-height: 1.4;
         color: white;
         margin-bottom: 3vh;
-        /* text-align: justify; */
       }
       @media screen and (max-width: 800px) {
         width: 85%;
@@ -446,5 +430,4 @@ const Wrapper = styled.div`
   }
 `;
 
-// export default SingleRoomPage;
 export default withRoomConsumer(SingleRoomPage);

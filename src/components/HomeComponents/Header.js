@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { useContext } from "react";
+import { RoomContext } from "../../roomContext";
 import styled from "styled-components";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
@@ -14,13 +16,9 @@ import { MdOutlineStar } from "react-icons/md";
 import desktopImg1 from "../../images/headerImages/TWIM PREMIUM 005.jpg";
 import desktopImg3 from "../../images/headerImages/Superior 11.jpg";
 import desktopImg4 from "../../images/headerImages/STUDIO 004.jpg";
-
 import mobileImg1 from "../../images/headerImages/TWIM PREMIUMMobile.jpg";
 import mobileImg2 from "../../images/headerImages/DELUXE Mobile.jpg";
 import mobileImg4 from "../../images/headerImages/STUDIO 005Mobile.jpg";
-
-import { useContext } from "react";
-import { RoomContext } from "../../roomContext";
 
 const Header = () => {
   const desktopImgs = [desktopImg1, desktopImg3, desktopImg4];
@@ -54,7 +52,6 @@ const Header = () => {
           animationSpeed={1000}
           slidesPerPage={1}
           addArrowClickHandler
-          //   stopAutoPlayOnHover
           arrowLeft={<IoIosArrowDropleftCircle className="arrow arrowLeft" />}
           arrowRight={
             <IoIosArrowDroprightCircle className="arrow arrowRight" />
@@ -68,10 +65,8 @@ const Header = () => {
                 return <img key={index} src={item} alt="" />;
               })}
         </Carousel>
-        {/* <div className="headerBGOneImage"></div> */}
         <div
           data-aos="zoom-in-down"
-          // data-aos-delay="600"
           data-aos-duration="2000"
           className="headerTitle"
         >
@@ -144,7 +139,6 @@ const Wrapper = styled.div`
     top: 60%;
     left: 10%;
     margin: 0 auto;
-    /* transform: translate(-50%, 0%); */
     height: 35%;
     width: 70%;
     display: flex;
@@ -157,7 +151,6 @@ const Wrapper = styled.div`
     letter-spacing: 2px;
     color: #eee;
     font-weight: 700;
-    /* user-select: none; */
     h1 {
       margin: 3vh 0 5vh;
       font-weight: 700;
