@@ -25,6 +25,8 @@ import RodoPage from "./pages/RodoPage";
 import SingleRoomPage from "./pages/SingleRoomPage";
 import AllRoomsPage from "./pages/AllRoomsPage";
 
+import ErrorPage from "./pages/ErrorPage";
+
 function App() {
   return (
     <div className="app">
@@ -33,6 +35,7 @@ function App() {
         <Submenu />
         <ScrollToTop />
         <Routes>
+          <Route path="*" element={<ErrorPage />}></Route>
           <Route path="/" element={<HomePage />}></Route>
           <Route path="/pokoje" element={<AllRoomsPage />}></Route>
           <Route path="/pokoje/:slug" element={<SingleRoomPage />}></Route>

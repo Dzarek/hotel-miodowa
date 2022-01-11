@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
 import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { useEffect } from "react";
 import Aos from "aos";
@@ -14,7 +15,12 @@ import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
-import { GiTwoCoins, GiMeal, GiVacuumCleaner } from "react-icons/gi";
+import {
+  GiTwoCoins,
+  GiMeal,
+  GiVacuumCleaner,
+  GiExitDoor,
+} from "react-icons/gi";
 import { BsFillPersonFill } from "react-icons/bs";
 import { RiRuler2Line } from "react-icons/ri";
 import { MdSingleBed } from "react-icons/md";
@@ -34,7 +40,18 @@ const SingleRoomPage = () => {
   const { getRoom } = context;
   const { rooms, polish } = context;
   const room = getRoom(slug);
-
+  if (!room) {
+    return (
+      <div className="main-page">
+        <div className="error">
+          <h2>{polish ? "nie można odnaleźć pokoju..." : "room not found"}</h2>
+          <Link to="/pokoje">
+            <GiExitDoor className="icon" />
+          </Link>
+        </div>
+      </div>
+    );
+  }
   const {
     name,
     description,
