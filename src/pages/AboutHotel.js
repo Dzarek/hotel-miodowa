@@ -293,6 +293,11 @@ const Wrapper = styled.div`
       height: 100vh;
     }
   }
+  .backgroundhotelInNumbers {
+    height: 100%;
+    width: 100%;
+    filter: saturate(0);
+  }
 `;
 
 export default AboutHotel;
