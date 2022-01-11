@@ -117,7 +117,6 @@ const AboutHotel = () => {
             </p>
           </div>
           <div className="hotelInNumbers">
-            <div className="backgroundhotelInNumbers"></div>
             <div className="inNumbers">
               <span data-aos="zoom-in-left">
                 <h3>37</h3>
@@ -292,11 +291,6 @@ const Wrapper = styled.div`
     @media (orientation: landscape) and (max-width: 800px) {
       height: 100vh;
     }
-  }
-  .backgroundhotelInNumbers {
-    height: 100%;
-    width: 100%;
-    filter: saturate(0);
   }
 `;
 

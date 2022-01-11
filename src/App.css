@@ -197,14 +197,14 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-.backgroundhotelInNumbers {
-  /* height: 100%;
-  width: 100%; */
+.hotelInNumbers {
+  height: 100%;
+  width: 100%;
   background-image: url(./images/recepcja&bar/BAR\ 002.jpg);
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  /* filter: saturate(0); */
+
 }
 
 .airportTransferHeader {
