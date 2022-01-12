@@ -57,7 +57,7 @@ const AboutHotel = () => {
             </p>
           </div>
           <div className="hotelInNumbers">
-            <div className="backgroundhotelInNumbers"></div>
+            {/* <div className="backgroundhotelInNumbers"></div> */}
             <div className="inNumbers">
               <span data-aos="zoom-in-left">
                 <h3>37</h3>
@@ -269,7 +269,7 @@ const Wrapper = styled.div`
       }
     }
     @media screen and (max-width: 800px) {
-      height: 60vh;
+      height: 70vh;
       .inNumbers {
         flex-direction: column;
         justify-content: space-around;
