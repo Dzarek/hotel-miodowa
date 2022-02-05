@@ -68,6 +68,8 @@ body {
   text-align: center;
   color: var(--secondaryColor2);
   margin-bottom: 2vh;
+  text-shadow: 3px 3px 3px black;
+
 }
 
 .titleContainer {
@@ -181,7 +183,7 @@ body {
   background-image: url(./images/krakow/wawel.jpg);
   background-size: cover;
   background-position: center 20%;
-  filter: brightness(0.7)
+  filter: brightness(0.8)
 }
 
 .hotelAboutHeader {
@@ -194,7 +196,7 @@ body {
 .backgroundDark {
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .hotelInNumbers {

@@ -102,15 +102,19 @@ const Wrapper = styled.div`
   width: 100vw;
   padding-top: 13vh;
   margin: 0 auto;
+  @media screen and (max-width: 800px) {
+    padding-top: 12vh;
+  }
   .title {
     padding-top: 10vh;
     padding-bottom: 10vh;
     width: 100vw;
-    background: #eee;
+    background: #fff;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: #444;
+    text-shadow: none;
     h2 {
       color: var(--secondaryColor);
       letter-spacing: 10px;

@@ -140,7 +140,6 @@ const Wrapper = styled.div`
       top: 70%;
       right: -20%;
       width: 100%;
-      text-shadow: 0 2px 2px black;
       color: white;
       z-index: 1;
       @media screen and (max-width: 800px) {

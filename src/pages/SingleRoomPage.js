@@ -182,6 +182,7 @@ const Wrapper = styled.div`
   position: relative;
   min-height: 100vh;
   width: 100vw;
+  max-width: 100vw;
   padding-top: 13vh;
   margin: 0 auto;
   @media screen and (max-width: 800px) {
@@ -200,7 +201,7 @@ const Wrapper = styled.div`
       object-fit: cover;
       top: 0;
       left: 0;
-      filter: brightness(0.3);
+      filter: brightness(0.6);
       animation: imgMove 10s linear infinite alternate;
       @keyframes imgMove {
         95% {
@@ -217,7 +218,6 @@ const Wrapper = styled.div`
       top: 70%;
       right: 25%;
       width: 100%;
-      text-shadow: 0 2px 2px black;
       color: white;
       z-index: 1;
       @media screen and (max-width: 800px) {
@@ -234,7 +234,7 @@ const Wrapper = styled.div`
 
   .singleRoomContent {
     width: 80vw;
-    max-width: 1360px;
+    max-width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -324,13 +324,14 @@ const Wrapper = styled.div`
   }
   .roomEquipments {
     width: 80vw;
-    max-width: 1360px;
+    max-width: 100vw;
 
     .equipments {
-      background: #ddd;
-      width: 100%;
-      padding: 20px;
+      background: #eee;
+      width: 100vw;
+      padding: 40px 10vw;
       border-radius: 3px;
+      margin-left: -10vw;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -344,20 +345,32 @@ const Wrapper = styled.div`
         font-family: var(--buttonFont);
         background: var(--appBgColor);
         padding: 20px 5px;
-        border-radius: 10px;
+        border-radius: 20px;
         width: 150px;
         height: 150px;
         margin: 1.5vh;
+        transition: 0.5s;
+
         span {
           font-size: 1.3rem;
           color: var(--secondaryColor2);
+          transition: 0.5s;
+        }
+        :hover {
+          color: var(--secondaryColor2);
+        }
+        :hover span {
+          color: #fff;
         }
       }
     }
     @media screen and (max-width: 800px) {
       width: 100vw;
       padding: 0;
-      margin: 0;
+      margin: 0 auto;
+      h2 {
+        text-align: center;
+      }
       .equipments {
         padding: 10px;
         width: 100vw;

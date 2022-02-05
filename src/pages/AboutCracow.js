@@ -73,6 +73,9 @@ const Wrapper = styled.div`
   width: 100vw;
   padding-top: 13vh;
   margin: 0 auto;
+  @media screen and (max-width: 800px) {
+    padding-top: 12vh;
+  }
   .cracowHeader {
     position: relative;
     height: 50vh;
@@ -85,7 +88,7 @@ const Wrapper = styled.div`
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
-      text-shadow: 0 2px 2px black;
+      /* text-shadow: 3px 3px 3px black; */
       color: white;
       @media screen and (max-width: 800px) {
         font-size: 1.2rem;

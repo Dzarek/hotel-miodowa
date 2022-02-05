@@ -111,6 +111,8 @@ const Wrapper = styled.div`
   border-top: 2px solid var(--bookBtnColor);
   position: relative;
   overflow: hidden;
+  ///
+  color: #fff;
   @media screen and (max-width: 800px) {
     height: auto;
     min-height: 160vh;
@@ -126,7 +128,8 @@ const Wrapper = styled.div`
     background: var(--bookBtnColor);
     width: 100%;
     height: 10%;
-    opacity: 0.6;
+    /* opacity: 0.6; */
+    opacity: 0.8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -181,6 +184,7 @@ const Wrapper = styled.div`
     }
     h3 {
       color: var(--primaryColor);
+      /* color: #fff; */
       text-transform: uppercase;
       font-size: 1.5rem;
       font-family: var(--buttonFont);
@@ -292,6 +296,7 @@ const Wrapper = styled.div`
       align-items: center;
       h4 {
         color: var(--primaryColor);
+        /* color: #fff; */
         text-transform: uppercase;
         font-size: 1.5rem;
         font-family: var(--titleFont);
@@ -305,7 +310,7 @@ const Wrapper = styled.div`
     }
   }
   .logo {
-    filter: grayscale(1);
+    filter: grayscale(0.6);
     width: 7vw;
     margin-right: 20px;
     @media screen and (max-width: 800px) {

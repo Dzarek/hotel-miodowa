@@ -106,14 +106,16 @@ const Wrapper = styled.div`
       height: 100vh;
       width: 100vw;
       object-fit: cover;
-      filter: brightness(0.5);
+      /* filter: brightness(0.5); */
+      filter: brightness(0.8);
     }
     .arrow {
       position: absolute;
       font-size: 2rem;
       cursor: pointer;
       z-index: 10000;
-      color: var(--primaryColor);
+      /* color: var(--primaryColor); */
+      color: #fff;
       transition: 0.3s;
       :hover {
         color: #aaa;
@@ -151,6 +153,8 @@ const Wrapper = styled.div`
     letter-spacing: 2px;
     color: #eee;
     font-weight: 700;
+    ///
+    text-shadow: 3px 3px 3px #000;
     h1 {
       margin: 3vh 0 5vh;
       font-weight: 700;
@@ -181,7 +185,9 @@ const Wrapper = styled.div`
       font-size: 4rem;
       opacity: 0;
       animation: showStars 2s infinite alternate;
-      color: var(--secondaryColor2);
+      /* color: var(--secondaryColor2); */
+      color: rgb(238, 193, 161);
+
       @keyframes showStars {
         40% {
           opacity: 1;

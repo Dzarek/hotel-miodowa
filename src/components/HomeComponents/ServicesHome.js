@@ -178,7 +178,9 @@ const Wrapper = styled.div`
   .servicesHome {
     display: flex;
     flex-direction: column;
-    width: 90vw;
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0 10vw;
     align-items: center;
     background: rgb(15, 15, 15);
     @media screen and (max-width: 800px) {
@@ -216,7 +218,8 @@ const Wrapper = styled.div`
           transform: translate(-50%, -50%);
           object-fit: cover;
           height: 100%;
-          filter: brightness(0.3);
+          /* filter: brightness(0.3); */
+          filter: brightness(0.5);
           z-index: 0;
           opacity: 0;
         }
@@ -272,7 +275,7 @@ const Wrapper = styled.div`
           }
         }
         @media screen and (max-width: 800px) {
-          width: 40vw;
+          width: 37vw;
           height: 20vh;
           margin: 5px;
           padding: 10px 5px;
@@ -289,6 +292,18 @@ const Wrapper = styled.div`
             top: 45%;
             left: 50%;
           }
+        }
+        :hover p {
+          ///
+          color: #eee;
+        }
+        :hover h4 {
+          ///
+          color: #eee;
+        }
+        :hover .icon {
+          color: #eee;
+          display: none;
         }
         @media (orientation: landscape) and (max-width: 800px) {
           height: 50vh;

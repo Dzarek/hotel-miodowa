@@ -85,7 +85,7 @@ const GalleryPage = () => {
                         data-aos="flip-down"
                         key={index}
                         src={item}
-                        alt={category}
+                        alt={category.toUpperCase()}
                       />
                     );
                   })}
@@ -191,8 +191,8 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     img {
-      width: 250px;
-      margin: 15px;
+      width: 23%;
+      margin: 15px 1%;
       border-radius: 3px;
       cursor: pointer;
       transition: 0.3s;

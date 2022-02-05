@@ -571,7 +571,8 @@ const Wrapper = styled.div`
       height: 100%;
       h5,
       a {
-        color: var(--primaryColor);
+        /* color: var(--primaryColor); */
+        color: #eee;
         text-decoration: none;
         height: 100%;
         font-weight: 600;
@@ -593,6 +594,7 @@ const Wrapper = styled.div`
         }
         &.active {
           color: var(--secondaryColor2);
+          color: rgb(185, 130, 93);
         }
         :hover {
           color: var(--secondaryColor);
@@ -785,7 +787,8 @@ const Wrapper2 = styled.div`
     align-items: center;
     h5,
     a {
-      color: var(--primaryColor);
+      /* color: var(--primaryColor); */
+      color: #eee;
       text-decoration: none;
       height: 100%;
       font-weight: 600;
@@ -800,7 +803,8 @@ const Wrapper2 = styled.div`
       align-items: center;
       justify-content: center;
       &.active {
-        color: var(--secondaryColor2);
+        /* color: var(--secondaryColor2); */
+        color: rgb(185, 130, 93);
       }
       :hover {
         color: var(--secondaryColor);

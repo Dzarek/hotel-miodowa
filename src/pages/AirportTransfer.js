@@ -197,6 +197,9 @@ const Wrapper = styled.div`
   width: 100vw;
   padding-top: 13vh;
   margin: 0 auto;
+  @media screen and (max-width: 800px) {
+    padding-top: 12vh;
+  }
   .backgroundDark {
     background: rgba(0, 0, 0, 0.3);
   }
@@ -212,8 +215,10 @@ const Wrapper = styled.div`
       top: 70%;
       right: 25%;
       width: 100%;
-      text-shadow: 0 2px 2px black;
       color: white;
+      h2 {
+        text-shadow: 3px 3px 3px black;
+      }
       h4 {
         text-transform: lowerCase;
         margin-top: 2vh;

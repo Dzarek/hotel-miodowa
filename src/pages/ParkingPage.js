@@ -184,8 +184,11 @@ const Wrapper = styled.div`
   width: 100vw;
   padding-top: 13vh;
   margin: 0 auto;
+  @media screen and (max-width: 800px) {
+    padding-top: 12vh;
+  }
   .backgroundDark {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
   }
   .parkingHeader {
     position: relative;
@@ -199,7 +202,6 @@ const Wrapper = styled.div`
       top: 70%;
       right: 25%;
       width: 100%;
-      text-shadow: 0 2px 2px black;
       color: white;
       h4 {
         text-transform: lowerCase;

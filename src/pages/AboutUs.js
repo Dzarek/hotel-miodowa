@@ -90,7 +90,7 @@ const Wrapper = styled.div`
     }
     a {
       position: relative;
-      filter: brightness(0.5) blur(1px);
+      filter: brightness(0.9) blur(1px);
       transition: 0.5s;
       cursor: pointer;
       display: flex;
@@ -105,13 +105,13 @@ const Wrapper = styled.div`
         font-size: 3rem;
         color: white;
         text-transform: uppercase;
-        text-shadow: 0 2px 2px black;
+        text-shadow: 3px 3px 3px black;
         transition: 1s;
         width: 100%;
         background: rgba(0, 0, 0, 0.5);
       }
       :hover {
-        filter: brightness(0.7);
+        filter: brightness(0.9);
       }
       :hover h2 {
         transform: translateX(0%);
