@@ -296,7 +296,7 @@ const Wrapper = styled.div`
   }
   .otherRooms {
     width: 80vw;
-    max-width: 1360px;
+    max-width: 100vw;
     margin-top: 10vh;
     h2 {
       align-self: center;
