@@ -105,7 +105,7 @@ const Wrapper = styled.form`
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: white;
+  color: var(--primaryColor);
   height: 66vh;
   width: 90%;
   margin: 0 auto;
@@ -119,6 +119,8 @@ const Wrapper = styled.form`
     margin-bottom: 5vh;
     font-family: var(--buttonFont);
     width: 80%;
+    color: var(--secondaryColor2);
+
     @media screen and (max-width: 800px) {
       font-size: 1.5rem;
       width: 90%;
@@ -134,9 +136,9 @@ const Wrapper = styled.form`
       width: 45%;
       padding: 10px 20px;
       font-size: 1rem;
-      background: #111;
+      background: var(--roomDetailBg);
       border: 2px solid var(--secondaryColor2);
-      color: white;
+      color: var(--primaryColor);
       font-family: var(--textFont);
       @media screen and (max-width: 800px) {
         font-size: 1rem;
@@ -151,9 +153,9 @@ const Wrapper = styled.form`
     padding: 20px 20px;
     border-radius: 5px;
     font-size: 1rem;
-    background: #111;
+    background: var(--roomDetailBg);
     border: 2px solid var(--secondaryColor2);
-    color: white;
+    color: var(--primaryColor);
     font-family: var(--textFont);
     line-height: 1.2;
     @media screen and (max-width: 800px) {
@@ -190,7 +192,7 @@ const Wrapper = styled.form`
     font-size: 1.1rem;
     padding: 10px 0;
     background: transparent;
-    color: white;
+    color: var(--primaryColor);
     letter-spacing: 1px;
     border-radius: 5px;
     cursor: pointer;
@@ -200,6 +202,7 @@ const Wrapper = styled.form`
     font-family: var(--buttonFont);
     :hover {
       background: var(--bookBtnColor);
+      color: #fff;
     }
     @media screen and (max-width: 800px) {
       width: 50%;

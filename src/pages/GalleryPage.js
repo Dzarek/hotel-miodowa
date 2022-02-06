@@ -165,10 +165,12 @@ const Wrapper = styled.div`
       transition: 0.4s;
       :hover {
         background: var(--bookBtnColor);
+        color: white;
       }
     }
     .activeBtn {
-      background: var(--favoriteRoomColor);
+      background: var(--secondaryColor);
+      color: white;
     }
     @media screen and (max-width: 800px) {
       width: 95vw;

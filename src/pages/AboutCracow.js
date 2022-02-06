@@ -88,7 +88,7 @@ const Wrapper = styled.div`
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
-      /* text-shadow: 3px 3px 3px black; */
+      text-shadow: 3px 3px 3px black;
       color: white;
       @media screen and (max-width: 800px) {
         font-size: 1.2rem;

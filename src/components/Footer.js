@@ -183,8 +183,8 @@ const Wrapper = styled.div`
       }
     }
     h3 {
-      color: var(--primaryColor);
-      /* color: #fff; */
+      /* color: var(--primaryColor); */
+      color: #fff;
       text-transform: uppercase;
       font-size: 1.5rem;
       font-family: var(--buttonFont);
@@ -295,8 +295,8 @@ const Wrapper = styled.div`
       justify-content: center;
       align-items: center;
       h4 {
-        color: var(--primaryColor);
-        /* color: #fff; */
+        /* color: var(--primaryColor); */
+        color: #fff;
         text-transform: uppercase;
         font-size: 1.5rem;
         font-family: var(--titleFont);

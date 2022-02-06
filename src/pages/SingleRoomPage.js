@@ -220,6 +220,8 @@ const Wrapper = styled.div`
       width: 100%;
       color: white;
       z-index: 1;
+      text-shadow: 3px 3px 3px black;
+
       @media screen and (max-width: 800px) {
         font-size: 1.2rem;
         right: 0%;
@@ -261,7 +263,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     width: 25%;
     padding: 30px 10px;
-    background: #111;
+    background: var(--roomDetailBg);
     justify-content: flex-start;
     align-items: center;
     margin-top: 20vh;
@@ -327,7 +329,7 @@ const Wrapper = styled.div`
     max-width: 100vw;
 
     .equipments {
-      background: #eee;
+      background: var(--equipmentsBg);
       width: 100vw;
       padding: 40px 10vw;
       border-radius: 3px;
@@ -360,7 +362,7 @@ const Wrapper = styled.div`
           color: var(--secondaryColor2);
         }
         :hover span {
-          color: #fff;
+          color: var(--primaryColor);
         }
       }
     }
@@ -409,7 +411,6 @@ const Wrapper = styled.div`
         font-family: var(--textFont);
         font-size: 1.2rem;
         line-height: 1.4;
-        color: white;
         margin-bottom: 3vh;
       }
       @media screen and (max-width: 800px) {

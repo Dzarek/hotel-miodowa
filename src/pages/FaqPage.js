@@ -190,7 +190,7 @@ const Wrapper = styled.div`
   }
 
   .questions {
-    color: white;
+    color: var(--primaryColor);
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -242,7 +242,7 @@ const Wrapper = styled.div`
       z-index: 1;
       background: var(--bookBtnColor);
       padding: 15px 25px;
-      color: var(--primaryColor);
+      color: #fff;
       font-size: 1.1rem;
       font-family: var(--buttonFont);
       text-transform: uppercase;

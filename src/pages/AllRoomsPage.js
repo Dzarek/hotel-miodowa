@@ -142,6 +142,8 @@ const Wrapper = styled.div`
       width: 100%;
       color: white;
       z-index: 1;
+      text-shadow: 3px 3px 3px black;
+
       @media screen and (max-width: 800px) {
         font-size: 1.4rem;
         right: 0%;

@@ -162,6 +162,8 @@ const Wrapper = styled.div`
       transform: translate(-50%, -50%);
       width: 100%;
       color: white;
+      text-shadow: 3px 3px 3px black;
+
       h4 {
         text-transform: lowerCase;
         margin-top: 2vh;

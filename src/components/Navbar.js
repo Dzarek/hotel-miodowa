@@ -18,11 +18,11 @@ import logoMiodowa from "../images/logo-Miodowa.png";
 import polandFlag from "../images/poland-flag.png";
 import englandFlag from "../images/england-flag.png";
 
-const Navbar = () => {
+const Navbar = ({ showMenu, setShowMenu }) => {
   const { openSubmenu, closeSubmenu } = useGlobalContext();
   const context = useContext(RoomContext);
 
-  const [showMenu, setShowMenu] = useState(false);
+  // const [showMenu, setShowMenu] = useState(false);
 
   const {
     handleTogglePolish,
@@ -487,7 +487,7 @@ const Wrapper = styled.div`
     z-index: 99;
     position: fixed;
     font-size: 50px;
-    color: white;
+    color: var(--primaryColor);
     transition: 0.3s;
   }
   .language-change {
@@ -501,11 +501,11 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: var(--languageBg);
     h2 {
       font-family: var(--buttonFont);
       margin-bottom: 5vh;
-      color: white;
+      color: var(--primaryColor);
     }
   }
 
@@ -524,8 +524,8 @@ const Wrapper = styled.div`
     cursor: pointer;
     filter: saturate(0.5);
     border-radius: 5px;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
   }
 
   .language-change img:hover {
@@ -545,7 +545,7 @@ const Wrapper = styled.div`
     padding: 0 3vw 0 10vw;
     align-items: center;
     z-index: 9999;
-    background: rgba(0, 0, 0, 0.85);
+    background: var(--navbarBg);
     border-bottom: 2px solid var(--bookBtnColor);
     .logo-container {
       height: 22vh;
@@ -557,6 +557,7 @@ const Wrapper = styled.div`
       border-radius: 0 0 5px 5px;
       cursor: pointer;
       transition: 0.5s;
+      border: 2px solid var(--bookBtnColor);
       .logo {
         width: 130px;
       }
@@ -572,7 +573,7 @@ const Wrapper = styled.div`
       h5,
       a {
         /* color: var(--primaryColor); */
-        color: #eee;
+        color: var(--primaryColor);
         text-decoration: none;
         height: 100%;
         font-weight: 600;
@@ -594,10 +595,10 @@ const Wrapper = styled.div`
         }
         &.active {
           color: var(--secondaryColor2);
-          color: rgb(185, 130, 93);
+          /* color: rgb(185, 130, 93); */
         }
         :hover {
-          color: var(--secondaryColor);
+          color: var(--navbarColor);
         }
       }
       .iconLanguage {
@@ -612,11 +613,11 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px 10px;
+    padding: 8px 10px;
     width: 12vw;
     background: var(--bookBtnColor);
     color: white;
-    border: none;
+    border: 2px solid var(--bookBtnColor);
     border-radius: 5px;
     font-size: 1rem;
     text-transform: uppercase;
@@ -624,7 +625,7 @@ const Wrapper = styled.div`
     cursor: pointer;
     transition: 0.5s;
     :hover {
-      background: #ddd;
+      background: #fff;
       color: var(--bookBtnColor);
       .bell {
         animation: bellRing 1s infinite alternate;
@@ -724,8 +725,8 @@ const Wrapper2 = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.98);
-    color: white;
+    background: var(--navbarBg2);
+    color: var(--primaryColor);
     z-index: 99;
     opacity: 1;
     transition: 0.7s;
@@ -757,7 +758,7 @@ const Wrapper2 = styled.div`
     border: none;
     background: transparent;
     font-size: 2rem;
-    color: white;
+    color: var(--primaryColor);
     display: flex;
     align-items: center;
   }
@@ -787,8 +788,7 @@ const Wrapper2 = styled.div`
     align-items: center;
     h5,
     a {
-      /* color: var(--primaryColor); */
-      color: #eee;
+      color: var(--primaryColor);
       text-decoration: none;
       height: 100%;
       font-weight: 600;

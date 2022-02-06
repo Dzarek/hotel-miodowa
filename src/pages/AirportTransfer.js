@@ -216,6 +216,7 @@ const Wrapper = styled.div`
       right: 25%;
       width: 100%;
       color: white;
+
       h2 {
         text-shadow: 3px 3px 3px black;
       }

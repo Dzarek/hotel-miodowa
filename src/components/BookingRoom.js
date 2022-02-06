@@ -245,7 +245,7 @@ const Wrapper = styled.div`
   }
   h4 {
     font-size: 1.2rem;
-    color: var(--primaryColor);
+    color: white;
     margin-bottom: -4vh;
   }
   .bookFormGuest {
@@ -315,7 +315,7 @@ const Wrapper = styled.div`
     label {
       font-size: 1.2rem;
       margin-bottom: 10px;
-      color: var(--primaryColor);
+      color: white;
       display: flex;
       justify-content: center;
       align-items: center;

@@ -209,6 +209,7 @@ const Wrapper = styled.div`
         font-size: 1.2rem;
         margin: 2vh auto;
         width: 23vw;
+        color: white;
 
         :nth-of-type(1) {
           margin-left: -2vw;

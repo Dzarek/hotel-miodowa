@@ -1,6 +1,9 @@
 import "./App.css";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { ScrollToTop } from "react-router-scroll-to-top";
+import { useState, useEffect } from "react";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { MdDoubleArrow } from "react-icons/md";
 
 import Navbar from "./components/Navbar";
 import Submenu from "./Submenu";
@@ -28,10 +31,46 @@ import AllRoomsPage from "./pages/AllRoomsPage";
 import ErrorPage from "./pages/ErrorPage";
 
 function App() {
+  const [lightMode, setLightMode] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 800;
+
   return (
-    <div className="app">
+    <div className={!lightMode ? "app" : "app2"}>
       <Router>
-        <Navbar />
+        {showMenu || !isMobile ? (
+          <>
+            {!lightMode ? (
+              <button
+                onClick={() => setLightMode(true)}
+                className="modeLightDark darkMode"
+              >
+                <MdDoubleArrow className="modeLightIcon" />
+                <MdLightMode />
+              </button>
+            ) : (
+              <button
+                onClick={() => setLightMode(false)}
+                className="modeLightDark lightMode"
+              >
+                <MdDarkMode />
+                <MdDoubleArrow className="modeDarkIcon" />
+              </button>
+            )}
+          </>
+        ) : null}
+        <Navbar showMenu={showMenu} setShowMenu={setShowMenu} />
         <Submenu />
         <ScrollToTop />
         <Routes>

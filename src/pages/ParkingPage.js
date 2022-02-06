@@ -203,6 +203,8 @@ const Wrapper = styled.div`
       right: 25%;
       width: 100%;
       color: white;
+      text-shadow: 3px 3px 3px black;
+
       h4 {
         text-transform: lowerCase;
         margin-top: 2vh;

@@ -76,11 +76,11 @@ const Room = ({ room }) => {
 const Wrapper = styled.div`
   width: 22vw;
   height: 55vh;
-  border: 1px solid #ddd;
+  border: 1px solid var(--secondaryColor);
   border-radius: 5px;
   position: relative;
   overflow: hidden;
-  background: #111;
+  background: #333;
   transition: 0.5s;
   margin: 2vw 1vw;
   @media screen and (max-width: 800px) {
@@ -106,7 +106,6 @@ const Wrapper = styled.div`
     top: 30vh;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(0, 0, 0, 0.9);
     background: var(--bookBtnColor);
     font-size: 1.3rem;
     text-align: center;
@@ -114,6 +113,8 @@ const Wrapper = styled.div`
     align-items: center;
     justify-content: center;
     font-family: var(--buttonFont);
+    color: #eee;
+
     @media (orientation: landscape) and (max-width: 800px) {
       height: 10vh;
     }

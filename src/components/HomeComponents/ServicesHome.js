@@ -182,7 +182,7 @@ const Wrapper = styled.div`
     max-width: 100vw;
     padding: 0 10vw;
     align-items: center;
-    background: rgb(15, 15, 15);
+    background: var(--servicesHomeBg);
     @media screen and (max-width: 800px) {
       width: 100vw;
     }
@@ -210,6 +210,7 @@ const Wrapper = styled.div`
         overflow: hidden;
         transition: 0.5s;
         user-select: none;
+        background: var(--appBgColor);
 
         img {
           position: absolute;
@@ -262,7 +263,7 @@ const Wrapper = styled.div`
         }
         p {
           font-family: var(--buttonFont);
-          color: #bbb;
+          color: var(--servicesHomeColor);
           font-size: 1rem;
           z-index: 1;
           position: absolute;
