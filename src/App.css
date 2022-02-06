@@ -49,8 +49,8 @@ body {
 
 @media screen and (max-width: 800px) {
   .modeLightDark {
-    top: 10%;
-    left: 0;
+    top: 7%;
+    left: 79%;
     ;
     transform: rotate(-90deg);
   }
@@ -102,6 +102,7 @@ body {
   --servicesHomeColor: #bbb;
   --roomDetailBg: #111;
   --equipmentsBg: #eee;
+  --bookingBg: #000;
 
 
   background-color: var(--appBgColor);
@@ -124,6 +125,7 @@ body {
   --servicesHomeColor: #333;
   --roomDetailBg: #fff;
   --equipmentsBg: #333;
+  --bookingBg: #fff;
 
 
 

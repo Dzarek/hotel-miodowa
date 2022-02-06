@@ -18,7 +18,7 @@ import logoMiodowa from "../images/logo-Miodowa.png";
 import polandFlag from "../images/poland-flag.png";
 import englandFlag from "../images/england-flag.png";
 
-const Navbar = ({ showMenu, setShowMenu }) => {
+const Navbar = ({ showMenu, setShowMenu, showBooking, setShowBooking }) => {
   const { openSubmenu, closeSubmenu } = useGlobalContext();
   const context = useContext(RoomContext);
 
@@ -54,7 +54,7 @@ const Navbar = ({ showMenu, setShowMenu }) => {
     }
   };
   const [offset, setOffset] = useState(0);
-  const [showBooking, setShowBooking] = useState(false);
+  // const [showBooking, setShowBooking] = useState(false);
 
   useEffect(() => {
     window.onscroll = () => {
@@ -668,7 +668,7 @@ const Wrapper2 = styled.div`
     z-index: 99;
     position: fixed;
     font-size: 50px;
-    color: white;
+    color: var(--primaryColor);
     transition: 0.3s;
     @media (orientation: landscape) and (max-width: 800px) {
       margin-top: 50vh;
@@ -685,11 +685,11 @@ const Wrapper2 = styled.div`
     justify-content: center;
     align-items: center;
     z-index: 10;
-    background-color: rgba(0, 0, 0, 0.95);
+    background-color: var(--languageBg);
     h2 {
       font-family: var(--buttonFont);
       margin-bottom: 5vh;
-      color: white;
+      color: var(--primaryColor);
     }
   }
 

@@ -206,7 +206,7 @@ const Wrapper = styled.form`
     }
     @media screen and (max-width: 800px) {
       width: 50%;
-      background: rgb(197, 103, 40);
+      /* background: rgb(197, 103, 40); */
     }
   }
 `;

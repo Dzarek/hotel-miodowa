@@ -376,6 +376,8 @@ const Wrapper = styled.div`
       .equipments {
         padding: 10px;
         width: 100vw;
+        margin-left: 0vw;
+
         p {
           font-size: 2.3rem;
           padding: 5px;

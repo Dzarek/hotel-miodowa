@@ -125,7 +125,7 @@ const Wrapper = styled.div`
   .bookRoom {
     width: 28vw;
     height: 75vh;
-    background: rgba(0, 0, 0, 0.9);
+    background: var(--languageBg);
     border-radius: 5px 0 0 5px;
     color: #111;
     transition: 0.4s;
@@ -138,7 +138,7 @@ const Wrapper = styled.div`
     @media screen and (max-width: 800px) {
       width: 100vw;
       height: 100vh;
-      background: rgba(0, 0, 0, 1);
+      background: var(--bookingBg);
       top: 0;
       right: 0;
       transform: translateX(100%);
@@ -152,7 +152,7 @@ const Wrapper = styled.div`
       background: transparent;
       cursor: pointer;
       border: none;
-      color: #ddd;
+      color: var(--primaryColor);
       transition: 0.4s;
       font-size: 1rem;
       padding: 5px;
@@ -232,7 +232,7 @@ const Wrapper = styled.div`
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    color: white;
+    color: var(--primaryColor);
     @media screen and (max-width: 800px) {
       width: 90vw;
       height: 50%;
@@ -245,7 +245,7 @@ const Wrapper = styled.div`
   }
   h4 {
     font-size: 1.2rem;
-    color: white;
+    color: var(--primaryColor);
     margin-bottom: -4vh;
   }
   .bookFormGuest {
@@ -315,7 +315,7 @@ const Wrapper = styled.div`
     label {
       font-size: 1.2rem;
       margin-bottom: 10px;
-      color: white;
+      color: var(--primaryColor);
       display: flex;
       justify-content: center;
       align-items: center;

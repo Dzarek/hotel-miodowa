@@ -33,6 +33,8 @@ import ErrorPage from "./pages/ErrorPage";
 function App() {
   const [lightMode, setLightMode] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
+  const [showBooking, setShowBooking] = useState(false);
+
   const [width, setWidth] = useState(window.innerWidth);
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -49,7 +51,7 @@ function App() {
   return (
     <div className={!lightMode ? "app" : "app2"}>
       <Router>
-        {showMenu || !isMobile ? (
+        {(showMenu && !showBooking) || !isMobile ? (
           <>
             {!lightMode ? (
               <button
@@ -70,7 +72,12 @@ function App() {
             )}
           </>
         ) : null}
-        <Navbar showMenu={showMenu} setShowMenu={setShowMenu} />
+        <Navbar
+          showMenu={showMenu}
+          setShowMenu={setShowMenu}
+          showBooking={showBooking}
+          setShowBooking={setShowBooking}
+        />
         <Submenu />
         <ScrollToTop />
         <Routes>
