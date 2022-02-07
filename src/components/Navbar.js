@@ -61,10 +61,10 @@ const Navbar = ({ showMenu, setShowMenu, showBooking, setShowBooking }) => {
       setOffset(window.pageYOffset);
     };
   }, []);
-  useEffect(() => {
-    closeSubmenu();
-    // eslint-disable-next-line
-  }, [offset]);
+  // useEffect(() => {
+  // closeSubmenu();
+  // eslint-disable-next-line
+  // }, [offset]);
   const pageHeight = window.document.body.offsetHeight - window.innerHeight;
 
   return (

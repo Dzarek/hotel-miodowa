@@ -1,6 +1,6 @@
 import React from "react";
-// import { useContext } from "react";
-// import { RoomContext } from "../roomContext";
+import { useContext } from "react";
+import { RoomContext } from "../roomContext";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import styled from "styled-components";
@@ -16,7 +16,7 @@ const Room = ({ room }) => {
     name,
     slug,
     images,
-    // price,
+    price,
     capacity,
     size,
     bathroom,
@@ -24,15 +24,15 @@ const Room = ({ room }) => {
     beds,
     sofa,
   } = room;
-  // const context = useContext(RoomContext);
-  // const { polish } = context;
+  const context = useContext(RoomContext);
+  const { polish } = context;
   return (
     <Wrapper>
       <img src={images[0]} alt="pokój" />
-      {/* <div className="price-top">
+      <div className="price-top">
         <h6>{price} zł</h6>
         <p>{polish ? "/noc" : "/night"}</p>
-      </div> */}
+      </div>
       <h4>{name}</h4>
       <Link to={`${slug}`} className="iconContainer">
         <GiExitDoor className="icon" />

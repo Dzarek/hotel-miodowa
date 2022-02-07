@@ -30,7 +30,11 @@ import AllRoomsPage from "./pages/AllRoomsPage";
 
 import ErrorPage from "./pages/ErrorPage";
 
+import { useGlobalContext } from "./context";
+
 function App() {
+  const { closeSubmenu } = useGlobalContext();
+
   const [lightMode, setLightMode] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showBooking, setShowBooking] = useState(false);
@@ -80,36 +84,38 @@ function App() {
         />
         <Submenu />
         <ScrollToTop />
-        <Routes>
-          <Route path="*" element={<ErrorPage />}></Route>
-          <Route path="/" element={<HomePage />}></Route>
-          <Route path="/pokoje" element={<AllRoomsPage />}></Route>
-          <Route path="/pokoje/:slug" element={<SingleRoomPage />}></Route>
-          <Route path="/galeria" element={<GalleryPage />}></Route>
-          <Route path="/oNas" element={<AboutUs />}></Route>
-          <Route path="/oNas/oKrakowie" element={<AboutCracow />}></Route>
-          <Route path="/oNas/oHotelu" element={<AboutHotel />}></Route>
-          <Route path="/uslugi" element={<ServicesPage />}></Route>
-          <Route
-            path="/uslugi/transport&wycieczki"
-            element={<AirportTransfer />}
-          ></Route>
-          <Route
-            path="/uslugi/restauracja"
-            element={<RestaurantPage />}
-          ></Route>
-          <Route path="/uslugi/parking" element={<ParkingPage />}></Route>
-          <Route
-            path="/kontakt/formularzKontaktowy"
-            element={<ContactPage />}
-          ></Route>
-          <Route path="/kontakt/faq" element={<FaqPage />}></Route>
-          <Route
-            path="/kontakt/regulamin"
-            element={<RegulationsPage />}
-          ></Route>
-          <Route path="/kontakt/rodo&cookies" element={<RodoPage />}></Route>
-        </Routes>
+        <div onMouseOver={closeSubmenu}>
+          <Routes>
+            <Route path="*" element={<ErrorPage />}></Route>
+            <Route path="/" element={<HomePage />}></Route>
+            <Route path="/pokoje" element={<AllRoomsPage />}></Route>
+            <Route path="/pokoje/:slug" element={<SingleRoomPage />}></Route>
+            <Route path="/galeria" element={<GalleryPage />}></Route>
+            <Route path="/oNas" element={<AboutUs />}></Route>
+            <Route path="/oNas/oKrakowie" element={<AboutCracow />}></Route>
+            <Route path="/oNas/oHotelu" element={<AboutHotel />}></Route>
+            <Route path="/uslugi" element={<ServicesPage />}></Route>
+            <Route
+              path="/uslugi/transport&wycieczki"
+              element={<AirportTransfer />}
+            ></Route>
+            <Route
+              path="/uslugi/restauracja"
+              element={<RestaurantPage />}
+            ></Route>
+            <Route path="/uslugi/parking" element={<ParkingPage />}></Route>
+            <Route
+              path="/kontakt/formularzKontaktowy"
+              element={<ContactPage />}
+            ></Route>
+            <Route path="/kontakt/faq" element={<FaqPage />}></Route>
+            <Route
+              path="/kontakt/regulamin"
+              element={<RegulationsPage />}
+            ></Route>
+            <Route path="/kontakt/rodo&cookies" element={<RodoPage />}></Route>
+          </Routes>
+        </div>
         <Footer />
       </Router>
     </div>
