@@ -117,7 +117,7 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
                   type="number"
                   name="children"
                   value={people}
-                  min={1}
+                  min={rooms}
                   max={maxPeople}
                   onChange={(e) => handleChildren(e)}
                 />
