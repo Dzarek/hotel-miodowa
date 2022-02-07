@@ -501,7 +501,7 @@ const Wrapper = styled.div`
     justify-content: center;
     align-items: center;
     z-index: 10;
-    background-color: var(--languageBg);
+    background-color: var(--navbarBg2);
     h2 {
       font-family: var(--buttonFont);
       margin-bottom: 5vh;
@@ -644,7 +644,7 @@ const Wrapper = styled.div`
     font-size: 2rem;
     background: transparent;
     border: none;
-    color: var(--primaryColor);
+    color: var(--equipmentsBg);
     transition: 0.5s;
     cursor: pointer;
     :hover {
@@ -685,7 +685,7 @@ const Wrapper2 = styled.div`
     justify-content: center;
     align-items: center;
     z-index: 10;
-    background-color: var(--languageBg);
+    background-color: var(--navbarBg2);
     h2 {
       font-family: var(--buttonFont);
       margin-bottom: 5vh;
@@ -743,11 +743,14 @@ const Wrapper2 = styled.div`
   }
   .menuSmall {
     margin: 0 auto;
-    width: 90vw;
+    width: 100vw;
+    padding: 0 5vw;
     height: 12vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 0.5vh solid var(--bookBtnColor);
+    background: transparent;
     @media (orientation: landscape) and (max-width: 800px) {
       height: 20vh;
     }
@@ -803,12 +806,12 @@ const Wrapper2 = styled.div`
       align-items: center;
       justify-content: center;
       &.active {
-        /* color: var(--secondaryColor2); */
-        color: rgb(185, 130, 93);
-      }
-      :hover {
         color: var(--secondaryColor);
+        /* color: rgb(185, 130, 93); */
       }
+      /* :hover {
+        color: var(--secondaryColor2);
+      } */
 
       .iconLanguage {
         font-size: 1.3rem;
@@ -857,7 +860,7 @@ const Wrapper2 = styled.div`
     font-size: 2rem;
     background: transparent;
     border: none;
-    color: var(--primaryColor);
+    color: var(--equipmentsBg);
     transition: 0.5s;
     z-index: 989;
     cursor: pointer;

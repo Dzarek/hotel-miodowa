@@ -16,7 +16,7 @@ import {
   IoIosArrowDroprightCircle,
 } from "react-icons/io";
 import {
-  GiTwoCoins,
+  // GiTwoCoins,
   GiMeal,
   GiVacuumCleaner,
   GiExitDoor,
@@ -57,7 +57,7 @@ const SingleRoomPage = () => {
     description,
     capacity,
     size,
-    price,
+    // price,
     extras,
     beds,
     sofa,
@@ -144,9 +144,9 @@ const SingleRoomPage = () => {
           className="roomDetails"
         >
           <h2>{polish ? "Szczegóły" : "Info"}</h2>
-          <p>
+          {/* <p>
             <GiTwoCoins className="icon" /> {price} zł
-          </p>
+          </p> */}
           <p>
             <BsFillPersonFill className="icon" /> 1 - {capacity}
           </p>
@@ -311,7 +311,7 @@ const Wrapper = styled.div`
       font-size: 2rem;
       cursor: pointer;
       z-index: 10000;
-      color: var(--primaryColor);
+      color: var(--equipmentsBg);
       transition: 0.3s;
       :hover {
         color: var(--secondaryColor);
@@ -450,7 +450,7 @@ const Wrapper = styled.div`
         transition: 0.4s;
         cursor: pointer;
         :hover {
-          box-shadow: 0 0 2px 2px white;
+          box-shadow: 0 0 2px 2px var(--secondaryColor);
         }
         @media screen and (max-width: 800px) {
           justify-content: center;

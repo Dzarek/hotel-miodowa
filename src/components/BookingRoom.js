@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { DatePicker } from "react-rainbow-components";
 import { useContext } from "react";
@@ -20,17 +20,17 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
   const context = useContext(RoomContext);
   const { polish } = context;
   const [dates, setDates] = useState([today, tomorrow]);
-  const [adult, setAdult] = useState(1);
-  const [children, setChildren] = useState(0);
-
+  const [rooms, setRooms] = useState(1);
+  const [people, setPeople] = useState(2);
+  const [showKW, setShowKW] = useState(false);
   const handleAdult = (e) => {
-    setAdult(e.target.value);
+    setRooms(e.target.value);
   };
   const handleChildren = (e) => {
-    setChildren(e.target.value);
+    setPeople(e.target.value);
   };
-  const ageOfChildren = "req_age=12;";
-  const numberOfChildren = ageOfChildren.repeat(children);
+  // const ageOfChildren = "req_age=12;";
+  // const numberOfChildren = ageOfChildren.repeat(children);
 
   let checkInDate = today.toISOString().slice(0, 10);
   let checkOutDate = tomorrow.toISOString().slice(0, 10);
@@ -41,92 +41,205 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
     checkOutDate = dates[1].toISOString().slice(0, 10);
   }
 
-  const url = `https://www.booking.com/hotel/pl/aparthotel-miodowa-krakow.pl.html?aid=304142;label=gen173nr-1DCAsotgFCGWFwYXJ0aG90ZWwtbWlvZG93YS1rcmFrb3dIHlgEaLYBiAEBmAEeuAEXyAEP2AED6AEB-AECiAIBqAIDuALtqLSNBsACAdICJDFhYjY2NDM4LTI1NzItNDhlYS1hMWY4LTU1NDE5YjYwNzI3ZtgCBOACAQ;sid=8eca526340932527514ab17dccd65fef;checkin=${checkInDate};checkout=${checkOutDate}; group_adults=${adult};group_children=${children};no_rooms=1;req_adults=${adult};${numberOfChildren}req_children=${children};`;
+  // const url = `https://www.booking.com/hotel/pl/aparthotel-miodowa-krakow.pl.html?aid=304142;label=gen173nr-1DCAsotgFCGWFwYXJ0aG90ZWwtbWlvZG93YS1rcmFrb3dIHlgEaLYBiAEBmAEeuAEXyAEP2AED6AEB-AECiAIBqAIDuALtqLSNBsACAdICJDFhYjY2NDM4LTI1NzItNDhlYS1hMWY4LTU1NDE5YjYwNzI3ZtgCBOACAQ;sid=8eca526340932527514ab17dccd65fef;checkin=${checkInDate};checkout=${checkOutDate}; group_adults=${adult};group_children=${children};no_rooms=1;req_adults=${adult};${numberOfChildren}req_children=${children};`;
+
+  const closeReservation = () => {
+    setShowBooking(false);
+    setShowKW(false);
+  };
+
+  let maxPeople = rooms * 4;
+  const peoplePerRoom = Math.floor(people / rooms);
+  const moduloPeople = people % rooms;
+  const numberRooms = `{"count":${peoplePerRoom}},`;
+  const numberRoomsRepeat = numberRooms.repeat(rooms).slice(0, -1);
+  const lastChar = Number(numberRoomsRepeat[numberRoomsRepeat.length - 2]);
+  let lastCharUpdate = lastChar + moduloPeople;
+  lastCharUpdate = lastCharUpdate.toString();
+  const numberRoomsRepeat2 = numberRoomsRepeat.slice(0, -2);
+  const finalRoomsRepeat = numberRoomsRepeat2.concat(lastCharUpdate, "}");
+  useEffect(() => {
+    setPeople(rooms * 1);
+    // eslint-disable-next-line
+  }, [maxPeople]);
+
+  const url2 = `https://be-v2.kwhotel.com/${polish ? "pl" : "en"}/${
+    process.env.REACT_APP_ACCESS_TOKEN
+  }/0?checkIn=${checkInDate}&checkOut=${checkOutDate}&occupancy=[${finalRoomsRepeat}]`;
+  const urlHash = `#`;
 
   return (
-    <Wrapper>
-      <div className={showBooking ? "bookRoom showBookRoom" : "bookRoom"}>
-        <h3>{polish ? "Rezerwacja" : "Reservation"}</h3>
-        <button
-          className="closeBookRoom"
-          onClick={() => {
-            setShowBooking(false);
-          }}
-        >
-          <ImCross />
-        </button>
-        <div className="bookByPhone">
-          <h4>
-            <FaPhoneAlt className="iconReact" /> +48 124467130
-          </h4>
-          <h4>
-            <MdMail className="iconReact" /> rezerwacja@hotelmiodowa.pl
-          </h4>
-          <p>{polish ? "lub przez booking.com" : "or by booking.com"}</p>
-        </div>
-        <form className="bookForm">
-          <div className="bookFormDates">
-            <div
-              className="rainbow-align-content_center rainbow-m-vertical_large rainbow-p-horizontal_small rainbow-m_auto"
-              style={containerStyles}
-            >
-              <DatePicker
-                minDate={new Date()}
-                label={polish ? "Termin pobytu:" : "Dates:"}
-                selectionType="range"
-                variant="single"
-                value={dates}
-                onChange={(dates) => setDates(dates)}
-              />
-            </div>
-          </div>
-          <h4>{polish ? "Liczba Gości:" : "Guests:"}</h4>
-          <div className="bookFormGuest">
-            <div className="adultGuests">
-              <label htmlFor="adults">{polish ? "Dorośli:" : "Adults:"}</label>
-              <input
-                type="number"
-                name="adults"
-                value={adult}
-                min={1}
-                max={10}
-                onChange={(e) => handleAdult(e)}
-              />
-            </div>
-            <div className="childrenGuests">
-              <label htmlFor="children">
-                {polish ? "Dzieci:" : "Children"}
-              </label>
-              <input
-                type="number"
-                name="children"
-                value={children}
-                min={0}
-                max={10}
-                onChange={(e) => handleChildren(e)}
-              />
-            </div>
-          </div>
-          <a
-            href={url}
-            rel="noopener noreferrer"
-            target="_blank"
-            className="reserveBtnNow"
+    <>
+      <Wrapper>
+        <div className={showBooking ? "bookRoom showBookRoom" : "bookRoom"}>
+          <h3>{polish ? "Rezerwacja" : "Reservation"}</h3>
+          <button
+            className="closeBookRoom"
+            onClick={() => {
+              setShowBooking(false);
+            }}
           >
-            {polish ? "Sprawdź termin" : "Book now"}
-          </a>
-        </form>
-      </div>
-    </Wrapper>
+            <ImCross />
+          </button>
+
+          <form className="bookForm">
+            <div className="bookFormDates">
+              <div
+                className="rainbow-align-content_center rainbow-m-vertical_large rainbow-p-horizontal_small rainbow-m_auto"
+                style={containerStyles}
+              >
+                <DatePicker
+                  minDate={new Date()}
+                  label={polish ? "Termin pobytu:" : "Dates:"}
+                  selectionType="range"
+                  variant="single"
+                  value={dates}
+                  onChange={(dates) => setDates(dates)}
+                />
+              </div>
+            </div>
+            <h4>{polish ? "Liczba Gości:" : "Guests:"}</h4>
+            <div className="bookFormGuest">
+              <div className="adultGuests">
+                <label htmlFor="adults">{polish ? "Pokoje:" : "Rooms:"}</label>
+                <input
+                  type="number"
+                  name="adults"
+                  value={rooms}
+                  min={1}
+                  max={37}
+                  onChange={(e) => handleAdult(e)}
+                />
+              </div>
+              <div className="childrenGuests">
+                <label htmlFor="children">{polish ? "Osoby:" : "People"}</label>
+                <input
+                  type="number"
+                  name="children"
+                  value={people}
+                  min={1}
+                  max={maxPeople}
+                  onChange={(e) => handleChildren(e)}
+                />
+              </div>
+            </div>
+            <a
+              href={urlHash}
+              onClick={() => setShowKW(true)}
+              className="reserveBtnNow"
+              style={{ cursor: "pointer" }}
+            >
+              {polish ? "Sprawdź termin" : "Book now"}
+            </a>
+          </form>
+          <div className="bookByPhone">
+            <p>{polish ? "Masz pytania?" : "Do you have a question"}</p>
+            <h4>
+              <FaPhoneAlt className="iconReact" /> +48 124467130
+            </h4>
+            <h4>
+              <MdMail className="iconReact" /> rezerwacja@hotelmiodowa.pl
+            </h4>
+          </div>
+        </div>
+        {showKW && (
+          <div className="kwBooking">
+            <h3>{polish ? "Rezerwacja" : "Reservation"}</h3>
+            <iframe src={url2} frameborder="0" title="KWReservation"></iframe>
+            <ImCross onClick={closeReservation} />
+          </div>
+        )}
+      </Wrapper>
+      <Wrapper2>
+        {showBooking && (
+          <div className="kwBooking">
+            <h3>{polish ? "Rezerwacja" : "Reservation"}</h3>
+            <iframe src={url2} frameborder="0" title="KWReservation"></iframe>
+            <ImCross onClick={closeReservation} />
+          </div>
+        )}
+      </Wrapper2>
+    </>
   );
 };
 
 const Wrapper = styled.div`
+  @media screen and (max-width: 800px) {
+    display: none;
+  }
+  .kwBooking {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999999;
+    background: var(--languageBg);
+    @media screen and (max-width: 800px) {
+      border: 4px solid var(--bookBtnColor);
+      background: var(--navbarBg2);
+    }
+    h3 {
+      font-size: 1.8rem;
+      font-family: var(--buttonFont);
+      color: var(--secondaryColor2);
+      letter-spacing: 3px;
+      position: absolute;
+      top: 4%;
+      left: 50%;
+      transform: translate(-50%);
+      text-transform: uppercase;
+      @media screen and (max-width: 800px) {
+        font-size: 1.5rem;
+        top: 4%;
+        left: 35%;
+      }
+    }
+    iframe {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -45%);
+      width: 80vw;
+      height: 85vh;
+      border: 4px solid var(--bookBtnColor);
+      border-radius: 10px;
+      @media screen and (max-width: 800px) {
+        width: 100vw;
+        height: 85vh;
+        top: 100%;
+        transform: translate(-50%, -100%);
+        border: none;
+        border-left: 4px solid var(--bookBtnColor);
+        border-right: 4px solid var(--bookBtnColor);
+        border-radius: 0px;
+      }
+    }
+    svg {
+      position: absolute;
+      top: 5%;
+      right: 5%;
+      color: var(--secondaryColor2);
+      font-size: 2rem;
+      cursor: pointer;
+      transition: 0.3s;
+      :hover {
+        color: var(--bookBtnColor);
+      }
+      @media screen and (max-width: 800px) {
+        font-size: 1.5rem;
+        top: 4.5%;
+      }
+    }
+  }
   .bookRoom {
     width: 28vw;
     height: 75vh;
     background: var(--languageBg);
     border-radius: 5px 0 0 5px;
+    border: 2px solid var(--bookBtnColor);
+    border-right: none;
     color: #111;
     transition: 0.4s;
     transform: translateX(100%);
@@ -144,6 +257,7 @@ const Wrapper = styled.div`
       transform: translateX(100%);
       border-radius: 5px;
       border: 2px solid var(--secondaryColor2);
+      border-right: 2px solid var(--secondaryColor2);
     }
     .closeBookRoom {
       position: absolute;
@@ -181,7 +295,7 @@ const Wrapper = styled.div`
   }
   .bookByPhone {
     position: absolute;
-    top: 18%;
+    top: 70%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -225,7 +339,7 @@ const Wrapper = styled.div`
     width: 28vw;
     height: 55%;
     position: absolute;
-    top: 65%;
+    top: 37%;
     left: 50%;
     transform: translate(-50%, -40%);
     display: flex;
@@ -333,10 +447,67 @@ const Wrapper = styled.div`
     text-decoration: none;
     border-radius: 5px;
     transition: 0.5s;
+    border: none;
+    font-family: var(--buttonFont);
     :hover {
-      box-shadow: 0 0 2px 2px white;
+      /* box-shadow: 0 0 2px 2px white; */
+      letter-spacing: 2px;
     }
   }
 `;
 
+const Wrapper2 = styled.div`
+  @media screen and (min-width: 801px) {
+    display: none;
+  }
+  .kwBooking {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999999999;
+    background: var(--bookingBg);
+    border: 4px solid var(--bookBtnColor);
+
+    h3 {
+      font-family: var(--buttonFont);
+      color: var(--secondaryColor2);
+      letter-spacing: 3px;
+      position: absolute;
+      transform: translate(-50%);
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      top: 4%;
+      left: 35%;
+    }
+
+    iframe {
+      position: absolute;
+      left: 50%;
+      width: 100vw;
+      height: 85vh;
+      top: 100%;
+      transform: translate(-50%, -100%);
+      border: none;
+      border-left: 4px solid var(--bookBtnColor);
+      border-right: 4px solid var(--bookBtnColor);
+      border-radius: 0px;
+    }
+
+    svg {
+      position: absolute;
+      right: 5%;
+      color: var(--secondaryColor2);
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 1.5rem;
+      top: 4.5%;
+      :hover {
+        color: var(--bookBtnColor);
+      }
+    }
+  }
+`;
 export default BookingRoom;

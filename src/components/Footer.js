@@ -125,11 +125,11 @@ const Wrapper = styled.div`
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--bookBtnColor);
+    background: var(--footerBgColor);
     width: 100%;
     height: 10%;
     /* opacity: 0.6; */
-    opacity: 0.8;
+    /* opacity: 0.8; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,7 +138,11 @@ const Wrapper = styled.div`
     letter-spacing: 2px;
     z-index: 1;
     text-align: center;
+    @media screen and (max-width: 800px) {
+      height: 8%;
+    }
   }
+
   .footerContainer {
     z-index: 1;
     position: absolute;

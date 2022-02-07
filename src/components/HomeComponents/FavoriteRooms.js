@@ -73,7 +73,7 @@ const Wrapper = styled.div`
     font-size: 2rem;
     cursor: pointer;
     z-index: 10000;
-    color: var(--primaryColor);
+    color: var(--equipmentsBg);
     transition: 0.3s;
     :hover {
       color: var(--secondaryColor);

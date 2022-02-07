@@ -92,7 +92,7 @@ body {
   --secondaryColor: rgb(133, 88, 55);
   --bookBtnColor: rgb(95, 72, 56);
   --favoriteRoomColor: rgb(44, 26, 18);
-  --footerBgColor: rgb(20, 20, 20);
+  --footerBgColor: rgba(95, 72, 56, 0.2);
   --appBgColor: rgb(10, 10, 10);
   --languageBg: rgba(0, 0, 0, 0.9);
   --navbarBg: rgba(0, 0, 0, 0.85);
@@ -110,17 +110,19 @@ body {
 }
 
 .app2 {
-  --primaryColor: #222;
+  --primaryColor: #111;
   --secondaryColor2: rgb(139, 97, 70);
   --secondaryColor: rgb(133, 88, 55);
   --bookBtnColor: rgb(95, 72, 56);
   --favoriteRoomColor: rgb(44, 26, 18);
-  --footerBgColor: rgb(20, 20, 20);
+  --footerBgColor: rgba(95, 72, 56, 0.2);
   --appBgColor: #eee;
-  --languageBg: rgba(255, 255, 255, 0.95);
+  --languageBg: rgba(255, 255, 255, 0.9);
   --navbarBg: rgba(255, 255, 255, 0.95);
-  --navbarBg2: rgba(255, 255, 255, 0.98);
+  /* --navbarBg2: rgba(255, 255, 255, 0.98); */
+  --navbarBg2: #bbb;
   --navbarColor: rgb(189, 128, 82);
+  /* --servicesHomeBg: #aaa; */
   --servicesHomeBg: #ddd;
   --servicesHomeColor: #333;
   --roomDetailBg: #fff;
@@ -203,7 +205,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center 85%;
-  filter: sepia(0.7) brightness(0.15);
+  filter: saturate(0.1) brightness(0.2);
   z-index: 0;
 }
 
