@@ -91,6 +91,7 @@ body {
   --secondaryColor2: rgb(185, 130, 93);
   --secondaryColor: rgb(133, 88, 55);
   --bookBtnColor: rgb(95, 72, 56);
+  --bookBtnColor2: #eee;
   --favoriteRoomColor: rgb(44, 26, 18);
   --footerBgColor: rgba(95, 72, 56, 0.2);
   --appBgColor: rgb(10, 10, 10);
@@ -102,7 +103,9 @@ body {
   --servicesHomeColor: #bbb;
   --roomDetailBg: #111;
   --equipmentsBg: #eee;
-  --bookingBg: #000;
+  --bookingBg: transparent;
+  --logoBg: #ddd;
+  --menu2Color: rgb(185, 130, 93);
 
 
   background-color: var(--appBgColor);
@@ -114,22 +117,21 @@ body {
   --secondaryColor2: rgb(139, 97, 70);
   --secondaryColor: rgb(133, 88, 55);
   --bookBtnColor: rgb(95, 72, 56);
+  --bookBtnColor2: rgb(95, 72, 56);
   --favoriteRoomColor: rgb(44, 26, 18);
   --footerBgColor: rgba(95, 72, 56, 0.2);
   --appBgColor: #eee;
   --languageBg: rgba(255, 255, 255, 0.9);
   --navbarBg: rgba(255, 255, 255, 0.95);
-  /* --navbarBg2: rgba(255, 255, 255, 0.98); */
-  --navbarBg2: #bbb;
+  --navbarBg2: #ccc;
   --navbarColor: rgb(189, 128, 82);
-  /* --servicesHomeBg: #aaa; */
   --servicesHomeBg: #ddd;
   --servicesHomeColor: #333;
   --roomDetailBg: #fff;
   --equipmentsBg: #333;
   --bookingBg: #fff;
-
-
+  --logoBg: #fff;
+  --menu2Color: rgb(133, 88, 55);
 
   background-color: var(--appBgColor);
   color: var(--primaryColor);
@@ -142,6 +144,20 @@ body {
   max-width: 1360px;
   margin: 5vh auto 0;
 }
+
+.app .main-nav {
+  background-image: url('./images/homeImages/menuBGBlack.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.app2 .main-nav {
+  background-image: url('./images/homeImages/menuBGWhite.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+
 
 @media (orientation: portrait) and (max-width: 800px) {
   .mainSection {

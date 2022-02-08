@@ -613,28 +613,28 @@ const Wrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 8px 10px;
+    padding: 10px 5px;
     width: 12vw;
-    background: var(--bookBtnColor);
-    color: white;
-    border: 2px solid var(--bookBtnColor);
+    background: transparent;
+    color: var(--bookBtnColor2);
+    border: 3px solid var(--secondaryColor);
     border-radius: 5px;
     font-size: 1rem;
     text-transform: uppercase;
     font-family: "Signika Negative", sans-serif;
     cursor: pointer;
     transition: 0.5s;
-    :hover {
-      background: #fff;
-      color: var(--bookBtnColor);
-      .bell {
-        animation: bellRing 1s infinite alternate;
-        @keyframes bellRing {
-          100% {
-            transform: scale(1.4);
-          }
+    .bell {
+      animation: bellRing 1s infinite alternate;
+      @keyframes bellRing {
+        100% {
+          transform: scale(1.3);
         }
       }
+    }
+    :hover {
+      background: var(--bookBtnColor);
+      color: #fff;
     }
   }
   .upBtn {
@@ -725,7 +725,7 @@ const Wrapper2 = styled.div`
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--navbarBg2);
+    /* background: var(--navbarBg2); */
     color: var(--primaryColor);
     z-index: 99;
     opacity: 1;
@@ -762,6 +762,7 @@ const Wrapper2 = styled.div`
     background: transparent;
     font-size: 2rem;
     color: var(--primaryColor);
+    color: var(--secondaryColor2);
     display: flex;
     align-items: center;
   }
@@ -769,7 +770,7 @@ const Wrapper2 = styled.div`
   .logo-container {
     height: 20vh;
     padding: 15px 10vw;
-    background: #ddd;
+    background: var(--logoBg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -806,7 +807,7 @@ const Wrapper2 = styled.div`
       align-items: center;
       justify-content: center;
       &.active {
-        color: var(--secondaryColor);
+        color: var(--menu2Color);
         /* color: rgb(185, 130, 93); */
       }
       /* :hover {
@@ -829,28 +830,29 @@ const Wrapper2 = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 10px 10px;
-    width: 45vw;
-    background: var(--bookBtnColor);
-    color: white;
-    border: none;
+    padding: 10px 5px;
+    width: 47vw;
+    /* background: var(--bookBtnColor2); */
+    background: var(--bookingBg);
+    color: var(--bookBtnColor2);
+    border: 3px solid var(--secondaryColor);
     border-radius: 5px;
     font-size: 1rem;
     text-transform: uppercase;
     font-family: "Signika Negative", sans-serif;
     cursor: pointer;
     transition: 0.5s;
+    .bell {
+      animation: bellRing 1s infinite alternate;
+      @keyframes bellRing {
+        100% {
+          transform: scale(1.3);
+        }
+      }
+    }
     :hover {
       background: #ddd;
       color: var(--bookBtnColor);
-      .bell {
-        animation: bellRing 1s infinite alternate;
-        @keyframes bellRing {
-          100% {
-            transform: scale(1.4);
-          }
-        }
-      }
     }
   }
   .upBtn {

@@ -220,7 +220,7 @@ const Wrapper = styled.div`
           object-fit: cover;
           height: 100%;
           /* filter: brightness(0.3); */
-          filter: brightness(0.5);
+          filter: sepia(0.8) brightness(0.5);
           z-index: 0;
           opacity: 0;
         }
@@ -246,7 +246,7 @@ const Wrapper = styled.div`
           width: 90%;
         }
         h4 {
-          font-size: 1.3rem;
+          font-size: 1.4rem;
           font-family: var(--buttonFont);
           font-weight: 400;
           z-index: 1;
@@ -258,7 +258,7 @@ const Wrapper = styled.div`
           @media screen and (max-width: 800px) {
             top: 75%;
             left: 50%;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
           }
         }
         p {
@@ -296,14 +296,16 @@ const Wrapper = styled.div`
         }
         :hover p {
           ///
-          color: #eee;
+          color: #fff;
+          text-shadow: 2px 2px 2px black;
         }
         :hover h4 {
           ///
-          color: #eee;
+          color: #fff;
+          text-shadow: 2px 2px 2px black;
         }
         :hover .icon {
-          color: #eee;
+          color: #fff;
           display: none;
         }
         @media (orientation: landscape) and (max-width: 800px) {
