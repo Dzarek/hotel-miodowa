@@ -352,8 +352,8 @@ export const questionsData = [
   {
     id: 1,
     title:
-      "Czym różnią się od siebie poszczególne typy apartamentów – Standard, Superior, Deluxe?",
-    info: "Wszystkie oferowane przez nas apartamenty urządzone są w bardzo wysokim standardzie. Typ SUPERIOR wyróżnia się większym metrażem niż apartamenty STANDARD, największą powierzchnię mają z kolei apartamenty DELUXE. Różnicę stanowi także widok z okna.",
+      "Czym różnią się od siebie poszczególne typy apartamentów – Studio, Superior, Deluxe?",
+    info: "Wszystkie oferowane przez nas apartamenty urządzone są w bardzo wysokim standardzie. Typ SUPERIOR wyróżnia się większym metrażem niż apartamenty STUDIO, największą powierzchnię mają z kolei apartamenty DELUXE. Różnicę stanowi także widok z okna.",
   },
   {
     id: 2,
@@ -367,8 +367,7 @@ export const questionsData = [
   },
   {
     id: 4,
-    title:
-      "Z jakich udogodnień można skorzystać na terenie Aparthotelu Miodowa?",
+    title: "Z jakich udogodnień można skorzystać na terenie Hotelu Miodowa?",
     info: "Poza kompleksowo wyposażonymi apartamentami naszym Gościom oferujemy także możliwość skorzystania z: darmowego śniadania w formie bufetu, parkingu, codziennego sprzątania, żelazka do prasowania, przechowali bagażu, usług całodobowej recepcji, transferu lotniskowego i innych usług transportowych.",
   },
   {
@@ -388,7 +387,7 @@ export const questionsData = [
   },
   {
     id: 8,
-    title: "Czy w Aparthotelu Miodowa akceptowana jest płatność kartą?",
+    title: "Czy w Hotelu Miodowa akceptowana jest płatność kartą?",
     info: "Tak – akceptujemy zarówno transakcje gotówkowe, jak i płatność kartą kredytową, Na terenie naszego obiektu możliwa jest obsługa kart Visa i MasterCard.",
   },
 ];
@@ -396,8 +395,8 @@ export const questionsDataEN = [
   {
     id: 1,
     title:
-      "What is the difference between the different types of apartments - Standard, Superior, Deluxe?",
-    info: "All our apartments are furnished to a very high standard. The SUPERIOR type is distinguished by a larger area than the STANDARD apartments, while the DELUXE apartments have the largest area. The difference is also the view from the window.",
+      "What is the difference between the different types of apartments - Studio, Superior, Deluxe?",
+    info: "All our apartments are furnished to a very high standard. The SUPERIOR type is distinguished by a larger area than the STUDIO apartments, while the DELUXE apartments have the largest area. The difference is also the view from the window.",
   },
   {
     id: 2,
@@ -411,7 +410,7 @@ export const questionsDataEN = [
   },
   {
     id: 4,
-    title: "What amenities can you use at Aparthotel Miodowa?",
+    title: "What amenities can you use at Hotel Miodowa?",
     info: "In addition to fully equipped apartments, we also offer our guests the opportunity to take advantage of: free breakfast buffet, parking, daily cleaning, irons for ironing, luggage storage, 24-hour reception services, airport transfer and other transport services.",
   },
   {
@@ -431,7 +430,7 @@ export const questionsDataEN = [
   },
   {
     id: 8,
-    title: "Is card payment accepted at Aparthotel Miodowa?",
+    title: "Is card payment accepted at Hotel Miodowa?",
     info: "Yes - we accept both cash transactions and credit card payments. We also accept Visa and MasterCard.",
   },
 ];
