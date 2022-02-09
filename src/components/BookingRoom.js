@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { DatePicker } from "react-rainbow-components";
+// import { DatePicker } from "react-rainbow-components";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
 
 import { ImCross } from "react-icons/im";
-import { MdMail } from "react-icons/md";
-import { FaPhoneAlt } from "react-icons/fa";
 
-const containerStyles = {
-  maxWidth: 400,
-};
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+import { registerLocale } from "react-datepicker";
+import pl from "date-fns/locale/pl";
+registerLocale("pl", pl);
 
 const today = new Date();
 let tomorrow = new Date();
@@ -19,29 +19,31 @@ tomorrow.setDate(today.getDate() + 1);
 const BookingRoom = ({ showBooking, setShowBooking }) => {
   const context = useContext(RoomContext);
   const { polish } = context;
-  const [dates, setDates] = useState([today, tomorrow]);
   const [rooms, setRooms] = useState(1);
   const [people, setPeople] = useState(2);
   const [showKW, setShowKW] = useState(false);
+
+  const [startDate, setStartDate] = useState(today);
+  const [endDate, setEndDate] = useState(tomorrow);
+  const onChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
+
   const handleAdult = (e) => {
     setRooms(e.target.value);
   };
   const handleChildren = (e) => {
     setPeople(e.target.value);
   };
-  // const ageOfChildren = "req_age=12;";
-  // const numberOfChildren = ageOfChildren.repeat(children);
 
   let checkInDate = today.toISOString().slice(0, 10);
   let checkOutDate = tomorrow.toISOString().slice(0, 10);
-  if (dates.length > 1) {
-    checkInDate = new Date();
-    checkInDate.setDate(dates[0].getDate() + 0);
-    checkInDate = checkInDate.toISOString().slice(0, 10);
-    checkOutDate = dates[1].toISOString().slice(0, 10);
+  if (startDate && endDate) {
+    checkInDate = startDate.toISOString().slice(0, 10);
+    checkOutDate = endDate.toISOString().slice(0, 10);
   }
-
-  // const url = `https://www.booking.com/hotel/pl/aparthotel-miodowa-krakow.pl.html?aid=304142;label=gen173nr-1DCAsotgFCGWFwYXJ0aG90ZWwtbWlvZG93YS1rcmFrb3dIHlgEaLYBiAEBmAEeuAEXyAEP2AED6AEB-AECiAIBqAIDuALtqLSNBsACAdICJDFhYjY2NDM4LTI1NzItNDhlYS1hMWY4LTU1NDE5YjYwNzI3ZtgCBOACAQ;sid=8eca526340932527514ab17dccd65fef;checkin=${checkInDate};checkout=${checkOutDate}; group_adults=${adult};group_children=${children};no_rooms=1;req_adults=${adult};${numberOfChildren}req_children=${children};`;
 
   const closeReservation = () => {
     setShowBooking(false);
@@ -83,20 +85,19 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
           </button>
 
           <form className="bookForm">
+            <h4>{polish ? "Data Pobytu:" : "Dates of Stay:"}</h4>
             <div className="bookFormDates">
-              <div
-                className="rainbow-align-content_center rainbow-m-vertical_large rainbow-p-horizontal_small rainbow-m_auto"
-                style={containerStyles}
-              >
-                <DatePicker
-                  minDate={new Date()}
-                  label={polish ? "Termin pobytu:" : "Dates:"}
-                  selectionType="range"
-                  variant="single"
-                  value={dates}
-                  onChange={(dates) => setDates(dates)}
-                />
-              </div>
+              <DatePicker
+                selected={startDate}
+                onChange={onChange}
+                startDate={startDate}
+                endDate={endDate}
+                selectsRange
+                inline
+                minDate={new Date()}
+                locale="pl"
+                dateFormat="Pp"
+              />
             </div>
             <h4>{polish ? "Liczba Gości:" : "Guests:"}</h4>
             <div className="bookFormGuest">
@@ -132,15 +133,6 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
               {polish ? "Sprawdź termin" : "Book now"}
             </a>
           </form>
-          <div className="bookByPhone">
-            <p>{polish ? "Masz pytania?" : "Do you have a question"}</p>
-            <h4>
-              <FaPhoneAlt className="iconReact" /> +48 124467130
-            </h4>
-            <h4>
-              <MdMail className="iconReact" /> rezerwacja@hotelmiodowa.pl
-            </h4>
-          </div>
         </div>
         {showKW && (
           <div className="kwBooking">
@@ -167,6 +159,7 @@ const Wrapper = styled.div`
   @media screen and (max-width: 800px) {
     display: none;
   }
+
   .kwBooking {
     position: fixed;
     width: 100vw;
@@ -225,17 +218,7 @@ const Wrapper = styled.div`
     top: 18%;
     right: 0;
     font-family: "Signika Negative", sans-serif;
-    /* @media screen and (max-width: 800px) {
-      width: 100vw;
-      height: 100vh;
-      background: var(--bookingBg);
-      top: 0;
-      right: 0;
-      transform: translateX(100%);
-      border-radius: 5px;
-      border: 2px solid var(--secondaryColor2);
-      border-right: 2px solid var(--secondaryColor2);
-    } */
+
     .closeBookRoom {
       position: absolute;
       top: 5%;
@@ -253,7 +236,7 @@ const Wrapper = styled.div`
     }
     h3 {
       position: absolute;
-      top: 6%;
+      top: 4%;
       left: 50%;
       transform: translateX(-50%);
       color: var(--secondaryColor2);
@@ -314,11 +297,11 @@ const Wrapper = styled.div`
   }
   .bookForm {
     width: 28vw;
-    height: 55%;
+    height: 85%;
     position: absolute;
-    top: 37%;
+    top: 55%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -337,7 +320,7 @@ const Wrapper = styled.div`
   h4 {
     font-size: 1.2rem;
     color: var(--primaryColor);
-    margin-bottom: -4vh;
+    margin-bottom: 0vh;
   }
   .bookFormGuest {
     display: flex;
@@ -385,24 +368,7 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    div {
-      width: 90%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      @media screen and (max-width: 800px) {
-        width: 98%;
-      }
-      input {
-        width: 100%;
-        font-size: 1.2rem;
-        border-radius: 5px;
-        border: solid 3px var(--bookBtnColor);
-        @media screen and (max-width: 800px) {
-          font-size: 1.4rem;
-        }
-      }
-    }
+
     label {
       font-size: 1.2rem;
       margin-bottom: 10px;
@@ -427,7 +393,6 @@ const Wrapper = styled.div`
     border: none;
     font-family: var(--buttonFont);
     :hover {
-      /* box-shadow: 0 0 2px 2px white; */
       letter-spacing: 2px;
     }
   }
