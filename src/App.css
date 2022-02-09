@@ -146,12 +146,14 @@ body {
 }
 
 .app .main-nav {
+  background-color: #000;
   background-image: url('./images/homeImages/menuBGBlack.jpg');
   background-position: center;
   background-size: cover;
 }
 
 .app2 .main-nav {
+  background-color: #fff;
   background-image: url('./images/homeImages/menuBGWhite.jpg');
   background-position: center;
   background-size: cover;
@@ -404,4 +406,10 @@ body {
 
 .error a:hover {
   font-size: 5rem;
+}
+
+.cookieLink {
+  color: var(--secondaryColor2);
+  margin-left: 10px;
+  text-decoration: none;
 }

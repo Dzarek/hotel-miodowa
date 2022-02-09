@@ -1,4 +1,6 @@
 import React from "react";
+import CookieConsent from "react-cookie-consent";
+
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import { useContext } from "react";
@@ -18,89 +20,122 @@ const Footer = () => {
   const context = useContext(RoomContext);
   const { polish } = context;
   return (
-    <Wrapper className="footer">
-      <div className="footerBg"></div>
-      <div className="footerContainer">
-        <div className="firstSection">
-          <div className="logoContainer">
-            <img className="logo" src={logoMiodowa} alt="logo" />
-            <section>
-              <h4>
-                HOTEL <br /> MIODOWA
-              </h4>
-              <div className="starsIcon">
-                <MdOutlineStar /> <MdOutlineStar /> <MdOutlineStar />
-              </div>
-            </section>
-          </div>
-          <p className="info">
-            {polish
-              ? "Dogodne położenie, luksusowe apartamenty, atrakcyjne ceny – Hotel Miodowa w Krakowie oferuje swoim Gościom idealne warunki na czas podróży służbowej, jak i na wyjazd turystyczny."
-              : "Perfect location, luxurious apartments, attractive prices - Hotel Miodowa in Krakow offers its guests ideal conditions for a business trip as well as for a tourist trip."}
-          </p>
-        </div>
-        <div className="secondSection">
-          <h3>{polish ? "Przydatne Linki" : "Useful links"}</h3>
-          <div className="links">
-            <section>
-              <NavLink to="/pokoje">
-                <FaLongArrowAltRight className="iconReact" />
-                {polish ? "Pokoje" : "Rooms"}
-              </NavLink>
-              <NavLink to="/oNas/oHotelu">
-                <FaLongArrowAltRight className="iconReact" /> Hotel
-              </NavLink>
-              <NavLink to="/oNas/oKrakowie">
-                <FaLongArrowAltRight className="iconReact" />{" "}
-                {polish ? "Kraków" : "Cracow"}
-              </NavLink>
-              <NavLink to="/uslugi/restauracja">
-                <FaLongArrowAltRight className="iconReact" />
-                {polish ? "Restauracja" : "Restaurant"}
-              </NavLink>
-              <NavLink to="/uslugi/transport&wycieczki">
-                <FaLongArrowAltRight className="iconReact" />{" "}
-                {polish ? "Transfery i Wycieczki" : "Transfers & Tours"}
-              </NavLink>
-            </section>
-            <section>
-              <NavLink to="/kontakt/faq">
-                <FaLongArrowAltRight className="iconReact" /> FAQ
-              </NavLink>
-              <NavLink to="/kontakt/regulamin">
-                <FaLongArrowAltRight className="iconReact" />{" "}
-                {polish ? "Regulamin" : "Regulations"}
-              </NavLink>
-              <NavLink to="/kontakt/rodo&cookies">
-                <FaLongArrowAltRight className="iconReact" /> RODO
-              </NavLink>
-            </section>
-          </div>
-        </div>
-        <div className="thirdSection">
-          <h3>{polish ? "Kontakt" : "Contact"}</h3>
-          <div className="contactInfo">
-            <p>
-              <FaMapMarkerAlt className="iconReact" /> ul. Miodowa 51, 31-036
-              Kraków
-            </p>
-            <p>
-              <FaPhoneAlt className="iconReact" /> +48 124467130
-            </p>
-            <p>
-              <MdMail className="iconReact" /> rezerwacja@hotelmiodowa.pl
-            </p>
-            <p>
-              <FaFacebook className="iconReact" /> hotel miodowa
+    <>
+      <Wrapper className="footer">
+        <div className="footerBg"></div>
+        <div className="footerContainer">
+          <div className="firstSection">
+            <div className="logoContainer">
+              <img className="logo" src={logoMiodowa} alt="logo" />
+              <section>
+                <h4>
+                  HOTEL <br /> MIODOWA
+                </h4>
+                <div className="starsIcon">
+                  <MdOutlineStar /> <MdOutlineStar /> <MdOutlineStar />
+                </div>
+              </section>
+            </div>
+            <p className="info">
+              {polish
+                ? "Dogodne położenie, luksusowe apartamenty, atrakcyjne ceny – Hotel Miodowa w Krakowie oferuje swoim Gościom idealne warunki na czas podróży służbowej, jak i na wyjazd turystyczny."
+                : "Perfect location, luxurious apartments, attractive prices - Hotel Miodowa in Krakow offers its guests ideal conditions for a business trip as well as for a tourist trip."}
             </p>
           </div>
+          <div className="secondSection">
+            <h3>{polish ? "Przydatne Linki" : "Useful links"}</h3>
+            <div className="links">
+              <section>
+                <NavLink to="/pokoje">
+                  <FaLongArrowAltRight className="iconReact" />
+                  {polish ? "Pokoje" : "Rooms"}
+                </NavLink>
+                <NavLink to="/oNas/oHotelu">
+                  <FaLongArrowAltRight className="iconReact" /> Hotel
+                </NavLink>
+                <NavLink to="/oNas/oKrakowie">
+                  <FaLongArrowAltRight className="iconReact" />{" "}
+                  {polish ? "Kraków" : "Cracow"}
+                </NavLink>
+                <NavLink to="/uslugi/restauracja">
+                  <FaLongArrowAltRight className="iconReact" />
+                  {polish ? "Restauracja" : "Restaurant"}
+                </NavLink>
+                <NavLink to="/uslugi/transport&wycieczki">
+                  <FaLongArrowAltRight className="iconReact" />{" "}
+                  {polish ? "Transfery i Wycieczki" : "Transfers & Tours"}
+                </NavLink>
+              </section>
+              <section>
+                <NavLink to="/kontakt/faq">
+                  <FaLongArrowAltRight className="iconReact" /> FAQ
+                </NavLink>
+                <NavLink to="/kontakt/regulamin">
+                  <FaLongArrowAltRight className="iconReact" />{" "}
+                  {polish ? "Regulamin" : "Regulations"}
+                </NavLink>
+                <NavLink to="/kontakt/rodo&cookies">
+                  <FaLongArrowAltRight className="iconReact" /> RODO
+                </NavLink>
+              </section>
+            </div>
+          </div>
+          <div className="thirdSection">
+            <h3>{polish ? "Kontakt" : "Contact"}</h3>
+            <div className="contactInfo">
+              <p>
+                <FaMapMarkerAlt className="iconReact" /> ul. Miodowa 51, 31-036
+                Kraków
+              </p>
+              <p>
+                <FaPhoneAlt className="iconReact" /> +48 124467130
+              </p>
+              <p>
+                <MdMail className="iconReact" /> rezerwacja@hotelmiodowa.pl
+              </p>
+              <p>
+                <FaFacebook className="iconReact" /> hotel miodowa
+              </p>
+            </div>
+          </div>
         </div>
-      </div>
-      <h5 className="copyrights">
-        &copy; 2014 - {new Date().getFullYear()} Hotel Miodowa,{" "}
-        {polish ? "Wszelkie Prawa Zastrzeżone" : "All Rights Reserved"}
-      </h5>
-    </Wrapper>
+        <h5 className="copyrights">
+          &copy; 2014 - {new Date().getFullYear()} Hotel Miodowa,{" "}
+          {polish ? "Wszelkie Prawa Zastrzeżone" : "All Rights Reserved"}
+        </h5>
+      </Wrapper>
+      <CookieConsent
+        buttonText="Akceptuje"
+        cookieName="myAwesomeCookieName2"
+        className="cookieInfo"
+        style={{
+          background: "rgba(0,0,0, .8)",
+          fontSize: "18px",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+          padding: "0 20px",
+          fontFamily: "Signika Negative",
+        }}
+        buttonStyle={{
+          color: "white",
+          fontSize: "18px",
+          backgroundColor: "rgb(133, 88, 55)",
+          padding: "10px",
+          borderRadius: "5px",
+          fontFamily: "Signika Negative",
+        }}
+        expires={7}
+      >
+        Strona korzysta z plików cookies. Pozostając na niej wyrażasz zgodę na
+        ich używanie. <br /> Ze szczegółowymi informacjami dotyczącymi cookies
+        na tej stronie można się zapoznać tutaj:
+        <NavLink to="/kontakt/rodo&cookies" className="cookieLink">
+          Polityka Prywatności
+        </NavLink>
+        .
+      </CookieConsent>
+    </>
   );
 };
 

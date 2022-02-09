@@ -661,6 +661,16 @@ const Wrapper2 = styled.div`
     display: none;
   }
 
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 990;
+  overflow-x: hidden;
+  overflow-y: auto;
+
   .navbarToggleLanguage {
     font-size: 1.8rem;
   }
@@ -722,12 +732,10 @@ const Wrapper2 = styled.div`
     align-items: center;
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
-    /* background: var(--navbarBg2); */
     color: var(--primaryColor);
-    z-index: 99;
     opacity: 1;
     transition: 0.7s;
     transform: translateY(-88vh);
