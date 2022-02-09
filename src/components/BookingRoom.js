@@ -176,10 +176,6 @@ const Wrapper = styled.div`
     transform: translate(-50%, -50%);
     z-index: 9999999999;
     background: var(--languageBg);
-    @media screen and (max-width: 800px) {
-      border: 4px solid var(--bookBtnColor);
-      background: var(--navbarBg2);
-    }
     h3 {
       font-size: 1.8rem;
       font-family: var(--buttonFont);
@@ -190,11 +186,6 @@ const Wrapper = styled.div`
       left: 50%;
       transform: translate(-50%);
       text-transform: uppercase;
-      @media screen and (max-width: 800px) {
-        font-size: 1.5rem;
-        top: 4%;
-        left: 35%;
-      }
     }
     iframe {
       position: absolute;
@@ -205,16 +196,6 @@ const Wrapper = styled.div`
       height: 85vh;
       border: 4px solid var(--bookBtnColor);
       border-radius: 10px;
-      @media screen and (max-width: 800px) {
-        width: 100vw;
-        height: 85vh;
-        top: 100%;
-        transform: translate(-50%, -100%);
-        border: none;
-        border-left: 4px solid var(--bookBtnColor);
-        border-right: 4px solid var(--bookBtnColor);
-        border-radius: 0px;
-      }
     }
     svg {
       position: absolute;
@@ -226,10 +207,6 @@ const Wrapper = styled.div`
       transition: 0.3s;
       :hover {
         color: var(--bookBtnColor);
-      }
-      @media screen and (max-width: 800px) {
-        font-size: 1.5rem;
-        top: 4.5%;
       }
     }
   }
@@ -248,7 +225,7 @@ const Wrapper = styled.div`
     top: 18%;
     right: 0;
     font-family: "Signika Negative", sans-serif;
-    @media screen and (max-width: 800px) {
+    /* @media screen and (max-width: 800px) {
       width: 100vw;
       height: 100vh;
       background: var(--bookingBg);
@@ -258,7 +235,7 @@ const Wrapper = styled.div`
       border-radius: 5px;
       border: 2px solid var(--secondaryColor2);
       border-right: 2px solid var(--secondaryColor2);
-    }
+    } */
     .closeBookRoom {
       position: absolute;
       top: 5%;
@@ -468,7 +445,7 @@ const Wrapper2 = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 9999999999;
-    background: var(--bookingBg);
+    background: var(--servicesHomeBg);
     border: 4px solid var(--bookBtnColor);
 
     h3 {
