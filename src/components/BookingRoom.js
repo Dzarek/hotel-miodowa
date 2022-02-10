@@ -7,7 +7,7 @@ import { RoomContext } from "../roomContext";
 import { ImCross } from "react-icons/im";
 
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import "../react-datepicker.css";
 import { registerLocale } from "react-datepicker";
 import pl from "date-fns/locale/pl";
 registerLocale("pl", pl);
@@ -37,6 +37,12 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
   const handleChildren = (e) => {
     setPeople(e.target.value);
   };
+  const closeReservation = () => {
+    setShowBooking(false);
+    setShowKW(false);
+    // setStartDate(today);
+    // setEndDate(tomorrow);
+  };
 
   let checkInDate = today.toISOString().slice(0, 10);
   let checkOutDate = tomorrow.toISOString().slice(0, 10);
@@ -44,11 +50,6 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
     checkInDate = startDate.toISOString().slice(0, 10);
     checkOutDate = endDate.toISOString().slice(0, 10);
   }
-
-  const closeReservation = () => {
-    setShowBooking(false);
-    setShowKW(false);
-  };
 
   let maxPeople = rooms * 4;
   const peoplePerRoom = Math.floor(people / rooms);
@@ -88,13 +89,13 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
             <h4>{polish ? "Data Pobytu:" : "Dates of Stay:"}</h4>
             <div className="bookFormDates">
               <DatePicker
-                selected={startDate}
                 onChange={onChange}
                 startDate={startDate}
                 endDate={endDate}
                 selectsRange
                 inline
                 minDate={new Date()}
+                selected={startDate}
                 locale="pl"
                 dateFormat="Pp"
               />
@@ -204,7 +205,7 @@ const Wrapper = styled.div`
     }
   }
   .bookRoom {
-    width: 28vw;
+    width: 30vw;
     height: 75vh;
     background: var(--languageBg);
     border-radius: 5px 0 0 5px;
