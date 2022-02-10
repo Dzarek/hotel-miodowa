@@ -471,7 +471,7 @@
 .react-datepicker__time-name {
   color: #fff;
   display: inline-block;
-  width: 2.7rem;
+  width: 2.5vw;
   line-height: 1.7rem;
   text-align: center;
   margin: 0.1rem 0.1rem;
@@ -502,7 +502,7 @@
 .react-datepicker__quarter--in-selecting-range:hover,
 .react-datepicker__quarter--in-range:hover {
   background-color: rgb(133, 88, 55);
-  ;
+
 }
 
 .react-datepicker__month--disabled,
