@@ -872,14 +872,14 @@ const Wrapper2 = styled.div`
     font-family: "Signika Negative", sans-serif;
     cursor: pointer;
     transition: 0.5s;
-    /* .bell {
+    .bell {
       animation: bellRing 1s infinite alternate;
       @keyframes bellRing {
         100% {
           transform: scale(1.3);
         }
       }
-    } */
+    }
     :hover {
       background: #ddd;
       color: var(--bookBtnColor);
