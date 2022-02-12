@@ -1,10 +1,9 @@
 import "./App.css";
 import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import { ScrollToTop } from "react-router-scroll-to-top";
-import { useState } from "react";
-// import { useState, useEffect } from "react";
-// import { MdDarkMode, MdLightMode } from "react-icons/md";
-// import { MdDoubleArrow } from "react-icons/md";
+import { useState, useEffect } from "react";
+import { MdDarkMode, MdLightMode } from "react-icons/md";
+import { MdDoubleArrow } from "react-icons/md";
 
 import Navbar from "./components/Navbar";
 import Submenu from "./Submenu";
@@ -36,28 +35,27 @@ import { useGlobalContext } from "./context";
 function App() {
   const { closeSubmenu } = useGlobalContext();
 
-  // const [lightMode, setLightMode] = useState(false);
+  const [lightMode, setLightMode] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
   const [showBooking, setShowBooking] = useState(false);
 
-  // const [width, setWidth] = useState(window.innerWidth);
-  // function handleWindowSizeChange() {
-  //   setWidth(window.innerWidth);
-  // }
-  // useEffect(() => {
-  //   window.addEventListener("resize", handleWindowSizeChange);
-  //   return () => {
-  //     window.removeEventListener("resize", handleWindowSizeChange);
-  //   };
-  // }, []);
+  const [width, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
 
-  // const isMobile = width <= 800;
+  const isMobile = width <= 800;
 
   return (
-    // <div className={!lightMode ? "app" : "app2"}>
-    <div className="app">
+    <div className={!lightMode ? "app" : "app2"}>
       <Router>
-        {/* {(showMenu && !showBooking) || !isMobile ? (
+        {(showMenu && !showBooking) || !isMobile ? (
           <>
             {!lightMode ? (
               <button
@@ -77,7 +75,7 @@ function App() {
               </button>
             )}
           </>
-        ) : null} */}
+        ) : null}
         <Navbar
           showMenu={showMenu}
           setShowMenu={setShowMenu}
