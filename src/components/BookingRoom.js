@@ -147,7 +147,7 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
         {showBooking && (
           <div className="kwBooking">
             <h3>{polish ? "Rezerwacja" : "Reservation"}</h3>
-            {/* <iframe src={url2} frameborder="0" title="KWReservation"></iframe> */}
+            <iframe src={url2} frameborder="0" title="KWReservation"></iframe>
             <ImCross onClick={closeReservation} />
           </div>
         )}
