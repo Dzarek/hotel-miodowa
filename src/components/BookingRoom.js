@@ -71,8 +71,6 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
   }/0?checkIn=${checkInDate}&checkOut=${checkOutDate}&occupancy=[${finalRoomsRepeat}]`;
   const urlHash = `#`;
 
-  console.log(process.env.REACT_APP_ACCESS_TOKEN);
-
   return (
     <>
       <Wrapper>
