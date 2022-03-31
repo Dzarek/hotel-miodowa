@@ -57,7 +57,7 @@ const RodoPage = () => {
               fizycznych w związku z przetwarzaniem danych osobowych i w sprawie
               swobodnego przepływu takich danych oraz uchylenia dyrektywy
               95/46/WE (Rozporządzenie ogólne o ochronie danych, zwane dalej:
-              RODO), Apart Hotel Miodowa informuje, że:
+              RODO), Hotel Miodowa informuje, że:
             </p>
             <p>
               1. Administratorem Pani/Pana danych osobowych jest Eko – Test
@@ -67,7 +67,7 @@ const RodoPage = () => {
             </p>
             <p>
               2. Administrator wyznaczył Inspektora ochrony danych osobowych
-              Jerzego Gorę, z którym może Pani/Pan skontaktować się poprzez
+              Jerzego Górę, z którym może Pani/Pan skontaktować się poprzez
               e-mail: biuro@aparthotelmiodowa.pl lub pisemnie na adres siedziby
               Administratora. Z inspektorem ochrony danych osobowych można
               kontaktować się we wszystkich sprawach dotyczących przetwarzania
@@ -232,7 +232,7 @@ const RodoPage = () => {
               natural persons in connection with the processing of personal data
               and on the free the flow of such data and the repeal of Directive
               95/46 / EC (General Data Protection Regulation, hereinafter
-              referred to as: GDPR), Apart Hotel Miodowa informs that:
+              referred to as: GDPR), Hotel Miodowa informs that:
             </p>
             <p>
               1. The administrator of your personal data is Eko - Test Szczakowa
@@ -241,8 +241,8 @@ const RodoPage = () => {
               biuro@aparthotelmiodowa.pl.
             </p>
             <p>
-              2. The administrator has appointed Jerzy's personal data
-              protection officer Gorę, which you can contact by e-mail:
+              2. The administrator has appointed a personal data protection Mr.
+              Jerzy Góra, which you can contact by e-mail:
               biuro@aparthotelmiodowa.pl or in writing to the address of the
               registered office Administrator. You can with the data protection
               officer contact you in all matters relating to processing personal

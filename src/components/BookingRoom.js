@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-// import { DatePicker } from "react-rainbow-components";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
 

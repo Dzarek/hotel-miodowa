@@ -362,7 +362,7 @@ export const questionsData = [
   },
   {
     id: 3,
-    title: "Co znajduje się na wyposażeniu pokojów?",
+    title: "Co znajduje się na wyposażeniu pokoi?",
     info: "W każdym apartamencie znajdują się: wygodne łóżka, szafa na ubrania, rozkładana sofa,telewizor LED, stolik kawowy, biurko, stół i krzesła, w pełni wyposażony aneks kuchenny (płyta indukcyjna, okap, lodówka, zlew, czajnik, naczynia i sztućce),dostęp do prywatnej łazienki z toaletą, umywalką, wanną lub prysznicem, lustrem i suszarką do włosów.",
   },
   {

@@ -35,7 +35,19 @@ import { useGlobalContext } from "./context";
 function App() {
   const { closeSubmenu } = useGlobalContext();
 
-  const [lightMode, setLightMode] = useState(false);
+  const getStorageTheme = () => {
+    // let lightMode = false;
+    // if (localStorage.getItem("lightMode")) {
+    //   lightMode = localStorage.getItem("lightMode");
+    // }
+    // return lightMode;
+
+    const saved = localStorage.getItem("lightMode");
+    const initialValue = JSON.parse(saved);
+    return initialValue;
+  };
+  // const [lightMode, setLightMode] = useState(false);
+  const [lightMode, setLightMode] = useState(getStorageTheme());
   const [showMenu, setShowMenu] = useState(false);
   const [showBooking, setShowBooking] = useState(false);
 
@@ -49,8 +61,20 @@ function App() {
       window.removeEventListener("resize", handleWindowSizeChange);
     };
   }, []);
-
   const isMobile = width <= 800;
+
+  useEffect(() => {
+    localStorage.setItem("lightMode", JSON.stringify(lightMode));
+  }, [lightMode]);
+  console.log(lightMode);
+  // const changeToLight = () => {
+  //   setLightMode(true);
+  //   localStorage.setItem("lightMode", true);
+  // };
+  // const changeToDark = () => {
+  //   setLightMode(false);
+  //   localStorage.setItem("lightMode", false);
+  // };
 
   return (
     <div className={!lightMode ? "app" : "app2"}>
@@ -60,6 +84,7 @@ function App() {
             {!lightMode ? (
               <button
                 onClick={() => setLightMode(true)}
+                // onClick={changeToLight}
                 className="modeLightDark darkMode"
               >
                 <MdDoubleArrow className="modeLightIcon" />
@@ -68,6 +93,7 @@ function App() {
             ) : (
               <button
                 onClick={() => setLightMode(false)}
+                // onClick={changeToDark}
                 className="modeLightDark lightMode"
               >
                 <MdDarkMode />

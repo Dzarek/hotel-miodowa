@@ -84,11 +84,11 @@ const AirportTransfer = () => {
               <p>Organizujemy wycieczki:</p>
               <span>
                 <FaLongArrowAltRight className="icon" /> do Auchwitz Birkenau:
-                koszt od 180 zł za osobę,
+                koszt od 200 zł za osobę,
               </span>
               <span>
                 <FaLongArrowAltRight className="icon" /> do Kopalni Soli w
-                Wieliczce: koszt od 180 zł za osobę,
+                Wieliczce: koszt od 200 zł za osobę,
               </span>
               <span>
                 <FaLongArrowAltRight className="icon" /> do Zakopanego: koszt od
@@ -120,13 +120,13 @@ const AirportTransfer = () => {
               </p>
               <span>
                 {" "}
-                <FaLongArrowAltRight className="icon" /> 1-3 people: 90 zł
+                <FaLongArrowAltRight className="icon" /> 1-3 people: 90 PLN
               </span>
               <span>
-                <FaLongArrowAltRight className="icon" /> 4-6 people: 140 zł
+                <FaLongArrowAltRight className="icon" /> 4-6 people: 140 PLN
               </span>
               <span>
-                <FaLongArrowAltRight className="icon" /> 7-8 people: 160 zł
+                <FaLongArrowAltRight className="icon" /> 7-8 people: 160 PLN
               </span>
               <p>
                 For more than eight people, we calculate the cost of the
@@ -168,15 +168,15 @@ const AirportTransfer = () => {
               <p>We organize trips:</p>
               <span>
                 <FaLongArrowAltRight className="icon" /> to Auchwitz Birkenau:
-                price 180 zł per person,
+                price 200 PLN per person,
               </span>
               <span>
                 <FaLongArrowAltRight className="icon" /> to Salt Mine in
-                Wieliczce: price 180 zł per person,
+                Wieliczce: price 200 PLN per person,
               </span>
               <span>
                 <FaLongArrowAltRight className="icon" /> to Zakopane: price 350
-                zł per person,
+                PLN per person,
               </span>
               <p>
                 The fee includes: transfer to the destination and back to the

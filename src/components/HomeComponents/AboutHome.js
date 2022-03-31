@@ -22,7 +22,7 @@ const AboutHome = () => {
       <div className="mainSection aboutShort">
         {polish ? (
           <div className="aboutShortText">
-            <h2>Luksusowe Apartamenty w Centrum Krakowa</h2>
+            <h2>Pokoje i Apartamenty w Centrum Krakowa</h2>
             <p>
               Hotel Miodowa to coś znacznie więcej, niż tylko wygodne pokoje. To
               zaproszenie do luksusu, który każdy z naszych Gości ma okazję
@@ -35,7 +35,7 @@ const AboutHome = () => {
           </div>
         ) : (
           <div className="aboutShortText">
-            <h2>Luxurious apartments in the center of Cracow</h2>
+            <h2>Rooms and Apartments in the center of Cracow</h2>
             <p>
               Hotel Miodowa is much more than just comfortable rooms. This an
               invitation to luxury that each of our guests has the opportunity

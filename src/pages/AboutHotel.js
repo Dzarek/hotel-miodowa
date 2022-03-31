@@ -23,19 +23,17 @@ const AboutHotel = () => {
             <div className="backgroundDark"></div>
             <div className="title">
               <h2 data-aos="zoom-in">Hotel Miodowa</h2>
-              <h4 data-aos="zoom-in">luksusowe apartamenty w centrum miasta</h4>
+              <h4 data-aos="zoom-in">pokoje i apartamenty w centrum miasta</h4>
             </div>
           </div>
           <div className="description">
             <h3>O Hotelu</h3>
             <p>
-              Hotel Miodowa to więcej niż luksusowe apartamenty w centrum
+              Hotel Miodowa to więcej niż pokoje i apartamenty w centrum
               Krakowa. Oferujemy niezwykłą przestrzeń wypoczynku na czas pobytu
               w stolicy Małopolski. Urządzone gustownie wnętrza pokoi gwarantują
               szereg udogodnień, a dobrane ze smakiem poszczególne komponenty
-              tworzą spójną estetycznie przestrzeń. Intuicyjny system rezerwacji
-              pozwala na sprawny wynajem apartamentu w jednym z trzech
-              oferowanych standardów.
+              tworzą spójną estetycznie przestrzeń.
             </p>
             <section>
               <p>
@@ -51,7 +49,7 @@ const AboutHotel = () => {
               <img data-aos="fade-left" src={BuildingImg} alt="budynek" />
             </section>
             <p>
-              Dogodne położenie, luksusowe apartamenty, atrakcyjne ceny – Hotel
+              Dogodne położenie, wygodne apartamenty, atrakcyjne ceny – Hotel
               Miodowa w Krakowie oferuje swoim Gościom idealne warunki na czas
               podróży służbowej, jak i na wyjazd turystyczny.
             </p>
@@ -81,21 +79,19 @@ const AboutHotel = () => {
             <div className="title">
               <h2 data-aos="zoom-in">Hotel Miodowa</h2>
               <h4 data-aos="zoom-in">
-                luxurious apartments in the center of Cracow
+                rooms and apartments in the center of Cracow
               </h4>
             </div>
           </div>
           <div className="description">
             <h3>About Hotel</h3>
             <p>
-              Hotel Miodowa is more than just luxurious apartments in the center
+              Hotel Miodowa is more than just rooms and apartments in the center
               of Krakow. We offer an extraordinary space for relaxation during
               your stay in the capital Lesser Poland. The tastefully decorated
               interiors of the rooms guarantee a variety amenities, and the
               tastefully selected individual components create a coherent one
-              aesthetically pleasing space. The intuitive booking system allows
-              you to efficient rental of an apartment in one of the three
-              offered standards.
+              aesthetically pleasing space.
             </p>
             <section>
               <p>
