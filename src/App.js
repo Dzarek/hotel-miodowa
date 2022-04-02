@@ -66,7 +66,7 @@ function App() {
   useEffect(() => {
     localStorage.setItem("lightMode", JSON.stringify(lightMode));
   }, [lightMode]);
-  console.log(lightMode);
+  // console.log(lightMode);
   // const changeToLight = () => {
   //   setLightMode(true);
   //   localStorage.setItem("lightMode", true);

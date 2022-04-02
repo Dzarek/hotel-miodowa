@@ -8,6 +8,8 @@ import { RoomContext } from "../roomContext";
 
 import { gallery, galleryEN } from "../data";
 
+import exampleImg from "../images/dbl/DBL 001.jpg";
+
 const allCategories = [
   ...new Set(gallery.map((item) => item.category)),
   "wszystkie",
@@ -54,6 +56,7 @@ const GalleryPage = () => {
     setMenuItemsEN(newItemsEN);
     setActiveBtnEN(category);
   };
+
   return (
     <>
       {polish ? (
@@ -75,23 +78,20 @@ const GalleryPage = () => {
             })}
           </div>
           <div className="galleryContent">
-            {menuItems.map((item) => {
-              const { img, category } = item;
-              return (
-                <SRLWrapper>
-                  {img.map((item, index) => {
-                    return (
-                      <img
-                        data-aos="flip-down"
-                        key={index}
-                        src={item}
-                        alt={category.toUpperCase()}
-                      />
-                    );
-                  })}
-                </SRLWrapper>
-              );
-            })}
+            <SRLWrapper>
+              {menuItems.map((item) => {
+                return item.img.map((itemA, index) => {
+                  return (
+                    <img
+                      data-aos="flip-down"
+                      key={index}
+                      src={itemA}
+                      alt={item.category}
+                    />
+                  );
+                });
+              })}
+            </SRLWrapper>
           </div>
         </Wrapper>
       ) : (
@@ -113,23 +113,20 @@ const GalleryPage = () => {
             })}
           </div>
           <div className="galleryContent">
-            {menuItemsEN.map((item) => {
-              const { img, category } = item;
-              return (
-                <SRLWrapper>
-                  {img.map((item, index) => {
-                    return (
-                      <img
-                        data-aos="flip-down"
-                        key={index}
-                        src={item}
-                        alt={category}
-                      />
-                    );
-                  })}
-                </SRLWrapper>
-              );
-            })}
+            <SRLWrapper>
+              {menuItemsEN.map((item) => {
+                return item.img.map((itemA, index) => {
+                  return (
+                    <img
+                      data-aos="flip-down"
+                      key={index}
+                      src={itemA}
+                      alt={item.category}
+                    />
+                  );
+                });
+              })}
+            </SRLWrapper>
           </div>
         </Wrapper>
       )}
