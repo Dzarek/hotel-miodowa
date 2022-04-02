@@ -39,9 +39,9 @@ const AboutHome = () => {
             <p>
               Hotel Miodowa is much more than just comfortable rooms. This an
               invitation to luxury that each of our guests has the opportunity
-              to experience the hard way. Comfortable beds, supportive a
-              pampering lounge, fully equipped kitchenette, and beautiful
-              facilities the bathroom will make you feel at home here home.
+              to experience on own skin. Comfortable beds, very nice lounge,
+              fully equipped kitchenette, and beautiful bathroom will make you
+              feel here like in home.
             </p>
             <NavLink to="/oNas/oHotelu">Read More</NavLink>
           </div>

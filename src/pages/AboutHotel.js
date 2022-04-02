@@ -87,28 +87,27 @@ const AboutHotel = () => {
             <h3>About Hotel</h3>
             <p>
               Hotel Miodowa is more than just rooms and apartments in the center
-              of Krakow. We offer an extraordinary space for relaxation during
-              your stay in the capital Lesser Poland. The tastefully decorated
-              interiors of the rooms guarantee a variety amenities, and the
-              tastefully selected individual components create a coherent one
-              aesthetically pleasing space.
+              of Cracow. We offer luxurious space for relaxation during your
+              stay in one of the biggest city in Poland. The amazing decorated
+              rooms guarantee a variety amenities, and the special selected
+              individual components create a wonderfull *** stars hotel.
             </p>
             <section>
               <p>
                 The advantage of our facility - apart from exclusive interiors -
-                is its location. The location in Krakow's Kazimierz is a
-                prestigious place of Fr. historical overtones. The former Jewish
+                is its location. The location in Cracow's Kazimierz is a
+                prestigious place of historical style. The former Jewish
                 district has many features the past, and its history is a
-                perfect background for a rich offer culinary and numerous
-                cultural attractions. It matters a lot proximity to the Old
-                Town. Take a leisurely stroll through the historic streets
-                allows you to discover the charms of the historic city center.
+                perfect background for a rich offer culinary and many cultural
+                attractions. Importance is also short distance to the Old Town.
+                Slow walk through the historic streets allows you to discover
+                the charms of the historic city center.
               </p>
               <img data-aos="fade-left" src={BuildingImg} alt="budynek" />
             </section>
             <p>
               Good location, luxurious apartments, attractive prices - Hotel
-              Miodowa in Krakow offers its guests ideal conditions on time a
+              Miodowa in Cracow offers its guests ideal conditions on time a
               business trip as well as a tourist trip.
             </p>
           </div>

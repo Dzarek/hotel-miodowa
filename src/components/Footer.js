@@ -39,7 +39,7 @@ const Footer = () => {
             <p className="info">
               {polish
                 ? "Dogodne położenie, luksusowe apartamenty, atrakcyjne ceny – Hotel Miodowa w Krakowie oferuje swoim Gościom idealne warunki na czas podróży służbowej, jak i na wyjazd turystyczny."
-                : "Perfect location, luxurious apartments, attractive prices - Hotel Miodowa in Krakow offers its guests ideal conditions for a business trip as well as for a tourist trip."}
+                : "Perfect location, luxurious apartments, attractive prices - Hotel Miodowa in Cracow offers for guests ideal conditions for a business trip as well as for a tourist trip."}
             </p>
           </div>
           <div className="secondSection">
@@ -84,8 +84,10 @@ const Footer = () => {
             <h3>{polish ? "Kontakt" : "Contact"}</h3>
             <div className="contactInfo">
               <p>
-                <FaMapMarkerAlt className="iconReact" /> ul. Miodowa 51, 31-036
-                Kraków
+                <FaMapMarkerAlt className="iconReact" />
+                {polish
+                  ? "ul. Miodowa 51, 31-036 Kraków"
+                  : "Miodowa 51 Street, 31-036 Cracow"}
               </p>
               <p>
                 <FaPhoneAlt className="iconReact" /> +48 124467130
@@ -127,12 +129,25 @@ const Footer = () => {
         }}
         expires={7}
       >
-        Strona korzysta z plików cookies. Pozostając na niej wyrażasz zgodę na
-        ich używanie. <br /> Ze szczegółowymi informacjami dotyczącymi cookies
-        na tej stronie można się zapoznać tutaj:
-        <NavLink to="/kontakt/rodo&cookies" className="cookieLink">
-          Polityka Prywatności
-        </NavLink>
+        {polish ? (
+          <>
+            Strona korzysta z plików cookies. Pozostając na niej wyrażasz zgodę
+            na ich używanie. <br /> Ze szczegółowymi informacjami dotyczącymi
+            cookies na tej stronie można się zapoznać tutaj:
+            <NavLink to="/kontakt/rodo&cookies" className="cookieLink">
+              Polityka Prywatności
+            </NavLink>
+          </>
+        ) : (
+          <>
+            The website uses cookies. By staying here, you consent to using
+            them. <br /> About information on cookies on this page you can read
+            here:
+            <NavLink to="/kontakt/rodo&cookies" className="cookieLink">
+              Privacy Policy
+            </NavLink>
+          </>
+        )}
         .
       </CookieConsent>
     </>

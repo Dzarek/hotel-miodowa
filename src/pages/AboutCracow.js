@@ -34,7 +34,7 @@ const AboutCracow = () => {
             <p>
               {polish
                 ? "Jedno z najstarszych miast w kraju, siedziba i nekropolia władców polskich, niezmiennie ważny od wieków ośrodek kultury, nauki i sztuki – Kraków przyciąga rzesze turystów z kraju i z całego świata. Odkrywa niezwykłe dzieje niezwykłego państwa i narodu. Pozwala poczuć świetność królewskich czasów. Zaskakuje nowoczesnością oraz bogatą ofertą biznesową i turystyczną."
-                : "One of the oldest cities in the country, the seat and necropolis of Polish rulers, invariably important for centuries center of culture, science and art - Krakow attracts crowds of tourists from the country and from around the world. He discovers the extraordinary history of an extraordinary state and nation. It allows you to feel the splendor of royal times. It surprises with modernity and a rich business and tourist offer."}
+                : "One of the oldest cities in the country, the seat and necropolis of Polish kings, invariably important for centuries center of culture, science and art - Cracow attracts crowds of tourists from the country and from around the world. It allows you to feel the splendor of royal times. It surprises with modernity and a rich tourist offer."}
             </p>
           </span>
         </section>
@@ -46,7 +46,7 @@ const AboutCracow = () => {
             <p>
               {polish
                 ? "Od czasów średniowiecza centrum życia mieszkańców Krakowa toczy się przy Wawelu. To właśnie u stóp wzgórza, na którym mieści się królewski zamek, rozciąga się Stare Miasto. Ten rozległy plac zadziwia potężnymi rozmiarami oraz niezmienionym od XIII wieku kształtem. Znajduje się tu Bazylika Mariacka, Sukiennice, a także historyczne zabudowania Uniwersytetu Krakowskiego."
-                : "Since the Middle Ages, the center of life of Krakow's inhabitants has been at Wawel. It is at the foot of the hill where the royal castle is located that the Old Town stretches. This vast square amazes with its huge size and shape unchanged since the 13th century. There are St. Mary's Basilica, the Cloth Hall, as well as the historic buildings of the University of Krakow."}
+                : "Since the Middle Ages, the center of life of Cracow's inhabitants has been at Wawel. In down of the hill where the royal castle is located you can find the Old Town. This big square amazes with its huge size and shape unchanged since the 13th century. There are St. Mary's Basilica, the Cloth Hall, as well as the historic buildings of the University of Cracow."}
             </p>
           </span>
           <img data-aos="fade-left" src={cracowImg1} alt="cracowImg2" />
@@ -58,7 +58,7 @@ const AboutCracow = () => {
             <p>
               {polish
                 ? " Nieopodal Starego Miasta, w centrum Krakowa, znajduje się stara dzielnica – Kazimierz, dawniej niewielka miejscowość. Przesiedlenie ludności żydowskiej na ten teren w XV wieku ożywiło miasteczko. Wzrastające wraz z rozwojem samego Krakowa stało się wkrótce jego dzielnicą. Dziś – podczas spaceru zabytkowymi uliczkami – można dojrzeć jeszcze wiele reliktów historii, w tym liczne synagogi, cmentarze, Mykwę Wielką, czy rzeźnię drobiu. Na terenie dzisiejszego Kazimierza organizowany jest także Festiwal Kultury Żydowskiej. Podczas pobytu w Krakowie warto odwiedzić tę dzielnicę, a jeszcze ciekawiej znaleźć tu nocleg."
-                : "Near the Old Town, in the center of Krakow, there is the old district - Kazimierz, formerly a small town. The resettlement of the Jewish population to this area in the 15th century revived the town. Growing along with the development of Krakow itself, it soon became its district. Today - while walking along the historic streets - you can still see many relics of history, including numerous synagogues, cemeteries, the Great Mikveh, and a poultry slaughterhouse. During your stay in Krakow, it is worth visiting this district, and even more interesting finding accommodation here."}
+                : "Near the Old Town, in the center of Cracow, there is the old district - Kazimierz, formerly a small town. The resettlement of the Jewish population to this area in the 15th century revived the town. Growing along with the development of Cracow itself, it soon became its district. Today - while walking along the historic streets - you can still see many relics of history, including many synagogues, cemeteries and the Great Mikveh. During your stay in Cracow, it is worth visiting this district, and even more interesting finding accommodation here."}
             </p>
           </span>
         </section>

@@ -135,7 +135,7 @@ const RodoPage = () => {
               danych.
             </p>
             <p>
-              10.W przypadku gdy przetwarzanie danych osobowych odbywa się na
+              10. W przypadku gdy przetwarzanie danych osobowych odbywa się na
               podstawie zgody osoby na przetwarzanie danych osobowych (art. 6
               ust. 1 lit a RODO), przysługuje jej prawo do cofnięcia tej zgody w
               dowolnym momencie.
@@ -165,7 +165,7 @@ const RodoPage = () => {
           <div className="content">
             <p>
               Serwis nie zbiera w sposób automatyczny żadnych informacji, z
-              wyjątkiem informacji zawartych w plikach cookies.Pliki cookies
+              wyjątkiem informacji zawartych w plikach cookies. Pliki cookies
               (tzw. „ciasteczka”) stanowią dane informatyczne, w szczególności
               pliki tekstowe, które przechowywane są w urządzeniu końcowym
               Użytkownika Serwisu i przeznaczone są do korzystania ze stron
@@ -178,7 +178,7 @@ const RodoPage = () => {
               Serwisu pliki cookies oraz uzyskującym do nich dostęp jest
               operator Serwisu – Eko – Test Szczakowa Spółka z ograniczoną
               odpowiedzialnością Nieruchomości Spółka Komandytowa z siedzibą
-              przy ul. Szklarkiej 5, 43-602 Jaworzono,
+              przy ul. Szklarkiej 5, 43-602 Jaworzono.
             </p>
             <p>
               Pliki cookies wykorzystywane są w celu: <br /> 1. Dostosowania
@@ -235,18 +235,16 @@ const RodoPage = () => {
               referred to as: GDPR), Hotel Miodowa informs that:
             </p>
             <p>
-              1. The administrator of your personal data is Eko - Test Szczakowa
-              Limited Liability Company Real Estate Company Komandytowa with its
-              seat at ul. Szklarka 5, 43-602 Jaworzenie, contact e-mail:
-              biuro@aparthotelmiodowa.pl.
+              1. The administrator of your personal data is Eko – Test Szczakowa
+              Spółka z ograniczoną odpowiedzialnością Nieruchomości Spółka
+              Komandytowa z siedzibą przy ul. Szklarkiej 5, 43-602 Jaworzono,
+              contact e-mail: biuro@aparthotelmiodowa.pl.
             </p>
             <p>
-              2. The administrator has appointed a personal data protection Mr.
-              Jerzy Góra, which you can contact by e-mail:
-              biuro@aparthotelmiodowa.pl or in writing to the address of the
-              registered office Administrator. You can with the data protection
-              officer contact you in all matters relating to processing personal
-              data and exercising the rights related to processing data.
+              2. The administrator has appointed a Personal Data Protection
+              Inspector - Jerzy Góra, who can be contacted by e-mail:
+              biuro@aparthotelmiodowa.pl. in any matter regarding the processing
+              of your personal data.
             </p>
             <p>
               3. Your personal data will be processed on the basis of Art. 6
@@ -335,28 +333,28 @@ const RodoPage = () => {
           <h4> Cookies Policy </h4>
           <div className="content">
             <p>
-              The website does not automatically collect any information, z
-              except for the information contained in cookies. Cookies are IT
-              data, in particular files text files that are stored on the User's
-              end device Website and are intended for the use of websites
-              Service. Cookies usually contain the name of the website, z which
-              they come from, their storage time on the end device and a unique
-              number.
+              The website does not automatically collect any information, except
+              for the information contained in cookies. Cookies are IT data, in
+              particular files text files that are stored on the User's end
+              device website and are intended for the use of websites Service.
+              Cookies usually contain the name of the website, which they come
+              from, their storage time on the end device and a unique number.
             </p>
             <p>
               The entity that places on the Website User's end device cookies
-              and accessing them is the operator of the Website - Eko - Test
-              Szczakowa Limited Liability Company Real Estate Spółka Komandytowa
-              with its registered office at ul. Szklarka 5, 43-602 Jawokuje,
+              and accessing them is the operator of the Website - Eko – Test
+              Szczakowa Spółka z ograniczoną odpowiedzialnością Nieruchomości
+              Spółka Komandytowa z siedzibą przy ul. Szklarkiej 5, 43-602
+              Jaworzono.
             </p>
             <p>
               Cookies are used for: <br /> 1. Customization the content of the
               Website pages to the User's preferences and optimizing the use of
               websites; in particular these files allow to recognize the device
-              of the Website User and properly display the website, tailored to
-              his individual needs; <br /> 2. Create statistics that help
-              understand how the Website Users use the pages websites, which
-              allows improving their structure and content;
+              of the Website User and properly display the website, for to his
+              individual needs; <br /> 2. Create statistics that help understand
+              how the Website Users use the pages websites, which allows
+              improving their structure and content;
             </p>
             <p>
               The Website uses two basic types of cookies: Session cookies and

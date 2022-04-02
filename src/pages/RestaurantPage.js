@@ -112,8 +112,8 @@ const RestaurantPage = () => {
             <span>
               If there is such a need and the guest has to leave the hotel
               earlier than breakfast is served, we can prepare breakfast / lunch
-              boxes Takeaway. It is enough to report it at the reception the day
-              before.
+              boxes takeaway. It this case leave information at the reception
+              the day before.
             </span>
           </div>
           <div className="meals">
@@ -126,8 +126,8 @@ const RestaurantPage = () => {
             <p>
               {""}
               <FaLongArrowAltRight className="icon" />
-              We agree the menu in advance with our guests and adjust it to them
-              preferences.
+              We prepare the menu in advance with our guests and adjust it to
+              them preferences.
             </p>
             <p>
               {""}

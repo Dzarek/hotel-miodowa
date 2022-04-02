@@ -101,7 +101,7 @@ const ParkingPage = () => {
         <div className="parkingInfo">
           <p>
             Are you traveling by car? Unfortunately, as in almost every major
-            city there is also a parking problem in Krakow. Dense urban
+            city there is also a parking problem in Cracow. Big urban
             development limits the ability to move the car in the center.
           </p>
           <p>
@@ -110,8 +110,8 @@ const ParkingPage = () => {
             the parking service is <span> 60 PLN / day </span>.
           </p>
           <p>
-            In case there is no parking space in our car park, we also recommend
-            it guarded car parks close to the Hotel:
+            In case there is no space in our parking, we also recommend guarded
+            parking close to the Hotel:
           </p>
           <section className="oneParking">
             <div className="oneParkingInfo">
@@ -170,8 +170,7 @@ const ParkingPage = () => {
           <p>
             There is also the possibility of parking in the street in front of
             the hotel in the zone paid parking. The zone is valid from Monday to
-            Saturday in between 10 a.m. and 8 p.m. The fee in the parking meter
-            is 6 PLN / hour.
+            Saturday in between 10 a.m. and 8 p.m. Price is 6 PLN / hour.
           </p>
         </div>
       )}

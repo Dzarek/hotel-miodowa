@@ -63,7 +63,11 @@ const ContactPage = () => {
           <div data-aos="fade-left" className="adressPhoneEmail">
             <span>
               <FaMapMarkerAlt />
-              <p>ul. Miodowa 51, 31-036 Kraków</p>
+              {polish ? (
+                <p>ul. Miodowa 51, 31-036 Kraków</p>
+              ) : (
+                <p>Miodowa 51 Street, 31-036 Cracow</p>
+              )}
             </span>
             <span>
               <FaPhoneAlt />

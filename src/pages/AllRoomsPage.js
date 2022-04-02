@@ -28,9 +28,9 @@ const AllRoomsPage = ({ context }) => {
       {!polish ? (
         <div className="allRoomsInfo">
           <p>
-            We offer 37 rooms and apartments, of which there are up to 120 beds.
-            When making a reservation, you are free choose comfortable and
-            functional rooms in one of six categories:
+            We offer 37 rooms and apartments, in which there are up to 120 beds.
+            When making a reservation, you can choose comfortable and functional
+            rooms in one of six categories:
           </p>
           <section>
             <ul>

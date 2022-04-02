@@ -358,12 +358,12 @@ export const questionsData = [
   {
     id: 2,
     title: "Podane ceny są cenami za apartament czy za osobę?",
-    info: "Wszystkie podawane na stronie ceny są cenami na apartament. Ceny apartamentów jednego typu mogą być zróżnicowane ze względu na ilość osób, jaką maksymalnie są w stanie pomieścić..",
+    info: "Wszystkie podawane na stronie ceny są cenami na apartament. Ceny apartamentów jednego typu mogą być zróżnicowane ze względu na ilość osób, jaką maksymalnie są w stanie pomieścić.",
   },
   {
     id: 3,
     title: "Co znajduje się na wyposażeniu pokoi?",
-    info: "W każdym apartamencie znajdują się: wygodne łóżka, szafa na ubrania, rozkładana sofa,telewizor LED, stolik kawowy, biurko, stół i krzesła, w pełni wyposażony aneks kuchenny (płyta indukcyjna, okap, lodówka, zlew, czajnik, naczynia i sztućce),dostęp do prywatnej łazienki z toaletą, umywalką, wanną lub prysznicem, lustrem i suszarką do włosów.",
+    info: "W każdym pokoju znajdują się: wygodne łóżka, szafa na ubrania, telewizor LED, biurko, lodówka, czajnik, dostęp do prywatnej łazienki z toaletą, umywalką, wanną lub prysznicem, lustrem i suszarką do włosów.",
   },
   {
     id: 4,
@@ -396,42 +396,42 @@ export const questionsDataEN = [
     id: 1,
     title:
       "What is the difference between the different types of apartments - Studio, Superior, Deluxe?",
-    info: "All our apartments are furnished to a very high standard. The SUPERIOR type is distinguished by a larger area than the STUDIO apartments, while the DELUXE apartments have the largest area. The difference is also the view from the window.",
+    info: "All our apartments are furnished to a very high standard. The SUPERIOR type have bigger area than the STUDIO apartments, while the DELUXE apartments have the largest area. The difference is also the view from the window.",
   },
   {
     id: 2,
-    title: "The given prices are prices per apartment or per person?",
-    info: "All prices quoted on the website are prices per apartment. Prices of one type of apartments may vary depending on the maximum number of people they can accommodate.",
+    title: "Prices are per apartment or per person?",
+    info: "All prices on the website are prices per apartment. Prices of one type of apartments are depending on the maximum number of people they can accommodate.",
   },
   {
     id: 3,
     title: "What's on the room equipment?",
-    info: "Each apartment has: comfortable beds, wardrobe, fold-out sofa, LED TV, coffee table, desk, table and chairs, fully equipped kitchenette (induction hob, extractor hood, fridge, sink, kettle, dishes and cutlery), access to a private bathroom with toilet, sink, bathtub or shower, mirror and hairdryer.",
+    info: "Each apartment has: comfortable beds, wardrobe, LED TV, desk, fridge, kettle, access to a private bathroom with toilet, sink, bathtub or shower, mirror and hairdryer.",
   },
   {
     id: 4,
     title: "What amenities can you use at Hotel Miodowa?",
-    info: "In addition to fully equipped apartments, we also offer our guests the opportunity to take advantage of: free breakfast buffet, parking, daily cleaning, irons for ironing, luggage storage, 24-hour reception services, airport transfer and other transport services.",
+    info: "In addition to fully equipped apartments, we also offer our guests the opportunity to take advantage of: free breakfast buffet, parking, daily cleaning, iron, luggage storage, 24-hour reception services, airport transfer and other transport services.",
   },
   {
     id: 5,
-    title: "Is it possible to use the car park?",
-    info: "Yes, we offer a guarded car park next to the property for an additional fee.",
+    title: "Is it possible to use the parking?",
+    info: "Yes, we offer a guarded parking next to the property for an additional fee.",
   },
   {
     id: 6,
-    title: "What time does the hotel day begin and end?",
-    info: "The hotel day starts at 2:00 PM and ends at 12:00 the next day.",
+    title: "What time is check-in and check-out?",
+    info: "Check-in starts at 2:00 PM. Check-out ends at 12:00 the next day.",
   },
   {
     id: 7,
     title: "What are the consequences of canceling the reservation?",
-    info: "It all depends on the type of room. We encourage you to read the booking conditions before making your reservation.",
+    info: "It all depends on the type of reservation. We encourage you to read the booking conditions before making your reservation.",
   },
   {
     id: 8,
     title: "Is card payment accepted at Hotel Miodowa?",
-    info: "Yes - we accept both cash transactions and credit card payments. We also accept Visa and MasterCard.",
+    info: "Yes - we accept both, cash transactions and credit card payments (Visa and MasterCard).",
   },
 ];
 
@@ -1638,13 +1638,13 @@ export const itemsEN = [
       featured: true,
       breakfast: true,
       bathroom: "shower",
-      kitchen: "kettle",
+      kitchen: "kitchen",
       beds: "2x 90cm",
       sofa: true,
       description: [
         "Our SUPERIOR apartments are a guarantee of a perfect rest, thanks to both the use of functional and comfortable amenities, as well as the classic, elegant arrangement. ",
-        "This type of residential building, suitable for up to 4 people, includes a bedroom and living area with a large, comfortable bed, a fold-out sofa, a desk, and a LED TV. The whole is a very harmonious space that is able to meet many needs of the occupants. In turn, a kitchenette with a dining area, which includes an induction hob, extractor hood, fridge, sink, kettle, dishes and cutlery as well as a table and chairs, allow you to sit down to eat together. ",
-        "A separate room is a very luxurious bathroom with a shower, in which all our guests will find a dryer, a set of cosmetics and towels enchanting with pure white and fresh scent.",
+        "This type of residential building, suitable for up to 4 people, includes a bedroom and living area with a large, comfortable bed, a fold-out sofa, a desk, and a LED TV. The whole is a very harmonious space that is able to meet many needs of the occupants. Kitchenette with a dining area, which includes an induction hob, extractor hood, fridge, sink, kettle, dishes and cutlery as well as a table and chairs, allow you to sit down to eat together. ",
+        "A separate room is a very luxurious bathroom with a shower, in which our guests will find a dryer, a set of cosmetics and towels enchanting with pure white and fresh scent.",
       ],
       extras: [
         {
@@ -1776,7 +1776,7 @@ export const itemsEN = [
       featured: true,
       breakfast: true,
       bathroom: "shower",
-      kitchen: "kettle",
+      kitchen: "kitchen",
       beds: "2x 90cm",
       sofa: true,
       description: [
@@ -1910,8 +1910,8 @@ export const itemsEN = [
       sofa: true,
       description: [
         "The DELUXE apartment can accommodate up to 4 people. It consists of a large room, combining the features of a bedroom, living room and kitchen, with direct access to a private bathroom (with bath and shower). ",
-        "A comfortable bed is an excellent option for anyone looking for a moment of blissful relaxation, while the fold-out sofa and LED TV create a unique seating space. A carefully equipped kitchenette, which includes an induction hob, extractor hood, fridge, sink, kettle, crockery and cutlery is the perfect way to prepare tasty meals that can be eaten together in the dining area. ",
-        "Taking care of the comfort of our guests, we also took care of the details. That is why in the DELUXE apartment there are always fresh, snow-white sets of towels, cosmetics sets, and even a hair dryer.",
+        "A comfortable bed is an excellent option for anyone looking for a moment of relaxation, while the fold-out sofa and LED TV create a unique seating space. A carefully equipped kitchenette, which includes an induction hob, extractor hood, fridge, sink, kettle, crockery and cutlery is the perfect way to prepare tasty meals that can be eaten together in the dining area. ",
+        "For the comfort of our guests, we also took care of the details. That is why in the DELUXE apartment there are always fresh, snow-white sets of towels, cosmetics sets, and even a hair dryer.",
       ],
       extras: [
         {

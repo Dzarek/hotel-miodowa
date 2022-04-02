@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
-
 import { ImCross } from "react-icons/im";
-
 import DatePicker from "react-datepicker";
 import "../react-datepicker.css";
 import { registerLocale } from "react-datepicker";
+import en from "date-fns/locale/en-US";
 import pl from "date-fns/locale/pl";
+registerLocale("en-US", en);
 registerLocale("pl", pl);
 
 const today = new Date();
@@ -87,17 +87,31 @@ const BookingRoom = ({ showBooking, setShowBooking }) => {
           <form className="bookForm">
             <h4>{polish ? "Data Pobytu:" : "Dates of Stay:"}</h4>
             <div className="bookFormDates">
-              <DatePicker
-                onChange={onChange}
-                startDate={startDate}
-                endDate={endDate}
-                selectsRange
-                inline
-                minDate={new Date()}
-                selected={startDate}
-                locale="pl"
-                dateFormat="Pp"
-              />
+              {polish ? (
+                <DatePicker
+                  onChange={onChange}
+                  startDate={startDate}
+                  endDate={endDate}
+                  selectsRange
+                  inline
+                  minDate={new Date()}
+                  selected={startDate}
+                  locale="pl"
+                  dateFormat="Pp"
+                />
+              ) : (
+                <DatePicker
+                  onChange={onChange}
+                  startDate={startDate}
+                  endDate={endDate}
+                  selectsRange
+                  inline
+                  minDate={new Date()}
+                  selected={startDate}
+                  locale="en-US"
+                  dateFormat="Pp"
+                />
+              )}
             </div>
             <h4>{polish ? "Liczba Gości:" : "Guests:"}</h4>
             <div className="bookFormGuest">

@@ -119,7 +119,7 @@ const RegulationsPage = () => {
           </p>
           <h3>§ 6</h3>
           <p>
-            1.Za kosztowności, pieniądze, sprzęt elektroniczny oraz inne
+            1. Za kosztowności, pieniądze, sprzęt elektroniczny oraz inne
             przedmioty pozostawione w apartamencie lub częściach wspólnego
             użytku Hotel Miodowa nie ponosi odpowiedzialności, a każda kradzież
             będzie zgłaszana na policję.
@@ -154,12 +154,12 @@ const RegulationsPage = () => {
             3. Goście Hotelu Miodowa mają prawo do korzystania ze wszystkich
             urządzeń stanowiących wyposażenie poszczególnych apartamentów, tj.
             m.in.z telewizorów, wyposażenia aneksu kuchennego, wyposażenia
-            łazienek, a także innych urządzeń znajdujących się w
-            apartamentach.Na terenie całego obiektu istnieje możliwość
-            nieodpłatnego korzystania z bezprzewodowej sieci Wi-Fi.{" "}
+            łazienek, a także innych urządzeń znajdujących się w apartamentach.
+            Na terenie całego obiektu istnieje możliwość nieodpłatnego
+            korzystania z bezprzewodowej sieci Wi-Fi.{" "}
           </p>
           <p>
-            4.W hotelu obowiązuje bezwzględny zakaz paleniaw pokojach i
+            4. W hotelu obowiązuje bezwzględny zakaz palenia w pokojach i
             częściach ogólnodostępnych za wyjątkiem miejsca przeznaczonego do
             tego celu, które to na Państwa życzenie zostanie wskazane przez
             obsługę Recepcji. Złamanie zakazu grozi karą w wysokości 500 zł, a
@@ -195,7 +195,6 @@ const RegulationsPage = () => {
             co więcej, zabrania się siadania na parapetach okien ze względów
             niebezpieczeństwa wypadnięcia.
           </p>
-          {/* DO SERWISU SPRZĄTAJĄCEGO */}
           <h3>
             III SERWIS SPRZĄTAJĄCY <br /> <br />§ 10
           </h3>
@@ -210,10 +209,10 @@ const RegulationsPage = () => {
           <p>
             3. Serwis sprzątający NIE obejmuje natomiast mycia naczyń oraz
             sprzątania osobistych rzeczy Gości (dotyczy rzeczy pozostawionych na
-            łóżkach, sofach, stołach, łazience, podłodze)
+            łóżkach, sofach, stołach, łazience, podłodze).
           </p>
           <p>
-            4. Ręczniki wymieniane są na czyste po trzeciej dobiepobytu chyba,
+            4. Ręczniki wymieniane są na czyste po trzeciej dobie pobytu chyba,
             że Gość poprosi o wcześniejszą wymianę. Pościel natomiast jest
             wymieniana tylko podczas długich pobytów (powyżej 7 dni) po czwartej
             dobie pobytu.
@@ -277,7 +276,9 @@ const RegulationsPage = () => {
           <h3>
             V GRUPY <br /> <br />§ 15
           </h3>
-          <p>1. Grono osóbliczące powyżej 20 członków jest uważane za GRUPĘ.</p>
+          <p>
+            1. Grono osób liczące powyżej 20 członków jest uważane za GRUPĘ.
+          </p>
           <p>
             2. Opiekun grupy ponosi całkowitą odpowiedzialność za grupę podczas
             jej pobytu w Hotelu Miodowa, jak również za ewentualne zniszczenie
@@ -306,16 +307,16 @@ const RegulationsPage = () => {
             indywidualnych.
           </p>
           <p>
-            7.Pracownik recepcji może poprosić opiekuna grupy o wpłatę depozytu
+            7. Pracownik recepcji może poprosić opiekuna grupy o wpłatę depozytu
             na poczet ewentualnych zniszczeń oraz kary za palenie w obiekcie w
-            wysokości ustalonej wspólnie .
+            wysokości ustalonej wspólnie.
           </p>
           <h3>
             VI WYMELDOWANIE <br /> <br />§ 16
           </h3>
           <p>
-            1.Każdy gość wyjeżdzający z Hotelu Miodowa zobowiązany jest do
-            pozostawienia kluczy do apartamentu na recepcji .
+            1. Każdy gość wyjeżdzający z Hotelu Miodowa zobowiązany jest do
+            pozostawienia kluczy do apartamentu na recepcji.
           </p>
           <p>
             2. Obsługa hotelu będzie wdzięczna za pozostawienie za sobą porządku
@@ -341,7 +342,7 @@ const RegulationsPage = () => {
             the safe stay of our guests.
           </h2>
           <h3>
-            AND CHECK-IN <br /> <br /> § 1
+            I CHECK-IN <br /> <br /> § 1
           </h3>
           <p> 1. The apartment at Hotel Miodowa is rented for days. </p>
           <p>
@@ -349,11 +350,9 @@ const RegulationsPage = () => {
             it is assumed that the apartment has been rented for one day.
           </p>
           <p>
-            3. The hotel day starts at 2 p.m. and lasts until one hour 12:00 the
-            next day. Not leaving the apartment until 12:00 means extending the
-            stay by another day, which is synonymous with the necessity to pay
-            the fee for the apartment according to the rates included in in the
-            price list without a guarantee of staying in the apartment.
+            3. The hotel day starts at 2 p.m. and ends 12:00 the next day. Not
+            leaving the apartment until 12:00 means extending the stay by
+            another day.
           </p>
           <h3> § 2 </h3>
           <p>
@@ -361,33 +360,32 @@ const RegulationsPage = () => {
             reception desk time. 9.00 a.m.
           </p>
           <p>
-            2. The hotel may not accept the request to extend the stay for any
-            reason lack of a free apartment.
+            2. The hotel may not accept the request to extend the stay if is not
+            availability.
           </p>
           <p>
-            3. In order to check in, we ask our guests to present photo ID (i.e.
-            ID card, passport, law driving) and signing the registration card.
-            Fee for staying in the hotel is charged in advance according to the
-            prices quoted during booking a room and the applicable price list,
-            in the case of failure to use the reservation for reasons beyond the
-            control of the hotel, a down payment paid for a specific reservation
-            is not refundable. It is possible to use the deposit at a different
-            date.
+            3. Before check in, we ask our guests to present photo ID (i.e. ID
+            card, passport, law driving) and signing the registration card. Fee
+            for staying in the hotel is charged in advance according to the
+            prices quoted during booking a room and the applicable price list.
+            In the case of failure to use the reservation for reasons beyond the
+            control of the hotel, a payment for a specific reservation is not
+            refundable. It is possible to use the deposit at a different date.
           </p>
           <p>
             4. The need to receive a VAT invoice for the stay at the hotel
             should be reported upon check-in. It can be issued at the latest in
             within 7 days from the date of payment (both the deposit and the
             amount due final), the above period is extended to 3 months when the
-            invoice is to be issued to a natural person who does not conduct
-            business economic. After the above-mentioned deadlines, the hotel
-            will refuse issuing an invoice.
+            invoice is to be issued to a person who does not conduct business
+            economic. After the above-mentioned deadlines, the hotel will refuse
+            issuing an invoice.
           </p>
           <p>
             5. When damage or destruction is found items entrusted by the hotel
-            will be charged extra an appropriate fee: - room keys from 1 to 24 -
-            PLN 150, - bed linen - PLN 100, - other - according to the price of
-            repair or purchase of a new one devices.
+            will be charged extra an appropriate fee: - room keys - PLN 150, -
+            bed linen - PLN 100, - other - according to the price of repair or
+            purchase of a new one devices.
           </p>
           <h3> § 3 </h3>
           <p>
@@ -396,12 +394,11 @@ const RegulationsPage = () => {
           </p>
           <p>
             2. Persons registered at the hotel inviting their guests should
-            inform about it inform the receptionist and are fully responsible
-            for any damage caused by them. Visits may last from 8.00 a.m. to
-            10.00 p.m. and guests staying at the hotel should make sure that
-            these people left the facility by 22.00. Failure to do so may result
-            in the removal of the guest from the hotel by the security service.{" "}
-            {""}
+            inform about it the receptionist and are fully responsible for any
+            damage caused by them. Visits may last from 8.00 a.m. to 10.00 p.m.
+            and guests staying at the hotel should make sure that these people
+            left the facility by 22.00. Failure to do so may result in the
+            removal of the guest from the hotel by the security service. {""}
           </p>
           <p>
             3. Hotel Miodowa may refuse to accept a Guest who during of the
@@ -425,19 +422,19 @@ const RegulationsPage = () => {
           </h3>
           <p>
             1. At the Guest's request, Hotel Miodowa provides free services the
-            following services: - providing information related to the stay i
-            travel, - wake up at the scheduled time, - ordering a taxi, - rental
-            of an iron and ironing board at the reception.
+            following services: - providing information related to the stay, -
+            wake up at the scheduled time, - ordering a taxi, - rental of an
+            iron and ironing board at the reception.
           </p>
           <h3> § 6 </h3>
           <p>
-            1.For valuables, money, electronic equipment and more items left in
-            the apartment or shared areas Hotel Miodowa is not responsible for
-            any theft will be reported to the police.
+            1. For money, electronic equipment and more items left in the
+            apartment or shared areas Hotel Miodowa is not responsible for any
+            theft will be reported to the police.
           </p>
           <p>
-            2. It is possible to deposit money and other valuable items items in
-            the deposit at the reception, for an additional fee fee.
+            2. It is possible to deposit money and other valuable items in the
+            deposit at the reception, for an additional fee.
           </p>
           <h3> § 7 </h3>
           <p>
@@ -446,64 +443,61 @@ const RegulationsPage = () => {
           </p>
           <p>
             2. The behavior of people using the hotel services should not
-            disturb you stay of other guests. Hotel Miodowa may refuse to
-            continue providing services to a person who has breached this rule
-            without return paid fees for the stay.
+            disturb stay of other guests. Hotel Miodowa may refuse to continue
+            providing services to a person who has breached this rule without
+            return paid fees for the stay.
           </p>
           <h3> § 8 </h3>
           <p>
-            1. Each time the Guest leaves the apartment, he should check it
-            close the door to his apartment, and he should leave the keys at the
-            reception.
+            1. Each time the Guest leaves the apartment, should check it close
+            the door to apartment, and should leave the keys at the reception.
           </p>
           <p>
-            2. The hotel guest is financially responsible for all the nature of
-            the damage, act or omission, as well as the action people
-            accompanying him.
+            2. The hotel guest is financially responsible for all the damage,
+            act or omission, as well as the action people accompanying him.
           </p>
           <p>
-            3. Guests of Hotel Miodowa have the right to use all of them devices
-            constituting the equipment of individual apartments, i.e. e.g. from
+            3. Guests of Hotel Miodowa have the right to use all of devices
+            constituting the equipment of individual apartments, e.g. from
             televisions, kitchenette equipment, equipment bathrooms, as well as
-            other devices located in the apartments there is a possibility of
-            free use of the entire facility wireless Wi-Fi network. {""}
+            other devices located in the apartments. There is a possibility of
+            free use wireless Wi-Fi network. {""}
           </p>
           <p>
             4. There is an absolute ban on smoking in the hotel rooms and parts
-            generally accessible, except for the place intended for this
-            purpose, which, at your request, will be indicated by the reception
-            staff. Breaking the ban may result in a fine of PLN 500, and they
-            will also be punished The state was charged with the costs of
-            refreshing the room and the intervention of the Guard Fire.
+            generally accessible, except for the place intended for this, which,
+            at your request, will be indicated by the reception staff. Breaking
+            the ban may result in a fine of PLN 500, and they will also be
+            charged with the costs of refreshing the room and the intervention
+            of the Guard Fire.
           </p>
           <p>
             5. In the event of a refusal to pay the penalty, the hotel has the
-            right to charge the card the Guest's credit card, and in the event
-            of its failure to issue an invoice unpaid fee. {""}
+            right to charge the Guest's credit card, and in the event of its
+            failure to issue an invoice unpaid fee. {""}
           </p>
           <h3> § 9 </h3>
           <p>
-            1. We invite you to breakfast from 7:30 to 10:00 am breakfast bar of
-            Hotel Miodowa, located on level -1. Down the breakfast room, please
-            go through the reception (the elevator goes down only to level 0).
+            1. We invite you to breakfast from 7:30 to 10:00. Breakfast room of
+            Hotel Miodowa is located on level -1. Down the breakfast room,
+            please go through the reception (the elevator goes down only to
+            level 0).
           </p>
           <p>
             2. In the evening hours (19:00 - 23:00 or until the last customer)
             we invite you to a drink bar, located on level 0.
           </p>
           <p>
-            3. Please be careful when eating in the apartments, in including
-            drinking coffee and other beverages that may dirty bedding and
+            3. Please be careful when eating in the apartments, including
+            drinking coffee and other drinks that may dirty bedding and
             mattresses. In case of contamination of the room equipment resulting
             from non-compliance with the above rules, you will burdened with the
             costs of cleaning, we expect a fine of PLN 300.
           </p>
           <p>
-            4. We also ask you not to throw anything out of the window,
-            Moreover, it is forbidden to sit on the window sills for reasons
-            danger of falling out.
+            4. We also ask you not to throw anything out of the window and don't
+            sit on the window sills for reasons danger of falling out.
           </p>
-          {/* DO SERWISU SPRZĄTAJĄCEGO */}
           <h3>
             III CLEANING SERVICE <br /> <br /> § 10
           </h3>
@@ -517,8 +511,7 @@ const RegulationsPage = () => {
           </p>
           <p>
             3. The cleaning service does NOT include washing dishes and cleaning
-            of personal belongings of guests (applies to items left on the
-            premises) beds, sofas, tables, bathroom, floor)
+            of personal belongings of guests.
           </p>
           <p>
             4. Towels are replaced with clean ones after the third day of stay,
@@ -530,15 +523,14 @@ const RegulationsPage = () => {
           <p>
             1. In the absence of guests in the apartment, an employee of the
             Hotel Miodowa can enter the room to clean or fix the fault. If you
-            do not wish this, please let us know a receptionist during check-in
-            or by hanging it up special DO NOT DISTURB pendant, which is located
-            in apartment.
+            do not wish this, please let know a receptionist during check-in or
+            by hanging it up special DO NOT DISTURB pendant, which is located in
+            apartment.
           </p>
           <h3> § 12 </h3>
           <p>
-            1. Personal belongings left by the departing person A guest in a
-            hotel apartment can be sent back upon request Guest to the indicated
-            address. {""}
+            1. Personal belongings left by the departing person can be sent back
+            upon request Guest to the indicated address. {""}
           </p>
           <p>
             2. If such an instruction is not received, Hotel Miodowa store items
@@ -548,18 +540,18 @@ const RegulationsPage = () => {
           </p>
           <h3> § 13 </h3>
           <p>
-            1. Hotel Miodowa staff has the right to remove non-users comply with
-            the regulations and disturb the order and peace of mind of others
-            Hotel guests. In such a situation, previously paid accommodation
-            fees are not refundable.
+            1. The staff of the Miodowa Hotel has the right to remove a guest
+            who does not comply with the regulations and disturbs the order and
+            peace of others. In this case, the accommodation fee will not be
+            refunded.
           </p>
           <p>
             2. It is forbidden to move room furnishings without the consent of
             the reception or another service person.
           </p>
           <p>
-            3. Each person checked into the hotel has a kit for their own use
-            keys to be returned upon check-out.
+            3. Each person checked into the hotel has their own keys to be
+            returned upon check-out.
           </p>
           <p>
             4. When placing orders with vendors, eg pizza etc, please remember
@@ -580,16 +572,13 @@ const RegulationsPage = () => {
             1. All minors staying at the Miodowa Hotel must be under the care of
             an adult responsible for them.
           </p>
-          <p>
-            2. Persons under 18 years of age are not allowed to stay at Hotel
-            Miodowa consume alcohol.
-          </p>
+          <p>2. Persons under 18 years old can't consume alcohol.</p>
           <h3>
             V GROUPS <br /> <br /> § 15
           </h3>
           <p> 1. A group of more than 20 members is considered a GROUP. </p>
           <p>
-            2. The group tutor is fully responsible for the group during her
+            2. The group leader is fully responsible for the group during they
             stay at the Hotel Miodowa, as well as for possible damage hotel
             property.
           </p>
@@ -600,24 +589,20 @@ const RegulationsPage = () => {
             identity.
           </p>
           <p>
-            4. The guardian is obliged to provide a contact telephone number to
-            myself as well as to other caregivers.
+            4. The leader is obliged to provide a contact telephone number to
+            him/her as well as to other leaders.
           </p>
           <p>
-            5. After checking in the group, the guardian should sign the list
-            regarding the issued keys to the apartments, he undertakes the same
-            obligation to return them in the amount indicated on the list and
-            accepted the obligation to pay a specific penalty in the event of
-            non-return any of the keys and for any damage caused by the group.
+            5. After checking in, the leader should sign the list of taking keys
+            to the apartments, he undertakes the same obligation to return them
+            in the amount indicated on the list and accepted the obligation to
+            pay a specific cost in the event of non-return any of the keys and
+            for any damage caused by the group.
           </p>
-          <p>
-            6. The hotel day for group reservations ends at 10:00. The start
-            time remains the same for guests individual.
-          </p>
+          <p>6. Check-out for group reservations ends at 10:00.</p>
           <p>
             7. The receptionist may ask the group leader to pay a deposit
-            against possible damage and penalties for smoking in the facility in
-            jointly agreed amount.
+            against possible damage and penalties for smoking in the rooms.
           </p>
           <h3>
             VI CHECK OUT <br /> <br /> § 16
@@ -638,8 +623,8 @@ const RegulationsPage = () => {
           <br /> <br /> <br />
           <h3>
             Hotel Miodowa would like to thank all guests for reading regulations
-            and wish you a pleasant stay. About any If you have any questions,
-            our staff will be happy to help you around the clock.
+            and wish you a pleasant stay. If you have any questions, our staff
+            will be happy to help you.
           </h3>
         </div>
       )}
