@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import emailjs from "emailjs-com";
-import styled from "styled-components";
-import { NavLink } from "react-router-dom";
+// import styled from "styled-components";
+// import { NavLink } from "react-router-dom";
 
 class MyForm extends Component {
   state = {
@@ -28,11 +28,11 @@ class MyForm extends Component {
       );
   };
   render() {
-    const { status } = this.state;
-    const { polish } = this.props;
+    // const { status } = this.state;
+    // const { polish } = this.props;
     return (
       <>
-        <Wrapper onSubmit={this.sendEmail}>
+        {/* <Wrapper onSubmit={this.sendEmail}>
           <h1>
             {polish
               ? "Jeśli chcesz dokonać rezerwacji lub masz jakieś pytania, śmiało napisz do nas!"
@@ -95,120 +95,133 @@ class MyForm extends Component {
               )}
             </>
           )}
-        </Wrapper>
+        </Wrapper> */}
+        <form action="../send_mail.php">
+          <label>Imię i nazwisko</label>
+          <input type="text" name="person" />
+
+          <label>Email</label>
+          <input type="text" name="email" />
+
+          <label>Wiadomość</label>
+          <textarea name="message" placeholder="Napisz wiadomość..."></textarea>
+
+          {/* <input type="submit" value="Wyślij" /> */}
+          <button type="submit">Wyślij</button>
+        </form>
       </>
     );
   }
 }
-const Wrapper = styled.form`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  color: var(--primaryColor);
-  height: 66vh;
-  width: 90%;
-  margin: 0 auto;
-  @media screen and (max-width: 800px) {
-    width: 100%;
-    height: auto;
-  }
-  h1 {
-    text-align: center;
-    margin: 0 auto;
-    margin-bottom: 5vh;
-    font-family: var(--buttonFont);
-    width: 80%;
-    color: var(--secondaryColor2);
+// const Wrapper = styled.form`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   align-items: center;
+//   color: var(--primaryColor);
+//   height: 66vh;
+//   width: 90%;
+//   margin: 0 auto;
+//   @media screen and (max-width: 800px) {
+//     width: 100%;
+//     height: auto;
+//   }
+//   h1 {
+//     text-align: center;
+//     margin: 0 auto;
+//     margin-bottom: 5vh;
+//     font-family: var(--buttonFont);
+//     width: 80%;
+//     color: var(--secondaryColor2);
 
-    @media screen and (max-width: 800px) {
-      font-size: 1.5rem;
-      width: 90%;
-    }
-  }
-  .inputContainer {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    input {
-      border-radius: 5px;
-      width: 45%;
-      padding: 10px 20px;
-      font-size: 1rem;
-      background: var(--roomDetailBg);
-      border: 2px solid var(--secondaryColor2);
-      color: var(--primaryColor);
-      font-family: var(--textFont);
-      @media screen and (max-width: 800px) {
-        font-size: 1rem;
-        width: 47%;
-        padding: 8px 10px;
-      }
-    }
-  }
-  textarea {
-    width: 100%;
-    min-height: 30vh;
-    padding: 20px 20px;
-    border-radius: 5px;
-    font-size: 1rem;
-    background: var(--roomDetailBg);
-    border: 2px solid var(--secondaryColor2);
-    color: var(--primaryColor);
-    font-family: var(--textFont);
-    line-height: 1.2;
-    @media screen and (max-width: 800px) {
-      font-size: 1rem;
-      padding: 8px 10px;
-      min-height: 30vh;
-    }
-  }
-  .labelCookieContainer {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    font-family: var(--textFont);
-    font-size: 1rem;
-    line-height: 1.2;
-    label {
-      margin: 3vh auto 0;
-      @media (orientation: portrait) and (max-width: 800px) {
-        font-size: 0.9rem;
-      }
-      input {
-        margin-right: 10px;
-        cursor: pointer;
-      }
-    }
-    .cookieLink {
-      color: var(--secondaryColor2);
-      cursor: pointer;
-      margin-left: 5px;
-    }
-  }
-  button {
-    width: 30%;
-    font-size: 1.1rem;
-    padding: 10px 0;
-    background: transparent;
-    color: var(--primaryColor);
-    letter-spacing: 1px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: 0.5s;
-    border: 2px solid var(--bookBtnColor);
-    margin-top: 3vh;
-    font-family: var(--buttonFont);
-    :hover {
-      background: var(--bookBtnColor);
-      color: #fff;
-    }
-    @media screen and (max-width: 800px) {
-      width: 50%;
-      /* background: rgb(197, 103, 40); */
-    }
-  }
-`;
+//     @media screen and (max-width: 800px) {
+//       font-size: 1.5rem;
+//       width: 90%;
+//     }
+//   }
+//   .inputContainer {
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     input {
+//       border-radius: 5px;
+//       width: 45%;
+//       padding: 10px 20px;
+//       font-size: 1rem;
+//       background: var(--roomDetailBg);
+//       border: 2px solid var(--secondaryColor2);
+//       color: var(--primaryColor);
+//       font-family: var(--textFont);
+//       @media screen and (max-width: 800px) {
+//         font-size: 1rem;
+//         width: 47%;
+//         padding: 8px 10px;
+//       }
+//     }
+//   }
+//   textarea {
+//     width: 100%;
+//     min-height: 30vh;
+//     padding: 20px 20px;
+//     border-radius: 5px;
+//     font-size: 1rem;
+//     background: var(--roomDetailBg);
+//     border: 2px solid var(--secondaryColor2);
+//     color: var(--primaryColor);
+//     font-family: var(--textFont);
+//     line-height: 1.2;
+//     @media screen and (max-width: 800px) {
+//       font-size: 1rem;
+//       padding: 8px 10px;
+//       min-height: 30vh;
+//     }
+//   }
+//   .labelCookieContainer {
+//     display: flex;
+//     justify-content: center;
+//     flex-direction: column;
+//     font-family: var(--textFont);
+//     font-size: 1rem;
+//     line-height: 1.2;
+//     label {
+//       margin: 3vh auto 0;
+//       @media (orientation: portrait) and (max-width: 800px) {
+//         font-size: 0.9rem;
+//       }
+//       input {
+//         margin-right: 10px;
+//         cursor: pointer;
+//       }
+//     }
+//     .cookieLink {
+//       color: var(--secondaryColor2);
+//       cursor: pointer;
+//       margin-left: 5px;
+//     }
+//   }
+//   button {
+//     width: 30%;
+//     font-size: 1.1rem;
+//     padding: 10px 0;
+//     background: transparent;
+//     color: var(--primaryColor);
+//     letter-spacing: 1px;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     transition: 0.5s;
+//     border: 2px solid var(--bookBtnColor);
+//     margin-top: 3vh;
+//     font-family: var(--buttonFont);
+//     :hover {
+//       background: var(--bookBtnColor);
+//       color: #fff;
+//     }
+//     @media screen and (max-width: 800px) {
+//       width: 50%;
+//       /* background: rgb(197, 103, 40); */
+//     }
+//   }
+// `;
 
 export default MyForm;

@@ -8,8 +8,6 @@ import { RoomContext } from "../roomContext";
 
 import { gallery, galleryEN } from "../data";
 
-import exampleImg from "../images/dbl/DBL 001.jpg";
-
 const allCategories = [
   ...new Set(gallery.map((item) => item.category)),
   "wszystkie",
