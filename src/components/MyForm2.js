@@ -26,7 +26,7 @@ const MyForm2 = () => {
         email: email,
         wiadomość: text,
         _template: "box",
-        _subject: "wiadomość z hotelmiodowa.pl",
+        _subject: `hotelmiodowa.pl, wiadomość od ${name}`,
       }),
     })
       .then((response) => response.json())
