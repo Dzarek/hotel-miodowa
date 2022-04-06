@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import MyForm from "../components/MyForm";
+// import MyForm from "../components/MyForm";
+import MyForm2 from "../components/MyForm2";
 import { useContext } from "react";
 import { RoomContext } from "../roomContext";
 
@@ -57,7 +58,8 @@ const ContactPage = () => {
       </div>
       <div className="contactContent">
         <section className="form">
-          <MyForm polish={polish} />
+          {/* <MyForm polish={polish} /> */}
+          <MyForm2 />
         </section>
         <section className="social">
           <div data-aos="fade-left" className="adressPhoneEmail">

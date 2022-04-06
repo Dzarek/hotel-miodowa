@@ -128,36 +128,39 @@ const RodoPage = () => {
             <p>
               9. Monitoring wizyjny obejmuje: recepcję hotelu, hol, korytarze,
               klatkę schodową, bar, jadalnie, wejścia do wind, wjazd do hotelu,
-              teren zielony. Osoba, której dane są przetwarzane, ma prawo do
-              żądania od administratora dostępu do danych osobowych, prawo do
-              ich sprostowania, usunięcia lub ograniczenia przetwarzania, prawo
-              do wniesienia sprzeciwu wobec przetwarzania, prawo do przenoszenia
+              teren zielony.
+            </p>
+            <p>
+              10. Osoba, której dane są przetwarzane, ma prawo do żądania od
+              administratora dostępu do danych osobowych, prawo do ich
+              sprostowania, usunięcia lub ograniczenia przetwarzania, prawo do
+              wniesienia sprzeciwu wobec przetwarzania, prawo do przenoszenia
               danych.
             </p>
             <p>
-              10. W przypadku gdy przetwarzanie danych osobowych odbywa się na
+              11. W przypadku gdy przetwarzanie danych osobowych odbywa się na
               podstawie zgody osoby na przetwarzanie danych osobowych (art. 6
               ust. 1 lit a RODO), przysługuje jej prawo do cofnięcia tej zgody w
               dowolnym momencie.
             </p>
             <p>
-              11. W przypadku powzięcia informacji o niezgodnym z prawem
+              12. W przypadku powzięcia informacji o niezgodnym z prawem
               przetwarzaniu przez Administratora danych osobowych, przysługuje
               Pani/Panu prawo wniesienia skargi do organu nadzorczego tj.
               Prezesa Urzędu Ochrony Danych Osobowych.
             </p>
             <p>
-              12. Podanie przez Panią/Pana danych osobowych jest obowiązkiem
+              13. Podanie przez Panią/Pana danych osobowych jest obowiązkiem
               ustawowym, gdy przesłanką przetwarzania jest przepis prawa lub
               warunkiem koniecznym zawarcia umowy bądź załatwienia indywidualnej
               sprawy.
             </p>
             <p>
-              13. Administrator nie przewiduje przetwarzania Pani/ Pana danych w
+              14. Administrator nie przewiduje przetwarzania Pani/ Pana danych w
               sposób zautomatyzowany, w tym ich profilowania.
             </p>
             <p>
-              14. Administrator nie przewiduje przekazywania Pani/ Pana danych
+              15. Administrator nie przewiduje przekazywania Pani/ Pana danych
               do państw trzecich w rozumieniu RODO.
             </p>
           </div>
@@ -227,106 +230,108 @@ const RodoPage = () => {
           <div className="content">
             <h3> Ladies and Gentlemen, </h3>
             <p>
-              In accordance with the Regulation of the European Parliament and
-              of the Council (EU) 2016/679 of 27 April 2016 on the protection of
-              natural persons in connection with the processing of personal data
-              and on the free the flow of such data and the repeal of Directive
-              95/46 / EC (General Data Protection Regulation, hereinafter
-              referred to as: GDPR), Hotel Miodowa informs that:
+              Pursuant to Regulation (EU) 2016/679 of the European Parliament
+              and of the Council of 27 April 2016 on the protection of
+              individuals with regard to the processing of personal data and on
+              the freemovement of such data, and repealing Directive 95/46 / EC
+              (General Regulation on the Protection of data, hereinafter
+              referred to as: RODO), Hotel Miodowa informs that:
             </p>
             <p>
               1. The administrator of your personal data is Eko – Test Szczakowa
               Spółka z ograniczoną odpowiedzialnością Nieruchomości Spółka
-              Komandytowa z siedzibą przy ul. Szklarkiej 5, 43-602 Jaworzono,
-              contact e-mail: biuro@aparthotelmiodowa.pl.
+              Komandytowa with its registered office at ul. Szklarkiej 5, 43-602
+              Jaworzno, contact e-mail: biuro@aparthotelmiodowa.pl.
             </p>
             <p>
-              2. The administrator has appointed a Personal Data Protection
-              Inspector - Jerzy Góra, who can be contacted by e-mail:
-              biuro@aparthotelmiodowa.pl. in any matter regarding the processing
-              of your personal data.
+              2. The administrator has appointed the Personal Data Protection
+              Inspector Jerzy Góra, who you can contact by e-mail:
+              biuro@aparthotelmiodowa.pl or in writing to the address of the
+              Administrator's seat. You can contact the Data Protection Officer
+              in all matters regarding the processing of personal data and the
+              exercise of rights related to data processing.
             </p>
             <p>
-              3. Your personal data will be processed on the basis of Art. 6
-              sec. 1 lit. b, f GDPR - processing is necessary to perform the
-              contract, to which party is the data subject or to take action at
-              the request of the data subject, before concluding the contract;
-              legally legitimate interest pursued by the data controller.
+              3. Your personal data will be processed on the basis of Art. 1
+              lit. b, f RODO - processing is necessary to perform a contract to
+              which the data subject is a party or to take action at the request
+              of the data subject before concluding the contract; legitimate
+              interest pursued by the data controller.
             </p>
             <p>
-              4. Your personal data will be processed in order to perform the
-              contract accommodation, in particular: issuing the necessary
-              documents use of our services (registration card, invoices,
-              receipts) and making cash and non-cash payments, handling
-              notifications that are sent by phone or e-mail, our use of contact
-              details for purposes related to provision of services resulting
-              from the concluded contract for the provision of services,
-              handling complaints and complaints - if they are submitted; in
-              cells tax and accounting, in terms of data collected by the
-              purpose of monitoring is to ensure the safety of the occupants in
-              the monitored area (including employee safety) and property
-              protection, fire and flood protection.
+              4. Your personal data will be processed for the purpose of
+              implementing the accommodation contract, in particular: issuing
+              the necessary documents for using our services (registration card,
+              invoice, receipt) and for making cash and non-cash payments,
+              handling requests that are sent by phone, e-mail, our use of
+              contact details for purposes related to the provision of services
+              under the concluded service contract, handling complaints and
+              complaints - if submitted; for tax and accounting purposes, in the
+              scope of data collected by monitoring, the purpose is to ensure
+              the safety of persons staying in the monitored area (including
+              employee safety) as well as property protection, fire and flood
+              protection.
             </p>
             <p>
-              5. The legitimate purpose of the data controller is to: conduct
-              own services, maintaining customer relations, conducting analyzes
-              statistical, providing payment services, debt collection,
-              archiving of data to ensure accountability and fulfillment
-              obligations under the law.
+              5. The legitimate purpose of the Data Administrator is: conducting
+              own services, maintaining customer relations, conducting
+              statistical analyzes, providing payment services, debt collection,
+              archiving data to ensure accountability and fulfill obligations
+              arising from legal provisions.
             </p>
             <p>
-              6. Your data will be made available to entities authorized to on
-              the basis of generally applicable legal regulations or a company
-              providing legal services.
+              6. Your data will be made available to entities authorized under
+              generally applicable law or a company providing legal services.
             </p>
             <p>
-              7. Your personal data will be kept for the period of validity
+              7. Your personal data will be stored for the duration of the
               contract with you, as well as after its termination for the
-              purpose of: investigation claims in connection with the
-              performance of the terms of the contract, performance obligations
-              resulting from legal regulations, including tax, i accounting,
-              fraud and fraud prevention, statistical and archiving, for a
-              maximum of 6 years from the end of the performance service
-              contracts.
+              purpose of: pursuing claims in connection with the performance of
+              contract conditions, performance of obligations arising from legal
+              provisions, including tax and accounting, preventing fraud and
+              fraud, statistical and archiving, up to a maximum of 6 years from
+              the end of the performance of the service contract.
             </p>
             <p>
-              8. Your personal data in the scope of the monitoring record will
-              be stored until overwritten (depending on the size of the
-              recordings) up to 30 days or until final completion legal
-              proceedings.
+              8. Your personal data in the scope of recording monitoring will be
+              stored until overwriting (depending on the size of recordings) up
+              to 30 days or until the final termination of the proceedings
+              conducted on the basis of law.
             </p>
             <p>
-              9. Video surveillance includes: hotel reception, hall, corridors,
+              9. Video monitoring includes: hotel reception, hall, corridors,
               staircase, bar, dining rooms, elevator entrances, hotel entrance,
-              green area. The data subject has the right to request from the
-              administrator of access to personal data, the right to them
-              rectification, deletion or limitation of processing, the right to
-              object to processing, the right to transfer data.
+              green area.
             </p>
             <p>
-              10. Where the processing of personal data takes place on on the
-              basis of the consent of the person to the processing of personal
-              data (art.6 par.1 letter a GDPR), she has the right to withdraw
-              this consent at any time moment.
+              10. The person whose data is processed has the right to request
+              the administrator to access personal data, the right to rectify
+              it, delete or limit processing, the right to object to the
+              processing, the right to transfer data.
             </p>
             <p>
-              11. In case of becoming aware of illegal activity processing of
-              personal data by the Administrator is entitled to Your right to
-              lodge a complaint with the supervisory body, i.e. the President
-              Personal Data Protection Office.
+              11. If the processing of personal data is based on the consent of
+              the person for the processing of personal data (Article 6
+              paragraph 1 point a of the GDPR), he has the right to withdraw
+              this consent at any time.
             </p>
             <p>
-              12. Providing your personal data by you is an obligation
-              statutory, when the premise for processing is a legal provision or
-              a necessary condition for concluding a contract or for an
-              individual arrangement issues.
+              12. If you become aware of an unlawful processing of personal data
+              by the Administrator, you have the right to lodge a complaint to
+              the supervisory body, i.e. the President of the Office for
+              Personal Data Protection.
             </p>
             <p>
-              13. The administrator does not provide for the processing of your
-              data in automated method, including profiling.
+              13. Providing personal data by you is a statutory obligation when
+              the premise for processing is a legal provision or a necessary
+              condition to conclude a contract or settle an individual case.
             </p>
             <p>
-              14. The administrator does not provide for the transfer of your
+              14. The Administrator does not provide for the processing of your
+              data in anautomated manner, including their profiling.
+            </p>
+            <p>
+              15. The Administrator does not provide for the transfer of your
               data to third countries within the meaning of the GDPR.
             </p>
           </div>

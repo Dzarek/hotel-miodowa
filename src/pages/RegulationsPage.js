@@ -608,7 +608,7 @@ const RegulationsPage = () => {
             VI CHECK OUT <br /> <br /> § 16
           </h3>
           <p>
-            1.Every guest leaving Hotel Miodowa is obliged to leaving the keys
+            1. Every guest leaving Hotel Miodowa is obliged to leaving the keys
             to the apartment at the reception.
           </p>
           <p>
