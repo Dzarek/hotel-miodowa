@@ -15,6 +15,7 @@ import {
 } from "react-icons/fa";
 
 import logoMiodowa from "../images/icon.png";
+import logoJarek from "../images/logoJarek.png";
 
 const Footer = () => {
   const context = useContext(RoomContext);
@@ -102,6 +103,12 @@ const Footer = () => {
           </div>
         </div>
         <h5 className="copyrights">
+          <span className="logoJarek">
+            <p>projekt i wykonanie</p>
+            <a href="https://www.jarekjanas.com">
+              <img src={logoJarek} alt="logo Jarosław Janas" />
+            </a>{" "}
+          </span>
           &copy; 2014 - {new Date().getFullYear()} Hotel Miodowa,{" "}
           {polish ? "Wszelkie Prawa Zastrzeżone" : "All Rights Reserved"}
         </h5>
@@ -189,7 +196,40 @@ const Wrapper = styled.div`
     z-index: 1;
     text-align: center;
     @media screen and (max-width: 800px) {
-      height: 8%;
+      height: 12%;
+      padding: 5% 2vw 0;
+      align-items: flex-start;
+    }
+  }
+  .logoJarek {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      width: 25px;
+      height: 25px;
+      margin-left: 10px;
+      img {
+        width: 100%;
+        height: 100%;
+        transition: 0.3s;
+        opacity: 0.8;
+        :hover {
+          filter: invert(100%);
+        }
+      }
+    }
+    p {
+      font-size: 12px;
+      letter-spacing: 1px;
+    }
+    @media screen and (max-width: 800px) {
+      top: 80%;
+      left: 3%;
     }
   }
 
