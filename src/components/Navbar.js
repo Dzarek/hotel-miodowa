@@ -67,198 +67,27 @@ const Navbar = ({ showMenu, setShowMenu, showBooking, setShowBooking }) => {
   // }, [offset]);
   const pageHeight = window.document.body.offsetHeight - window.innerHeight;
 
+  const [width, setWidth] = useState(window.innerWidth);
+  function handleWindowSizeChange() {
+    setWidth(window.innerWidth);
+  }
+  useEffect(() => {
+    window.addEventListener("resize", handleWindowSizeChange);
+    return () => {
+      window.removeEventListener("resize", handleWindowSizeChange);
+    };
+  }, []);
+
+  const isMobile = width <= 800;
+
   return (
     <>
-      <Wrapper>
-        <div
-          className={offset === 0 ? "navbar" : "navbar navbarBg"}
-          onMouseOver={handleSubmenu}
-        >
+      {!isMobile ? (
+        <Wrapper>
           <div
-            onClick={() => {
-              scroll.scrollToTop();
-            }}
-            className={
-              offset !== pageHeight
-                ? "logo-container"
-                : "logo-container displayNONE"
-            }
+            className={offset === 0 ? "navbar" : "navbar navbarBg"}
+            onMouseOver={handleSubmenu}
           >
-            <img className="logo" src={logoMiodowa} alt="logo" />
-          </div>
-          <button
-            onClick={() => {
-              setShowBooking(true);
-            }}
-            className="bookBtn"
-            style={!showBooking ? { opacity: 1 } : { opacity: 0 }}
-          >
-            <FaConciergeBell className="bell" />
-            <h3>{polish ? "Rezerwacja" : "Reservation"}</h3>{" "}
-          </button>
-          {polish ? (
-            <div className="navbar-links">
-              <NavLink to="/" activeClassName="active">
-                <p>strona główna</p>
-              </NavLink>
-              <NavLink to="/pokoje" activeClassName="active">
-                <p onMouseOver={displaySubmenu} className="link-btn">
-                  pokoje
-                </p>
-                <TiArrowSortedDown />
-              </NavLink>
-              <NavLink to="/oNas" activeClassName="active">
-                <p onMouseOver={displaySubmenu} className="link-btn">
-                  o nas
-                </p>
-                <TiArrowSortedDown />
-              </NavLink>
-              <NavLink to="/galeria" activeClassName="active">
-                galeria
-              </NavLink>
-              <NavLink to="/uslugi" activeClassName="active">
-                <p onMouseOver={displaySubmenu} className="link-btn">
-                  usługi
-                </p>
-                <TiArrowSortedDown />
-              </NavLink>
-              <NavLink
-                to="/kontakt/formularzKontaktowy"
-                activeClassName="active"
-              >
-                <p onMouseOver={displaySubmenu} className="link-btn">
-                  kontakt
-                </p>
-                <TiArrowSortedDown />
-              </NavLink>
-              <h5 className="iconLanguage">
-                {viewlanguage ? (
-                  <GiExitDoor
-                    className="navbarToggleLanguage-big"
-                    onClick={handleToggleLanguage}
-                  />
-                ) : (
-                  <IoLanguageSharp
-                    className="navbarToggleLanguage"
-                    onClick={handleToggleLanguage}
-                  />
-                )}
-                {viewlanguage ? (
-                  <div className="language-change">
-                    {polish ? <h2>Zmiana Języka</h2> : <h2>Change Language</h2>}
-                    <div className="language-change-items">
-                      <span>
-                        <img
-                          src={englandFlag}
-                          alt="englandFlag"
-                          onClick={handleToggleEnglish}
-                        />
-                      </span>
-                      <span>
-                        <img
-                          src={polandFlag}
-                          alt="polandFlag"
-                          onClick={handleTogglePolish}
-                        />
-                      </span>
-                    </div>
-                  </div>
-                ) : null}
-              </h5>
-            </div>
-          ) : (
-            <div className="navbar-links">
-              <NavLink to="/" activeClassName="active">
-                <p>home</p>
-              </NavLink>
-              <NavLink to="/pokoje" activeClassName="active">
-                <p onMouseOver={displaySubmenu} className="link-btn">
-                  rooms
-                </p>
-                <TiArrowSortedDown />
-              </NavLink>
-              <NavLink to="/oNas" activeClassName="active">
-                <p onMouseOver={displaySubmenu} className="link-btn">
-                  about us
-                </p>
-                <TiArrowSortedDown />
-              </NavLink>
-              <NavLink to="/galeria" activeClassName="active">
-                gallery
-              </NavLink>
-              <NavLink to="/uslugi" activeClassName="active">
-                <p onMouseOver={displaySubmenu} className="link-btn">
-                  services
-                </p>
-                <TiArrowSortedDown />
-              </NavLink>
-              <NavLink
-                to="/kontakt/formularzKontaktowy"
-                activeClassName="active"
-              >
-                <p onMouseOver={displaySubmenu} className="link-btn">
-                  contact
-                </p>
-                <TiArrowSortedDown />
-              </NavLink>
-              <h5 className="iconLanguage">
-                {viewlanguage ? (
-                  <GiExitDoor
-                    className="navbarToggleLanguage-big"
-                    onClick={handleToggleLanguage}
-                  />
-                ) : (
-                  <IoLanguageSharp
-                    className="navbarToggleLanguage"
-                    onClick={handleToggleLanguage}
-                  />
-                )}
-                {viewlanguage ? (
-                  <div className="language-change">
-                    {polish ? <h2>Zmiana Języka</h2> : <h2>Change Language</h2>}
-                    <div className="language-change-items">
-                      <span>
-                        <img
-                          src={polandFlag}
-                          alt="polandFlag"
-                          onClick={handleTogglePolish}
-                        />
-                      </span>
-                      <span>
-                        <img
-                          src={englandFlag}
-                          alt="englandFlag"
-                          onClick={handleToggleEnglish}
-                        />
-                      </span>
-                    </div>
-                  </div>
-                ) : null}
-              </h5>
-            </div>
-          )}
-        </div>
-        <BookingRoom
-          showBooking={showBooking}
-          setShowBooking={setShowBooking}
-        />
-        <button
-          className={offset > 200 ? "upBtn" : "upBtn upBtnNone"}
-          onClick={() => {
-            scroll.scrollToTop();
-          }}
-        >
-          <BsFillArrowUpSquareFill />
-        </button>
-      </Wrapper>
-      <Wrapper2>
-        <div
-          className={
-            !showMenu ? "main-navOutside" : "main-navOutside showMain-Nav"
-          }
-        >
-          {/* <div className="main-nav"> */}
-          <div className={!showMenu ? "main-nav" : "main-nav showMain-Nav"}>
             <div
               onClick={() => {
                 scroll.scrollToTop();
@@ -271,49 +100,50 @@ const Navbar = ({ showMenu, setShowMenu, showBooking, setShowBooking }) => {
             >
               <img className="logo" src={logoMiodowa} alt="logo" />
             </div>
+            <button
+              onClick={() => {
+                setShowBooking(true);
+              }}
+              className="bookBtn"
+              style={!showBooking ? { opacity: 1 } : { opacity: 0 }}
+            >
+              <FaConciergeBell className="bell" />
+              <h3>{polish ? "Rezerwacja" : "Reservation"}</h3>{" "}
+            </button>
             {polish ? (
-              <div className="nav-list">
-                <NavLink
-                  to="/"
-                  activeClassName="active"
-                  onClick={() => setShowMenu(false)}
-                >
+              <div className="navbar-links">
+                <NavLink to="/" activeClassName="active">
                   <p>strona główna</p>
                 </NavLink>
-                <NavLink
-                  to="/pokoje"
-                  activeClassName="active"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <p>pokoje</p>
+                <NavLink to="/pokoje" activeClassName="active">
+                  <p onMouseOver={displaySubmenu} className="link-btn">
+                    pokoje
+                  </p>
+                  <TiArrowSortedDown />
                 </NavLink>
-                <NavLink
-                  to="/oNas"
-                  activeClassName="active"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <p>o nas</p>
+                <NavLink to="/oNas" activeClassName="active">
+                  <p onMouseOver={displaySubmenu} className="link-btn">
+                    o nas
+                  </p>
+                  <TiArrowSortedDown />
                 </NavLink>
-                <NavLink
-                  to="/galeria"
-                  activeClassName="active"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <p>galeria</p>
+                <NavLink to="/galeria" activeClassName="active">
+                  galeria
                 </NavLink>
-                <NavLink
-                  to="/uslugi"
-                  activeClassName="active"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <p>usługi</p>
+                <NavLink to="/uslugi" activeClassName="active">
+                  <p onMouseOver={displaySubmenu} className="link-btn">
+                    usługi
+                  </p>
+                  <TiArrowSortedDown />
                 </NavLink>
                 <NavLink
                   to="/kontakt/formularzKontaktowy"
                   activeClassName="active"
-                  onClick={() => setShowMenu(false)}
                 >
-                  <p>kontakt</p>
+                  <p onMouseOver={displaySubmenu} className="link-btn">
+                    kontakt
+                  </p>
+                  <TiArrowSortedDown />
                 </NavLink>
                 <h5 className="iconLanguage">
                   {viewlanguage ? (
@@ -339,14 +169,14 @@ const Navbar = ({ showMenu, setShowMenu, showBooking, setShowBooking }) => {
                           <img
                             src={englandFlag}
                             alt="englandFlag"
-                            onClick={toggleEnglishL}
+                            onClick={handleToggleEnglish}
                           />
                         </span>
                         <span>
                           <img
                             src={polandFlag}
                             alt="polandFlag"
-                            onClick={togglePolishL}
+                            onClick={handleTogglePolish}
                           />
                         </span>
                       </div>
@@ -355,48 +185,39 @@ const Navbar = ({ showMenu, setShowMenu, showBooking, setShowBooking }) => {
                 </h5>
               </div>
             ) : (
-              <div className="nav-list">
-                <NavLink
-                  to="/"
-                  activeClassName="active"
-                  onClick={() => setShowMenu(false)}
-                >
+              <div className="navbar-links">
+                <NavLink to="/" activeClassName="active">
                   <p>home</p>
                 </NavLink>
-                <NavLink
-                  to="/pokoje"
-                  activeClassName="active"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <p>rooms</p>
+                <NavLink to="/pokoje" activeClassName="active">
+                  <p onMouseOver={displaySubmenu} className="link-btn">
+                    rooms
+                  </p>
+                  <TiArrowSortedDown />
                 </NavLink>
-                <NavLink
-                  to="/oNas"
-                  activeClassName="active"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <p>about us</p>
+                <NavLink to="/oNas" activeClassName="active">
+                  <p onMouseOver={displaySubmenu} className="link-btn">
+                    about us
+                  </p>
+                  <TiArrowSortedDown />
                 </NavLink>
-                <NavLink
-                  to="/galeria"
-                  activeClassName="active"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <p>gallery</p>
+                <NavLink to="/galeria" activeClassName="active">
+                  gallery
                 </NavLink>
-                <NavLink
-                  to="/uslugi"
-                  activeClassName="active"
-                  onClick={() => setShowMenu(false)}
-                >
-                  <p>services</p>
+                <NavLink to="/uslugi" activeClassName="active">
+                  <p onMouseOver={displaySubmenu} className="link-btn">
+                    services
+                  </p>
+                  <TiArrowSortedDown />
                 </NavLink>
                 <NavLink
                   to="/kontakt/formularzKontaktowy"
                   activeClassName="active"
-                  onClick={() => setShowMenu(false)}
                 >
-                  <p>contact</p>
+                  <p onMouseOver={displaySubmenu} className="link-btn">
+                    contact
+                  </p>
+                  <TiArrowSortedDown />
                 </NavLink>
                 <h5 className="iconLanguage">
                   {viewlanguage ? (
@@ -422,14 +243,14 @@ const Navbar = ({ showMenu, setShowMenu, showBooking, setShowBooking }) => {
                           <img
                             src={polandFlag}
                             alt="polandFlag"
-                            onClick={togglePolishL}
+                            onClick={handleTogglePolish}
                           />
                         </span>
                         <span>
                           <img
                             src={englandFlag}
                             alt="englandFlag"
-                            onClick={toggleEnglishL}
+                            onClick={handleToggleEnglish}
                           />
                         </span>
                       </div>
@@ -438,48 +259,252 @@ const Navbar = ({ showMenu, setShowMenu, showBooking, setShowBooking }) => {
                 </h5>
               </div>
             )}
-            <div className="menuSmall">
-              <button
+          </div>
+          <BookingRoom
+            showBooking={showBooking}
+            setShowBooking={setShowBooking}
+          />
+          <button
+            className={offset > 200 ? "upBtn" : "upBtn upBtnNone"}
+            onClick={() => {
+              scroll.scrollToTop();
+            }}
+          >
+            <BsFillArrowUpSquareFill />
+          </button>
+        </Wrapper>
+      ) : (
+        <Wrapper2>
+          <div
+            className={
+              !showMenu ? "main-navOutside" : "main-navOutside showMain-Nav"
+            }
+          >
+            {/* <div className="main-nav"> */}
+            <div className={!showMenu ? "main-nav" : "main-nav showMain-Nav"}>
+              <div
                 onClick={() => {
-                  setShowBooking(true);
+                  scroll.scrollToTop();
                 }}
-                className="bookBtn"
-                style={!showBooking ? { opacity: 1 } : { opacity: 0 }}
+                // className={
+                //   offset !== pageHeight
+                //     ? "logo-container"
+                //     : "logo-container displayNONE"
+                // }
+                className="logo-container"
               >
-                <FaConciergeBell className="bell" />
-                <h3>{polish ? "Rezerwacja" : "Reservation"}</h3>{" "}
-              </button>
-              {!showMenu ? (
-                <button
-                  onClick={() => setShowMenu(!showMenu)}
-                  className="nav-toggle"
-                >
-                  <FaBars />
-                </button>
+                <img className="logo" src={logoMiodowa} alt="logo" />
+              </div>
+              {polish ? (
+                <div className="nav-list">
+                  <NavLink
+                    to="/"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>strona główna</p>
+                  </NavLink>
+                  <NavLink
+                    to="/pokoje"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>pokoje</p>
+                  </NavLink>
+                  <NavLink
+                    to="/oNas"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>o nas</p>
+                  </NavLink>
+                  <NavLink
+                    to="/galeria"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>galeria</p>
+                  </NavLink>
+                  <NavLink
+                    to="/uslugi"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>usługi</p>
+                  </NavLink>
+                  <NavLink
+                    to="/kontakt/formularzKontaktowy"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>kontakt</p>
+                  </NavLink>
+                  <h5 className="iconLanguage">
+                    {viewlanguage ? (
+                      <GiExitDoor
+                        className="navbarToggleLanguage-big"
+                        onClick={handleToggleLanguage}
+                      />
+                    ) : (
+                      <IoLanguageSharp
+                        className="navbarToggleLanguage"
+                        onClick={handleToggleLanguage}
+                      />
+                    )}
+                    {viewlanguage ? (
+                      <div className="language-change">
+                        {polish ? (
+                          <h2>Zmiana Języka</h2>
+                        ) : (
+                          <h2>Change Language</h2>
+                        )}
+                        <div className="language-change-items">
+                          <span>
+                            <img
+                              src={englandFlag}
+                              alt="englandFlag"
+                              onClick={toggleEnglishL}
+                            />
+                          </span>
+                          <span>
+                            <img
+                              src={polandFlag}
+                              alt="polandFlag"
+                              onClick={togglePolishL}
+                            />
+                          </span>
+                        </div>
+                      </div>
+                    ) : null}
+                  </h5>
+                </div>
               ) : (
-                <button
-                  onClick={() => setShowMenu(!showMenu)}
-                  className="nav-toggle"
-                >
-                  <FaArrowUp />
-                </button>
+                <div className="nav-list">
+                  <NavLink
+                    to="/"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>home</p>
+                  </NavLink>
+                  <NavLink
+                    to="/pokoje"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>rooms</p>
+                  </NavLink>
+                  <NavLink
+                    to="/oNas"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>about us</p>
+                  </NavLink>
+                  <NavLink
+                    to="/galeria"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>gallery</p>
+                  </NavLink>
+                  <NavLink
+                    to="/uslugi"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>services</p>
+                  </NavLink>
+                  <NavLink
+                    to="/kontakt/formularzKontaktowy"
+                    activeClassName="active"
+                    onClick={() => setShowMenu(false)}
+                  >
+                    <p>contact</p>
+                  </NavLink>
+                  <h5 className="iconLanguage">
+                    {viewlanguage ? (
+                      <GiExitDoor
+                        className="navbarToggleLanguage-big"
+                        onClick={handleToggleLanguage}
+                      />
+                    ) : (
+                      <IoLanguageSharp
+                        className="navbarToggleLanguage"
+                        onClick={handleToggleLanguage}
+                      />
+                    )}
+                    {viewlanguage ? (
+                      <div className="language-change">
+                        {polish ? (
+                          <h2>Zmiana Języka</h2>
+                        ) : (
+                          <h2>Change Language</h2>
+                        )}
+                        <div className="language-change-items">
+                          <span>
+                            <img
+                              src={polandFlag}
+                              alt="polandFlag"
+                              onClick={togglePolishL}
+                            />
+                          </span>
+                          <span>
+                            <img
+                              src={englandFlag}
+                              alt="englandFlag"
+                              onClick={toggleEnglishL}
+                            />
+                          </span>
+                        </div>
+                      </div>
+                    ) : null}
+                  </h5>
+                </div>
               )}
+              <div className="menuSmall">
+                <button
+                  onClick={() => {
+                    setShowBooking(true);
+                  }}
+                  className="bookBtn"
+                  style={!showBooking ? { opacity: 1 } : { opacity: 0 }}
+                >
+                  <FaConciergeBell className="bell" />
+                  <h3>{polish ? "Rezerwacja" : "Reservation"}</h3>{" "}
+                </button>
+                {!showMenu ? (
+                  <button
+                    onClick={() => setShowMenu(!showMenu)}
+                    className="nav-toggle"
+                  >
+                    <FaBars />
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => setShowMenu(!showMenu)}
+                    className="nav-toggle"
+                  >
+                    <FaArrowUp />
+                  </button>
+                )}
+              </div>
             </div>
           </div>
-        </div>
-        <BookingRoom
-          showBooking={showBooking}
-          setShowBooking={setShowBooking}
-        />
-        <button
-          className={offset > 200 ? "upBtn" : "upBtn upBtnNone"}
-          onClick={() => {
-            scroll.scrollToTop();
-          }}
-        >
-          <BsFillArrowUpSquareFill />
-        </button>
-      </Wrapper2>
+          <BookingRoom
+            showBooking={showBooking}
+            setShowBooking={setShowBooking}
+          />
+          <button
+            className={offset > 200 ? "upBtn" : "upBtn upBtnNone"}
+            onClick={() => {
+              scroll.scrollToTop();
+            }}
+          >
+            <BsFillArrowUpSquareFill />
+          </button>
+        </Wrapper2>
+      )}
     </>
   );
 };
