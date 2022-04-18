@@ -15,7 +15,7 @@ const MyForm2 = () => {
 
   const handleWowSubmit = async (e) => {
     e.preventDefault();
-    await fetch("https://formsubmit.co/ajax/dzarekcoding@gmail.com", {
+    await fetch("https://formsubmit.co/ajax/rezerwacja@hotelmiodowa.pl", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
