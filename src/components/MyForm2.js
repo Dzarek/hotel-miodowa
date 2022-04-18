@@ -50,11 +50,11 @@ const MyForm2 = () => {
   return (
     <>
       <Wrapper onSubmit={(e) => handleWowSubmit(e)}>
-        <h1>
+        <h2>
           {polish
             ? "Jeśli chcesz dokonać rezerwacji lub masz jakieś pytania, śmiało napisz do nas!"
             : "If you want to make a reservation or have any questions, feel free to write to us!"}
-        </h1>
+        </h2>
         <div className="inputContainer">
           <input
             type="text"
@@ -147,7 +147,7 @@ const Wrapper = styled.form`
     width: 100%;
     height: auto;
   }
-  h1 {
+  h2 {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 5vh;

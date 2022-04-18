@@ -63,12 +63,12 @@ const RodoPage = () => {
               1. Administratorem Pani/Pana danych osobowych jest Eko – Test
               Szczakowa Spółka z ograniczoną odpowiedzialnością Nieruchomości
               Spółka Komandytowa z siedzibą przy ul. Szklarkiej 5, 43-602
-              Jaworzono, kontakt e mail: biuro@aparthotelmiodowa.pl .
+              Jaworzono, kontakt e mail: biuro@hotelmiodowa.pl .
             </p>
             <p>
               2. Administrator wyznaczył Inspektora ochrony danych osobowych
               Jerzego Górę, z którym może Pani/Pan skontaktować się poprzez
-              e-mail: biuro@aparthotelmiodowa.pl lub pisemnie na adres siedziby
+              e-mail: biuro@hotelmiodowa.pl lub pisemnie na adres siedziby
               Administratora. Z inspektorem ochrony danych osobowych można
               kontaktować się we wszystkich sprawach dotyczących przetwarzania
               danych osobowych oraz korzystania z praw związanych z

@@ -19,7 +19,7 @@ const ServicesPage = () => {
   const { polish } = context;
   return (
     <Wrapper>
-      <h1 className="title">{polish ? "Usługi" : "Services"}</h1>
+      <h2 className="title">{polish ? "Usługi" : "Services"}</h2>
       <div data-aos="fade-up" className="main-page">
         <NavLink to="/uslugi/transport&wycieczki" className="oneService">
           <img src={transportImg} alt="transport" />
