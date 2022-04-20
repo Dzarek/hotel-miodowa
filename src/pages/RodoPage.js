@@ -241,12 +241,12 @@ const RodoPage = () => {
               1. The administrator of your personal data is Eko – Test Szczakowa
               Spółka z ograniczoną odpowiedzialnością Nieruchomości Spółka
               Komandytowa with its registered office at ul. Szklarkiej 5, 43-602
-              Jaworzno, contact e-mail: biuro@aparthotelmiodowa.pl.
+              Jaworzno, contact e-mail: biuro@hotelmiodowa.pl.
             </p>
             <p>
               2. The administrator has appointed the Personal Data Protection
               Inspector Jerzy Góra, who you can contact by e-mail:
-              biuro@aparthotelmiodowa.pl or in writing to the address of the
+              biuro@hotelmiodowa.pl or in writing to the address of the
               Administrator's seat. You can contact the Data Protection Officer
               in all matters regarding the processing of personal data and the
               exercise of rights related to data processing.
