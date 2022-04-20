@@ -96,9 +96,9 @@ const Footer = () => {
               <p>
                 <MdMail className="iconReact" /> rezerwacja@hotelmiodowa.pl
               </p>
-              <p>
+              <a href="https://www.facebook.com/aparthotel.miodowa.14">
                 <FaFacebook className="iconReact" /> hotel miodowa
-              </p>
+              </a>
             </div>
           </div>
         </div>
@@ -359,7 +359,8 @@ const Wrapper = styled.div`
         justify-content: center;
         align-items: flex-start;
         width: 100%;
-        p {
+        p,
+        a {
           margin: 2vh 0;
           display: flex;
           justify-content: space-around;
@@ -367,6 +368,8 @@ const Wrapper = styled.div`
           font-family: var(--buttonFont);
           font-size: 1.1rem;
           transition: 0.3s;
+          color: white;
+          text-decoration: none;
           .iconReact {
             color: var(--secondaryColor2);
             margin-right: 10px;
