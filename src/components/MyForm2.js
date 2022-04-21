@@ -13,31 +13,75 @@ const MyForm2 = () => {
   const [text, setText] = useState("");
   const [box, setBox] = useState(false);
 
+  // const handleWowSubmit = async (e) => {
+  //   e.preventDefault();
+  //
+  //   await fetch("https://formsubmit.co/ajax/dzarekcoding@gmail.com", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Accept: "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       NADAWCA: name,
+  //       EMAIL: email,
+  //       WIADOMOŚĆ: text,
+  //       _template: "table",
+  //       _subject: `hotelmiodowa.pl, wiadomość od ${name}`,
+  //       _replyto: email,
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       if (data.success) {
+  //         setStatus("SUCCESS");
+  //       } else {
+  //         setStatus("ERROR");
+  //       }
+  //     })
+  //     .catch((error) => console.log(error));
+  //   setTimeout(() => {
+  //     setStatus("");
+  //     setName("");
+  //     setEmail("");
+  //     setText("");
+  //     setBox(false);
+  //   }, 3000);
+  // };
+
+  const mailBody = polish
+    ? `IMIĘ I NAZWISKO:  ` +
+      `<strong>${name}</strong>` +
+      `<br/> <br/> ADRES EMAIL:  ` +
+      `<strong>${email}</strong>` +
+      `<br/> <br/> WIADOMOŚĆ:  ` +
+      `<strong>${text}</strong>`
+    : `NAME:  ` +
+      `<strong>${name}</strong>` +
+      `<br/> <br/> EMAIL:  ` +
+      `<strong>${email}</strong>` +
+      `<br/> <br/> MESSAGE:  ` +
+      `<strong>${text}</strong>`;
+  const mailSubject = polish
+    ? `hotelmiodowa.pl, Wiadomość od ${name}`
+    : `hotelmiodowa.pl, Message from ${name}`;
   const handleWowSubmit = async (e) => {
     e.preventDefault();
-    await fetch("https://formsubmit.co/ajax/rezerwacja@hotelmiodowa.pl", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-      body: JSON.stringify({
-        nadawca: name,
-        email: email,
-        wiadomość: text,
-        _template: "box",
-        _subject: `hotelmiodowa.pl, wiadomość od ${name}`,
-      }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          setStatus("SUCCESS");
-        } else {
-          setStatus("ERROR");
-        }
-      })
-      .catch((error) => console.log(error));
+    window.Email.send({
+      Host: "smtp.gmail.com",
+      Username: "miodowa.wycieczki@gmail.com",
+      Password: `${process.env.REACT_APP_ACCESS_EMAIL}`,
+      To: ["rezerwacja@hotelmiodowa.pl"],
+      From: email,
+      Subject: mailSubject,
+      Body: mailBody,
+    }).then((data) => {
+      if (data === "OK") {
+        setStatus("SUCCESS");
+      } else {
+        setStatus("ERROR");
+      }
+    });
     setTimeout(() => {
       setStatus("");
       setName("");
