@@ -69,8 +69,8 @@ const MyForm2 = () => {
     e.preventDefault();
     window.Email.send({
       Host: "smtp.gmail.com",
-      Username: "miodowa.wycieczki@gmail.com",
-      Password: `${process.env.REACT_APP_ACCESS_EMAILL}`,
+      Username: "miodowa.hotel@gmail.com",
+      Password: `${process.env.REACT_APP_ACCESS_EMAIL}`,
       To: ["rezerwacja@hotelmiodowa.pl"],
       From: email,
       Subject: mailSubject,

@@ -1,6 +1,7 @@
 {
   "name": "hotel-miodowa",
   "version": "0.1.0",
+  "homepage": "https://www.hotelmiodowa.pl",
   "private": true,
   "dependencies": {
     "@brainhubeu/react-carousel": "^1.19.26",
