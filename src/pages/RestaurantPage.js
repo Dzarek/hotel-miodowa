@@ -71,7 +71,7 @@ const RestaurantPage = () => {
             <p>
               {" "}
               <FaLongArrowAltRight className="icon" />
-              Obiady i kolacje są podawane jedynie dla zoorganizowanych grup.
+              Obiady i kolacje są podawane jedynie dla zorganizowanych grup.
             </p>
             <p>
               {" "}
